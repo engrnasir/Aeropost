@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300;400;500;600;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;   
+
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+#app {
+  font-family: 'Sofia Sans', sans-serif;
+}
+.row{
+  @apply w-[100%] max-w-[1440px] mx-auto;
+}
+.btn{
+  @apply px-12 py-[10px] rounded-[40px] text-lg font-medium bg-white text-blue cursor-pointer transition-all duration-200 hover:bg-yellow hover:text-blue; 
+}
+.btn-blue{
+  @apply px-12 py-[10px] rounded-[40px] text-lg font-medium bg-blue text-white cursor-pointer transition-all duration-200 hover:bg-yellow hover:text-blue; 
+}
+.btn-yellow{
+  @apply px-12 py-[10px] rounded-[40px] text-lg font-medium bg-yellow text-blue cursor-pointer transition-all duration-200 hover:bg-white; 
+}

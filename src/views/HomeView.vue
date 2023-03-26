@@ -1,18 +1,35 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container min-w-full">
+    <HeroTitleVue :title="title" utext="" :description="description" :showSignUp="true"></HeroTitleVue>
+    <Benefits></Benefits>
+    <DetailsVue></DetailsVue>
+    <SliderVue></SliderVue>
+    <FooterTitle title="We make shopping simple." :bgBlue='true'></FooterTitle>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import HeroTitleVue from '@/components/header/HeroTitle.vue';
+import Benefits from '@/components/homepage/Benefits.vue';
+import DetailsVue from '@/components/homepage/Details.vue';
+import SliderVue from '@/components/homepage/Slider.vue';
+import FooterTitle from '@/components/footer/FooterTitle.vue';
 
 export default {
   name: 'HomeView',
-  components: {
-    HelloWorld
+  components:{
+    HeroTitleVue,
+    Benefits,
+    DetailsVue,
+    SliderVue,
+    FooterTitle,
+  },
+  data(){
+    return{
+      title:'Buy Anything from the U.S.',
+      description:'The best way to buy from your favorite stores in the U.S.'
+    }
   }
+  
 }
 </script>

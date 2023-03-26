@@ -1,32 +1,29 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
+    <img src="@/assets/images/bg.png" alt="" class="min-w-full absolute top-0 left-0 z-0">  
+    <div class="bg-blue max-md:sticky top-0 left-0 z-50">
+      <LogoNav class="relative z-40"></LogoNav>
+      <HeaderVue></HeaderVue>
+    </div>
+    
     <router-view/>
+    <footerVue :bgBlue="false"/>
   </div>
 </template>
+<script>
+import LogoNav from "./components/header/LogoNav.vue";
+import HeaderVue from "@/components/header/Header.vue"
+import FooterVue from "@/components/footer/Footer.vue"
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+export default{
+  components:{
+    LogoNav,
+    HeaderVue,
+    FooterVue
   }
 }
+</script>
+<style>
+
+
 </style>
