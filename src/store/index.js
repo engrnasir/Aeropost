@@ -7,7 +7,7 @@ export default new Vuex.Store({
   state: {
     selectedCountry:{name:'America',flagUrl:''},
 
-    showCountries:true,
+    showCountries:false,
     selectedContinentIndex:0,
     showMenu:false,
   },
