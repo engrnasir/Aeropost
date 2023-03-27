@@ -72,10 +72,10 @@
   
   <style lang="scss" scoped>
   .item{
-    @apply flex  items-center justify-center relative max-[880px]:flex-col;
+    @apply flex  items-center justify-center relative max-[880px]:flex-col max-[880px]:mb-7;
     .details{
         @apply max-w-[420px] max-[1100px]:max-w-[350px] flex flex-col 
-              max-[880px]:items-center max-[880px]:text-center max-[880px]:m-5 max-[880px]:max-w-[720px];
+               max-[880px]:items-center max-[880px]:text-center max-[880px]:m-5 max-[880px]:max-w-[720px];
     }
     .number{
         @apply font-extrabold text-[130px] text-yellow leading-none max-[880px]:text-[80px];

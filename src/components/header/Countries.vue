@@ -81,7 +81,7 @@ export default {
 <style lang="scss" scoped>
 .wrapper{
     @apply w-full min-h-[70vh] p-8 bg-white min-h-min z-50 absolute top-16 left-0 shadow-lg flex flex-col items-center transition-all duration-300 
-       max-md:min-h-screen max-md:top-0 max-md:px-3
+       max-md:min-h-screen max-md:fixed max-md:top-0 max-md:px-3
     ;
 }
 .continentItem{

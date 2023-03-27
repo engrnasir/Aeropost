@@ -53,7 +53,7 @@ nav{
 @media screen and (max-width:780px) {
   .nav-wrapper{
     @apply w-[240px] mx-0 fixed left-0 top-[56px] h-screen justify-start flex-col items-start bg-white shadow-2xl 
-            px-3 py-5 overflow-y-scroll
+            px-3 py-5 pb-60 overflow-y-scroll
             transition-all duration-300
             -translate-x-full
             ;

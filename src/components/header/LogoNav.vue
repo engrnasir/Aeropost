@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full px-8" :class="showMenu?'bg-blue':''">
+    <div class="w-full px-8" :class="showMenu || bgBlue? 'bg-blue':''">
         <div class="row pt-4">
               <div class="flex justify-between items-center w-[100%]" >
                   <div class="flex items-center">
@@ -31,18 +31,29 @@ export default {
         Logo,
         CountryControlVue
     },
+    data(){
+        return{
+            bgBlue:false,
+
+        }
+    },
     computed:{
         ...mapState(['showMenu'])
     },
     methods:{
         ...mapMutations(['setShowMenu'])
+    },
+    mounted(){
+        window.addEventListener('scroll',(e)=>{
+           this.bgBlue = window.scrollY>10 && window.innerWidth<800?true:false;
+        })
     }
 }
 </script>
 
 <style lang="scss" scoped>
 .loginBtn{
-    @apply px-9 py-2 hidden max-md:inline-block  max-sm:px-5  max-sm:text-sm   max-sm:py-1 ;
+    @apply px-9 py-2 hidden max-md:inline-block  max-md:px-5  max-md:text-sm   max-md:py-1 ;
 }
 
 </style>
