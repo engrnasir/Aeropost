@@ -71,7 +71,7 @@ nav{
     @apply w-full border-b pl-3 mb-7 flex-col items-start text-blue;
   }
   .item{
-    @apply w-full border-t py-5  mr-0 text-blue;
+    @apply w-full border-t py-5 pl-3  mr-0 text-blue;
   }
   .btn{
     @apply w-full px-8 bg-yellow hover:bg-blue hover:text-white;
