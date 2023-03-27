@@ -11,7 +11,7 @@
             <li class="item mr-0" @click="setShowMenu(false)"><router-link to="/">Contact</router-link></li>
         </ul>
     </nav>
-    <div class="flex-items-center min-w-max">
+    <div class="flex items-center min-w-max max-md:min-w-full">
         <router-link to="" class="btn mr-[14px] max-md:hidden">Log in</router-link>
         <router-link to="" class="btn">Sign Up For Free</router-link>
     </div>
@@ -52,7 +52,7 @@ nav{
 
 @media screen and (max-width:780px) {
   .nav-wrapper{
-    @apply w-[240px] mx-0 fixed left-0 top-[56px] h-screen justify-start flex-col items-start bg-white shadow-2xl 
+    @apply w-[260px] mx-0 fixed left-0 top-[56px] h-screen justify-start flex-col items-start bg-white shadow-2xl 
             px-3 py-5 pb-60 overflow-y-scroll
             transition-all duration-300
             -translate-x-full
@@ -68,13 +68,16 @@ nav{
     @apply w-full;
   }
   .items{
-    @apply w-full border-b pl-3 mb-7 flex-col items-start text-blue;
+    @apply ml-3 min-w-full mb-7 flex-col items-start text-blue;
   }
   .item{
     @apply w-full border-t py-5 pl-3  mr-0 text-blue;
   }
-  .btn{
-    @apply w-full px-8 bg-yellow hover:bg-blue hover:text-white;
+  .item:last-child{
+    @apply border-b;
+  }
+  .btn:last-child{
+    @apply w-full flex justify-center items-center px-8 bg-yellow hover:bg-blue hover:text-white;
   }
 }
 </style>
