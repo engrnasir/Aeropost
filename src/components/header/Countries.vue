@@ -42,7 +42,7 @@ export default {
         @apply flex items-center px-8 py-3 rounded-xl hover:bg-slate-200 cursor-pointer;
 
         p{
-            @apply text-lg font-medium mr-3;
+            @apply text-lg font-medium mr-3 min-w-min max-md:text-base;
         }
         img{
             @apply h-4;
