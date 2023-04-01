@@ -5,10 +5,10 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    selectedCountry:{name:'America',flagUrl:''},
+    selectedCountry:{ id:'ca1', name:'Belize', flagUrl:'belize.png', longitude:0, latitude:0, },
 
     showCountries:false,
-    selectedContinentIndex:0,
+    selectedMapIndex:0,
     showMenu:false,
   },
   getters: {
@@ -20,8 +20,8 @@ export default new Vuex.Store({
     setSelectedCountry:(state,val)=>{
       state.selectedCountry = val
     },
-    setSelectedContinentIndex:(state,val)=>{
-      state.selectedContinentIndex=val;
+    setSelectedMapIndex:(state,val)=>{
+      state.selectedMapIndex=val;
     },
     setShowMenu:(state,val)=>{
       state.showMenu = val
@@ -32,3 +32,4 @@ export default new Vuex.Store({
   modules: {
   }
 })
+

@@ -1,16 +1,16 @@
 <template>
     <div class="bg-blue px-8 py-4 pt-0 mb-0 border-0">
-        <CountriesVue></CountriesVue>
-        <navigation></navigation>
+        <CountryPicker/>
+        <Navigation/>
     </div>
 </template>
 
 <script>
-import CountriesVue from '@/components/header/Countries.vue';
+import CountryPicker from '@/components/header/CountryPicker.vue';
 import Navigation from '@/components/header/Navigation.vue'
 export default {
     components:{
-        CountriesVue,
+        CountryPicker,
         Navigation,
     },
 }

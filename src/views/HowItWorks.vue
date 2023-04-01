@@ -95,7 +95,7 @@
     ;
   }
   .line2{
-    @apply w-[440px] h-[190px] absolute -bottom-[158px] left-[150px]
+    @apply w-[430px] h-[210px] absolute -bottom-[188px] left-[170px]
    max-xl:left-[150px]  max-xl:-bottom-[138px]  max-xl:h-[134px] max-xl:w-[337px]
    max-[880px]:hidden;
   }

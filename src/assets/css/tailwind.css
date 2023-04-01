@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300;400;500;600;700;900&display=swap');
+@import url('./font.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;   
@@ -9,7 +10,7 @@
     box-sizing: border-box;
 }
 #app {
-  font-family: 'Sofia Sans', sans-serif;
+  font-family: 'Sofia Pro', sans-serif;
 }
 .row{
   @apply w-[100%] max-w-[1440px] mx-auto;
@@ -22,4 +23,14 @@
 }
 .btn-yellow{
   @apply px-12 py-[10px] rounded-[40px] text-lg font-medium bg-yellow text-blue cursor-pointer transition-all duration-200 hover:bg-white; 
+}
+
+.main-heading{
+  @apply font-bold text-3xl text-blue leading-none mb-4 max-md:text-2xl;
+}
+.heading{
+  @apply text-blue text-lg mb-4 font-medium leading-none max-md:text-base;
+}
+.sub-heading{
+  @apply text-blue text-base mb-4 leading-none;
 }
