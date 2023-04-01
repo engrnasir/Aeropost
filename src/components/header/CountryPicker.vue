@@ -5,10 +5,10 @@
         <div class="mapItem" 
             v-for="(c,index) in maps" :key="index" 
             @click="setSelectedMapIndex(index)">
-                <img :src="require(`@/assets/images/${c.imgUrl}`)" alt="" class="mapImg">
-                <div class="text-center flex  items-center justify-between max-md:border-b">
+                <img :src="require(`@/assets/images/${c.imgUrl}`)" alt="" class="mapImg" >
+                <div class="text-center flex  items-center justify-between max-md:border-b max-md:pb-2">
                     <p :class="c===maps[selectedMapIndex]?'font-bold border-b-4 border-yellow':''">{{c.name}}</p>
-                    <img src="@/assets/images/icon-arrow-blue.png" alt="" class="md:hidden">
+                    <img src="@/assets/images/icon-arrow-blue.png" alt="" class="w-4 md:hidden">
                 </div>
                 <div class="mob-countries" :class="c===maps[selectedMapIndex]?'showCountries':'hidden'">
                     <CountriesVue :countries="c.countries" />
@@ -123,19 +123,19 @@ export default {
     ;
 }
 .mapItem{
-    @apply flex flex-col items-center cursor-pointer p-3 mx-6  
-            max-md:mx-2 max-md:block max-md:items-start;
+    @apply flex flex-col items-center cursor-pointer md:p-3 mx-6  
+            max-md:mx-0  max-md:block max-md:items-start;
 
     .mapImg{
         @apply w-32 mb-5 max-md:w-20 max-sm:w-12 max-md:hidden ;
     }
     p{
-        @apply text-xl text-center text-[#4e4e4e] pb-4 px-2 max-md:border-none;
+        @apply text-xl text-center text-[#4e4e4e] pb-4 px-2 max-md:border-none max-md:pb-0;
     }
 }
 
 .close{
-    @apply w-8 absolute top-5 right-5  cursor-pointer
+    @apply w-8 absolute top-5 right-3  cursor-pointer
           max-md:w-4;
     ;
 }

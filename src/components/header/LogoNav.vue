@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full px-8" :class="showMenu || bgBlue? 'bg-blue':''">
+    <div class="w-full px-8 max-md:px-4" :class="showMenu || bgBlue? 'bg-blue':''">
         <div class="row pt-4">
               <div class="flex justify-between items-center w-[100%]" >
                   <div class="flex items-center">
