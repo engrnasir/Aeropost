@@ -6,7 +6,7 @@
             v-for="(c,index) in maps" :key="index" 
             @click="setSelectedMapIndex(index)">
                 <img :src="require(`@/assets/images/${c.imgUrl}`)" alt="" class="mapImg" >
-                <div class="text-center flex  items-center justify-between max-md:border-b max-md:pb-2">
+                <div class="text-center flex  items-center justify-between max-md:border-b max-md:py-2">
                     <p :class="c===maps[selectedMapIndex]?'font-bold border-b-4 border-yellow':''">{{c.name}}</p>
                     <img src="@/assets/images/icon-arrow-blue.png" alt="" class="w-4 md:hidden">
                 </div>
