@@ -7,7 +7,7 @@
             <ul class="items">
                 <li class="item" :class="bgBlue?'item-white':'item-blue'"><router-link to="/how-it-works">How It Works</router-link></li>
                 <li class="item" :class="bgBlue?'item-white':'item-blue'"><router-link to="">About Us</router-link></li>
-                <li class="item" :class="bgBlue?'item-white':'item-blue'"><router-link to="/rates">Rates</router-link></li>
+                <li v-if="!invalidRate" class="item" :class="bgBlue?'item-white':'item-blue'"><router-link to="/rates">Rates</router-link></li>
                 <li class="item" :class="bgBlue?'item-white':'item-blue'"><router-link to="/calculator">Calculator</router-link></li>
                 <li class="item" :class="bgBlue?'item-white':'item-blue'"><router-link to="">Restricted Products</router-link></li>
                 <li class="item" :class="bgBlue?'item-white':'item-blue'"><router-link to="">Contact</router-link></li>
@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
 import Logo from '../header/Logo.vue';
 export default {
     props:['bgBlue'],
@@ -30,6 +31,14 @@ export default {
     },
     components:{
         Logo
+    },
+    computed:{
+        ...mapState(['selectedCountry']),
+        invalidRate(){
+            return this.selectedCountry.id==='cb4' 
+                    || this.selectedCountry.id ==='cb13' 
+                    || this.selectedCountry.id ==='cb19';
+        }
     },
     mounted(){
        this.logoColor = this.bgBlue===true? 'white': 'blue';

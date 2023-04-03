@@ -34,9 +34,8 @@ export default {
     ]),
     invalidRate(){
       return this.selectedCountry.id==='cb4' 
-                    || this.selectedCountry.id ==='cb13' 
-                    || this.selectedCountry.id ==='cb19';
-                    console.log(invalid);
+              || this.selectedCountry.id ==='cb13' 
+              || this.selectedCountry.id ==='cb19';
     }
   },
   methods:{
