@@ -20,6 +20,7 @@ export default new Vuex.Store({
     },
 
     setShowCountries:(state,val)=>{
+      window.scrollTo(0,0)
       state.showCountries = val
     },
     setSelectedCountry:(state,val)=>{
