@@ -14,7 +14,7 @@
     </nav>
     <div class="flex items-center min-w-max max-md:min-w-full">
         <router-link to="" class="btn max-lg:text-sm mr-[14px] max-lg:mr-2 max-md:hidden">{{lang==='en'?'Log in':'Iniciar Sesión'}}</router-link>
-        <router-link to="" class="btn max-lg:text-sm">{{lang==='en'?'Sign Up For Free':'Regístrate Gratis'}}</router-link>
+        <router-link to="" class="btn max-lg:text-sm">{{lang==='en'?'Sign Up for Free':'Regístrate Gratis'}}</router-link>
     </div>
   </div>
 </template>
