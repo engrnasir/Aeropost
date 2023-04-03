@@ -11,7 +11,7 @@
                       </router-link>
                   </div>
       
-                  <router-link to="" class="btn loginBtn">Log in</router-link>
+                  <router-link to="" class="btn loginBtn">{{lang==='en'?'Log in':'Iniciar Sesión'}}</router-link>
       
                   <div class="max-md:hidden ">
                       <CountryControlVue></CountryControlVue>
@@ -38,10 +38,10 @@ export default {
         }
     },
     computed:{
-        ...mapState(['showMenu'])
+        ...mapState(['lang','showMenu'])
     },
     methods:{
-        ...mapMutations(['setShowMenu'])
+        ...mapMutations(['setLang','setShowMenu'])
     },
     mounted(){
         window.addEventListener('scroll',(e)=>{

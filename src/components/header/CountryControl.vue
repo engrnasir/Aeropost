@@ -8,15 +8,15 @@
         </div>
         <p>
             <span 
-                :class="english?'':'active-lang'" 
+                :class="lang==='en'?'':'active-lang'" 
                 class="border-r-2 border-sky-100 lang-item"
-                @click="english=false">
+                @click="setLang('es')">
                 Espanol
             </span> 
             <span 
                 class="lang-item"
-                :class="english?'active-lang':''"
-                @click="english=true">English</span>
+                :class="lang==='en'?'active-lang':''"
+                @click="setLang('en')">English</span>
         </p>
     </div>
 </template>
@@ -30,12 +30,14 @@ export default {
     },
     computed:{
         ...mapState([
+            'lang',
             'showCountries',
             'selectedCountry'
-        ])
+        ]),
     },
     methods:{
         ...mapMutations([
+            'setLang',
             'setShowCountries',
             'setSelectedCountries',
         ])
@@ -58,7 +60,7 @@ export default {
     @apply text-[#F6D000];
 }
 
-@media only screen and (max-width:780px){
+@media only screen and (max-width:840px){
     .wrapper{
         @apply flex-col mb-5 ;
     }

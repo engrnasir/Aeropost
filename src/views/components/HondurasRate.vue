@@ -33,13 +33,11 @@
 <script>
 import tableVue from '@/components/rates/table.vue';
 import InformationVue from '@/components/rates/Information.vue';
-import StorageTable from '@/components/rates/StorageTable.vue';
 export default {
   name: 'HondurusRate',
   components:{
       tableVue,
       InformationVue,
-      StorageTable,
   },
   data(){
     return{

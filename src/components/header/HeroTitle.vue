@@ -1,17 +1,21 @@
 <template>
   <div class="wrapper">
         <div class="flex items-center max-lg:flex-col">
-          <h1>{{ title }}</h1>
+          <h1>{{ title }}&nbsp;</h1>
           <h1 class="border-b-2 border-[#A8EEFF]">{{ utext }}</h1>
         </div>
         <p class="description">{{ description }}</p>
-        <router-link to="" class="btn-yellow" v-show="showSignUp">Sign Up For Free</router-link>
+        <router-link to="" class="btn-yellow" v-show="showSignUp">{{lang==='en'?'Sign Up For Free':'Regístrate Gratis'}}</router-link>
     </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
-  props:['title','utext', 'description', 'showSignUp']
+  props:['title','utext', 'description', 'showSignUp'],
+  computed:{
+    ...mapState(['lang'])
+  }
 }
 </script>
 

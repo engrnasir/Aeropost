@@ -16,7 +16,7 @@
   @apply w-[100%] max-w-[1440px] mx-auto;
 }
 .btn{
-  @apply px-12 py-[10px] rounded-[40px] text-lg font-medium bg-white text-blue cursor-pointer transition-all duration-200 hover:bg-yellow hover:text-blue; 
+  @apply px-6 py-2 rounded-[40px] text-base  font-medium bg-white text-blue cursor-pointer transition-all duration-200 hover:bg-yellow hover:text-blue; 
 }
 .btn-blue{
   @apply px-12 py-[10px] rounded-[40px] text-lg font-medium bg-blue text-white cursor-pointer transition-all duration-200 hover:bg-yellow hover:text-blue; 

@@ -15,7 +15,7 @@
                 </div>
         </div>
     </div>
-    <div class="max-md:hidden">
+    <div class="max-md:hidden w-full max-w-[980px]">
         <CountriesVue :countries="maps[selectedMapIndex].countries"/>
     </div>
     <p class="text-center text-blue text-lg pt-6"><a href="">Your country is not listed?</a></p>
@@ -52,24 +52,25 @@ export default {
                     imgUrl:'map2.png',
                     countries:[
                         { id:'cb1', name:'Anguilla', flagUrl:'anguilla.png', longitude:0, latitude:0, },
-                        { id:'cb2', name:'Aruba', flagUrl:'aruba.png', longitude:0, latitude:0, },
-                        { id:'cb3', name:'Bahamas', flagUrl:'bahamas.png', longitude:0, latitude:0, },
-                        { id:'cb4', name:'Barbados', flagUrl:'barbados.png', longitude:0, latitude:0, },
-                        { id:'cb5', name:'British Virgin Islands', flagUrl:'virgin-island.png', longitude:0, latitude:0, },
-                        { id:'cb6', name:'Cayman Islands', flagUrl:'cayman.png', longitude:0, latitude:0, },
-                        { id:'cb7', name:'Curacao', flagUrl:'curacao.png', longitude:0, latitude:0, },
-                        { id:'cb8', name:'Dominica', flagUrl:'dominica.png', longitude:0, latitude:0, },
-                        { id:'cb9', name:'Grenada', flagUrl:'grenada.png', longitude:0, latitude:0, },
-                        { id:'cb10', name:'Guadeloupe', flagUrl:'guadeloupe.png', longitude:0, latitude:0, },
-                        { id:'cb11', name:'Haití', flagUrl:'haiti.png', longitude:0, latitude:0, },
-                        { id:'cb12', name:'Jamaica', flagUrl:'jamaica.png', longitude:0, latitude:0, },
-                        { id:'cb13', name:'Martinique', flagUrl:'martinique.png', longitude:0, latitude:0, },
-                        { id:'cb14', name:'Montserrat', flagUrl:'montserrat.png', longitude:0, latitude:0, },
-                        { id:'cb15', name:'Saint Lucia', flagUrl:'saint.png', longitude:0, latitude:0, },
-                        { id:'cb16', name:'Saint Martin', flagUrl:'saint-martin.png', longitude:0, latitude:0, },
-                        { id:'cb17', name:'Saint Vincent', flagUrl:'saint-vincent.png', longitude:0, latitude:0, },
-                        { id:'cb18', name:'Trinidad and Tobago', flagUrl:'trinidad_toba.png', longitude:0, latitude:0, },
-                        { id:'cb19', name:'Turks & Caicos', flagUrl:'turks.png', longitude:0, latitude:0, },
+                        { id:'cb2', name:'Antigua', flagUrl:'aruba.png', longitude:0, latitude:0, },
+                        { id:'cb3', name:'Aruba', flagUrl:'aruba.png', longitude:0, latitude:0, },
+                        { id:'cb4', name:'Bahamas', flagUrl:'bahamas.png', longitude:0, latitude:0, },
+                        { id:'cb5', name:'Barbados', flagUrl:'barbados.png', longitude:0, latitude:0, },
+                        { id:'cb6', name:'British Virgin Islands', flagUrl:'virgin-island.png', longitude:0, latitude:0, },
+                        { id:'cb7', name:'Cayman Islands', flagUrl:'cayman.png', longitude:0, latitude:0, },
+                        { id:'cb8', name:'Curacao', flagUrl:'curacao.png', longitude:0, latitude:0, },
+                        { id:'cb9', name:'Dominica', flagUrl:'dominica.png', longitude:0, latitude:0, },
+                        { id:'cb10', name:'Grenada', flagUrl:'grenada.png', longitude:0, latitude:0, },
+                        { id:'cb11', name:'Guadeloupe', flagUrl:'guadeloupe.png', longitude:0, latitude:0, },
+                        { id:'cb12', name:'Haití', flagUrl:'haiti.png', longitude:0, latitude:0, },
+                        { id:'cb13', name:'Jamaica', flagUrl:'jamaica.png', longitude:0, latitude:0, },
+                        { id:'cb14', name:'Martinique', flagUrl:'martinique.png', longitude:0, latitude:0, },
+                        { id:'cb15', name:'Montserrat', flagUrl:'montserrat.png', longitude:0, latitude:0, },
+                        { id:'cb16', name:'Saint Lucia', flagUrl:'saint.png', longitude:0, latitude:0, },
+                        { id:'cb17', name:'Saint Martin', flagUrl:'saint-martin.png', longitude:0, latitude:0, },
+                        { id:'cb18', name:'Saint Vincent', flagUrl:'saint-vincent.png', longitude:0, latitude:0, },
+                        { id:'cb19', name:'Trinidad and Tobago', flagUrl:'trinidad_toba.png', longitude:0, latitude:0, },
+                        { id:'cb20', name:'Turks & Caicos', flagUrl:'turks.png', longitude:0, latitude:0, },
                     ]
                 },
                 {

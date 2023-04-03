@@ -5,6 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    lang:'en', //default
     selectedCountry:{ id:'ca1', name:'Belize', flagUrl:'belize.png', longitude:0, latitude:0, },
 
     showCountries:false,
@@ -14,6 +15,10 @@ export default new Vuex.Store({
   getters: {
   },
   mutations: {
+    setLang:(state, val)=>{
+      state.lang = 'en'
+    },
+
     setShowCountries:(state,val)=>{
       state.showCountries = val
     },

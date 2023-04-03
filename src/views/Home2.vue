@@ -14,6 +14,7 @@
   import DetailsVue from '@/components/homepage2/Details2.vue';
   import SliderVue from '@/components/homepage/Slider.vue';
   import FooterTitle from '@/components/footer/FooterTitle.vue';
+import { mapState } from 'vuex';
   export default {
     name: 'HomeView',
     components:{
@@ -22,13 +23,18 @@
       DetailsVue,
       SliderVue,
       FooterTitle,
-    },
-    data(){
-      return{
-        title:'Buy Anything from the U.S. ',
-        utext:'with Aeropost',
-        description:'The easiest way to shop from your favorite online stores.'
-      }
+    },    
+    computed:{
+      ...mapState(['lang']),
+      title(){
+        return this.lang==='en'?'Buy Anything from the U.S.':'Compra cualquier cosa desde USA'
+      },
+      utext(){
+        return this.lang==='en'?' with Aeropost':' con Aeropost';
+      },
+      description(){
+        return this.lang==='en'?'The easiest way to shop from your favorite online stores.':'La forma más fácil de comprar en tus tiendas online favoritas.';
+      },
     }
     
   }

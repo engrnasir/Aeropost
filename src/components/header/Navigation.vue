@@ -5,15 +5,16 @@
     </div>
     <nav class="w-full">
         <ul class="items">
-            <li class="item" @click="setShowMenu(false)"><router-link to="/how-it-works">How It Works</router-link></li>
-            <li class="item" @click="setShowMenu(false)"><router-link to="/rates">Rates</router-link></li>
-            <li class="item" @click="setShowMenu(false)"><router-link to="/faqs">FAQs</router-link></li>
-            <li class="item mr-0" @click="setShowMenu(false)"><router-link to="/">Contact</router-link></li>
+            <li class="item" @click="setShowMenu(false)"><router-link to="/how-it-works">{{lang==='en'?'How It Works':'Cómo Funciona'}}</router-link></li>
+            <li class="item" v-if="!invalidRate" @click="setShowMenu(false)"><router-link to="/rates">{{lang==='en'?'Rates':'Tarifas'}}</router-link></li>
+            <li class="item" @click="setShowMenu(false)"><router-link to="/calculator">{{lang==='en'?'Calculator':'Calculadora de Costos'}}</router-link></li>
+            <li class="item" @click="setShowMenu(false)"><router-link to="/faqs">{{lang==='en'?'FAQs':'Preguntas Frecuentes'}}</router-link></li>
+            <li class="item mr-0" @click="setShowMenu(false)"><router-link to="/">{{lang==='en'?'Contact':'Contacto'}}</router-link></li>
         </ul>
     </nav>
     <div class="flex items-center min-w-max max-md:min-w-full">
-        <router-link to="" class="btn mr-[14px] max-md:hidden">Log in</router-link>
-        <router-link to="" class="btn">Sign Up For Free</router-link>
+        <router-link to="" class="btn max-lg:text-sm mr-[14px] max-lg:mr-2 max-md:hidden">{{lang==='en'?'Log in':'Iniciar Sesión'}}</router-link>
+        <router-link to="" class="btn max-lg:text-sm">{{lang==='en'?'Sign Up For Free':'Regístrate Gratis'}}</router-link>
     </div>
   </div>
 </template>
@@ -26,7 +27,17 @@ export default {
     CountryControl
   },
   computed:{
-    ...mapState(['showMenu'])
+    ...mapState([
+      'lang',
+      'showMenu',
+      'selectedCountry'
+    ]),
+    invalidRate(){
+      return this.selectedCountry.id==='cb4' 
+                    || this.selectedCountry.id ==='cb13' 
+                    || this.selectedCountry.id ==='cb19';
+                    console.log(invalid);
+    }
   },
   methods:{
     ...mapMutations(['setShowMenu'])
@@ -44,13 +55,13 @@ nav{
     @apply flex items-center text-white;
   }
   .item{
-    @apply mr-16 text-xl hover:text-yellow font-medium
-           max-lg:mr-7;
+    @apply mr-8 text-base hover:text-yellow font-medium
+           max-lg:mr-4 max-lg:text-sm max-md:text-base;
   }
 }
 
 
-@media screen and (max-width:780px) {
+@media screen and (max-width:840px) {
   .nav-wrapper{
     @apply w-[260px] mx-0 fixed left-0 top-[56px] h-screen justify-start flex-col items-start bg-white shadow-2xl 
             px-3 py-5 pb-60 overflow-y-scroll

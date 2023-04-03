@@ -6,7 +6,7 @@
             @click="setSelectedCountry(country); setShowCountries(false)"
             :class="selectedCountry.name===country.name?'bg-slate-200':''"
             >
-            <router-link :to="`/rates/${country.id}`" tag="a">
+            <router-link to="/" tag="a">
                 <p>{{ country.name }}</p>
                 <img :src="require(`@/assets/images/flags/${country.flagUrl}`)" :alt="country.name">
             </router-link>
@@ -35,14 +35,14 @@ export default {
 
 <style lang="scss" scoped>
 .countries{
-    @apply w-full max-w-[980px] grid grid-cols-3 gap-x-3 justify-items-center p-5 border-b-2 border-[#3333]
+    @apply min-w-full  grid grid-cols-3 gap-x-3 gap-y-1 justify-items-center py-5 border-b-2 border-[#3333]
             max-md:grid-cols-1 max-md:px-2;
 
     .country{
         @apply flex justify-center items-center w-full rounded-md;
     }
     .country a{
-        @apply flex items-center px-8 py-3 rounded-xl hover:bg-slate-200 cursor-pointer;
+        @apply min-w-full flex justify-center items-center px-8 py-3 rounded-xl hover:bg-slate-200 cursor-pointer;
 
         p{
             @apply text-lg font-medium mr-3 min-w-min max-lg:text-base min-w-min;
