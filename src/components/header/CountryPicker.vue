@@ -104,6 +104,9 @@ export default {
             'setSelectedCountry',
             'setSelectedMapIndex'
         ])
+    },
+    mounted(){
+        window.scrollTo(0,0)
     }
 
 }
