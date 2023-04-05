@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p class="text-bold text-base mb-4 text-blue ">Effective February 15, 2014</p>
+        
         <InformationVue :list="info.list1"/>
 
         <tableVue :list="info.table1" :hasHeader="false"/>

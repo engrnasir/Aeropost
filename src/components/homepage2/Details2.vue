@@ -3,18 +3,18 @@
       <div class="row wrapper max-md:flex-col">
           <img src="@/assets/images/lady-prealert.png" alt="" class="image">
           <div class="details-wrapper">
-              <p class="sub-heading">Pre-alert</p>
-              <h3 class="main-heading">Process your package much more quickly</h3>
-              <p class="snippet">A pre-alert is a way for you to let us know you have a package coming. By doing this you give us the original tracking number and an invoice which then allows us to process your package much more quickly when it arrives in Miami</p>
+              <p class="text-blue mb-4 leading-none text-3xl">PRE-ALERT</p>
+              <h3 class="main-heading">Process your package much more smoothly</h3>
+              <p class="snippet">After placing an order using your FREE U.S. address, <a href="" class="text-blue">Submit Pre-alert</a> to let us know that your package is on its way to our Miami fulfillment center. This step is crucial in ensuring that packages are processed as smoothly and efficiently as possible.</p>
           </div>
       </div>
   
       <div class="row wrapper flex-row-reverse max-md:flex-col">
           <img src="@/assets/images/autopay2.png" alt="" class="image">
           <div class="details-wrapper">
-              <p class="sub-heading">Autopay</p>
-              <h3 class="main-heading">Speed delivery</h3>
-              <p class="snippet ">Autopay is a setting where you allow us to take payment from your credit card or Paypal account automatically when packages have been invoiced to you. This will ensure the speediest delivery of your package.</p>
+              <p class="text-blue mb-4 leading-none text-3xl">AUTOPAY</p>
+              <h3 class="main-heading">Less time at checkout, more time shopping online.</h3>
+              <p class="snippet ">Streamline your online shopping experience even more when you <a href="" class="text-blue">ENROLL IN AUTOPAY</a> at aeropost.com. Enabling the AutoPay function will allow us to automatically charge the cost of your package to your saved  credit card or debit card when it arrives at our Miami fulfillment center.</p>
           </div>
       </div>
     </div>

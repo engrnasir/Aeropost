@@ -1,6 +1,5 @@
 <template>
     <div>
-        <p class="text-bold text-blue">{{ info.effectiveDate }}</p>
 
         <InformationVue :list="info.list1" />
         
@@ -33,7 +32,6 @@ export default {
   data(){
     return{
         info:{
-            effectiveDate:'Effective February 15, 2014',
 
             list1:[
                 'We charge on weight NOT on size of your package.',

@@ -4,7 +4,7 @@
     <div class="menu-overlay" @click="setShowMenu(false)" v-show="showMenu"></div>
 
     <div class="bg-blue absolute max-md:fixed top-0 left-0 w-full h-[56px]"></div>
-    <img src="@/assets/images/bg.png" alt="" class="min-w-full absolute top-0 left-0 z-0">  
+    <Mapsvg class="min-w-full absolute top-0 left-0 z-0"/>
     <div class=" max-md:sticky top-0 left-0 z-50">
       <LogoNav class="relative z-40"></LogoNav>
     </div>
@@ -18,12 +18,14 @@
 import LogoNav from "./components/header/LogoNav.vue";
 import HeaderVue from "@/components/header/Header.vue"
 import FooterVue from "@/components/footer/Footer.vue"
+import Mapsvg from "./components/header/Mapsvg.vue";
 import { mapMutations, mapState } from 'vuex';
 export default{
   components:{
     LogoNav,
     HeaderVue,
-    FooterVue
+    FooterVue,
+    Mapsvg
   },
   computed:{
         ...mapState([

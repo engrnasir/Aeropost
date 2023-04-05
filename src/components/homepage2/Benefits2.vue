@@ -8,7 +8,7 @@
         </div>
       </div>
       
-      <h2 class="main-heading">Why work with Aeropost</h2>
+      <h2 class="main-heading">Why We’re The Total Package</h2>
       <div class="row cards">
           <div class="card" v-for="(item, i) in benefitItems" :key="i">
               <img :src="require(`@/assets/images/${item.img}`)" alt="" class="w-9 mb-5 max-md:mb-3">
@@ -17,7 +17,7 @@
           </div>
       </div>
       <div class="flex justify-center">
-          <router-link to="/benefits" class="btn border border-blue hover:bg-blue hover:text-white">More Benefits </router-link>
+          <router-link to="/benefits" class="more-btn">More Reasons To Shop </router-link>
       </div>
     </div>
   </template>
@@ -32,10 +32,10 @@
                   {img:'calculator.png', title:'Cost Calculator'},
               ],
               benefitItems:[
-                  {img:'fast.png',title:'Secure & Reliability',description:'Last-mile delivery with the highest flight frequency in the region.'},
+                  {img:'fast.png',title:'Security & Reliability',description:'Last-mile delivery with the highest flight frequency in the region.'},
                   {img:'secure.png',title:'Secure Transactions',description:'We use the latest technology to ensure that your transactions are secure.'},
-                  {img:'return.png',title:'Easy Returns',description:'If what you bought is not what you expected we make it simple to return it.'},
-                  {img:'track.png',title:'Track your packages',description:'Check your package status whenever you want.'},
+                  {img:'return.png',title:'Easy Returns',description:'If you are not satisfied with your purchase, we make it simple to return it.'},
+                  {img:'track.png',title:'Track Your Packages',description:'Receive up-to-date tracking updates for your packages.'},
               ]
           }
       }
@@ -77,6 +77,9 @@
                   max-lg:flex max-lg:flex-col max-lg:items-center max-lg:text-center 
               ;
           }
+      }
+      .more-btn{
+        @apply px-12 py-[10px] rounded-[40px] text-xl font-medium bg-yellow text-blue cursor-pointer transition-all duration-200 hover:bg-blue hover:text-white;
       }
   }
   

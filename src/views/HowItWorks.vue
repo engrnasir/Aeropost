@@ -39,7 +39,7 @@
                 <div class="details"> 
                     <p class="number">4</p>
                     <h3 class="title">Receive or Pick Up Package</h3>
-                    <p class="description">Pick up packages from your selected Aeropost store, smart parcel locker, or have your package delivered right to your door.</p>
+                    <p class="description">Pick up packages from your selected Aeropost store, smart parcel locker, or right from your front door!</p>
                 </div>
                 <img src="@/assets/images/img4.png" alt="" class="w-[360px] mr-16 max-[1100px]:w-[280px] max-[880px]:m-0">
             </div>
@@ -63,7 +63,7 @@
       return{
         title:'How It Works',
         utext:'',
-        description:`Shopping from the U.S. has never been easier with Aeropost! We've streamlined our courier process to ensure that you have the simplest and smoothest online shopping experience.`
+        description:`Shopping from the U.S. has never been easier than with Aeropost. We’ve streamline our courier process to ensure that you have the simplest and smoothest online shopping experience.`
       }
     }
     

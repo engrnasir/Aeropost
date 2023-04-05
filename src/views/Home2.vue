@@ -33,7 +33,7 @@ import { mapState } from 'vuex';
         return this.lang==='en'?' with Aeropost':' con Aeropost';
       },
       description(){
-        return this.lang==='en'?'The easiest way to shop from your favorite online stores.':'La forma más fácil de comprar en tus tiendas online favoritas.';
+        return this.lang==='en'?'The easiest way to shop from your favorite U.S. online stores':'La forma más fácil de comprar en tus tiendas online favoritas.';
       },
     }
     
