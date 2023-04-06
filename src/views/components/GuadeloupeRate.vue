@@ -20,6 +20,7 @@
 import tableVue from '@/components/rates/table.vue';
 import InformationVue from '@/components/rates/Information.vue';
 import WarrantyVue from '@/components/rates/Warranty.vue';
+import { mapState } from 'vuex';
 export default {
   name: 'GuadeloupeRate',
   components:{
@@ -29,7 +30,7 @@ export default {
   },
   data(){
     return{
-        info:{
+        en_info:{
             list1:[
                 'We charge on weight NOT on size of your package.',
                 'You can return your junk mail and we will credit your account.',
@@ -59,7 +60,44 @@ export default {
                 'Shipments that require any special handling, are subject to additional charges. Please quote with local office.',
                 'Additional charges apply to shipments measuring over 1 meter on any side. Please quote with the local office.',
             ],
-        }
+        },
+        es_info:{
+            list1:[
+                'Cobramos por el peso, NO por el tamaño de su paquete.',
+                'Puede devolver su correo no deseado y le acreditaremos su cuenta.',
+                'Puede rastrear sus paquetes en nuestro sitio en www.aeropost.com.',
+            ],
+
+            packages:[
+                ['Paquetes','Tarifas(USD)'],
+                ['0.5 lb','USD $6.95'],
+                ['1 libra','USD $9.00'],
+                ['libras adicionales','$4,00'],
+            ],
+            
+            OtherCharges:[
+                ['Otros cargos',''],
+                ['Tarifa de manejo (cargo local)','Cotización con agente local'],
+                ['Derechos e impuestos','Derechos e impuestos aplicables'],
+                ['Entrega a domicilio (cargo local)','Cotización con agente local'],			
+            ],
+            table1:[
+                ['Envíos restringidos','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Haga clic aquí</a>'],
+                ['SED','USD $25.00'],
+            ],
+            
+            list2:[
+                'Todos los documentos con un número de seguimiento se procesarán como paquetes.',
+                'Los envíos que requieran algún manejo especial, están sujetos a cargos adicionales. Cotice con la oficina local.',
+                'Se aplican cargos adicionales a los envíos que miden más de 1 metro en cualquier lado. Cotice con la oficina local.',
+            ],
+        },
+    }
+  },
+  computed:{
+    ...mapState(['lang']),
+    info(){
+        return this.lang==='en'?this.en_info:this.es_info;
     }
   }
   

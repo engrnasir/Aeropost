@@ -3,18 +3,20 @@
         
         <InformationVue :list="info.list1" />
         
-        <h2 class="main-heading">AIR</h2>
+        <h2 class="main-heading">{{ lang==='en'?'AIR':'AIRE' }}</h2>
         <tableVue :list="info.packages" :hasHeader="true"/>
         
         <tableVue :list="info.otherCharges" :hasHeader="true"/>
 
-         <p class="text-bold text-blue mb-4">*This handling fee charge applies to all transactions, both when customs clearance is provided by Aeropost or the customer elects to pick up Customs document.</p>
+         <p class="text-bold text-blue mb-4" v-if="lang==='en'">*This handling fee charge applies to all transactions, both when customs clearance is provided by Aeropost or the customer elects to pick up Customs document.</p>
+         <p class="text-bold text-blue mb-4" v-else>*Este cargo por tarifa de manejo se aplica a todas las transacciones, tanto cuando Aeropost proporciona el despacho de aduana como cuando el cliente elige recoger el documento de Aduana.</p>
         
         <InformationVue :list="info.list2" />
 
         <tableVue :list="info.maritime" :hasHeader="true"/>     
         
-        <p class="text-bold text-blue mb-4"><u>Local documentation charges</u> from vessel company landing agent may apply.</p>        
+        <p class="text-bold text-blue mb-4" v-if="lang==='en'"><u>Local documentation charges</u> from vessel company landing agent may apply.</p>        
+        <p class="text-bold text-blue mb-4" v-else>Se pueden aplicar <u>cargos por documentación local</u> del agente de desembarque de la compañía naviera.</p>        
 
         <WarrantyVue/>
 
@@ -26,6 +28,7 @@
 import tableVue from '@/components/rates/table.vue';
 import InformationVue from '@/components/rates/Information.vue';
 import WarrantyVue from '@/components/rates/Warranty.vue';
+import { mapState } from 'vuex';
 export default {
   name: 'SaintVincentRate',
   components:{
@@ -35,7 +38,7 @@ export default {
   },
   data(){
     return{
-        info:{
+        en_info:{
             list1:[
                 'We charge on weight NOT on size of your package.',
                 'You can track your packages on our site at www.aeropost.com.'
@@ -97,7 +100,76 @@ export default {
                 ["For large cargo to client's location",'USD $200.00'],
                 ['Other type of cargo','Request quote'],
             ]
-        }
+        },
+        es_info:{
+            list1:[
+                'Cobramos por el peso, NO por el tamaño de su paquete.',
+                'Puede rastrear sus paquetes en nuestro sitio en www.aeropost.com.'
+            ],
+
+
+            packages:[
+                ['Paquetes','Tarifas(USD)'],
+                ['1/2 libra','USD $5.50'],
+                ['1 libra', 'USD $6.60'],
+                ['2 libras','USD $11.00'],
+                ['lb adicional (hasta 200 lb)','USD $3,85'],
+                ['200+ lb','USD $3.05 '],
+            ],            
+            otherCharges:[
+                ['Otros cargos',''],
+                ['Manejo de Aduanas','USD $3.50*'],
+                ['Envíos restringidos','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Haga clic aquí</a>'],
+            ],
+            
+            list2:[
+                'Todos los documentos de seguridad con un número de seguimiento serán tratados como paquetes.',
+                'Los envíos que requieren algún manejo especial están sujetos a cargos adicionales.',
+                'Los impuestos del paquete se cobrarán en el momento de la entrega.',
+            ],
+ 
+            maritime:[
+                 ['MARÍTIMO',''],
+                 ['<b>Personas físicas y jurídicas</b>',''],
+                 ['Flete','USD $7.25 por pie cúbico'],
+                 ['Cobro mínimo de factura:','USD $25.00'],
+                 ['Tasa de tramitación',''],
+                 ['De 1 a 40 pies cúbicos','USD $10.00'],
+                 ['Desde 41 pies cúbicos en adelante','USD $25.00'],
+
+                 ['<b>Corporativo: 40 pies cúbicos y más</b>',''],
+                 ['Este descuento de tarifa es bajo pedido, tiene un cargo mínimo en factura por mes',''],
+                 ['Flete','USD $6.53'],
+                 ['Cargo mínimo - 40 pies cúbicos','USD $260.00'],
+                 ['Tasa de tramitación',''],
+                 ['De 1 a 40 pies cúbicos','USD $25.00'],
+                 ['Desde 40 pies cúbicos en adelante','USD $50.00'],
+                 ['Agencia Aduanal (cuando se requiera)','USD $50.00'],
+
+                 ['<b>Corporativo - 80 pies cúbicos. y arriba</b>',''],
+                 ['Este descuento en la tarifa es a pedido, se requiere un cargo mínimo de factura por mes',''],
+                 ['Flete','USD $5.80 por pie cúbico'],
+                 ['Cargo mínimo - 80 pies cúbicos','USD $410.00'],
+                 ['Tarifa de manejo', '80 pies cúbicos en adelante USD $50.00'],
+                 ['Agencia aduanal (cuando se requiera)','USD $100.00'],
+                 ['Otros cargos:',''],
+                 ['Seguro ',''],
+                 ['Por cada USD $100 de valor declarado','USD $1.50'],
+                 ['USD $5.00 mín. cuando no hay valor declarado. Cubre un máx. de USD $350.00',''],
+                 ['SED por valor declarado de USD $2500 y más','USD $25.00'],
+                 ['HAZ','USD $100.00 por ONU'],
+                 ['Entrega',''],
+                 ["Para carga pequeña a domicilio del cliente",'USD $65.00'],
+                 ["Para carga grande a la ubicación del cliente", 'USD $ 200.00'],
+                 ['Otro tipo de carga','Solicitar cotización'],
+             ]
+        },
+    }
+  },
+  computed:{
+    ...mapState(['lang']),
+    info(){
+        return this.lang==='en'?this.en_info:this.es_info;
     }
   }
   

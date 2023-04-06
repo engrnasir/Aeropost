@@ -24,6 +24,7 @@
 import tableVue from '@/components/rates/table.vue';
 import InformationVue from '@/components/rates/Information.vue';
 import WarrantyVue from '@/components/rates/Warranty.vue';
+import { mapState } from 'vuex';
 export default {
   name: 'BarbadosRate',
   components:{
@@ -33,7 +34,7 @@ export default {
   },
   data(){
     return{
-        info:{
+        en_info:{
             list1:[
                 'We charge on weight NOT on size of your package.',
                 'You can track your packages on our site at www.aeropost.com',
@@ -69,8 +70,49 @@ export default {
                 ],
                 tableFooter:'Warehouse storage for package not having a proper invoice will apply 5 business days after receiving status alert “In-Customs Needs Documentation” - USD$10.00 + VAT per day'
             },
-        }
+        },
+        es_info:{
+            list1:[
+                'Cobramos por el peso, NO por el tamaño de su paquete.',
+                'Puede rastrear sus paquetes en nuestro sitio en www.aeropost.com',
+            ],
+
+            packages:[
+                ['Paquetes','Tarifas(USD)'],
+                ['0.5 lb','USD $6.95'],
+                ['1 libra','USD $9.00'],
+                ['2 libras','USD $14.00'],
+                ['3 libras','USD $19.00'],
+                ['libras adicionales','USD $5.00'],
+            ],
+            
+            OtherCharges:[
+                ['Otros cargos',''],
+                ['Envíos restringidos','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Haga clic aquí</a>'],
+                ['Gestión aduanera','Ver Gestión personalizada para más detalles'],
+                ["Tarifa de almacenamiento en mostrador si el paquete no se recoge dentro de los próximos 5 días hábiles después de 'Listo en mostrador", "USD $5.00 por día"],
+	        ],
+
+            list2:[
+                'Los envíos que requieren algún manejo especial están sujetos a cargos adicionales.',
+             ],
+
+            customHandling:{
+                title:'Manejo de Aduana',
+                description:'Todos los paquetes que ingresan al país deben pasar por la aduana y están sujetos al pago de impuestos.',
+                table:[
+                    ['Tarifa de gestión aduanera sobre entradas personales','USD $10,00'],
+                    ['Tarifa de gestión aduanera sobre entradas comerciales','USD $20,00'],
+                    ['Tarifa del gobierno de Barbados por entrada','USD $5.00'],
+                ],
+                tableFooter:'El almacenamiento en almacén para el paquete que no tenga una factura adecuada se aplicará 5 días hábiles después de recibir la alerta de estado "Documentación de necesidades en aduana" - USD $ 10.00 + IVA por día'
+            },
+        },
     }
+  },
+  computed:{
+    ...mapState(['lang']),
+    info(){return this.lang==='en'? this.en_info:this.es_info}
   }
   
 }

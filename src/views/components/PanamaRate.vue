@@ -28,6 +28,7 @@
 <script>
 import tableVue from '@/components/rates/table.vue';
 import InformationVue from '@/components/rates/Information.vue';
+import { mapState } from 'vuex';
 export default {
   name: 'PanamRate',
   components:{
@@ -36,7 +37,7 @@ export default {
   },
   data(){
     return{
-        info:{
+        en_info:{
             effectiveDate:'Effective as of March 1, 2023.',
             list1:[
                 'We charge on weight NOT on size of your package.',
@@ -107,7 +108,85 @@ export default {
                 '* Packages with a CIF value below USD $100.00, consigned to an individual, are exempt from import taxes. ',
                 '* Packages that remain in the customs area (airport warehouse) for more than two weeks will be valued by local custom.'                
             ],
-        }
+        },
+        es_info:{
+            effectiveDate:'Efectivo a partir del 1 de marzo de 2023.',
+            list1:[
+                'Cobramos por el peso, NO por el tamaño de su paquete.',
+                'Puede devolver su correo no deseado y le acreditaremos su cuenta.',
+                'Puede rastrear sus paquetes en nuestro sitio en www.aeropost.com.',
+            ],
+
+            packages:[
+                ['Paquetes',''],
+                ['Membresía Anual','GRATIS'],
+                ['Mínimo mensual','Ninguno'],
+                ['Envío Miami-Panamá','USD $3.00 por lb'],
+            ],
+            
+            OtherCharges:[
+                ['Otros cargos',''],
+                ['Entrega','USD $3.00 por paquete'],
+                ['Gestión aduanera','Ver Gestión personalizada para más detalles'],
+                ['Envíos restringidos','<a href="" class="text-blue">Haga clic aquí</a>'],
+                ['Envíos múltiples (pieza adicional)','USD $2.00 por pieza'],
+            ],
+            list2:[
+                'Las tarifas no incluyen el manejo de aduanas (derechos y tasas de almacenamiento).',
+                'Todos los documentos de seguridad con un número de seguimiento serán tratados como paquetes'
+            ],
+
+
+            warrantyTable:{
+                title:'Programa de Garantía y Servicio de Devolución',
+                rateList:[
+                    ['Ruptura de tasa (valor declarado)','Tasa'],
+                    ['1 dólar estadounidense - 99.99 dólares estadounidenses', '1.90 dólares estadounidenses'],
+                    ['100 USD - 159.99 USD', '3.90 USD'],
+                    ['USD 160 - USD 199.99', 'USD 3.95'],
+                    ['US$200 - US$299.99','US$5.95'],
+                    ['US$300 - US$399.99','US$7.95'],
+                    ['US$400 - US$499.99','US$9.75'],
+                    ['500 USD - 599.99 USD', '11.50 USD'],
+                    ['600 dólares estadounidenses - 699.99 dólares estadounidenses', '13.25 dólares estadounidenses'],
+                    ['US$700 - US$799.99','US$14.95'],
+                    ['US$800 - US$899.99','US$16.75'],
+                    ['US$900 - US$999.99','US$18.50'],
+                    ['US$1000 - US$1099.99','US$20.25'],
+                    ['US$1100 - US$1199.99','US$21.95'],
+                    ['US$1200 - US$1299.99','US$23.75'],
+                    ['US$1300 - US$1399.99','US$25.50'],
+                    ['US$1400 - US$1499.99','US$27.25'],
+                    ['Igual o mayor a US$1500', '2.5% del Valor Declarado']
+                ]
+            },
+            customHandling:{
+                title:'Manejo de Aduana',
+                description:"Todos los paquetes que ingresan al país deben pasar por la aduana y están sujetos a impuestos. Las tarifas de manejo de aduanas se establecen en función del valor CIF del paquete. Para calcular los cargos de impuestos de un paquete, use nuestro Efectivo a partir del 1 de marzo de 2023",
+            },
+            consolidatedPolicy:{
+                title:'Política consolidada',
+                table1:[
+                    ["Valor CIF del paquete", 'Tarifa'],
+                    ['Hasta USD $99.99','USD $1.00'],
+                    ['USD $100.00 - USD $500.00','USD $2.00'],
+                    ['USD $500.01 - USD $1000.00','USD $3.50'],
+                    ['USD $1,000.00 y superior','USD $5.00'],
+                ],
+                table1Footer:'* No incluye ITBM',
+            },
+            list3:[
+                '* Todos los paquetes con un valor CIF de hasta USD $ 2,000 pagan al gobierno una tarifa de USD $ 100 además de los impuestos de importación. ',
+                '* Los bultos con valor CIF inferior a USD $100.00, consignados a persona física, están exentos de impuestos de importación. ',
+                '* Los bultos que permanezcan en la zona aduanera (bodega aeroportuaria) por más de dos semanas serán valorados por la aduana local.'
+            ],
+        },
+    }
+  },
+  computed:{
+    ...mapState(['lang']),
+    info(){
+        return this.lang==='en'?this.en_info:this.es_info;
     }
   }
   

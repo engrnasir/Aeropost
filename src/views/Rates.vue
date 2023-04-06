@@ -1,12 +1,12 @@
 <template>
     <div class="min-w-full">
-      <HeroTitleVue :title="title" :description="description"></HeroTitleVue>
+      <HeroTitleVue :title="hero.title" :description="hero.description"></HeroTitleVue>
 
       <div class="container">
         <router-view></router-view>
       </div>
 
-      <FooterTitle title="We make shopping simple." :bgBlue='true'></FooterTitle>
+      <FooterTitle :title="footerTitle" :bgBlue='true'></FooterTitle>
     </div>
   </template>
 
@@ -23,19 +23,28 @@ import { mapState } from 'vuex';
     },
     data(){
       return{
-        title:'Rates',
-        description:'Your Miami Address service allows you to shop from your favorite U.S.websites and receive or pick up your packages at a local store, locker or get it delivered right to your door..',
+        en_hero:{
+          title:'Rates',
+          description:'Your Miami Address service allows you to shop from your favorite U.S.websites and receive or pick up your packages at a local store, locker or get it delivered right to your door..',
+        },
+        es_hero:{
+          title:'Tarifas',
+          description:'Nuestro servicio de dirección de Miami te permite comprar en tus sitios web favoritos de EE. UU. y recibir tus compras en tu hogar, en el trabajo o en una tienda local.',
+        },
       }
     },
     computed:{
       ...mapState([
-        'selectedCountry'
-      ])
-    },
-    mounted(){
-      this.$router.push(`/rates/${this.selectedCountry.id}`)
-    }
-    
+        'selectedCountry',
+        'lang'
+      ]),
+      hero(){
+        return this.lang==='en'?this.en_hero:this.es_hero;
+      },
+      footerTitle(){
+        return this.lang==='en'?'We make shopping simple.':'Hacemos que tus compras sean simples.';
+      }
+    },    
   }
   </script>
   <style lang="scss" scoped>

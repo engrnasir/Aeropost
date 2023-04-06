@@ -20,6 +20,7 @@
 import tableVue from '@/components/rates/table.vue';
 import InformationVue from '@/components/rates/Information.vue';
 import WarrantyVue from '@/components/rates/Warranty.vue';
+import { mapState } from 'vuex';
 export default {
   name: 'CaymanIslandRate',
   components:{
@@ -29,7 +30,7 @@ export default {
   },
   data(){
     return{
-        info:{
+        en_info:{
             effectiveDate:'Effective February, 2022.',
             list1:[
                 'We charge on weight NOT on size of your package.',
@@ -47,7 +48,6 @@ export default {
                 ['Addtional lb after 30 lb','$3.85'],
             ],
             
-            // <a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Click here</a>
             OtherCharges:[
                 ['Other charges',''],
                 ['Handling Fee and processing fee','$7.00'],
@@ -90,9 +90,74 @@ export default {
                 'We are always available through our email <a href="mailto:serviceGCM@aeropost.com" class="text-blue">serviceGCM@aeropost.com</a>, Chatlive at our website, or calling us free at <span class="text-blue">1 (866) 297-1191</span>',
             ],
 
-        }
+        },
+        es_info:{
+            effectiveDate:'Efectivo febrero de 2022.',
+            list1:[
+                'Cobramos por el peso, NO por el tamaño de su paquete.',
+                'Puede devolver su correo no deseado y le acreditaremos su cuenta.',
+                'Puede rastrear sus paquetes en nuestro sitio en www.aeropost.com.',
+            ],
+
+            packages:[
+                ['Paquetes','Tarifas(USD)'],
+                ['0,50 libras', '$7,25'],
+                ['1 libra', '$8.95'],
+                ['2 libras', '$13.50'],
+                ['3 libras', '$18.30'],
+                ['lb adicional hasta 30 lb', '$4.95'],
+                ['lb adicional después de 30 lb', '$3.85'],
+            ],
+            
+            OtherCharges:[
+                 ['Otros cargos',''],
+                 ['Tarifa de manejo y tarifa de procesamiento','$7.00'],
+                 ['Impuestos por paquete/Manejo de aduanas, por paquete','$12.20'],
+                 ['',''],
+                 ['Solicitudes de consolidación',''],
+                 ['Segundo paquete en adelante','$3.50'],
+                 ['Impuestos por paquete/Manejo de aduanas, por paquete','$7.32'],
+                 ['',''],
+                 ['Envíos restringidos','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Haga clic aquí</a>'],
+                 ['',''],
+                 ['Transporte marítimo (CID)',''],
+                 ['Cargo mínimo de flete marítimo: 1 CuFt','$10'],
+                 ['Cargo mínimo de flete marítimo: 2-3 CuFt','$25'],
+                 ['4 pies cúbicos y más, por pie cúbico', '$7.50'],
+                 ['',''],
+                 ['Tarifa de manejo y procesamiento 1 - 50 CuFt','$10'],
+                 ['Tarifa de manejo y procesamiento 51 - 100 CuF','$25'],
+                 ['Tarifa de manejo y procesamiento 101 - 250 CuFt','$50'],
+                 ['Tarifa de manejo y procesamiento 251 - 500 CuFt','$100'],
+                 ['Más de 500 pies cúbicos','Cotización'],
+                 ['',''],
+                 ['Impuestos por paquete / Manejo de aduanas, por paquete','$6'],
+                 ['Consolidación, segundo paquete en adelante','$3.50'],
+                 ['Conocimiento de Embarque Único','$75'],
+                 ['SED','$25'],
+                 ['Agencia aduanal, mayor a 500 CuFt','$150'],
+                 ['Entrega','Cotización'],
+             ],
+
+            title2:'Otra información importante:',
+            list2:[
+                'Islas Caimán aplica un impuesto de embalaje del gobierno de $ 5,00 CI y una tarifa de almacenamiento del gobierno de $ 5,00 CI por envío.',
+                'Los aranceles se aplican a todas las importaciones.',
+                'Entrega en casa/oficina: $5.00 CI por paquete, cargo contra entrega (dentro de Georgetown, Industrial Park y Seven Mile Beach). Otras áreas, favor cotizar con Proveedor Local.',
+                'Los envíos que requieren algún manejo especial están sujetos a cargos adicionales.',
+                'Cobramos por el peso, NO por el tamaño de su paquete. Límite de 31 pulgadas por cualquiera de sus lados.',
+                'Puede devolver su correo no deseado y le acreditaremos su cuenta.',
+                'Puede rastrear sus paquetes en nuestro sitio en <a href="https://aeropost.com/" class="text-blue">www.aeropost.com</a>',
+                'Siempre estamos disponibles a través de nuestro correo electrónico <a href="mailto:serviceGCM@aeropost.com" class="text-blue">serviceGCM@aeropost.com</a>, chat en vivo en nuestro sitio web o llamándonos gratis a <span class="text-blue">1 (866) 297-1191</span>',
+            ],
+
+        },
     }
-  }
+  },
+  computed:{
+        ...mapState(['lang']),
+        info(){return this.lang==='en'? this.en_info:this.es_info}
+    }
   
 }
 </script>

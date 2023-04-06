@@ -9,11 +9,6 @@
   <script>
   export default {
       props:['list'],
-  
-      computed:{
-  
-      }
-  
   }
   </script>
   

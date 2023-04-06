@@ -10,11 +10,6 @@
 <script>
 export default {
   props:['title', 'list'],
-  data(){
-    return{
-     
-    }
-  },
 }
 </script>
 
