@@ -3,25 +3,61 @@
       <div class="row wrapper max-md:flex-col">
           <img src="@/assets/images/lady-prealert.png" alt="" class="image">
           <div class="details-wrapper">
-              <p class="text-blue mb-4 leading-none text-3xl">PRE-ALERT</p>
-              <h3 class="main-heading">Process your package much more smoothly</h3>
-              <p class="snippet">After placing an order using your FREE U.S. address, <a href="" class="text-blue">Submit Pre-alert</a> to let us know that your package is on its way to our Miami fulfillment center. This step is crucial in ensuring that packages are processed as smoothly and efficiently as possible.</p>
+              <p class="text-blue mb-4 leading-none text-3xl uppercase">{{ prealert.title }}</p>
+              <h3 class="main-heading">{{ prealert.description }}</h3>
+              <p class="snippet" v-html="prealert.details"></p>
           </div>
       </div>
   
       <div class="row wrapper flex-row-reverse max-md:flex-col">
           <img src="@/assets/images/autopay2.png" alt="" class="image">
           <div class="details-wrapper">
-              <p class="text-blue mb-4 leading-none text-3xl">AUTOPAY</p>
-              <h3 class="main-heading">Less time at checkout, more time shopping online.</h3>
-              <p class="snippet ">Streamline your online shopping experience even more when you <a href="" class="text-blue">ENROLL IN AUTOPAY</a> at aeropost.com. Enabling the AutoPay function will allow us to automatically charge the cost of your package to your saved  credit card or debit card when it arrives at our Miami fulfillment center.</p>
+              <p class="text-blue mb-4 leading-none text-3xl uppercase">{{autopay.title}}</p>
+              <h3 class="main-heading">{{autopay.description}}</h3>
+              <p class="snippet " v-html="autopay.details"></p>
           </div>
       </div>
     </div>
   </template>
   
   <script>
+import { mapState } from 'vuex'
   export default {
+    data(){
+      return{
+        en_prealert:{
+          title:'PRE-ALERT',
+          description:'Process your package much more smoothly',
+          details:'After placing an order using your FREE U.S. address, <a href="" class="text-blue">Submit Pre-alert</a> to let us know that your package is on its way to our Miami fulfillment center. This step is crucial in ensuring that packages are processed as smoothly and efficiently as possible.'
+        },
+        es_prealert:{
+          title:'Pre-Alerta',
+          description:'Procese su paquete de forma mucho más fluida',
+          details:'Después de realizar un pedido con su dirección GRATUITA de EE. UU., <a href="" class="text-blue">Enviar alerta previa</a> para informarnos que su paquete está en camino a nuestro centro logístico de Miami. Este paso es crucial para garantizar que los paquetes se procesen de la manera más fluida y eficiente posible.'
+        },
+        
+        en_autopay:{
+          title:'AUTOPAY',
+          description:'Less time at checkout, more time shopping online.',
+          details:'Streamline your online shopping experience even more when you <a href="" class="text-blue">ENROLL IN AUTOPAY</a> at aeropost.com. Enabling the AutoPay function will allow us to automatically charge the cost of your package to your saved  credit card or debit card when it arrives at our Miami fulfillment center.'
+        },
+        es_autopay:{
+          title:'AUTOPAGO',
+          description:'Menos tiempo para pagar, más tiempo para comprar en línea.',
+          details:'Optimice su experiencia de compra en línea aún más cuando <a href="" class="text-blue">REGÍSTRESE EN AUTOPAY</a> en aeropost.com. Habilitar la función de pago automático nos permitirá cargar automáticamente el costo de su paquete a su tarjeta de crédito o débito guardada cuando llegue a nuestro centro logístico de Miami.'
+        },
+
+      }
+    },
+    computed:{
+      ...mapState(['lang']),
+      prealert(){
+        return this.lang==='en'?this.en_prealert:this.es_prealert;
+      },
+      autopay(){
+        return this.lang==='en'?this.en_autopay:this.es_autopay;
+      }
+    }
   
   }
   </script>

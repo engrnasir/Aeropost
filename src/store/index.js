@@ -16,7 +16,7 @@ export default new Vuex.Store({
   },
   mutations: {
     setLang:(state, val)=>{
-      state.lang = 'en'
+      state.lang = val
     },
 
     setShowCountries:(state,val)=>{

@@ -4,7 +4,7 @@
     <div class="menu-overlay" @click="setShowMenu(false)" v-show="showMenu"></div>
 
     <div class="bg-blue absolute max-md:fixed top-0 left-0 w-full h-[56px]"></div>
-    <Mapsvg class="min-w-full absolute top-0 left-0 z-0"/>
+    <Mapsvg class="max-w-full -mt-12 min-w-full absolute top-0 left-0 z-0"/>
     <div class=" max-md:sticky top-0 left-0 z-50">
       <LogoNav class="relative z-40"></LogoNav>
     </div>

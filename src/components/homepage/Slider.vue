@@ -1,6 +1,8 @@
 <template>
   <div class="bg-yellow py-14 relative">
-    <h2 class="text-blue font-medium px-5 text-4xl mb-12 text-center">What Our Customers Are Saying</h2>
+    <h2 class="text-blue font-medium px-5 text-4xl mb-12 text-center">
+       {{ this.lang==='en'?'What Our Customers Are Saying' :'Lo que nuestros clientes están diciendo'}}
+    </h2>
     <div class="row">
         <div class="slider py-4 pb-12">
             <div class="min-w-full flex px-5` grid grid-cols-2 justify-items-center gap-x-3 max-md:grid-cols-1" v-for="(quote, i) in quotes" :key="i">
@@ -32,11 +34,12 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
 export default {
     data(){
         return{
             currentSlide : 0,
-            quotes:[
+            en_quotes:[
                 [
                     {
                         heading: 'Always reliable and efficient!', 
@@ -75,7 +78,51 @@ export default {
                         author:'Julian Jones'
                     },
                 ]
+            ],
+            es_quotes:[
+                [
+                    {
+                        heading: 'Siempre un gran servicio', 
+                        description:'El servicio es una excelente experiencia; A tiempo, fácil de rastrear y súper accesible. Tienen un buen funcionamiento siempre.',
+                        author:'C. Small.'
+                    },
+                    {
+                        heading: 'Excelente servicio al cliente', 
+                        description:'He estado usando Aeropost durante años y lo que los hace geniales es el excelente servicio al cliente, tanto localmente como a través del chat en línea. Me encanta su programa de cupones, la capacidad de tener precios con todo incluido de sus artículos y seguimiento. ¡La velocidad de envío también es excelente y la política de devolución fácil! ¡No cambiaría nada!”',
+                        author:'Nicolás Look.'
+                    },
+                ],
+                [
+                    {
+                        heading: 'Siempre un gran servicio', 
+                        description:'El servicio es una excelente experiencia; A tiempo, fácil de rastrear y súper accesible. Tienen un buen funcionamiento siempre.',
+                        author:'C. Small.'
+                    },
+                    {
+                        heading: 'Excelente servicio al cliente', 
+                        description:'He estado usando Aeropost durante años y lo que los hace geniales es el excelente servicio al cliente, tanto localmente como a través del chat en línea. Me encanta su programa de cupones, la capacidad de tener precios con todo incluido de sus artículos y seguimiento. ¡La velocidad de envío también es excelente y la política de devolución fácil! ¡No cambiaría nada!”',
+                        author:'Nicolás Look.'
+                    },
+                ],
+                [
+                    {
+                        heading: 'Siempre un gran servicio', 
+                        description:'El servicio es una excelente experiencia; A tiempo, fácil de rastrear y súper accesible. Tienen un buen funcionamiento siempre.',
+                        author:'C. Small.'
+                    },
+                    {
+                        heading: 'Excelente servicio al cliente', 
+                        description:'He estado usando Aeropost durante años y lo que los hace geniales es el excelente servicio al cliente, tanto localmente como a través del chat en línea. Me encanta su programa de cupones, la capacidad de tener precios con todo incluido de sus artículos y seguimiento. ¡La velocidad de envío también es excelente y la política de devolución fácil! ¡No cambiaría nada!”',
+                        author:'Nicolás Look.'
+                    },
+                ],
             ]
+        }
+    },
+    computed:{
+        ...mapState(['lang']),
+        quotes(){
+            return this.lang==='en'? this.en_quotes:this.es_quotes;
         }
     },
     methods:{

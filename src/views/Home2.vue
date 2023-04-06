@@ -4,7 +4,7 @@
       <Benefits></Benefits>
       <DetailsVue></DetailsVue>
       <SliderVue></SliderVue>
-      <FooterTitle title="We make shopping simple." :bgBlue='true'></FooterTitle>
+      <FooterTitle :title="footerTitle" :bgBlue='true'></FooterTitle>
     </div>
   </template>
   
@@ -35,6 +35,9 @@ import { mapState } from 'vuex';
       description(){
         return this.lang==='en'?'The easiest way to shop from your favorite U.S. online stores':'La forma más fácil de comprar en tus tiendas online favoritas.';
       },
+      footerTitle(){
+        return this.lang==='en'?'We make shopping simple.':'Hacemos que tus compras sean simples.';
+      }
     }
     
   }

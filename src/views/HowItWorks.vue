@@ -1,14 +1,14 @@
 <template>
     <div class="min-w-full">
-      <HeroTitleVue :title="title" :utext="utext" :description="description"></HeroTitleVue>
+      <HeroTitleVue :title="hero.title" :utext="hero.utext" :description="hero.description"></HeroTitleVue>
         <div class="w-[1020px] mx-auto pb-24 max-[1100px]:w-[780px] max-[880px]:w-full">
             <!-- Item 1 -->
             <div class="item max-[1100px]:mb-5">
                 <img src="@/assets/images/line1.png" alt="" class="line1">
                 <div class="details mr-5"> 
                     <p class="number">1</p>
-                    <h3 class="title">Register for a FREE U.S. Address</h3>
-                    <p class="description">Create an Aeropost account to get  a FREE U.S. address.</p>
+                    <h3 class="title">{{ step1.title }}</h3>
+                    <p class="description">{{ step1.description }}</p>
                 </div>
                 <img src="@/assets/images/img1.png" alt="" class="w-[454.56px] max-[1100px]:w-[350px] max-[880px]:m-0">
             </div>
@@ -17,8 +17,8 @@
                 <img src="@/assets/images/line2.png" alt="" class="line2">
                 <div class="details"> 
                     <p class="number">2</p>
-                    <h3 class="title">Shop Online</h3>
-                    <p class="description">Shop your favorite online stores using the FREE U.S. address provided.</p>
+                    <h3 class="title">{{ step2.title }}</h3>
+                    <p class="description">{{ step2.description }}</p>
                 </div>
                 <img src="@/assets/images/img2.png" alt="" class="w-[360px] mr-24 max-[1100px]:w-[280px] max-[880px]:m-0">
             </div>
@@ -28,8 +28,8 @@
                 <img src="@/assets/images/line3.png" alt="" class="line3">
                 <div class="details"> 
                     <p class="number">3</p>
-                    <h3 class="title">Submit a Pre-alert</h3>
-                    <p class="description">Let us know when your package is on its way to our Miami fulfillment center.</p>
+                    <h3 class="title">{{ step3.title }}</h3>
+                    <p class="description">{{ step3.description }}</p>
                 </div>
                 <img src="@/assets/images/img3.png" alt="" class="w-[360px] ml-12 max-[1100px]:w-[280px] max-[880px]:m-0">
             </div>
@@ -38,13 +38,13 @@
             <div class=" item flex-row-reverse relative">
                 <div class="details"> 
                     <p class="number">4</p>
-                    <h3 class="title">Receive or Pick Up Package</h3>
-                    <p class="description">Pick up packages from your selected Aeropost store, smart parcel locker, or right from your front door!</p>
+                    <h3 class="title">{{ step4.title }}</h3>
+                    <p class="description">{{ step4.description }}</p>
                 </div>
                 <img src="@/assets/images/img4.png" alt="" class="w-[360px] mr-16 max-[1100px]:w-[280px] max-[880px]:m-0">
             </div>
         </div>
-      <FooterTitle title="We make shopping simple." :bgBlue='true'></FooterTitle>
+      <FooterTitle :title="footerTitle" :bgBlue='true'></FooterTitle>
     </div>
   </template>
   
@@ -52,19 +52,73 @@
   import HeroTitleVue from '@/components/header/HeroTitle.vue';
   
   import FooterTitle from '@/components/footer/FooterTitle.vue';
+import { mapState } from 'vuex';
   export default {
     name: 'HomeView',
     components:{
       HeroTitleVue,
-
       FooterTitle,
     },
     data(){
       return{
-        title:'How It Works',
-        utext:'',
-        description:`Shopping from the U.S. has never been easier than with Aeropost. We’ve streamline our courier process to ensure that you have the simplest and smoothest online shopping experience.`
+        en_hero:{
+          title:'How It Works',
+          utext:'',
+          description:`Shopping from the U.S. has never been easier than with Aeropost. We’ve streamline our courier process to ensure that you have the simplest and smoothest online shopping experience.`,
+        },
+        es_hero:{
+          title:'Cómo funciona',
+          utext:'',
+          description:'Comprar desde EE. UU. nunca ha sido tan fácil como con Aeropost. Hemos simplificado nuestro proceso de mensajería para garantizar que tenga la experiencia de compra en línea más simple y fluida.'
+        },
+
+        en_step1:{
+          title:'Register for a FREE U.S. Address',
+          description:' Create an Aeropost account to get  a FREE U.S. address.'
+        },
+        es_step1:{
+          title:'Regístrese para obtener una dirección GRATUITA en EE. UU.',
+          description:'Cree una cuenta de Aeropost para obtener una dirección de EE. UU. GRATIS.'
+        },
+
+        en_step2:{
+          title:'Shop Online',
+          description:'Shop your favorite online stores using the FREE U.S. address provided.'
+        },
+        es_step2:{
+          title:'Tienda en linea',
+          description:'Compre en sus tiendas en línea favoritas usando la dirección GRATUITA de EE. UU. proporcionada.'
+        },
+        
+        en_step3:{
+          title:'Submit a Pre-alert',
+          description:'Let us know when your package is on its way to our Miami fulfillment center.'
+        },
+        es_step3:{
+          title:'Enviar una alerta previa',
+          description:'Infórmenos cuando su paquete esté en camino a nuestro centro logístico de Miami.'
+        },
+
+        en_step4:{
+          title:'Receive or Pick Up Package',
+          description:'Pick up packages from your selected Aeropost store, smart parcel locker, or right from your front door!'
+        },
+        es_step4:{
+          title:'Recibir o recoger paquete',
+          description:'¡Recoge paquetes de tu tienda Aeropost seleccionada, casillero inteligente para paquetes o directamente desde la puerta de tu casa!'
+        },
+
       }
+    },
+    computed:{
+      ...mapState(['lang']),
+      hero(){return this.lang==='en'?this.en_hero:this.es_hero;},
+      step1(){return this.lang==='en'?this.en_step1:this.es_step1;},
+      step2(){return this.lang==='en'?this.en_step2:this.es_step2;},
+      step3(){return this.lang==='en'?this.en_step3:this.es_step3;},
+      step4(){return this.lang==='en'?this.en_step4:this.es_step4;},
+      footerTitle(){ return this.lang==='en'?'We make shopping simple.':'Hacemos que tus compras sean simples.'; }
+
     }
     
   }

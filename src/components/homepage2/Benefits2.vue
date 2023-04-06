@@ -8,7 +8,9 @@
         </div>
       </div>
       
-      <h2 class="main-heading">Why We’re The Total Package</h2>
+        <h2 class="main-heading">
+         {{ this.lang==='en'? 'Why We’re The Total Package?':'¿Por qué somos el paquete total?' }} 
+        </h2>
       <div class="row cards">
           <div class="card" v-for="(item, i) in benefitItems" :key="i">
               <img :src="require(`@/assets/images/${item.img}`)" alt="" class="w-9 mb-5 max-md:mb-3">
@@ -17,28 +19,52 @@
           </div>
       </div>
       <div class="flex justify-center">
-          <router-link to="/benefits" class="more-btn">More Reasons To Shop </router-link>
+          <router-link to="/benefits" class="more-btn">
+            {{ this.lang==='en'? 'More Reasons To Shop':'Más razones para comprar' }}  
+           </router-link>
       </div>
     </div>
   </template>
   
   <script>
+import { mapActions, mapState } from 'vuex'
   export default {
       data(){
           return{
-              cards:[
+              en_cards:[
                   {img:'prealert.png', title:'Prealert'},
                   {img:'payment.png', title:'Make Payment'},
                   {img:'calculator.png', title:'Cost Calculator'},
               ],
-              benefitItems:[
+              es_cards:[
+                  {img:'prealert.png', title:'Enviar Pre-Alerta'},
+                  {img:'payment.png', title:'Realizar un pago'},
+                  {img:'calculator.png', title:'Seguimiento de paquetes'},
+              ],
+
+              en_benefitItems:[
                   {img:'fast.png',title:'Security & Reliability',description:'Last-mile delivery with the highest flight frequency in the region.'},
                   {img:'secure.png',title:'Secure Transactions',description:'We use the latest technology to ensure that your transactions are secure.'},
                   {img:'return.png',title:'Easy Returns',description:'If you are not satisfied with your purchase, we make it simple to return it.'},
                   {img:'track.png',title:'Track Your Packages',description:'Receive up-to-date tracking updates for your packages.'},
+              ],
+              es_benefitItems:[
+                  {img:'fast.png',title:'Rápido y confiable',description:'Entrega de última milla con la mayor frecuencia de vuelos de la región.'},
+                  {img:'secure.png',title:'Transacciones seguras',description:'Utilizamos la última tecnología para garantizar que tus transacciones sean seguras.'},
+                  {img:'return.png',title:'Devoluciones fáciles',description:'Si no estás satisfecho con tu compra, te facilitamos la devolución.'},
+                  {img:'track.png',title:'Ahorra en impuestos',description:'Ahorra un 7 % en el impuesto sobre las ventas de EE. UU. al usar tu dirección de Aeropost.'},
               ]
           }
-      }
+      },
+      computed:{
+        ...mapState(['lang']),
+        cards(){
+            return this.lang==='en'? this.en_cards : this.es_cards;
+        },
+        benefitItems(){
+            return this.lang==='en'? this.en_benefitItems : this.es_benefitItems;
+        }
+      },
   }
   </script>
   
