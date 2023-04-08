@@ -28,7 +28,7 @@ export default {
     props:['bgBlue'],
     data(){
         return{
-            logoColor:'blue'
+            logoColor:'#0B3E9D'
         }
     },
     components:{
@@ -50,6 +50,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .items{
     @apply flex justify-center items-center flex-wrap mb-6 max-sm:flex-col;
 }
