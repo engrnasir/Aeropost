@@ -1,5 +1,14 @@
 <template>
     <div class="mb-3 relative"> 
+        <!-- Peru -->
+        <div class="elfsight-app-deb2e522-90d0-4732-ab93-6ae4212c26e2"
+             v-show="selectedCountry.id === 'sa5'"></div>
+        <!-- Panama  -->
+        <div class="elfsight-app-bdc45d78-adaf-4049-911b-66871cbdb3ea"
+             v-show="selectedCountry.id === 'ca8'"></div>
+        <!-- Guatemala  -->
+        <div class="elfsight-app-6bf451b9-afac-440e-b447-fc2abe4bca35"
+             v-show="selectedCountry.id === 'ca4'"></div>
         <!-- El Salvador  -->
         <div class="elfsight-app-7f258fb8-a6f2-4631-9991-e5f70dccc182" 
              v-show="selectedCountry.id === 'ca3'"></div>
@@ -39,7 +48,7 @@ export default {
   },
   data() {
     return {
-     validIds:['ca3','ca2','sa2','cb6','cb5','cb19','cb13','cb4']
+     validIds:['sa5','ca8', 'ca4','ca3','ca2','sa2','cb6','cb5','cb19','cb13','cb4']
     };
   },
   computed:{
