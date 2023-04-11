@@ -10,7 +10,7 @@
                 <li v-if="!invalidRate" class="item" :class="bgBlue?'item-white':'item-blue'"><router-link :to="`/rates/${selectedCountry.id}`">{{lang=='en'?'Rates':'Tarifas'}}</router-link></li>
                 <li class="item" :class="bgBlue?'item-white':'item-blue'"><router-link to="/calculator">{{lang=='en'?'Calculator':'Calculadora'}}</router-link></li>
                 <li class="item" :class="bgBlue?'item-white':'item-blue'"><router-link to="">{{lang=='en'?'Restricted Products':'Productos restringidos'}}</router-link></li>
-                <li class="item" :class="bgBlue?'item-white':'item-blue'"><router-link to="">{{lang=='en'?'Contact':'Contacto'}}</router-link></li>
+                <li class="item" :class="bgBlue?'item-white':'item-blue'"><router-link to="/contactus">{{lang=='en'?'Contact':'Contacto'}}</router-link></li>
                 <li class="item mr-0" :class="bgBlue?'item-white':'item-blue'"><router-link to="/terms">{{lang=='en'?'Terms and Conditions':'Términos y condiciones'}}</router-link></li>
             </ul>
             <p class="text-sm" :class="bgBlue?'text-white':'text-[#33333]'">

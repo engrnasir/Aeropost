@@ -9,7 +9,7 @@
             <li class="item" v-if="!invalidRate" @click="setShowMenu(false)"><router-link :to="`/rates/${selectedCountry.id}`">{{lang==='en'?'Rates':'Tarifas'}}</router-link></li>
             <li class="item" @click="setShowMenu(false)"><router-link to="/calculator">{{lang==='en'?'Calculator':'Calculadora de Costos'}}</router-link></li>
             <li class="item" @click="setShowMenu(false)"><router-link to="/faqs">{{lang==='en'?'FAQs':'Preguntas Frecuentes'}}</router-link></li>
-            <li class="item mr-0" @click="setShowMenu(false)"><router-link to="/">{{lang==='en'?'Contact':'Contacto'}}</router-link></li>
+            <li class="item mr-0" @click="setShowMenu(false)"><router-link to="/contactus">{{lang==='en'?'Contact':'Contacto'}}</router-link></li>
             <li class="item mr-0" @click="setShowMenu(false)"><router-link to="/benefits">{{lang==='en'?'Benefits':'Beneficios'}}</router-link></li>
         </ul>
     </nav>

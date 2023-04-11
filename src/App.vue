@@ -33,12 +33,12 @@ export default{
             'showMenu'
         ])
     },
-    methods:{
-        ...mapMutations([
-            'setShowCountries',
-            'setShowMenu'
-        ])
-    }
+  methods:{
+      ...mapMutations([
+          'setShowCountries',
+          'setShowMenu'
+      ])
+  },
 }
 </script>
 <style>

@@ -5,14 +5,16 @@
       <div class="container">
         <p class="text-base text-center text-[#333333] mb-12" v-for="(p,i) in details" :key="i" v-html="p"></p>       
       </div>
-
+      
       <FooterTitle :title="footerTitle" :bgBlue='true'></FooterTitle>
     </div>
   </template>
 
-  <script>
-  import HeroTitleVue from '@/components/header/HeroTitle.vue';
-  import FooterTitle from '@/components/footer/FooterTitle.vue';
+<script>
+
+import HeroTitleVue from '@/components/header/HeroTitle.vue';
+import FooterTitle from '@/components/footer/FooterTitle.vue';
+
 import { mapState } from 'vuex';
 
   export default {
