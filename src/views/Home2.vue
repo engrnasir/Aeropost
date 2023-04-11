@@ -16,7 +16,7 @@
   import FooterTitle from '@/components/footer/FooterTitle.vue';
 import { mapState } from 'vuex';
   export default {
-    name: 'HomeView',
+    name: 'HomeView2',
     components:{
       HeroTitleVue,
       Benefits,

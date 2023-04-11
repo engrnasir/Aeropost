@@ -6,6 +6,8 @@ import BenefitView from '../views/BenefitView.vue'
 import FaqsView from '../views/FaqsView.vue'
 import CalculatorView from '../views/CalculatorView.vue'
 import HowItWorksView from '../views/HowItWorks.vue'
+import AboutUs from '../views/Aboutus.vue'
+import TermsCondition from '../views/TermsCondition.vue'
 
 import RatesView from '../views/Rates.vue'
 import BelizeRate from '../views/components/BelizeRate.vue'
@@ -64,8 +66,18 @@ const routes = [
   },
   {
     path: '/how-it-works',
-    name: 'how it works',
+    name: 'HowItWorks',
     component: HowItWorksView
+  },
+  {
+    path: '/aboutus',
+    name: 'AboutUs',
+    component: AboutUs
+  },
+  {
+    path: '/terms',
+    name: 'TermsCondition',
+    component: TermsCondition
   },
   {
     path: '/rates',
