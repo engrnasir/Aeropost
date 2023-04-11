@@ -11,7 +11,7 @@
                       </router-link>
                   </div>
       
-                  <router-link to="" class="btn loginBtn">{{lang==='en'?'Log in':'Iniciar Sesión'}}</router-link>
+                  <a href="https://courier.aeropost.com/site/en/auth " class="btn loginBtn">{{lang==='en'?'Log in':'Iniciar Sesión'}}</a>
       
                   <div class="max-md:hidden ">
                       <CountryControlVue></CountryControlVue>

@@ -14,8 +14,8 @@
         </ul>
     </nav>
     <div class="flex items-center min-w-max max-md:min-w-full">
-        <router-link to="" class="btn max-lg:text-sm mr-[14px] max-lg:mr-2 max-md:hidden">{{lang==='en'?'Log in':'Iniciar Sesión'}}</router-link>
-        <router-link to="" class="btn max-lg:text-sm">{{lang==='en'?'Sign Up for Free':'Regístrate Gratis'}}</router-link>
+        <a href="https://courier.aeropost.com/site/en/auth" class="btn max-lg:text-sm mr-[14px] max-lg:mr-2 max-md:hidden">{{lang==='en'?'Log in':'Iniciar Sesión'}}</a>
+        <a href="https://courier.aeropost.com/site/en/auth?a=signup" class="btn max-lg:text-sm">{{lang==='en'?'Sign Up for Free':'Regístrate Gratis'}}</a>
     </div>
   </div>
 </template>

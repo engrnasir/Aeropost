@@ -5,7 +5,7 @@
           <h1 class="border-b-2 border-[#A8EEFF]">{{ utext }}</h1>
         </div>
         <p class="description">{{ description }}</p>
-        <router-link to="" class="btn-yellow" v-show="showSignUp">{{lang==='en'?'Sign Up for Free':'Regístrate Gratis'}}</router-link>
+        <a href="https://courier.aeropost.com/site/en/auth?a=signup" class="btn-yellow" v-show="showSignUp">{{lang==='en'?'Sign Up for Free':'Regístrate Gratis'}}</a>
     </div>
 </template>
 
