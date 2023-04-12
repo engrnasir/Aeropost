@@ -13,7 +13,7 @@
   <script>
   import HeroTitleVue from '@/components/header/HeroTitle.vue';
   import FooterTitle from '@/components/footer/FooterTitle.vue';
-import { mapState } from 'vuex';
+  import { mapState } from 'vuex';
 
   export default {
     name: 'RateView',

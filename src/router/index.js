@@ -109,7 +109,7 @@ const routes = [
       {path:'cb1', component:AnguillaRate},
       {path:'cb2', component:AntiguaRate},
       {path:'cb3', component:ArubaRate},
-      {path:'cb4', component:Home2},  // Redirect to Home
+      {path:'cb4', redirect:'/'},  // Redirect to Home
       {path:'cb5', component:BarbadosRate},
       {path:'cb6', component:BritishVirginRate},
       {path:'cb7', component:CaymanIslandRate},
@@ -118,13 +118,13 @@ const routes = [
       {path:'cb10', component:GrenadaRate},
       {path:'cb11', component:GuadeloupeRate},
       {path:'cb12', component:HaitiRate},
-      {path:'cb13', component:Home2},  // Redirect to Home
+      {path:'cb13', redirect:'/'},  // Redirect to Home
       {path:'cb14', component:MartiniqueRate},
       {path:'cb15', component:MontserratRate},
       {path:'cb16', component:SaintLuciaRate},
       {path:'cb17', component:SaintMartinRate},
       {path:'cb18', component:SaintVincentRate},
-      {path:'cb19', component:Home2},   // Redirect to Home
+      {path:'cb19', redirect:'/'},   // Redirect to Home
       {path:'cb20', component:TurksCaicosRate},
 
       {path:'sa1', component:ChileRate},

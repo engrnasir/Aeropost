@@ -43,11 +43,11 @@ export default{
     window.onUsersnapLoad = function(api) {
         api.init();
       }
-    var script = document.createElement('script');
+    let script = document.createElement('script');
     script.defer = 1;
     script.src = 'https://widget.usersnap.com/global/load/ea450baa-f4ca-4b2e-a32e-85a6865337b9?onload=onUsersnapLoad';
     document.getElementsByTagName('head')[0].appendChild(script);
-    
+
     let mapScript = document.createElement('script')
     mapScript.defer = 1;
     mapScript.setAttribute('src', 'https://apps.elfsight.com/p/platform.js')
@@ -56,7 +56,6 @@ export default{
 }
 </script>
 <style>
-
 .overlay{
     @apply w-full min-h-screen fixed left-0 top-0 bg-black opacity-10 z-30;
 }
