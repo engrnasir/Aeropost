@@ -53,10 +53,10 @@ export default {
     computed:{
         ...mapState(['selectedCountry','lang']),
         invalidRate(){
-            return this.selectedCountry.id==='cb4' 
-                    || this.selectedCountry.id ==='cb13' 
-                    || this.selectedCountry.id ==='cb19';
-        }
+            return this.selectedCountry.gtw==='BHS' 
+                    || this.selectedCountry.gtw ==='JAM' 
+                    || this.selectedCountry.gtw ==='POS';
+            }
     },
     mounted(){
        this.logoColor = this.bgBlue===true? 'white': 'blue';

@@ -7,7 +7,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     lang:'en', //default
-    selectedCountry:{ id:'ca1', name:'Belize', flagUrl:'belize.png', longitude:0, latitude:0, },
+    selectedCountry:{ gtw:'BZE', name:'Belize', flagUrl:'belize.png', longitude:0, latitude:0, },
 
     showCountries:false,
     selectedMapIndex:0,
