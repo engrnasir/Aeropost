@@ -46,6 +46,7 @@ import VenezuelaRate from '../views/components/VenezuelaRate.vue'
 Vue.use(VueRouter)
 
 const routes = [
+  
   {
     path: '/',
     name: 'Home',
@@ -96,7 +97,7 @@ const routes = [
     name: 'Rates',
     component: RatesView,
       children: [
-      {path:'ca1', component:BelizeRate},
+      {path:`ca1`, component:BelizeRate},
       {path:'ca2', component:CostaRate},
       {path:'ca3', component:ElSavadorRate},
       {path:'ca4', component:GuatemalaRate},

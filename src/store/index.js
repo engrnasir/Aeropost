@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import router from '@/router'
 
 Vue.use(Vuex)
 
@@ -17,6 +18,7 @@ export default new Vuex.Store({
   mutations: {
     setLang:(state, val)=>{
       state.lang = val
+      console.log(router.getRoutes());
     },
 
     setShowCountries:(state,val)=>{

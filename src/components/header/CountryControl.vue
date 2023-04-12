@@ -10,7 +10,7 @@
             <span 
                 :class="lang==='en'?'':'active-lang'" 
                 class="border-r-2 border-sky-100 lang-item"
-                @click="setLang('es')">
+                @click="setToEs()">
                 Espanol
             </span> 
             <span 
@@ -40,7 +40,11 @@ export default {
             'setLang',
             'setShowCountries',
             'setSelectedCountries',
-        ])
+        ]),
+        setToEs(){
+            console.log(this.$route.params.lang);
+            this.setLang('es')
+        }
     }
 
 }

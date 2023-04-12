@@ -108,16 +108,6 @@
             MODO NOCTURNO
         </p>
 
-
-
-
-<!-- 
-
-
-
-
- -->
-
     </div>
   
 </template>

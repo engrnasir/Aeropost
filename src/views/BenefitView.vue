@@ -59,6 +59,9 @@ import { mapState } from 'vuex';
     },
     computed:{
       ...mapState(['lang']),
+      // lang(){
+      //   return this.$route.params.lang;
+      // },
       hero(){return this.lang==='en'? this.en_hero:this.es_hero},
       cards(){return this.lang==='en'? this.en_cards:this.es_cards},
       footerTitle(){
