@@ -39,6 +39,20 @@ export default{
           'setShowMenu'
       ])
   },
+  mounted() {
+    window.onUsersnapLoad = function(api) {
+        api.init();
+      }
+    var script = document.createElement('script');
+    script.defer = 1;
+    script.src = 'https://widget.usersnap.com/global/load/ea450baa-f4ca-4b2e-a32e-85a6865337b9?onload=onUsersnapLoad';
+    document.getElementsByTagName('head')[0].appendChild(script);
+    
+    let mapScript = document.createElement('script')
+    mapScript.defer = 1;
+    mapScript.setAttribute('src', 'https://apps.elfsight.com/p/platform.js')
+    document.body.appendChild(mapScript)
+  },
 }
 </script>
 <style>
