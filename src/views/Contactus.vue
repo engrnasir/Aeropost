@@ -4,7 +4,6 @@
 
       <div class="container">
         <p v-html="content">
-
         </p>
         <!-- <router-view></router-view> -->
       </div>

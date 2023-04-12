@@ -9,6 +9,7 @@ import HowItWorksView from '../views/HowItWorks.vue'
 import AboutUs from '../views/Aboutus.vue'
 import TermsCondition from '../views/TermsCondition.vue'
 import Contactus from '../views/Contactus.vue'
+import Restricted from '../views/Restricted.vue'
 
 import RatesView from '../views/Rates.vue'
 import BelizeRate from '../views/components/BelizeRate.vue'
@@ -84,6 +85,11 @@ const routes = [
     path: '/contactus',
     name: 'Contactus',
     component: Contactus
+  },
+  {
+    path: '/restricted',
+    name: 'RestrictedView',
+    component: Restricted
   },
   {
     path: '/rates',
