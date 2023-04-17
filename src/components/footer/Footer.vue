@@ -25,13 +25,13 @@
                 </svg>
             </router-link>
             <ul class="items">
-                <li class="item" :class="bgBlue?'item-white':'item-blue'"><router-link to="/how-it-works">{{lang=='en'?'How It Works':'Cómo funciona'}}</router-link></li>
-                <li class="item" :class="bgBlue?'item-white':'item-blue'"><router-link to="/aboutus">{{lang=='en'?'About Us':'Sobre nosotras'}}</router-link></li>
-                <li v-if="!invalidRate" class="item" :class="bgBlue?'item-white':'item-blue'"><router-link :to="`/${selectedCountry.id}/rates`">{{lang=='en'?'Rates':'Tarifas'}}</router-link></li>
-                <li class="item" :class="bgBlue?'item-white':'item-blue'"><router-link to="/calculator">{{lang=='en'?'Calculator':'Calculadora'}}</router-link></li>
-                <li class="item" :class="bgBlue?'item-white':'item-blue'"><router-link to="/restricted">{{lang=='en'?'Restricted Products':'Productos restringidos'}}</router-link></li>
-                <li class="item" :class="bgBlue?'item-white':'item-blue'"><router-link to="/contactus">{{lang=='en'?'Contact':'Contacto'}}</router-link></li>
-                <li class="item mr-0" :class="bgBlue?'item-white':'item-blue'"><router-link to="/terms">{{lang=='en'?'Terms and Conditions':'Términos y condiciones'}}</router-link></li>
+                <li class="item" :class="bgBlue?'item-white':'item-blue'"><router-link :to="`/how-it-works?lang=${lang}`">{{lang=='en'?'How It Works':'Cómo funciona'}}</router-link></li>
+                <li class="item" :class="bgBlue?'item-white':'item-blue'"><router-link :to="`/aboutus?lang=${lang}`">{{lang=='en'?'About Us':'Sobre nosotras'}}</router-link></li>
+                <li v-if="!invalidRate" class="item" :class="bgBlue?'item-white':'item-blue'"><router-link :to="`/${selectedCountry.gtw}/rates?lang=${lang}`">{{lang=='en'?'Rates':'Tarifas'}}</router-link></li>
+                <li class="item" :class="bgBlue?'item-white':'item-blue'"><router-link :to="`/${selectedCountry.gtw}/calculator?lang=${lang}`">{{lang=='en'?'Calculator':'Calculadora'}}</router-link></li>
+                <li class="item" :class="bgBlue?'item-white':'item-blue'"><router-link :to="`/restricted?lang=${lang}`">{{lang=='en'?'Restricted Products':'Productos restringidos'}}</router-link></li>
+                <li class="item" :class="bgBlue?'item-white':'item-blue'"><router-link :to="`/${selectedCountry.gtw}/contactus?lang=${lang}`">{{lang=='en'?'Contact':'Contacto'}}</router-link></li>
+                <li class="item mr-0" :class="bgBlue?'item-white':'item-blue'"><router-link :to="`/terms?lang=${lang}`">{{lang=='en'?'Terms and Conditions':'Términos y condiciones'}}</router-link></li>
             </ul>
             <p class="text-sm" :class="bgBlue?'text-white':'text-[#33333]'">
                 {{this.lang==='en'?'© 2023 Aeropost. All Rights Reserved.':'© 2023 Aeropost. Reservados todos los derechos.'}}

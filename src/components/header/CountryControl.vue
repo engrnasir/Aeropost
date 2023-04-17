@@ -10,24 +10,19 @@
             <span 
                 :class="lang==='en'?'':'active-lang'" 
                 class="border-r-2 border-sky-100 lang-item"
-                @click="setToEs()">
+                @click="setLanguage('es')">
                 Espanol
             </span> 
             <span 
                 class="lang-item"
                 :class="lang==='en'?'active-lang':''"
-                @click="setLang('en')">English</span>
+                @click="setLanguage('en')">English</span>
         </p>
     </div>
 </template>
 <script>
 import { mapMutations, mapState } from 'vuex';
 export default {
-    data(){
-        return{
-            english:true,
-        }
-    },
     computed:{
         ...mapState([
             'lang',
@@ -41,10 +36,10 @@ export default {
             'setShowCountries',
             'setSelectedCountries',
         ]),
-        setToEs(){
-            console.log(this.$route.params.lang);
-            this.setLang('es')
-        }
+        setLanguage(lg){
+            this.setLang(lg)
+            this.$router.push(`${this.$route.path}?lang=${lg}`)
+        },
     }
 
 }

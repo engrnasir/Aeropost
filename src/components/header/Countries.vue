@@ -6,7 +6,7 @@
             @click="setSelectedCountry(country); setShowCountries(false)"
             :class="selectedCountry.name===country.name?'bg-slate-200':''"
             >
-            <router-link to="/" tag="a">
+            <router-link :to="`/lang=${lang}`" tag="a">
                 <p>{{ country.name }}</p>
                 <img :src="require(`@/assets/images/flags/${country.flagUrl}`)" :alt="country.name">
             </router-link>
@@ -20,6 +20,7 @@ export default {
     props:['countries'],
     computed:{
         ...mapState([
+            'lang',
             'showCountries',
             'selectedCountry',
         ]),

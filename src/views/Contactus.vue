@@ -3,9 +3,7 @@
       <HeroTitleVue :title="hero.title" :description="hero.description"></HeroTitleVue>
 
       <div class="container">
-        <p v-html="content">
-        </p>
-        <!-- <router-view></router-view> -->
+        <p v-html="content"></p>
       </div>
       <mapVue/>
 

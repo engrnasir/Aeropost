@@ -5,12 +5,12 @@
     </div>
     <nav class="w-full">
         <ul class="items">
-            <li class="item" @click="setShowMenu(false)"><router-link to="/how-it-works">{{lang==='en'?'How It Works':'Cómo Funciona'}}</router-link></li>
-            <li class="item" v-if="!invalidRate" @click="setShowMenu(false)"><router-link :to="`/${selectedCountry.gtw}/rates`">{{lang==='en'?'Rates':'Tarifas'}}</router-link></li>
-            <li class="item" @click="setShowMenu(false)"><router-link to="/calculator">{{lang==='en'?'Calculator':'Calculadora de Costos'}}</router-link></li>
-            <li class="item" @click="setShowMenu(false)"><router-link to="/faqs">{{lang==='en'?'FAQs':'Preguntas Frecuentes'}}</router-link></li>
-            <li class="item mr-0" @click="setShowMenu(false)"><router-link to="/contactus">{{lang==='en'?'Contact':'Contacto'}}</router-link></li>
-            <li class="item mr-0" @click="setShowMenu(false)"><router-link :to="`/benefits`">{{lang==='en'?'Benefits':'Beneficios'}}</router-link></li>
+            <li class="item" @click="setShowMenu(false)"><router-link :to="`/how-it-works?lang=${lang}`">{{lang==='en'?'How It Works':'Cómo Funciona'}}</router-link></li>
+            <li class="item" v-if="!invalidRate" @click="setShowMenu(false)"><router-link :to="`/${selectedCountry.gtw}/rates?lang=${lang}`">{{lang==='en'?'Rates':'Tarifas'}}</router-link></li>
+            <li class="item" @click="setShowMenu(false)"><router-link :to="`/${selectedCountry.gtw}/calculator?lang=${lang}`">{{lang==='en'?'Calculator':'Calculadora de Costos'}}</router-link></li>
+            <li class="item" @click="setShowMenu(false)"><router-link :to="`/faqs?lang=${lang}`">{{lang==='en'?'FAQs':'Preguntas Frecuentes'}}</router-link></li>
+            <li class="item mr-0" @click="setShowMenu(false)"><router-link :to="`/${selectedCountry.gtw}/contactus?lang=${lang}`">{{lang==='en'?'Contact':'Contacto'}}</router-link></li>
+            <li class="item mr-0" @click="setShowMenu(false)"><router-link :to="`/benefits?lang=${lang}`">{{lang==='en'?'Benefits':'Beneficios'}}</router-link></li>
         </ul>
     </nav>
     <div class="flex items-center min-w-max max-md:min-w-full">

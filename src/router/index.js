@@ -58,7 +58,7 @@ const routes = [
     component: BenefitView
   },
   {
-    path: '/calculator',
+    path: '/:gtw/calculator',
     name: 'calculator',
     component: CalculatorView
   },
@@ -83,7 +83,7 @@ const routes = [
     component: TermsCondition
   },
   {
-    path: '/contactus',
+    path: '/:gtw/contactus',
     name: 'Contactus',
     component: Contactus
   },

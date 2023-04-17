@@ -36,10 +36,14 @@ export default{
   methods:{
       ...mapMutations([
           'setShowCountries',
-          'setShowMenu'
+          'setShowMenu',
+          'setLang'
       ])
   },
   mounted() {
+    const lg = this.$route.query.lang;
+    this.setLang(lg)
+
     window.onUsersnapLoad = function(api) {
         api.init();
       }
