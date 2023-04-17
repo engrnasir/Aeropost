@@ -32,64 +32,12 @@ export default {
     },
     data(){
         return{
-            maps:[
-                {
-                    name:'Central America',
-                    imgUrl:'map1.png',
-                    countries:[
-                        { gtw:'BZE', name:'Belize', flagUrl:'belize.png', longitude:0, latitude:0, },
-                        { gtw:'SJO', name:'Costa Rica', flagUrl:'costa-rica.png', longitude:0, latitude:0, },
-                        { gtw:'SAL', name:'El Salvador', flagUrl:'salvador.png', longitude:0, latitude:0, },
-                        { gtw:'GUA', name:'Guatemala', flagUrl:'guatemala.png', longitude:0, latitude:0, },
-                        { gtw:'SAP', name:'Honduras, San Pedro Sula', flagUrl:'honduras.png', longitude:0, latitude:0, },
-                        { gtw:'TEG', name:'Honduras, Tegucigalpa', flagUrl:'teguci.png', longitude:0, latitude:0, },
-                        { gtw:'MGA', name:'Nicaragua', flagUrl:'nicaragua.png', longitude:0, latitude:0, },
-                        { gtw:'PTY', name:'Panamá', flagUrl:'panama.png', longitude:0, latitude:0, },
-                    ]
-                },
-                {
-                    name:'Caribbean',
-                    imgUrl:'map2.png',
-                    countries:[
-                        { gtw:'AXA', name:'Anguilla', flagUrl:'anguilla.png', longitude:0, latitude:0, },
-                        { gtw:'ANU', name:'Antigua', flagUrl:'aruba.png', longitude:0, latitude:0, },
-                        { gtw:'AUA', name:'Aruba', flagUrl:'aruba.png', longitude:0, latitude:0, },
-                        { gtw:'BHS', name:'Bahamas', flagUrl:'bahamas.png', longitude:0, latitude:0, },
-                        { gtw:'BGI', name:'Barbados', flagUrl:'barbados.png', longitude:0, latitude:0, },
-                        { gtw:'EIS', name:'British Virgin Islands', flagUrl:'virgin-island.png', longitude:0, latitude:0, },
-                        { gtw:'GCM', name:'Cayman Islands', flagUrl:'cayman.png', longitude:0, latitude:0, },
-                        { gtw:'CUR', name:'Curacao', flagUrl:'curacao.png', longitude:0, latitude:0, },
-                        { gtw:'DOM', name:'Dominica', flagUrl:'dominica.png', longitude:0, latitude:0, },
-                        { gtw:'GND', name:'Grenada', flagUrl:'grenada.png', longitude:0, latitude:0, },
-                        { gtw:'PTP', name:'Guadeloupe', flagUrl:'guadeloupe.png', longitude:0, latitude:0, },
-                        { gtw:'PAP', name:'Haití', flagUrl:'haiti.png', longitude:0, latitude:0, },
-                        { gtw:'JAM', name:'Jamaica', flagUrl:'jamaica.png', longitude:0, latitude:0, },
-                        { gtw:'FDF', name:'Martinique', flagUrl:'martinique.png', longitude:0, latitude:0, },
-                        { gtw:'MNI', name:'Montserrat', flagUrl:'montserrat.png', longitude:0, latitude:0, },
-                        { gtw:'SLU', name:'Saint Lucia', flagUrl:'saint.png', longitude:0, latitude:0, },
-                        { gtw:'SXM', name:'Saint Martin', flagUrl:'saint-martin.png', longitude:0, latitude:0, },
-                        { gtw:'SVD', name:'Saint Vincent', flagUrl:'saint-vincent.png', longitude:0, latitude:0, },
-                        { gtw:'POS', name:'Trinidad and Tobago', flagUrl:'trinidad_toba.png', longitude:0, latitude:0, },
-                        { gtw:'TCA', name:'Turks & Caicos', flagUrl:'turks.png', longitude:0, latitude:0, },
-                    ]
-                },
-                {
-                    name:'South America',
-                    imgUrl:'map3.png',
-                    countries:[
-                        {gtw:'SCL', name:'Chile', flagUrl:'chile.png', longitude:0, latitude:0, },
-                        {gtw:'BOG', name:'Colombia', flagUrl:'colombia.png', longitude:0, latitude:0, },
-                        {gtw:'ECU', name:'Ecuador', flagUrl:'ecuador.png', longitude:0, latitude:0, },
-                        {gtw:'GEO', name:'Guyana', flagUrl:'guyana.png', longitude:0, latitude:0, },
-                        {gtw:'LIM', name:'Perú', flagUrl:'peru.png', longitude:0, latitude:0, },
-                        {gtw:'CCS', name:'Venezuela', flagUrl:'venezuela.png', longitude:0, latitude:0, },
-                    ]
-                },
-            ]
+           
         }
     },
     computed:{
         ...mapState([
+            'maps',
             'showCountries',
             'selectedCountry',
             'selectedMapIndex'

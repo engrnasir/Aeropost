@@ -28,24 +28,36 @@ export default{
     Mapsvg
   },
   computed:{
-        ...mapState([
-            'showCountries',
-            'showMenu'
-        ])
+      ...mapState([
+          'showCountries',
+          'showMenu',
+          'maps'
+      ])
     },
   methods:{
       ...mapMutations([
           'setShowCountries',
           'setShowMenu',
-          'setLang'
+          'setLang',
+          'setSelectedCountry'
       ])
   },
   mounted() {
     const lg = this.$route.query.lang;
-    if(lg){
-      this.setLang(lg)
+    if(lg){ this.setLang(lg)}
+    let gtw = this.$route.query.gtw 
+    const that = this;
+    if(!gtw){
+      gtw = this.$route.params.gtw
     }
-
+    this.maps.forEach(el=>{
+      el.countries.forEach(c=> {
+        if(c.gtw === gtw){
+          that.setSelectedCountry(c)
+        }
+      })
+    })
+    
     window.onUsersnapLoad = function(api) {
         api.init();
       }

@@ -13,7 +13,7 @@
   <script>
   import HeroTitleVue from '@/components/header/HeroTitle.vue';
   import FooterTitle from '@/components/footer/FooterTitle.vue';
-  import { mapState } from 'vuex';
+  import { mapMutations, mapState } from 'vuex';
 
   export default {
     name: 'RateView',
@@ -36,7 +36,8 @@
     computed:{
       ...mapState([
         'selectedCountry',
-        'lang'
+        'lang',
+        'maps'
       ]),
       hero(){
         return this.lang==='en'?this.en_hero:this.es_hero;
@@ -44,8 +45,22 @@
       footerTitle(){
         return this.lang==='en'?'We make shopping simple.':'Hacemos que tus compras sean simples.';
       }
-    },    
-  }
+    },
+    methods:{
+      ...mapMutations(['setSelectedCountry'])
+    },
+    mounted(){
+      const gtw = this.$route.query.gtw
+      const that = this;
+      this.maps.forEach(el=>{
+        el.countries.forEach(c=> {
+          if(c.gtw === gtw){
+            that.setSelectedCountry(c)
+          }
+        })
+      })
+    }   
+  }    
   </script>
   <style lang="scss" scoped>
   .container{

@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="py-8 flex flex-col items-center" :class="bgBlue===true?'bg-blue':'bg-[#F2FBFF]'">
-            <router-link to="/">
+            <router-link :to="`/?lang=${lang}&gtw=${selectedCountry.gtw}`">
                 <svg width="262" height="41" viewBox="0 0 262 41" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[230px] mb-6"> 
                     <g clip-path="url(#clip0_323_39924)">
                     <path d="M18.0751 19.2425C18.0825 19.876 17.9627 20.5046 17.7228 21.0905C17.4829 21.6764 17.1278 22.2076 16.6789 22.6524C16.23 23.0971 15.6964 23.4462 15.1101 23.6788C14.5238 23.9114 13.8968 24.0228 13.2667 24.0061C10.8572 24.0061 8.25531 22.1855 8.25531 19.2425C8.25531 16.2995 10.8572 14.4842 13.2667 14.4842C13.8964 14.4676 14.5229 14.5787 15.1088 14.811C15.6947 15.0433 16.2281 15.3919 16.6769 15.8361C17.1258 16.2803 17.4809 16.8109 17.7212 17.3961C17.9614 17.9814 18.0818 18.6094 18.0751 19.2425ZM18.0751 10.0052C15.938 7.82482 12.6096 7.755 12.1982 7.755C9.16731 7.75501 6.26058 8.96529 4.11742 11.1196C1.97427 13.2739 0.770264 16.1958 0.770264 19.2425C0.770264 22.2892 1.97427 25.211 4.11742 27.3653C6.26058 29.5197 9.16731 30.7299 12.1982 30.7299C13.7262 30.7299 16.4723 30.107 18.0751 28.4797V30.3164H25.0205V8.21686H18.0751V10.0052Z" :fill="colorVal"/>
@@ -25,13 +25,41 @@
                 </svg>
             </router-link>
             <ul class="items">
-                <li class="item" :class="bgBlue?'item-white':'item-blue'"><router-link :to="`/how-it-works?lang=${lang}`">{{lang=='en'?'How It Works':'Cómo funciona'}}</router-link></li>
-                <li class="item" :class="bgBlue?'item-white':'item-blue'"><router-link :to="`/aboutus?lang=${lang}`">{{lang=='en'?'About Us':'Sobre nosotras'}}</router-link></li>
-                <li v-if="!invalidRate" class="item" :class="bgBlue?'item-white':'item-blue'"><router-link :to="`/${selectedCountry.gtw}/rates?lang=${lang}`">{{lang=='en'?'Rates':'Tarifas'}}</router-link></li>
-                <li class="item" :class="bgBlue?'item-white':'item-blue'"><router-link :to="`/${selectedCountry.gtw}/calculator?lang=${lang}`">{{lang=='en'?'Calculator':'Calculadora'}}</router-link></li>
-                <li class="item" :class="bgBlue?'item-white':'item-blue'"><router-link :to="`/restricted?lang=${lang}`">{{lang=='en'?'Restricted Products':'Productos restringidos'}}</router-link></li>
-                <li class="item" :class="bgBlue?'item-white':'item-blue'"><router-link :to="`/${selectedCountry.gtw}/contactus?lang=${lang}`">{{lang=='en'?'Contact':'Contacto'}}</router-link></li>
-                <li class="item mr-0" :class="bgBlue?'item-white':'item-blue'"><router-link :to="`/terms?lang=${lang}`">{{lang=='en'?'Terms and Conditions':'Términos y condiciones'}}</router-link></li>
+                <li class="item" :class="bgBlue?'item-white':'item-blue'">
+                    <router-link :to="`/how-it-works?lang=${lang}&gtw=${selectedCountry.gtw}`">
+                        {{lang=='en'?'How It Works':'Cómo funciona'}}
+                    </router-link>
+                </li>
+                <li class="item" :class="bgBlue?'item-white':'item-blue'">
+                    <router-link :to="`/aboutus?lang=${lang}&gtw=${selectedCountry.gtw}`">
+                        {{lang=='en'?'About Us':'Sobre nosotras'}}
+                    </router-link>
+                </li>
+                <li v-if="!invalidRate" class="item" :class="bgBlue?'item-white':'item-blue'">
+                    <router-link :to="`/${selectedCountry.gtw}/rates?lang=${lang}&gtw=${selectedCountry.gtw}`">
+                        {{lang=='en'?'Rates':'Tarifas'}}
+                    </router-link>
+                </li>
+                <li class="item" :class="bgBlue?'item-white':'item-blue'">
+                    <router-link :to="`/${selectedCountry.gtw}/calculator?lang=${lang}`">
+                        {{lang=='en'?'Calculator':'Calculadora'}}
+                    </router-link>
+                </li>
+                <li class="item" :class="bgBlue?'item-white':'item-blue'">
+                    <router-link :to="`/restricted?lang=${lang}&gtw=${selectedCountry.gtw}`">
+                        {{lang=='en'?'Restricted Products':'Productos restringidos'}}
+                    </router-link>
+                </li>
+                <li class="item" :class="bgBlue?'item-white':'item-blue'">
+                    <router-link :to="`/${selectedCountry.gtw}/contactus?lang=${lang}`">
+                        {{lang=='en'?'Contact':'Contacto'}}
+                    </router-link>
+                </li>
+                <li class="item mr-0" :class="bgBlue?'item-white':'item-blue'">
+                    <router-link :to="`/terms?lang=${lang}&gtw=${selectedCountry.gtw}`">
+                        {{lang=='en'?'Terms and Conditions':'Términos y condiciones'}}
+                    </router-link>
+                </li>
             </ul>
             <p class="text-sm" :class="bgBlue?'text-white':'text-[#33333]'">
                 {{this.lang==='en'?'© 2023 Aeropost. All Rights Reserved.':'© 2023 Aeropost. Reservados todos los derechos.'}}

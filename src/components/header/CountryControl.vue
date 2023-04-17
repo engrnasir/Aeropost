@@ -38,7 +38,12 @@ export default {
         ]),
         setLanguage(lg){
             this.setLang(lg)
-            this.$router.push(`${this.$route.path}?lang=${lg}`)
+            const gtw = this.$route.query.gtw
+            let url = `${this.$route.path}?lang=${lg}&`
+            if(gtw){
+                url += `&gtw=${gtw}`
+            }
+            this.$router.push(url)
         },
     }
 

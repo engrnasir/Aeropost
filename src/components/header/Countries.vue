@@ -3,10 +3,10 @@
     
         <div class="country" 
             v-for="(country,index) in countries" :key="index" 
-            @click="setSelectedCountry(country); setShowCountries(false)"
+            @click="setCountry(country)"
             :class="selectedCountry.name===country.name?'bg-slate-200':''"
             >
-            <router-link :to="`/lang=${lang}`" tag="a">
+            <router-link :to="`/?lang=${lang}`" tag="a">
                 <p>{{ country.name }}</p>
                 <img :src="require(`@/assets/images/flags/${country.flagUrl}`)" :alt="country.name">
             </router-link>
@@ -29,7 +29,11 @@ export default {
         ...mapMutations([
             'setShowCountries',
             'setSelectedCountry',
-        ])
+        ]),
+        setCountry(country){
+            this.setSelectedCountry(country)
+            this.setShowCountries(false)
+        }
     }
 }
 </script>

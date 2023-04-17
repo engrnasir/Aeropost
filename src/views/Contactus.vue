@@ -15,7 +15,7 @@
 import HeroTitleVue from '@/components/header/HeroTitle.vue';
 import FooterTitle from '@/components/footer/FooterTitle.vue';
 import mapVue from '@/components/contact/map.vue';
-import { mapState } from 'vuex';
+import { mapMutations, mapState } from 'vuex';
 
   export default {
     name: 'Contactus',
@@ -61,7 +61,8 @@ import { mapState } from 'vuex';
     computed:{
       ...mapState([
         'selectedCountry',
-        'lang'
+        'lang',
+        'maps'
       ]),
       hero(){
         return this.lang==='en'?this.en_hero:this.es_hero;
@@ -72,7 +73,20 @@ import { mapState } from 'vuex';
       content(){
         return this.lang==='en'? this.en_content:this.es_content;
       }
-    },    
+    }, 
+    methods:{
+      ...mapMutations(['setSelectedCountry'])
+    },
+    mounted(){
+      const gtw = this.$route.params.gtw
+      this.maps.forEach(el=>{
+        el.countries.forEach(c=> {
+          if(c.gtw == gtw){
+            this.setSelectedCountry(c)
+          }
+        })
+      })
+    }   
   }
   </script>
   <style lang="scss" scoped>

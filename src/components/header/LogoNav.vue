@@ -6,7 +6,7 @@
                       <img src="@/assets/images/menu.png" alt="" 
                           class="hidden max-md:block w-6 mr-5 cursor-pointer"
                           @click="setShowMenu(!showMenu)">
-                      <router-link to="/?lang=en">
+                      <router-link :to="`/?lang=${lang}`">
                           <Logo colorVal="#fff" class="max-md:w-40 max-lg:w-50"/>
                       </router-link>
                   </div>
