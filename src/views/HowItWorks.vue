@@ -135,11 +135,11 @@ import { mapState } from 'vuex';
         @apply font-extrabold text-[130px] text-yellow leading-none max-[880px]:text-[80px];
     }
     .title{
-        @apply font-semibold text-blue text-[40px] mb-5 leading-none
-        max-[880px]:text-[30px] max-[880px]:mb-3;
+        @apply font-semibold text-blue text-[30px] mb-5 leading-none
+         max-[880px]:mb-3;
     }
     .description{
-        @apply text-[#333333] text-3xl max-[880px]:text-xl;
+        @apply text-[#333333] text-xl;
     }
   }
   .line1{

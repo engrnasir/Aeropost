@@ -14,6 +14,7 @@ module.exports = {
         'bgImg': "url('@/assets/images/bg-footer.png')",
       },
       screens:{
+        '2xl':'1240px',
         'xl':'1100px',
         'sm':'680px',
         'md':'840px',

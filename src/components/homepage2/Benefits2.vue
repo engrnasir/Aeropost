@@ -3,8 +3,8 @@
       <div class="sm-cards">
         <div class="card-item" 
               v-for="(card, index) in cards" :key="index">
-          <img :src="require(`@/assets/images/${card.img}`)" alt="Pre alert" class="w-16 mb-6">
-          <p class="text-blue text-base">{{card.title}}</p>
+          <img :src="require(`@/assets/images/${card.img}`)" alt="Pre alert" class="w-16 mb-2">
+          <p class="text-blue text-base text-center px-2">{{card.title}}</p>
         </div>
       </div>
       
@@ -77,14 +77,13 @@ import { mapActions, mapState } from 'vuex'
           @apply flex items-center justify-center -translate-y-14 relative z-20 max-sm:-translate-y-10;
   
           .card-item{
-              @apply w-[200px] h-[126px] mx-6 flex flex-col justify-center items-center rounded-xl shadow-lg bg-gradient-to-t from-[#fff] to-[#EBF6FB]
-                     max-md:w-28 max-md:h-20 max-md:mx-[6px]
-                      ;
+              @apply w-[200px] h-[140px] p-2 mx-6 flex flex-col justify-center items-center rounded-xl shadow-lg bg-gradient-to-t from-[#fff] to-[#EBF6FB]
+                     max-md:w-28 max-md:h-28 max-md:mx-[6px] max-md:p-1;
               img{
                   @apply max-md:w-8 max-md:mb-2;
               }
               p{
-                  @apply max-md:text-[12px];
+                  @apply max-md:text-[10px] max-md:leading-3;
               }
           }
       }
@@ -93,13 +92,13 @@ import { mapActions, mapState } from 'vuex'
           @apply text-blue font-medium text-4xl mb-12 px-3 text-center;
       }
       .cards{
-          @apply flex justify-between mb-14 px-5 
-          max-lg:grid max-lg:grid-cols-2 max-lg:justify-items-center
+          @apply mb-14 px-5 grid grid-cols-4 justify-items-center gap-5
+          max-2xl:grid-cols-2 
           max-[600px]:grid-cols-1
           ;
   
           .card{
-              @apply p-5 max-w-[250px] flex flex-col items-center text-center
+              @apply max-w-[250px] w-full flex flex-col items-center text-center
                   max-lg:flex max-lg:flex-col max-lg:items-center max-lg:text-center 
               ;
           }

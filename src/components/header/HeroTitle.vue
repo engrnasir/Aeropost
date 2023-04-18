@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-        <div class="flex items-center max-lg:flex-col">
+        <div class="flex items-center max-2xl:flex-col">
           <h1>{{ title }}&nbsp;</h1>
           <h1 class="border-b-2 border-[#A8EEFF]">{{ utext }}</h1>
         </div>

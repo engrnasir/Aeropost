@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-blue px-8 py-4 pt-0 mb-0 border-0 ">
+    <div class=" px-8 py-4">
         <CountryPicker/>
         <Navigation/>
     </div>

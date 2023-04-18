@@ -79,8 +79,8 @@ nav{
     @apply flex items-center text-white;
   }
   .item{
-    @apply mr-8 text-base hover:text-yellow font-medium
-           max-lg:mr-4 max-lg:text-sm max-md:text-base;
+    @apply mr-4 text-sm hover:text-yellow font-medium
+            max-md:text-base;
   }
 }
 

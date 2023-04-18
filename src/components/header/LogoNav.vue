@@ -4,10 +4,10 @@
               <div class="flex justify-between items-center w-[100%]" >
                   <div class="flex items-center">
                       <img src="@/assets/images/menu.png" alt="" 
-                          class="hidden max-md:block w-6 mr-5 cursor-pointer"
+                          class="hidden max-md:block w-6 mr-4 cursor-pointer"
                           @click="setShowMenu(!showMenu)">
                       <router-link :to="`/?lang=${lang}`">
-                          <Logo colorVal="#fff" class="max-md:w-40 max-lg:w-50"/>
+                          <Logo colorVal="#fff" class="max-md:w-32 max-lg:w-50"/>
                       </router-link>
                   </div>
       
