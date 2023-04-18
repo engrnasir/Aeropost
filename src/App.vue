@@ -57,7 +57,6 @@ export default{
     const lg = this.$route.params.lg;
     if(lg){ this.setLang(lg)}
     let gtw = this.$route.params.gtw 
-    console.log(gtw);
     if(!gtw){
       gtw = this.$route.path.substring(1,4)
     }

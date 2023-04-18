@@ -43,10 +43,11 @@ export default {
             if(path.includes('rates')){
                 gtw = path.substring(1,4)
             }
-            console.log(gtw);
             if(gtw && lg){
                 let url = `/${gtw}/${lg}/${path.substring(8)}`
-                this.$router.push(url)
+                if(this.$route.path !== url){
+                    this.$router.push(url)
+                }
             }
         },
     }

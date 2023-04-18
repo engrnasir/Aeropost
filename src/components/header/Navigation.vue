@@ -25,11 +25,11 @@
                 {{lang==='en'?'FAQs':'Preguntas Frecuentes'}}
               </router-link>
             </li>
-            <li class="item" :class="bgBlue?'item-white':'item-blue'">
-                    <router-link :to="`/${selectedCountry.gtw}/${lang}/restricted`">
-                        {{lang=='en'?'Restricted Products':'Productos restringidos'}}
-                    </router-link>
-                </li>
+            <li class="item">
+                <router-link :to="`/${selectedCountry.gtw}/${lang}/restricted`">
+                    {{lang=='en'?'Restricted Products':'Productos restringidos'}}
+                </router-link>
+            </li>
             <li class="item mr-0" @click="setShowMenu(false)">
               <router-link :to="`/${selectedCountry.gtw}/${lang}/contactus`">
                 {{lang==='en'?'Contact':'Contacto'}}

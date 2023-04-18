@@ -2,7 +2,7 @@
     <div class=" min-w-full transition-all duration-1000 bg-[#F5F5F5]">
       <HeroTitleVue :title="hero.title" :description="hero.description"></HeroTitleVue>
       <div class="-translate-y-16">
-          <div class="w-[96%] max-w-[600px] min-h-[500px] bg-white shadow-2xl rounded-xl  mx-auto relative z-20 mb-8">
+          <div class="cal-wrapper">
             <iframe :src="cal_url" frameborder="0" width="600" height="500" class="bg-#000"></iframe>
           </div>
       </div>
@@ -54,15 +54,23 @@
   </script>
 
 <style lang="scss">
+.cal-wrapper{
+  @apply w-[96%] max-w-[600px] min-h-[600px] bg-white 
+         shadow-2xl rounded-xl  mx-auto relative z-20 mb-8
+         overflow-x-scroll;
+}
+.cal-wrapper::-webkit-scrollbar{  
+  @apply hidden;
+}
 #tbCalculator{
-  width: 100%;
+  width: 100% !important;
   &>div{
-    width: 100%;
+    width: 100% !important;
   }
 }
 #tbMain{
   @media only  screen and (max-width:700px){
-    width: 320px;    
+    width: 320px !important;
   }
 }
 </style>
