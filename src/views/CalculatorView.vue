@@ -44,13 +44,12 @@
         return this.lang==='en'?'We make shopping simple.':'Hacemos que tus compras sean simples.';
       },
       cal_url(){
-        return `https://calculator.aeropost.com/Calculator.aspx?gateway=${this.selectedCountry.gtw}&userlanguage=${this.lang==='en'?'1':'0'}`
+        return `https://calculator.aeropost.com/Calculator.aspx?gateway=${this.selectedCountry.gtw}&userlanguage=${this.langCode}`
+      },
+      langCode(){
+        return this.lang==='en'?'1':'0';
       }
-    },
-    methods:{
-
-    }
-    
+    },   
   }
   </script>
 

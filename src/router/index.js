@@ -45,91 +45,94 @@ import VenezuelaRate from '../views/components/VenezuelaRate.vue'
 
 Vue.use(VueRouter)
 
-const routes = [
-  
+const routes = [  
   {
     path: '/',
+    redirect:'/BZE/en'
+  },
+  {
+    path: '/:gtw/:lg',
     name: 'Home',
     component: Home2
   },
   {
-    path: '/benefits',
+    path: '/:gtw/:lg/benefits',
     name: 'benefitsview',
     component: BenefitView
   },
   {
-    path: '/:gtw/calculator',
+    path: '/:gtw/:lg/calculator',
     name: 'calculator',
     component: CalculatorView
   },
   {
-    path: '/faqs',
+    path: '/:gtw/:lg/faqs',
     name: 'faqs',
     component: FaqsView
   },
   {
-    path: '/how-it-works',
+    path: '/:gtw/:lg/how-it-works',
     name: 'HowItWorks',
     component: HowItWorksView
   },
   {
-    path: '/aboutus',
+    path: '/:gtw/:lg/aboutus',
     name: 'AboutUs',
     component: AboutUs
   },
   {
-    path: '/terms',
+    path: '/:gtw/:lg/terms',
     name: 'TermsCondition',
     component: TermsCondition
   },
   {
-    path: '/:gtw/contactus',
+    path: '/:gtw/:lg/contactus',
     name: 'Contactus',
     component: Contactus
   },
   {
-    path: '/restricted',
+    path: '/:gtw/:lg/restricted',
     name: 'RestrictedView',
     component: Restricted
   },
   {
-    path: ':gtw/rates',
+    path: '/:gtw/:lg/rates',
     name: 'Rates',
     component: RatesView,
       children: [
-        {path:'/BZE/rates', component:BelizeRate},
-        {path:'/SJO/rates', component:CostaRate},
-        {path:'/SAL/rates', component:ElSavadorRate},
-        {path:'/GUA/rates', component:GuatemalaRate},
-        {path:'/SAP/rates', component:HondurasRate},
-        {path:'/TEG/rates', component:HondurasRate},
-        {path:'/MGA/rates', component:NicaraguaRate},
-        {path:'/PTY/rates', component:PanamaRate},
+        {path:'/BZE/:lg/rates', component:BelizeRate},
+        {path:'/SJO/:lg/rates', component:CostaRate},
+        {path:'/SAL/:lg/rates', component:ElSavadorRate},
+        {path:'/GUA/:lg/rates', component:GuatemalaRate},
+        {path:'/SAP/:lg/rates', component:HondurasRate},
+        {path:'/TEG/:lg/rates', component:HondurasRate},
+        {path:'/MGA/:lg/rates', component:NicaraguaRate},
+        {path:'/PTY/:lg/rates', component:PanamaRate},
 
-        {path:'/AXA/rates', component:AnguillaRate},
-        {path:'/ANU/rates', component:AntiguaRate},
-        {path:'/AUA/rates', component:ArubaRate},
-        {path:'/BGI/rates', component:BarbadosRate},
-        {path:'/EIS/rates', component:BritishVirginRate},
-        {path:'/GCM/rates', component:CaymanIslandRate},
-        {path:'/CUR/rates', component:CuracaoRate},
-        {path:'/DOM/rates', component:DominicaRate},
-        {path:'/GND/rates', component:GrenadaRate},
-        {path:'/PTP/rates', component:GuadeloupeRate},
-        {path:'/PAP/rates', component:HaitiRate},
-        {path:'/FDF/rates', component:MartiniqueRate},
-        {path:'/MNI/rates', component:MontserratRate},
-        {path:'/SLU/rates', component:SaintLuciaRate},
-        {path:'/SXM/rates', component:SaintMartinRate},
-        {path:'/SVD/rates', component:SaintVincentRate},
-        {path:'/TCA/rates', component:TurksCaicosRate},
+        {path:'/AXA/:lg/rates', component:AnguillaRate},
+        {path:'/ANU/:lg/rates', component:AntiguaRate},
+        {path:'/AUA/:lg/rates', component:ArubaRate},
+        {path:'/BGI/:lg/rates', component:BarbadosRate},
+        {path:'/EIS/:lg/rates', component:BritishVirginRate},
+        {path:'/GCM/:lg/rates', component:CaymanIslandRate},
+        {path:'/CUR/:lg/rates', component:CuracaoRate},
+        {path:'/DOM/:lg/rates', component:DominicaRate},
+        {path:'/GND/:lg/rates', component:GrenadaRate},
+        {path:'/PTP/:lg/rates', component:GuadeloupeRate},
+        {path:'/PAP/:lg/rates', component:HaitiRate},
+        {path:'/FDF/:lg/rates', component:MartiniqueRate},
+        {path:'/MNI/:lg/rates', component:MontserratRate},
+        {path:'/SLU/:lg/rates', component:SaintLuciaRate},
+        {path:'/SXM/:lg/rates', component:SaintMartinRate},
+        {path:'/SVD/:lg/rates', component:SaintVincentRate},
+        {path:'/TCA/:lg/rates', component:TurksCaicosRate},
 
-        {path:'/SCL/rates', component:ChileRate},
-        {path:'/BOG/rates', component:ColombiaRate},
-        {path:'/ECU/rates', component:EcuadorRate},
-        {path:'/GEO/rates', component:GuyanaRate},
-        {path:'/LIM/rates', component:PeruRate},
-        {path:'/CCS/rates', component:VenezuelaRate},
+        {path:'/SCL/:lg/rates', component:ChileRate},
+        {path:'/BOG/:lg/rates', component:ColombiaRate},
+        {path:'/ECU/:lg/rates', component:EcuadorRate},
+        {path:'/GEO/:lg/rates', component:GuyanaRate},
+        {path:'/LIM/:lg/rates', component:PeruRate},
+        {path:'/CCS/:lg/rates', component:VenezuelaRate},
     ],
   },
   {

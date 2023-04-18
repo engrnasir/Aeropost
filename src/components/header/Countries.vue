@@ -6,10 +6,8 @@
             @click="setCountry(country)"
             :class="selectedCountry.name===country.name?'bg-slate-200':''"
             >
-            <router-link :to="`/?lang=${lang}`" tag="a">
-                <p>{{ country.name }}</p>
-                <img :src="require(`@/assets/images/flags/${country.flagUrl}`)" :alt="country.name">
-            </router-link>
+            <p>{{ country.name }}</p>
+            <img :src="require(`@/assets/images/flags/${country.flagUrl}`)" :alt="country.name">
         </div>
     </div>
 </template>
@@ -33,6 +31,7 @@ export default {
         setCountry(country){
             this.setSelectedCountry(country)
             this.setShowCountries(false)
+            this.$router.push(`/${this.selectedCountry.gtw}/${this.lang}`)
         }
     }
 }
@@ -44,10 +43,7 @@ export default {
             max-md:grid-cols-1 max-md:px-2;
 
     .country{
-        @apply flex justify-center items-center w-full rounded-md;
-    }
-    .country a{
-        @apply min-w-full flex justify-center items-center px-8 py-3 rounded-xl hover:bg-slate-200 cursor-pointer;
+        @apply flex justify-center items-center w-full px-8 py-3 rounded-xl hover:bg-slate-200 cursor-pointer;
 
         p{
             @apply text-lg font-medium mr-3 min-w-min max-lg:text-base min-w-min;

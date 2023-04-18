@@ -12,6 +12,11 @@
     <HeaderVue></HeaderVue>
     <router-view/>
     <footerVue :bgBlue="false"/>
+    <button @click="goTop()" 
+      class="fixed right-6 bottom-6 z-50 text-white bg-blue p-3 rounded-md border border-gray-50"
+      id="goTopBtn">
+      <img src="@/assets/images/down.png" alt="" class="rotate-180">
+    </button>
   </div>
 </template>
 <script>
@@ -40,15 +45,21 @@ export default{
           'setShowMenu',
           'setLang',
           'setSelectedCountry'
-      ])
+      ]),
+      goTop(){
+        window.scrollTo(0,0)
+      }
   },
+
+
   mounted() {
-    const lg = this.$route.query.lang;
-    if(lg){ this.setLang(lg)}
-    let gtw = this.$route.query.gtw 
     const that = this;
+    const lg = this.$route.params.lg;
+    if(lg){ this.setLang(lg)}
+    let gtw = this.$route.params.gtw 
+    console.log(gtw);
     if(!gtw){
-      gtw = this.$route.params.gtw
+      gtw = this.$route.path.substring(1,4)
     }
     this.maps.forEach(el=>{
       el.countries.forEach(c=> {
@@ -56,6 +67,11 @@ export default{
           that.setSelectedCountry(c)
         }
       })
+    })
+
+    const goTopBtn = document.getElementById('goTopBtn')
+    window.addEventListener('scroll',()=>{
+      goTopBtn.style.display = window.scrollY<60? 'none':'inline';
     })
 
     window.onUsersnapLoad = function(api) {

@@ -6,32 +6,32 @@
     <nav class="w-full">
         <ul class="items">
             <li class="item" @click="setShowMenu(false)">
-              <router-link :to="`/how-it-works?lang=${lang}&gtw=${selectedCountry.gtw}`">
+              <router-link :to="`/${selectedCountry.gtw}/${lang}/how-it-works`">
                 {{lang==='en'?'How It Works':'Cómo Funciona'}}
               </router-link>
             </li>
             <li class="item" v-if="!invalidRate" @click="setShowMenu(false)">
-              <router-link :to="`/${selectedCountry.gtw}/rates?lang=${lang}&gtw=${selectedCountry.gtw}`">
+              <router-link :to="`/${selectedCountry.gtw}/${lang}/rates`">
                 {{lang==='en'?'Rates':'Tarifas'}}
               </router-link>
             </li>
             <li class="item" @click="setShowMenu(false)">
-              <router-link :to="`/${selectedCountry.gtw}/calculator?lang=${lang}`">
+              <router-link :to="`/${selectedCountry.gtw}/${lang}/calculator`">
                 {{lang==='en'?'Calculator':'Calculadora de Costos'}}
               </router-link>
             </li>
             <li class="item" @click="setShowMenu(false)">
-              <router-link :to="`/faqs?lang=${lang}&gtw=${selectedCountry.gtw}`">
+              <router-link :to="`/${selectedCountry.gtw}/${lang}/faqs`">
                 {{lang==='en'?'FAQs':'Preguntas Frecuentes'}}
               </router-link>
             </li>
             <li class="item mr-0" @click="setShowMenu(false)">
-              <router-link :to="`/${selectedCountry.gtw}/contactus?lang=${lang}`">
+              <router-link :to="`/${selectedCountry.gtw}/${lang}/contactus`">
                 {{lang==='en'?'Contact':'Contacto'}}
               </router-link>
             </li>
             <li class="item mr-0" @click="setShowMenu(false)">
-              <router-link :to="`/benefits?lang=${lang}&gtw=${selectedCountry.gtw}`">
+              <router-link :to="`/${selectedCountry.gtw}/${lang}/benefits`">
                 {{lang==='en'?'Benefits':'Beneficios'}}
               </router-link>
             </li>
@@ -65,7 +65,7 @@ export default {
   },
   methods:{
     ...mapMutations(['setShowMenu'])
-  }
+  },
 }
 </script>
 

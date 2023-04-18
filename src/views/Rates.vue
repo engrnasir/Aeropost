@@ -50,7 +50,7 @@
       ...mapMutations(['setSelectedCountry'])
     },
     mounted(){
-      const gtw = this.$route.query.gtw
+      const gtw = this.$route.params.gtw
       const that = this;
       this.maps.forEach(el=>{
         el.countries.forEach(c=> {

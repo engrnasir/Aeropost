@@ -37,13 +37,17 @@ export default {
             'setSelectedCountries',
         ]),
         setLanguage(lg){
+            let path = this.$route.path
             this.setLang(lg)
-            const gtw = this.$route.query.gtw
-            let url = `${this.$route.path}?lang=${lg}&`
-            if(gtw){
-                url += `&gtw=${gtw}`
+            let gtw = this.$route.params.gtw
+            if(path.includes('rates')){
+                gtw = path.substring(1,4)
             }
-            this.$router.push(url)
+            console.log(gtw);
+            if(gtw && lg){
+                let url = `/${gtw}/${lg}/${path.substring(8)}`
+                this.$router.push(url)
+            }
         },
     }
 

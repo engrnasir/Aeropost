@@ -22,6 +22,8 @@
 <script>
 import { mapState } from 'vuex'
 export default{
-    ...mapState(['lang'])
+    computed:{
+        ...mapState(['lang'])
+    }
 }
 </script>

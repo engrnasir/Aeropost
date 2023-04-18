@@ -6,7 +6,7 @@
                       <img src="@/assets/images/menu.png" alt="" 
                           class="hidden max-md:block w-6 mr-4 cursor-pointer"
                           @click="setShowMenu(!showMenu)">
-                      <router-link :to="`/?lang=${lang}`">
+                      <router-link :to="`/${selectedCountry.gtw}/${lang}`">
                           <Logo colorVal="#fff" class="max-md:w-32 max-lg:w-50"/>
                       </router-link>
                   </div>
@@ -37,7 +37,7 @@ export default {
         }
     },
     computed:{
-        ...mapState(['lang','showMenu'])
+        ...mapState(['lang','showMenu','selectedCountry'])
     },
     methods:{
         ...mapMutations(['setLang','setShowMenu'])
