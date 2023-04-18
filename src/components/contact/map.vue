@@ -1,6 +1,6 @@
 <template>
     <div class="mb-3 relative min-h-[50vh]"> 
-          <div :class="selectedCountry.mapClass" class="wrapper"></div>
+          <div :class="selectedCountry.mapClass" id="wrapper"></div>
           <WhatsappVue/>
     </div>
 
@@ -19,8 +19,8 @@ export default {
 </script>
 
 <style scoped>
-.wrapper{
-    max-height: 700px;
+#wrapper{
+  max-height: 700px;
 }
 .eapps-google-maps-bar-content{
   max-height: 300px !important; /* Set the desired height of the search panel */
