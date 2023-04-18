@@ -27,11 +27,6 @@
                     </router-link>
                 </li>
                 <li class="item" :class="bgBlue?'item-white':'item-blue'">
-                    <router-link :to="`/${selectedCountry.gtw}/${lang}/restricted`">
-                        {{lang=='en'?'Restricted Products':'Productos restringidos'}}
-                    </router-link>
-                </li>
-                <li class="item" :class="bgBlue?'item-white':'item-blue'">
                     <router-link :to="`/${selectedCountry.gtw}/${lang}/contactus`">
                         {{lang=='en'?'Contact':'Contacto'}}
                     </router-link>
