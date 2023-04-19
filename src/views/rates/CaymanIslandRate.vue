@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p class="text-bold text-base mb-4 text-blue ">{{ info.effectiveDate }}</p>
+        <p class=" text-base mb-4 text-blue ">{{ info.effectiveDate }}</p>
 
         <InformationVue :list="info.list1" />
         

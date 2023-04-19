@@ -11,8 +11,8 @@
 
         <tableVue :list="info.maritime" :hasHeader="true"/>     
         
-        <p class="text-bold text-blue mb-4" v-if="lang==='en'"><u>Local documentation charges</u> from vessel company landing agent may apply.</p>        
-        <p class="text-bold text-blue mb-4" v-else>Se pueden aplicar <u>cargos por documentación local</u> del agente de desembarque de la compañía naviera.</p>        
+        <p class=" text-blue mb-4" v-if="lang==='en'"><u>Local documentation charges</u> from vessel company landing agent may apply.</p>        
+        <p class=" text-blue mb-4" v-else>Se pueden aplicar <u>cargos por documentación local</u> del agente de desembarque de la compañía naviera.</p>        
 
         <WarrantyVue/>
 

@@ -52,6 +52,7 @@
     mounted(){
       const gtw = this.$route.params.gtw
       const that = this;
+      console.log(gtw);
       this.maps.forEach(el=>{
         el.countries.forEach(c=> {
           if(c.gtw === gtw){

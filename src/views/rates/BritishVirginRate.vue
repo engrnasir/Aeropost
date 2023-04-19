@@ -8,7 +8,7 @@
 
         <tableVue :list="info.airportCargo" :hasHeader="true"/>
 
-        <p class="text-bold text-sm mb-4 text-blue ">
+        <p class="text-sm mb-4 text-blue ">
             {{ 
                 lang==='en'?
                 '*We are not able to provide any special customs clearance needs for exemptions or special circumstances.  This is including, but not limited to, Pier-Park exemptions, Retail business exemptions,  Government Departments duty exemptions, Temporary Import exemptions,  and any other special exemptions.'
@@ -21,7 +21,7 @@
         <h2 class="main-heading">{{ info.maritime.title }}</h2>
         <tableVue :list="info.maritime.table"/>
         
-        <p class="text-bold text-base mb-4 text-blue ">
+        <p class=" text-base mb-4 text-blue ">
             {{ 
                 lang==='en'?
                 '*We are not able to provide any special customs clearance needs for exemptions or special circumstances.  This is including, but not limited to, Pier-Park exemptions, Retail business exemptions,  Government Departments duty exemptions, Temporary Import exemptions,  and any other special exemptions.'

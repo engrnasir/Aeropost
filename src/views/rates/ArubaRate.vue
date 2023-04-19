@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p class="text-bold text-base mb-4 text-blue ">{{ info.effectiveDate }}</p>
+        <p class="text-base mb-4 text-blue ">{{ info.effectiveDate }}</p>
 
         <InformationVue :list="info.list1" />
 
@@ -12,7 +12,7 @@
         
         <h2 class="main-heading">{{ info.customHandling.title }}</h2>
         <p class="text-base text-blue mb-5" v-html="info.customHandling.description"></p>  
-        <p class="text-bold text-base mb-4 text-blue ">{{ info.effectiveDate }}</p>
+        <p class="text-base mb-4 text-blue ">{{ info.effectiveDate }}</p>
         <tableVue :list="info.customHandling.table" :hasHeader="true"/>
 
     </div>

@@ -54,12 +54,9 @@ export default{
 
   mounted() {
     const that = this;
-    const lg = this.$route.params.lg;
+    const lg = this.$route.params.lg
     if(lg){ this.setLang(lg)}
-    let gtw = this.$route.params.gtw 
-    if(!gtw){
-      gtw = this.$route.path.substring(1,4)
-    }
+    let gtw = this.$route.params.gtw? this.$route.params.gtw : this.$route.path.substring(1,4)
     this.maps.forEach(el=>{
       el.countries.forEach(c=> {
         if(c.gtw === gtw){
@@ -70,7 +67,7 @@ export default{
 
     const goTopBtn = document.getElementById('goTopBtn')
     window.addEventListener('scroll',()=>{
-      goTopBtn.style.display = window.scrollY<60? 'none':'inline';
+      goTopBtn.style.display = window.scrollY<320? 'none':'inline';
     })
 
     window.onUsersnapLoad = function(api) {

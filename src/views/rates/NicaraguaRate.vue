@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p class="text-bold text-base mb-4 text-blue ">
+        <p class="text-base mb-4 text-blue ">
             {{lang==='en'?'Effective January 12, 2022.':'Efectivo el 12 de enero de 2022'}}
         </p>
 

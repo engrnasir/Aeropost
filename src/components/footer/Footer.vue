@@ -61,9 +61,7 @@ export default {
     computed:{
         ...mapState(['selectedCountry','lang']),
         invalidRate(){
-            return this.selectedCountry.gtw==='BHS' 
-                    || this.selectedCountry.gtw ==='JAM' 
-                    || this.selectedCountry.gtw ==='POS';
+            return this.selectedCountry.gtw==='BHS';
             }
     },
     mounted(){

@@ -2,8 +2,8 @@
     <div class=" min-w-full transition-all duration-1000 bg-[#F5F5F5]">
       <HeroTitleVue :title="hero.title" :description="hero.description"></HeroTitleVue>
       <div class="-translate-y-16">
-          <div class="cal-wrapper">
-            <iframe :src="cal_url" frameborder="0" width="600" height="500" class="bg-#000"></iframe>
+          <div class="cal-wrapper" >
+            <iframe :src="cal_url" frameborder="0" width="600" height="500" id="calculator"></iframe>
           </div>
       </div>
       <FooterTitle :title="footerTitle" :bgBlue='true'></FooterTitle>
@@ -49,7 +49,7 @@
       langCode(){
         return this.lang==='en'?'1':'0';
       }
-    },   
+    }, 
   }
   </script>
 
@@ -61,16 +61,5 @@
 }
 .cal-wrapper::-webkit-scrollbar{  
   @apply hidden;
-}
-#tbCalculator{
-  width: 100% !important;
-  &>div{
-    width: 100% !important;
-  }
-}
-#tbMain{
-  @media only  screen and (max-width:700px){
-    width: 320px !important;
-  }
 }
 </style>

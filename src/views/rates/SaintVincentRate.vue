@@ -8,15 +8,15 @@
         
         <tableVue :list="info.otherCharges" :hasHeader="true"/>
 
-         <p class="text-bold text-blue mb-4" v-if="lang==='en'">*This handling fee charge applies to all transactions, both when customs clearance is provided by Aeropost or the customer elects to pick up Customs document.</p>
-         <p class="text-bold text-blue mb-4" v-else>*Este cargo por tarifa de manejo se aplica a todas las transacciones, tanto cuando Aeropost proporciona el despacho de aduana como cuando el cliente elige recoger el documento de Aduana.</p>
+         <p class="text-blue mb-4" v-if="lang==='en'">*This handling fee charge applies to all transactions, both when customs clearance is provided by Aeropost or the customer elects to pick up Customs document.</p>
+         <p class="text-blue mb-4" v-else>*Este cargo por tarifa de manejo se aplica a todas las transacciones, tanto cuando Aeropost proporciona el despacho de aduana como cuando el cliente elige recoger el documento de Aduana.</p>
         
         <InformationVue :list="info.list2" />
 
         <tableVue :list="info.maritime" :hasHeader="true"/>     
         
-        <p class="text-bold text-blue mb-4" v-if="lang==='en'"><u>Local documentation charges</u> from vessel company landing agent may apply.</p>        
-        <p class="text-bold text-blue mb-4" v-else>Se pueden aplicar <u>cargos por documentación local</u> del agente de desembarque de la compañía naviera.</p>        
+        <p class="text-blue mb-4" v-if="lang==='en'"><u>Local documentation charges</u> from vessel company landing agent may apply.</p>        
+        <p class="text-blue mb-4" v-else>Se pueden aplicar <u>cargos por documentación local</u> del agente de desembarque de la compañía naviera.</p>        
 
         <WarrantyVue/>
 

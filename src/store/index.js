@@ -42,7 +42,7 @@ export default new Vuex.Store({
               { gtw:'GND', name:'Grenada', flagUrl:'grenada.png', mapClass:'elfsight-app-e13963d2-99f6-4ce2-a24a-1f3cb48c4fe8'},
               { gtw:'PTP', name:'Guadeloupe', flagUrl:'guadeloupe.png', mapClass:'elfsight-app-9cfd6ab6-b0a3-4c09-8ebb-0401e2277d04'},
               { gtw:'PAP', name:'Haití', flagUrl:'haiti.png', mapClass:'elfsight-app-f204af06-7b67-4780-be13-021bc4264777'},
-              { gtw:'JAM', name:'Jamaica', flagUrl:'jamaica.png', mapClass:'elfsight-app-d8fd84d8-e15a-480f-af72-7964f5ea7c7b'},
+              { gtw:'KIN', name:'Jamaica', flagUrl:'jamaica.png', mapClass:'elfsight-app-d8fd84d8-e15a-480f-af72-7964f5ea7c7b'},
               { gtw:'FDF', name:'Martinique', flagUrl:'martinique.png', mapClass:'elfsight-app-f8ecc474-0da6-49ae-bf15-3b865d0e2848'},
               { gtw:'MNI', name:'Montserrat', flagUrl:'montserrat.png', mapClass:'elfsight-app-ca543e84-07af-481b-82a6-8f0766356fc1'},
               { gtw:'SLU', name:'Saint Lucia', flagUrl:'saint.png', mapClass:'elfsight-app-f357d17b-0073-4698-9d2d-64a35ef50dc5'},

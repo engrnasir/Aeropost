@@ -2,7 +2,7 @@
     <div>
         <InformationVue :list="info.list1" />
         
-        <p class="text-bold text-base mb-4 text-blue ">{{ info.effectiveDate }}</p>
+        <p class="text-base mb-4 text-blue ">{{ info.effectiveDate }}</p>
 
         <tableVue :list="info.packages" :hasHeader="true"/>
 

@@ -15,7 +15,7 @@
         <h2 class="main-heading">
             {{lang==='en'?'Home delivery':'Entrega a domicilio'}}
         </h2>
-        <p class="text-bold text-blue mb-4">{{ info.effectiveDate }}</p>
+        <p class=" text-blue mb-4">{{ info.effectiveDate }}</p>
         <tableVue :list="info.homeDeliveryPackages" :hasHeader="true"/>
 
         <h2 class="main-heading">
@@ -27,7 +27,7 @@
         
         <h2 class="main-heading">{{ info.customHandling.title }}</h2>
         <p class="text-blue mb-4">{{ info.customHandling.description }}</p>
-        <p class="text-sm text-bold text-blue mb-4">{{ info.customHandling.effectiveDate }}</p>
+        <p class="text-sm text-blue mb-4">{{ info.customHandling.effectiveDate }}</p>
         <tableVue :list="info.customHandling.table" :hasHeader="true"/>
 
     </div>

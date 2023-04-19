@@ -3,7 +3,7 @@
       <HeroTitleVue :title="hero.title"></HeroTitleVue>
 
       <div class="container">
-        <RestrictedContents/>
+        <router-view></router-view>
       </div>
 
       <FooterTitle :title="footerTitle" :bgBlue='true'></FooterTitle>
@@ -36,7 +36,8 @@ import { mapState } from 'vuex';
     computed:{
       ...mapState([
         'selectedCountry',
-        'lang'
+        'lang',
+        'maps'
       ]),
       hero(){
         return this.lang==='en'?this.en_hero:this.es_hero;
@@ -44,7 +45,18 @@ import { mapState } from 'vuex';
       footerTitle(){
         return this.lang==='en'?'We make shopping simple.':'Hacemos que tus compras sean simples.';
       }
-    },    
+    }, 
+    mounted(){
+      const gtw = this.$route.params.gtw
+      const that = this;
+      this.maps.forEach(el=>{
+        el.countries.forEach(c=> {
+          if(c.gtw === gtw){
+            that.setSelectedCountry(c)
+          }
+        })
+      })
+    }    
   }
   </script>
   <style lang="scss" scoped>
