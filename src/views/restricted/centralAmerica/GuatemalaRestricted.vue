@@ -124,16 +124,68 @@ export default {
                 ['Veterinary products and accessories	','Agricultural products and accesories'],
                 ['Products for animals','Dairy products'],
             ],
-
-
-
-
-
             list1:[
                 "Aerocasillas DOES NOT handle permit procesess, therefore it is the client's responsibility to file the necessary the paperwork with the Ministry of Agriculture, Livestock and Food (MAGA). For more information call PBX: 2413-7000 or directly visit the Ministry in 7th Ave 12-90 zone 13, Guatemala."
             ]
         },
-        es_info:{}
+        es_info:{
+            products:[
+                ['Productos',''],
+                ['Cualquier artículo inflamable, corrosivo o explosivo', 'Municiones y armas de fuego'],
+                ['Cualquier artículo con alcohol incluido como su primer ingrediente', 'Baterías de celda húmeda'],
+                ['Soluciones de limpieza','Venenos'],
+                ['Fuegos artificiales','Contenedores a presión'],
+                ['Gasolina','Fósforos'],
+                ['Gas lacrimógeno o gas pimienta', 'Herramientas a gas'],
+                ['Mecheros','Prishables'],
+                ['Neumáticos usados', 'Sustancias psicotrópicas, precursores y sustancias controladas'],
+                ['Productos naturales y vitaminas', 'Máquinas de tatuar'],
+                ['Bolsas de aire',''],
+            ],
+
+            products1:[
+                ['Estos artículos tienen ciertas restricciones locales o pueden necesitar permisos especiales para ingresar al país. Incluyen pero no se limitan a:',''],
+                ['Desodorantes', 'Esmalte de uñas'],
+                ['Polvos de belleza', 'Latas de aerosol'],
+                ['Productos de belleza', 'Velas de aceite'],
+                ['Cremas','Perfumes'],
+                ['Gels','Bloqueador solar'],
+                ['Soluciones de limpieza no corrosivas','Productos edulcorantes, aromatizantes y colorantes alimentarios'],
+                ['Enjuague bucal', 'Choques de coche'],
+                ['Hoverboards','Baterías'],
+                ['Cualquier artículo inflamable, corrosivo o explosivo', 'Municiones y armas de fuego'],
+                ['Cualquier artículo con alcohol incluido como su primer ingrediente', 'Baterías de celda húmeda'],
+                ['Soluciones de limpieza','Venenos'],
+                ['Fuegos artificiales','Contenedores a presión'],
+                ['Gasolina','Fósforos'],
+                ['Gas lacrimógeno o gas pimienta', 'Herramientas a gas'],
+                ['Mecheros', 'Prishables'],
+                ['Neumáticos usados', 'Sustancias psicotrópicas, precursores y sustancias controladas'],
+                ['Productos naturales y vitaminas', 'Máquinas de tatuar'],
+                ['Bolsas de aire',''],
+            ],
+            products2:[
+                ['Productos <br>Requieren Permiso del "Ministerio de Salud Pública"',''],
+                ['Cremas y cosméticos', 'Medicamentos y drogas'],
+                ['Perfumes y fragancias','Productos de maquillaje y belleza'],
+                ['Productos para el cabello','Jabón'],
+                ['Geles', 'Tabaco'],
+                ['Alimentos y bebidas','Sustancias tóxicas'],
+                ['Licor', 'Equipamiento médico'],
+                ['Aerosoles',''],
+            ],
+            products3:[
+                ['Productos',''],
+                ['Madera', 'Semillas'],
+                ['Pieles y productos animales', 'Plantas'],
+                ['Productos y accesorios veterinarios', 'Productos y accesorios agrícolas'],
+                ['Productos para animales','Productos lácteos'],
+            ],
+            list1:[
+                "Aerocasillas NO maneja trámite de permisos, por lo tanto es responsabilidad del cliente realizar los trámites necesarios ante el Ministerio de Agricultura, Ganadería y Alimentación (MAGA). Para mayor información llamar al PBX: 2413-7000 o visitar directamente el Ministerio en 7ma Ave. 12-90 zona 13, Guatemala."
+            ]
+        },
+
     }
   },
   computed:{
