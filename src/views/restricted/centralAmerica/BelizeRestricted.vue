@@ -70,7 +70,38 @@ export default {
 
             ],
         },
-        es_info:{
+        en_info:{
+            
+            table1:[
+            ['Estos productos incluyen Cualquier artículo con alcohol incluido como su primer ingrediente, así como Cualquier cantidad de material INFLAMABLE, EXPLOSIVO o CORROSIVO']
+            ],
+            products:[
+                 ['Productos',''],
+                 ['Latas de aerosol','Fósforos'],
+                 ['Bebidas alcohólicas', 'Equipamiento médico'],
+                 ['Municiones, armas de fuego y repuestos de armas de fuego', 'Vehículos de motor'],
+                 ['Pieles y pieles de animales', 'Enjuague bucal'],
+                 ['Sustancias químicas', 'Esmalte de uñas'],
+                 ['Soluciones de limpieza', 'Velas de aceite'],
+                 ['Cremas', 'Perfumes y colonias'],
+                 ['Desodorantes','Artículos perecederos'],
+                 ['Material explosivo', 'Productos de belleza personal'],
+                 ['Fuegos artificiales','Plantas'],
+                 ['Fragancias y cosmética', 'Venenos'],
+                 ['Herramientas a gas','Contenedores a presión'],
+                 ['Gasolina, combustible', 'Semillas'],
+                 ['Geles', 'Edulcorantes, saborizantes o colorantes alimentarios'],
+                 ['Artículos de valor extremadamente alto', 'Gas lacrimógeno o gas pimienta'],
+                 ['Mecheros', 'Tabaco'],
+                 ['Animales vivos', 'Baterías de celda húmeda'],
+                 ['Valorar certificados y acciones de cualquier clase', 'Manuscritos'],
+                 ['Cheques', 'Títulos académicos, de propiedad y otros'],
+                 ['Pasaportes y documentos de identificación','Tarjetas de crédito o débito'],
+                 ['Efectivo y monedas','Tarjetas regalo'],
+                 ['Sellos o billetes de transporte de cualquier clase', 'Piedras preciosas'],
+                 ['Aerotablas',' '],
+
+             ],
         },
     }
   },
