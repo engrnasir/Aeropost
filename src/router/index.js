@@ -57,6 +57,12 @@ import NicaraguaRestricted from '@/views/restricted/centralAmerica/NicaraguaRest
 import PanamaRestricted from '@/views/restricted/centralAmerica/PanamaRestricted.vue'
 
 import AnguillaRestricted from '@/views/restricted/caribbean/AnguillaRestricted.vue'
+import AntiguaRestricted from '@/views/restricted/caribbean/AntiguaRestricted.vue'
+import ArubaRestricted from '@/views/restricted/caribbean/ArubaRestricted.vue'
+import BahamasRestricted from '@/views/restricted/caribbean/BahamasRestricted.vue'
+import BarbadosRestricted from '@/views/restricted/caribbean/BarbadosRestricted.vue'
+import BritishRestricted from '@/views/restricted/caribbean/BritishRestricted.vue'
+import CaymanRestricted from '@/views/restricted/caribbean/CaymanRestricted.vue'
 
 
 
@@ -125,6 +131,12 @@ const routes = [
       {path:'/PTY/:lg/restricted', component:PanamaRestricted},
 
       {path:'/AXA/:lg/restricted', component:AnguillaRestricted},
+      {path:'/ANU/:lg/restricted', component:AntiguaRestricted},
+      {path:'/AUA/:lg/restricted', component:ArubaRestricted},
+      {path:'/BHS/:lg/restricted', component:BahamasRestricted},
+      {path:'/BGI/:lg/restricted', component:BarbadosRestricted},
+      {path:'/EIS/:lg/restricted', component:BritishRestricted},
+      {path:'/GCM/:lg/restricted', component:CaymanRestricted},
     ]
   },
   {

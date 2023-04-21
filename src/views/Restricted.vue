@@ -13,7 +13,6 @@
 <script>
 import HeroTitleVue from '@/components/header/HeroTitle.vue';
 import FooterTitle from '@/components/footer/FooterTitle.vue';
-import RestrictedContents from '@/components/restricted/RestrictedContents.vue'
 import { mapState } from 'vuex';
 
   export default {
@@ -21,7 +20,6 @@ import { mapState } from 'vuex';
     components:{
         HeroTitleVue,
         FooterTitle,
-        RestrictedContents
     },
     data(){
       return{

@@ -44,7 +44,8 @@ export default{
           'setShowCountries',
           'setShowMenu',
           'setLang',
-          'setSelectedCountry'
+          'setSelectedCountry',
+          'setSelectedMapIndex'
       ]),
       goTop(){
         window.scrollTo(0,0)
@@ -57,9 +58,10 @@ export default{
     const lg = this.$route.params.lg
     if(lg){ this.setLang(lg)}
     let gtw = this.$route.params.gtw? this.$route.params.gtw : this.$route.path.substring(1,4)
-    this.maps.forEach(el=>{
+    this.maps.forEach((el,i)=>{
       el.countries.forEach(c=> {
         if(c.gtw === gtw){
+          that.setSelectedMapIndex(i)
           that.setSelectedCountry(c)
         }
       })

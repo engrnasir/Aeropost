@@ -22,7 +22,7 @@
 
         <table-vue :list="info.table1" :hasHeader="true"/>
 
-        <information-vue :list="['For more information please contact customer service.']"/>
+        <information-vue :list="info.list1"/>
 
 
 
@@ -78,7 +78,8 @@ export default {
                 ['Credit or debit cards','',''],
                 ['Gift cards','',''],
                 ['Gemstones','',''],
-            ]
+            ],
+            list1:['For more information please contact customer service.']
         },
         es_info:{
             desc1:`
@@ -114,7 +115,8 @@ export default {
                 ['Tarjetas de credito o debito','',''],
                 ['Tarjetas de regalo','',''],
                 ['Piedras preciosas','',''],
-            ]
+            ],
+            list1:['Para obtener más información, póngase en contacto con el servicio al cliente.']
         },
         
     }
