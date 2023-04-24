@@ -32,7 +32,7 @@ html{
   @apply font-bold text-3xl text-blue leading-none mb-4 max-md:text-2xl;
 }
 .heading{
-  @apply text-blue text-xl mb-4 font-medium leading-none max-md:text-base;
+  @apply text-blue text-xl mb-4 font-bold leading-8 max-md:text-base ;
 }
 .sub-heading{
   @apply text-blue text-base mb-4 leading-none;

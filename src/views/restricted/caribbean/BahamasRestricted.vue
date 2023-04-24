@@ -7,23 +7,21 @@
                 
         <information-vue :list="info.list1" />
 
-        <div class="grid grid-cols-4 gap-4 max-md:grid-cols-3 max-sm:grid-cols-2">
-            <div class="flex flex-col items-center p-3 border border-gray" v-for="(item, i) in info.products" :key="i">
-                <img :src="require(`@/assets/images/bhsResProds/${item.img}`)" :alt="item.title" class="mb-2">
-                <p class="text-[12px] text-blue text-center">{{ item.title }}</p>
-            </div>
-        </div>
+        <CardGridVue :list="info.products"/>
+        
     </div>
   
 </template>
 
 <script>
 import InformationVue from '@/components/rates/Information.vue';
+import CardGridVue from '@/components/restricted/CardGrid.vue';
 import { mapState } from 'vuex';
 export default {
   name: 'BahamasRestricted',
   components:{
       InformationVue,
+      CardGridVue
   },
   data(){
     return{

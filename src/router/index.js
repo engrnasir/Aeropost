@@ -63,6 +63,25 @@ import BahamasRestricted from '@/views/restricted/caribbean/BahamasRestricted.vu
 import BarbadosRestricted from '@/views/restricted/caribbean/BarbadosRestricted.vue'
 import BritishRestricted from '@/views/restricted/caribbean/BritishRestricted.vue'
 import CaymanRestricted from '@/views/restricted/caribbean/CaymanRestricted.vue'
+import CuacaoRestricted from '@/views/restricted/caribbean/CuacaoRestricted.vue'
+import DominicaRestricted from '@/views/restricted/caribbean/DominicaRestricted.vue'
+import GrenadaRestricted from '@/views/restricted/caribbean/GrenadaRestricted.vue'
+import GuadeloupeRestricted from '@/views/restricted/caribbean/GuadeloupeRestricted.vue'
+import HaitiRestricted from '@/views/restricted/caribbean/HaitiRestricted.vue'
+import JamaicaRestricted from '@/views/restricted/caribbean/JamaicaRestricted.vue'
+import MartiniqueRestricted from '@/views/restricted/caribbean/MartiniqueRestricted.vue'
+import SaintLuciaRestricted from '@/views/restricted/caribbean/SaintLuciaRestricted.vue'
+import SaintMartinRestricted from '@/views/restricted/caribbean/SaintMartinRestricted.vue'
+import SaintVincentRestricted from '@/views/restricted/caribbean/SaintVincentRestricted.vue'
+import TrinidadRestricted from '@/views/restricted/caribbean/TrinidadRestricted.vue'
+import TurksCaicosRestricted from '@/views/restricted/caribbean/TurksCaicosRestricted.vue'
+
+import ChileRestricted from '@/views/restricted/southAmerica/ChileRestricted.vue'
+import ColombiaRestricted from '@/views/restricted/southAmerica/ColombiaRestricted.vue'
+import EcuadorRestricted from '@/views/restricted/southAmerica/EcuadorRestricted.vue'
+import GuyanaRestricted from '@/views/restricted/southAmerica/GuyanaRestricted.vue'
+import PeruRestricted from '@/views/restricted/southAmerica/PeruRestricted.vue'
+import VenezuelaRestricted from '@/views/restricted/southAmerica/VenezuelaRestricted.vue'
 
 
 
@@ -137,6 +156,29 @@ const routes = [
       {path:'/BGI/:lg/restricted', component:BarbadosRestricted},
       {path:'/EIS/:lg/restricted', component:BritishRestricted},
       {path:'/GCM/:lg/restricted', component:CaymanRestricted},
+      {path:'/CUR/:lg/restricted', component:CuacaoRestricted},
+      {path:'/DOM/:lg/restricted', component:DominicaRestricted},
+      {path:'/GND/:lg/restricted', component:GrenadaRestricted},
+      {path:'/PTP/:lg/restricted', component:GuadeloupeRestricted},
+      {path:'/PAP/:lg/restricted', component:HaitiRestricted},
+      {path:'/KIN/:lg/restricted', component:JamaicaRestricted},
+      {path:'/FDF/:lg/restricted', component:MartiniqueRestricted},
+      {path:'/MNI/:lg/restricted', component:MartiniqueRestricted}, //Same page of Martinique
+      {path:'/SLU/:lg/restricted', component:SaintLuciaRestricted},
+      {path:'/SXM/:lg/restricted', component:SaintMartinRestricted},
+      {path:'/SVD/:lg/restricted', component:SaintVincentRestricted},
+      {path:'/POS/:lg/restricted', component:TrinidadRestricted},
+      {path:'/TCA/:lg/restricted', component:TurksCaicosRestricted},
+      
+      {path:'/SCL/:lg/restricted', component:ChileRestricted},
+      {path:'/BOG/:lg/restricted', component:ColombiaRestricted},
+      {path:'/ECU/:lg/restricted', component:EcuadorRestricted},
+      {path:'/GEO/:lg/restricted', component:GuyanaRestricted },
+      {path:'/LIM/:lg/restricted', component:PeruRestricted },
+      {path:'/CCS/:lg/restricted', component:VenezuelaRestricted },
+
+
+
     ]
   },
   {
