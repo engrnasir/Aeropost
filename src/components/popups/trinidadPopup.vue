@@ -20,7 +20,7 @@
     
                     <div class="max-md:flex item-center">
                         <div class="w-[250px] pr-3 rounded-[60px] overflow-hidden bg-white flex items-center mb-2 max-md:mr-2">
-                            <select name="lockerVal" v-model="selectVal" id="" class="cursor-pointer w-full py-3 px-5 text-blue font-bold text-sm outline-none select">
+                            <select name="lockerVal" v-model="selectVal" id="" class="cursor-pointer w-full py-3 px-5 bg-white text-blue font-bold text-sm outline-none select">
                                 <option value="" selected>Choose your Locker Location</option>
                                 <option :value="l" v-for="(l,i) in lockers" :key="i">{{ l }}</option>
                             </select>
