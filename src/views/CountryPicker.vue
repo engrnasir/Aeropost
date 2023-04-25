@@ -23,7 +23,7 @@
             max-lg:hidden
             " />
         
-        <router-link :to="`/${selectedCountry.gtw}/${lang}/country-picker/all`" class="text-white font-bold text-2xl block text-center max-lg:mt-20 lg:fixed bottom-10 right-10" >View All</router-link>
+        <router-link :to="`/${selectedCountry.gtw}/${lang}/country-picker/all`" class="text-white font-bold text-2xl block text-center max-lg:mt-20 lg:fixed bottom-10 right-10 hover:text-darkYellow" >View All</router-link>
     </div>
   
 </template>

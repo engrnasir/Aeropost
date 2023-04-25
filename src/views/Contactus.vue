@@ -1,5 +1,7 @@
 <template>
     <div class="min-w-full">
+      <trinidad-popup-vue v-if="showTrinidadPopup && !skip" @skip="skip=true"/>
+
       <HeroTitleVue :title="hero.title" :description="hero.description"></HeroTitleVue>
 
       <div class="container">
@@ -7,11 +9,20 @@
       </div>
       <mapVue/>
 
+      <button id="custom-gladly-chat-button" onclick="Gladly.show()" style="display: none;" > 
+        <svg viewBox="10 6 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="button__icon">
+          <g id="DialogueNew" fill="currentColor">
+            <path d="M29.9996 39.3369H29.9996C28.9494 39.3228 27.9027 39.2117 26.873 39.0048C26.3867 38.9217 25.8882 39.0509 25.5034 39.3597C23.5353 40.8057 21.2244 41.714 18.7985 41.9951C18.3992 42.037 18.0415 41.7472 17.9997 41.3478C17.9817 41.1769 18.0249 41.0053 18.1214 40.8632H18.1214C19.059 39.6954 19.7322 38.3381 20.0947 36.885C20.1678 36.4882 20.0128 36.0839 19.6931 35.8378C16.1547 33.2089 14.0485 29.0767 14 24.6684C14 16.5773 21.1633 10 29.9996 10C38.8359 10 45.9992 16.5773 45.9992 24.6684C45.9992 32.7596 38.8361 39.3369 29.9996 39.3369H29.9996Z"></path>
+          </g>
+        </svg>
+      </button>
+
       <FooterTitle :title="footerTitle" :bgBlue='true'></FooterTitle>
     </div>
   </template>
 
 <script>
+import trinidadPopupVue from '@/components/popups/trinidadPopup.vue';
 import HeroTitleVue from '@/components/header/HeroTitle.vue';
 import FooterTitle from '@/components/footer/FooterTitle.vue';
 import mapVue from '@/components/contact/map.vue';
@@ -22,10 +33,12 @@ import { mapMutations, mapState } from 'vuex';
     components:{
         HeroTitleVue,
         FooterTitle,
-        mapVue
+        mapVue,
+        trinidadPopupVue
     },
     data(){
       return{
+        skip:false,
         en_hero:{
           title:'Contact Us',
           description:'Looking for our store locations or hours?',
@@ -64,6 +77,10 @@ import { mapMutations, mapState } from 'vuex';
         'lang',
         'maps'
       ]),
+      showTrinidadPopup(){
+        let path = this.$route.path
+        return path.includes('POS') && path.includes('contactus')
+      },
       hero(){
         return this.lang==='en'?this.en_hero:this.es_hero;
       },

@@ -22,14 +22,16 @@
 
             <p v-if="searchbarFocused && searchKey.length<=0">Start typing country name...</p>
             <div v-if="filteredCountries.length>0">
-                <div class="cursor-pointer p-2 font-light hover:bg-[#eeeeee50]" 
+                <div class="cursor-pointer p-2 hover:bg-[#eeeeee50]" 
                     v-for="(item, i) in filteredCountries" :key="i"
                     @click.stop="handleSelection(item)"
                     >
-                    <p class="text-[#3E454E]">
-                        <span v-for="(t,i) in item.country.name" :key="i" 
-                            :class="searchKey.toLowerCase().includes(t.toLowerCase())?'font-bold':''">{{ t }}</span>
-                    </p>
+                    <div class="text-[#3E454E] lowercase flex">
+                        <p v-for="(t,i) in item.country.name" :key="i" 
+                            :class="[
+                                (searchKey.toLowerCase().includes(t.toLowerCase())?'font-bold ':''),
+                                (i===0?'uppercase':'')] ">{{ t }}</p>
+                    </div>
                     <p class="text-[#67778B]">{{ maps[item.mapId].name }}</p>
                 </div>
             </div>

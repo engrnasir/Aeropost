@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    
+
     <div class="overlay" @click="setShowCountries(false)" v-show="showCountries "></div>
     <div class="menu-overlay" @click="setShowMenu(false)" v-show="showMenu"></div>
 
@@ -19,12 +21,16 @@
     </button>
   </div>
 </template>
+
 <script>
 import LogoNav from "./components/header/LogoNav.vue";
 import HeaderVue from "@/components/header/Header.vue"
 import FooterVue from "@/components/footer/Footer.vue"
 import Mapsvg from "./components/header/Mapsvg.vue";
 import { mapMutations, mapState } from 'vuex';
+
+
+
 export default{
   metaInfo: {
       title: 'Shipping & Courier Services | Aeropost',
@@ -35,18 +41,23 @@ export default{
         },
       ]
   },
+  data(){
+    return{
+      
+    }
+  },
   components:{
     LogoNav,
     HeaderVue,
     FooterVue,
-    Mapsvg
+    Mapsvg,
   },
   computed:{
       ...mapState([
           'showCountries',
           'showMenu',
           'maps'
-      ])
+      ]),
     },
   methods:{
       ...mapMutations([

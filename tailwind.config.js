@@ -9,7 +9,8 @@ module.exports = {
       colors: {
         'blue': '#0148A4',
         'yellow':'#F6D000',
-        'darkYellow':'#F6C143'
+        'darkYellow':'#F6C143',
+        'lightYellow':'#FFCD3E'
       },
       backgroundImage: {
         'bgImg': "url('@/assets/images/bg-footer.png')",
@@ -20,6 +21,10 @@ module.exports = {
         'xl':'1100px',
         'md':'840px',
         'sm':'680px',
+      },
+      fontFamily:{
+        sofiaPro:'Sofia Pro',
+        poppins:'Poppins',
       }
     },
   },
