@@ -65,7 +65,7 @@ export default {
 
 <style lang="scss" scoped>
 .countryPickerWrapper{
-    @apply bg-gradient-to-b flex flex-col from-[#0047A3] to-[#00377E] w-full h-screen overflow-scroll fixed top-0 left-0 z-[999] p-8 3xl:p-16;
+    @apply bg-gradient-to-b flex flex-col from-[#0047A3] to-[#00377E] w-full h-screen overflow-scroll fixed top-0 left-0 z-[999] p-8 3xl:p-16 pb-14;
 }
 .countryPickerWrapper::-webkit-scrollbar{
     @apply hidden;
