@@ -5,7 +5,7 @@
             <img src="@/assets/images/x.png" alt="x" class="w-12 h-12 cursor-pointer absolute right-1 top-1 3xl:right-3 3xl:top-3">
         </router-link>
 
-        <div class="flex items-center justify-center mb-14 md:mb-20">
+        <div class="flex items-center justify-center mb-14 md:mb-20 lg:hidden">
             <router-link :to="`/${selectedCountry.gtw}/${lang}`">
                 <LogoVue :colorVal="'#ffffff'"/>
             </router-link>
