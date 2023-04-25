@@ -30,7 +30,7 @@
                         <p v-for="(t,i) in item.country.name" :key="i" 
                             :class="[
                                 (searchKey.toLowerCase().includes(t.toLowerCase())?'font-bold ':''),
-                                (i===0?'uppercase':'')] ">{{ t }}</p>
+                                (i===0?'uppercase':'')] " v-html="t"></p>
                     </div>
                     <p class="text-[#67778B]">{{ maps[item.mapId].name }}</p>
                 </div>

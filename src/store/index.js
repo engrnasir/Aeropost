@@ -50,7 +50,7 @@ export default new Vuex.Store({
           { gtw:'SLU', name:'Saint Lucia', flagUrl:'saint.png', mapClass:'elfsight-app-f357d17b-0073-4698-9d2d-64a35ef50dc5'},
           { gtw:'SXM', name:'Saint Martin', flagUrl:'saint-martin.png', mapClass:'elfsight-app-ea601d11-819c-4d70-8395-a241d6b2a973'},
           { gtw:'SVD', name:'Saint Vincent', flagUrl:'saint-vincent.png', mapClass:'elfsight-app-83e05cc5-8ac2-48de-9b89-93a557235273'},
-          { gtw:'POS', name:'Trinidad and Tobago', flagUrl:'trinidad_toba.png', mapClass:'elfsight-app-0b926e5d-76d4-40ac-845a-3ce42e8a125c'},
+          { gtw:'POS', name:'Trinidad & Tobago', flagUrl:'trinidad_toba.png', mapClass:'elfsight-app-0b926e5d-76d4-40ac-845a-3ce42e8a125c'},
           { gtw:'TCA', name:'Turks & Caicos', flagUrl:'turks.png', mapClass:'elfsight-app-67e8bdc1-d2fa-4315-9e68-d988969a2c45'},
         ]
       },
