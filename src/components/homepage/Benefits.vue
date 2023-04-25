@@ -11,7 +11,7 @@
     <h2 class="main-heading">Why work with Aeropost</h2>
     <div class="row cards">
         <div class="card" v-for="(item, i) in benefitItems" :key="i">
-            <img :src="require(`@/assets/images/${item.img}`)" alt="" class="w-9 mb-5 max-md:mb-3">
+            <img :src="require(`@/assets/images/${item.img}`)" :alt="item.title" class="w-9 mb-5 max-md:mb-3">
             <p class="text-blue font-medium text-[26px] max-md:text-xl mb-4 max-md:mb-2 w-max">{{ item.title }}</p>
             <p class="text-base text-[#333333] leading-5">{{ item.description }}</p>
         </div>

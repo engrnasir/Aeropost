@@ -1,12 +1,9 @@
 <template>
   <div class="wrapper">
-        <div class="flex items-center max-2xl:flex-col">
-          <h1>{{ title }}&nbsp;</h1>
-          <h1 class="border-b-2 border-[#A8EEFF]">{{ utext }}</h1>
-        </div>
-        <p class="description">{{ description }}</p>
-        <a href="https://courier.aeropost.com/site/en/auth?a=signup" class="btn-yellow" v-show="showSignUp">{{lang==='en'?'Sign Up for Free':'Regístrate Gratis'}}</a>
-    </div>
+      <h1 class="text-center min-w-max" v-html="getTitle"></h1>
+      <p class="description">{{ description }}</p>
+      <a href="https://courier.aeropost.com/site/en/auth?a=signup" class="btn-yellow" v-show="showSignUp">{{lang==='en'?'Sign Up for Free':'Regístrate Gratis'}}</a>
+  </div>
 </template>
 
 <script>
@@ -14,7 +11,10 @@ import { mapState } from 'vuex'
 export default {
   props:['title','utext', 'description', 'showSignUp'],
   computed:{
-    ...mapState(['lang'])
+    ...mapState(['lang']),
+    getTitle(){
+      return this.utext? this.title + '&nbsp; <br class="2xl:hidden">' + `<span class="border-b-2 border-[#A8EEFF]">${this.utext}</span>` : this.title;
+    }
   }
 }
 </script>

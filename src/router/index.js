@@ -84,6 +84,10 @@ import PeruRestricted from '@/views/restricted/southAmerica/PeruRestricted.vue'
 import VenezuelaRestricted from '@/views/restricted/southAmerica/VenezuelaRestricted.vue'
 
 
+import CountryPicker from '@/views/CountryPicker.vue'
+import AllCountries from '@/views/AllCountries.vue'
+
+
 
 
 
@@ -91,14 +95,27 @@ import VenezuelaRestricted from '@/views/restricted/southAmerica/VenezuelaRestri
 Vue.use(VueRouter)
 
 const routes = [  
+  
+
   {
     path: '/',
     redirect:'/BZE/en'
   },
+
   {
     path: '/:gtw/:lg',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/:gtw/:lg/country-picker',
+    name: 'CountryPicker',
+    component: CountryPicker,
+  },
+  {
+    path: '/:gtw/:lg/country-picker/all',
+    name: 'AllCountries',
+    component: AllCountries,
   },
   {
     path: '/:gtw/:lg/benefits',

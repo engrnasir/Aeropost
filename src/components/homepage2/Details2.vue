@@ -1,7 +1,7 @@
 <template>
     <div>
       <div class="row wrapper max-md:flex-col">
-          <img src="@/assets/images/lady-prealert.png" alt="" class="image">
+          <img src="@/assets/images/lady-prealert.png" alt="lady-prealert" class="image">
           <div class="details-wrapper">
               <p class="text-blue mb-4 leading-none text-3xl uppercase">{{ prealert.title }}</p>
               <h3 class="main-heading">{{ prealert.description }}</h3>
@@ -10,7 +10,7 @@
       </div>
   
       <div class="row wrapper flex-row-reverse max-md:flex-col">
-          <img src="@/assets/images/autopay2.png" alt="" class="image">
+          <img src="@/assets/images/autopay2.png" alt="autopay2" class="image">
           <div class="details-wrapper">
               <p class="text-blue mb-4 leading-none text-3xl uppercase">{{autopay.title}}</p>
               <h3 class="main-heading">{{autopay.description}}</h3>

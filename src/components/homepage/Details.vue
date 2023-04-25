@@ -2,7 +2,7 @@
   <div>
     <div class="row wrapper max-md:flex-col">
         <div class="bg-layer"></div>
-        <img src="@/assets/images/prealertImg.png" alt="" class="image">
+        <img src="@/assets/images/prealertImg.png" alt="prealertImg" class="image">
         <div class="details-wrapper">
             <p class="sub-heading">Pre-alert</p>
             <h3 class="main-heading">Process your package much more quickly</h3>
@@ -12,7 +12,7 @@
 
     <div class="row wrapper flex-row-reverse max-md:flex-col">
         <div class="bg-layer absolute top-0 left-0 z-0 rounded-t-2xl"></div>
-        <img src="@/assets/images/autopay.png" alt="" class="image">
+        <img src="@/assets/images/autopay.png" alt="autopay" class="image">
         <div class="details-wrapper">
             <p class="sub-heading">Autopay</p>
             <h3 class="main-heading">Speed delivery</h3>

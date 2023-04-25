@@ -15,7 +15,7 @@
     <button @click="goTop()" 
       class="fixed right-6 bottom-6 z-50 text-white bg-blue p-3 rounded-md border border-gray-50"
       id="goTopBtn">
-      <img src="@/assets/images/down.png" alt="" class="rotate-180">
+      <img src="@/assets/images/down.png" alt="down" class="rotate-180">
     </button>
   </div>
 </template>
@@ -26,6 +26,15 @@ import FooterVue from "@/components/footer/Footer.vue"
 import Mapsvg from "./components/header/Mapsvg.vue";
 import { mapMutations, mapState } from 'vuex';
 export default{
+  metaInfo: {
+      title: 'Shipping & Courier Services | Aeropost',
+      meta: [
+        {
+          name: 'description',
+          content: 'We offer the fastest shipping experience to make your shopping easier. As a global shipping company, we deliver courier services to nearly 38 countries worldwide.'
+        },
+      ]
+  },
   components:{
     LogoNav,
     HeaderVue,

@@ -16,7 +16,7 @@
                 {{ lang=='en'?'Open WhatsApp':'Abre WhatsApp' }} 
             </a>
         </div>
-        <img src="@/assets/images/wa-qr.png" alt="" class="w-[150px] max-[480px]:w-[120px]">
+        <img src="@/assets/images/wa-qr.png" alt="wa-qr" class="w-[150px] max-[480px]:w-[120px]">
     </div>
 </template>
 <script>

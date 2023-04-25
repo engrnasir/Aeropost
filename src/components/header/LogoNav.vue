@@ -3,7 +3,7 @@
         <div class="row pt-4">
               <div class="flex justify-between items-center w-[100%]" >
                   <div class="flex items-center">
-                      <img src="@/assets/images/menu.png" alt="" 
+                      <img src="@/assets/images/menu.png" alt="menu" 
                           class="hidden max-md:block w-6 mr-4 cursor-pointer"
                           @click="setShowMenu(!showMenu)">
                       <router-link :to="`/${selectedCountry.gtw}/${lang}`">

@@ -7,7 +7,7 @@
         <div class="slider py-4 pb-12">
             <div class="min-w-full flex px-5` grid grid-cols-2 justify-items-center gap-x-3 max-md:grid-cols-1" v-for="(quote, i) in quotes" :key="i">
                 <div class="relative w-full max-w-[80%] bg-white shadow-lg rounded-xl p-12 flex flex-col justify-between">
-                    <img src="@/assets/images/dblquote.png" alt="" class="w-12 absolute -top-2 -left-2">
+                    <img src="@/assets/images/dblquote.png" alt="dblquote" class="w-12 absolute -top-2 -left-2">
                     <div>
                         <h4 class="text-2xl leading-8 text-[#333333] mb-3">{{ quote[0].heading }}</h4>
                         <p class="italic text-[#737373] mb-4 justify-items-start">{{ quote[0].description }}</p>
@@ -15,7 +15,7 @@
                     <p class="font-semibold text-blue text-sm">{{ quote[0].author }}</p>
                 </div>
                 <div class="relative w-full max-w-[80%] bg-white shadow-lg rounded-xl p-12 max-md:hidden flex flex-col justify-between">
-                    <img src="@/assets/images/dblquote.png" alt="" class="w-12 absolute -top-2 -left-2">
+                    <img src="@/assets/images/dblquote.png" alt="dblquote" class="w-12 absolute -top-2 -left-2">
                     <div>
                         <h4 class="text-2xl leading-8 text-[#333333] mb-3">{{ quote[1].heading }}</h4>
                         <p class="italic text-[#737373] mb-4">{{ quote[1].description }}</p>

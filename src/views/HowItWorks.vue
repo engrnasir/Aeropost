@@ -4,34 +4,34 @@
         <div class="w-[1020px] mx-auto pb-24 max-[1100px]:w-[780px] max-[880px]:w-full">
             <!-- Item 1 -->
             <div class="item max-[1100px]:mb-5">
-                <img src="@/assets/images/line1.png" alt="" class="line1">
+                <img src="@/assets/images/line1.png" alt="line1" class="line1">
                 <div class="details mr-5"> 
                     <p class="number">1</p>
                     <h3 class="title">{{ step1.title }}</h3>
                     <p class="description">{{ step1.description }}</p>
                 </div>
-                <img src="@/assets/images/img1.png" alt="" class="w-[454.56px] max-[1100px]:w-[350px] max-[880px]:m-0">
+                <img src="@/assets/images/img1.png" alt="img1" class="w-[454.56px] max-[1100px]:w-[350px] max-[880px]:m-0">
             </div>
             <!-- Item 2 -->
             <div class="item flex-row-reverse mb-28">
-                <img src="@/assets/images/line2.png" alt="" class="line2">
+                <img src="@/assets/images/line2.png" alt="line2" class="line2">
                 <div class="details"> 
                     <p class="number">2</p>
                     <h3 class="title">{{ step2.title }}</h3>
                     <p class="description">{{ step2.description }}</p>
                 </div>
-                <img src="@/assets/images/img2.png" alt="" class="w-[360px] mr-24 max-[1100px]:w-[280px] max-[880px]:m-0">
+                <img src="@/assets/images/img2.png" alt="img2" class="w-[360px] mr-24 max-[1100px]:w-[280px] max-[880px]:m-0">
             </div>
 
             <!-- Item 3 -->
             <div class="item mb-28">
-                <img src="@/assets/images/line3.png" alt="" class="line3">
+                <img src="@/assets/images/line3.png" alt="line3" class="line3">
                 <div class="details"> 
                     <p class="number">3</p>
                     <h3 class="title">{{ step3.title }}</h3>
                     <p class="description">{{ step3.description }}</p>
                 </div>
-                <img src="@/assets/images/img3.png" alt="" class="w-[360px] ml-12 max-[1100px]:w-[280px] max-[880px]:m-0">
+                <img src="@/assets/images/img3.png" alt="img3" class="w-[360px] ml-12 max-[1100px]:w-[280px] max-[880px]:m-0">
             </div>
 
             <!-- Item 4 -->
@@ -41,7 +41,7 @@
                     <h3 class="title">{{ step4.title }}</h3>
                     <p class="description">{{ step4.description }}</p>
                 </div>
-                <img src="@/assets/images/img4.png" alt="" class="w-[360px] mr-16 max-[1100px]:w-[280px] max-[880px]:m-0">
+                <img src="@/assets/images/img4.png" alt="img4" class="w-[360px] mr-16 max-[1100px]:w-[280px] max-[880px]:m-0">
             </div>
         </div>
       <FooterTitle :title="footerTitle" :bgBlue='true'></FooterTitle>

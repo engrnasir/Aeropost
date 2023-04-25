@@ -1,14 +1,14 @@
 <template>
   <div class="wrapper" :class="showCountries?'translate-y-0':'-translate-y-[140%]'">
-    <img src="@/assets/images/close.png" alt="" class="close" @click="setShowCountries(false)">
+    <img src="@/assets/images/close.png" alt="close" class="close" @click="setShowCountries(false)">
     <div class="map-wrapper">
         <div class="mapItem" 
             v-for="(c,index) in maps" :key="index" 
             @click="setSelectedMapIndex(index)">
-                <img :src="require(`@/assets/images/${c.imgUrl}`)" alt="" class="mapImg" >
+                <img :src="require(`@/assets/images/${c.imgUrl}`)" alt="map" class="mapImg" >
                 <div class="text-center flex  items-center justify-between max-md:border-b max-md:py-2">
                     <p :class="c===maps[selectedMapIndex]?'font-bold border-b-4 border-yellow':''">{{c.name}}</p>
-                    <img src="@/assets/images/icon-arrow-blue.png" alt="" class="w-4 md:hidden">
+                    <img src="@/assets/images/icon-arrow-blue.png" alt="icon-arrow-blue" class="w-4 md:hidden">
                 </div>
                 <div class="mob-countries" :class="c===maps[selectedMapIndex]?'showCountries':'hidden'">
                     <CountriesVue :countries="c.countries" />
