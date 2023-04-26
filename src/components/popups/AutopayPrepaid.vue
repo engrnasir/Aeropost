@@ -53,8 +53,8 @@
                             <div class="md:flex">
                                 <input type="text" :placeholder="lang==='en'?'Card Number':'Número de tarjeta '" v-model="form.credit.number">
                                 <div class="flex">
-                                    <input type="text" :placeholder="lang==='en'?'MM/YY':'MM/AA'" class="md:max-w-[95px] mr-2 md:mx-2" v-model="form.credit.expiryDate">
-                                    <input type="text" placeholder="CCV" class="md:max-w-[72px]" v-model="form.credit.ccv">
+                                    <input type="text" :placeholder="lang==='en'?'MM/YY':'MM/AA'" class="md:w-[95px] mr-2 md:mx-2" v-model="form.credit.expiryDate">
+                                    <input type="text" placeholder="CCV" class="md:w-[72px]" v-model="form.credit.ccv">
                                 </div>
                             </div>
                         </div>
