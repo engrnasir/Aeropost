@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full max-h-screen  overflow-y-scroll py-12 fixed left-0 top-0 bg-[#00000025] z-[999] shadow-2xl ">
+    <div class="w-full h-screen  overflow-y-scroll py-12 fixed left-0 top-0 bg-[#00000010] z-[999]">
         <div class="bg-lightYellow rounded-sm mx-auto relative w-[850px] min-h-[570px] max-md:w-[96%] px-8 py-6">
             <img src="@/assets/images/popups/bgBlue.png" alt="bgBlue" class="w-full absolute top-0 left-0 z-0 max-md:h-[700px] max-md:hidden">
             <img src="@/assets/images/popups/bgBlueMob.png" alt="bgBlueMob" class="w-full absolute top-0 left-0 z-0 h-[700px] md:hidden">
