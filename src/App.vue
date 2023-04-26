@@ -14,11 +14,11 @@
     <HeaderVue></HeaderVue>
     <router-view/>
     <footerVue :bgBlue="false"/>
-    <button @click="goTop()" 
+    <!-- <button @click="goTop()" 
       class="fixed right-6 bottom-6 z-50 text-white bg-blue p-3 rounded-md border border-gray-50"
       id="goTopBtn">
       <img src="@/assets/images/down.png" alt="down" class="rotate-180">
-    </button>
+    </button> -->
   </div>
 </template>
 
@@ -87,10 +87,10 @@ export default{
       })
     })
 
-    const goTopBtn = document.getElementById('goTopBtn')
-    window.addEventListener('scroll',()=>{
-      goTopBtn.style.display = window.scrollY<320? 'none':'inline';
-    })
+    // const goTopBtn = document.getElementById('goTopBtn')
+    // window.addEventListener('scroll',()=>{
+    //   goTopBtn.style.display = window.scrollY<320? 'none':'inline';
+    // })
 
     window.onUsersnapLoad = function(api) {
         api.init();

@@ -3,7 +3,7 @@
         <div class="bg-lightYellow rounded-sm mx-auto relative w-[850px] min-h-[570px] max-md:w-[96%] p-6">
             <!-- Bg Blue Images -->
             <img src="@/assets/images/popups/bgBlue.png" alt="bgBlue" class="w-full absolute top-0 left-0 z-0 max-md:h-[700px] max-md:hidden">
-            <img src="@/assets/images/popups/bgBlueMob.png" alt="bgBlueMob" class="w-full absolute top-0 left-0 z-0 h-[700px] md:hidden">
+            <img src="@/assets/images/popups/bgBlueMob.png" alt="bgBlueMob" class="w-full absolute top-0 left-0 z-0 h-[770px] md:hidden">
             
             <!-- Main top heading  -->
             <div class="flex relative z-10">
@@ -79,7 +79,7 @@
                     <p class="font-bold text-base text-darkYellow md:text-blue leading-6 px-4 md:ml-10 md:rounded-[84px] md:bg-darkYellow w-full max-md:text-center md:mb-3 self-start md:w-[184px]">
                         {{ lang==='en'?'Lockers In Your Area':'Lockers en tu área'}}
                     </p>
-                    <trinidadMap class="w-[350px] md:w-[380px]"/>
+                    <Map class="w-[330px] md:w-[380px]"/>
                     <p class="text-3xl text-blue max-md:hidden md:-mt-4">
                         {{ lang==='en'?'it’s your package,':'Son tus paquetes,' }}
                         <br><b>{{ lang==='en'?'get it when you want it.':'retiralos cuando quieras.' }}</b>
@@ -93,11 +93,9 @@
 </template>
 
 <script>
-import trinidadMap from '@/assets/images/popups/trinidadMap.vue'
 import { mapState } from 'vuex'
 export default {
-    data(){
-        
+    data(){        
         return {
             selectVal:'',
             en_lockers:[
@@ -136,10 +134,10 @@ export default {
         ...mapState(['lang']),
         lockers(){
             return this.lang==='en'? this.en_lockers:this.es_lockers;
-        }
+        },
     },
     components:{
-        trinidadMap
+        Map : ()=> import('@/assets/images/popups/guatemalaMap.vue')
     },
     methods:{
         handleLockerSelection(){

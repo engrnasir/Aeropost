@@ -1,10 +1,14 @@
 <template>
     <div class="min-w-full">
-      <trinidad-popup-vue v-if="showTrinidadPopup && !skip" @skip="skip=true"/>
+      <TrinidadPopupVue v-if="showTrinidadPopup && !skip" @skip="skip=true"/>
+      <BVIPopupVue v-if="showBVIPopup && !skip" @skip="skip=true"/>
+      <BarbadosPopupVue v-if="showBarbadosPopup && !skip" @skip="skip=true"/>
+      <GuatemalaPopupVue v-if="showGuatemalaPopup && !skip" @skip="skip=true"/>
+      <CostaRicaPopupVue v-if="showCostaPopup && !skip" @skip="skip=true"/>
 
       <HeroTitleVue :title="hero.title" :description="hero.description"></HeroTitleVue>
 
-      <div class="container">
+      <div class="contact-container">
         <p v-html="content"></p>
       </div>
       <mapVue/>
@@ -22,7 +26,8 @@
   </template>
 
 <script>
-import trinidadPopupVue from '@/components/popups/trinidadPopup.vue';
+
+
 import HeroTitleVue from '@/components/header/HeroTitle.vue';
 import FooterTitle from '@/components/footer/FooterTitle.vue';
 import mapVue from '@/components/contact/map.vue';
@@ -34,7 +39,12 @@ import { mapMutations, mapState } from 'vuex';
         HeroTitleVue,
         FooterTitle,
         mapVue,
-        trinidadPopupVue
+
+        TrinidadPopupVue: ()=> import('@/components/popups/trinidadPopup.vue'),
+        BVIPopupVue: ()=> import('@/components/popups/BVIPopup.vue'),
+        BarbadosPopupVue: ()=> import('@/components/popups/BarbadosPopup.vue'),
+        GuatemalaPopupVue: ()=> import('@/components/popups/GuatemalaPopup.vue'),
+        CostaRicaPopupVue: ()=> import('@/components/popups/CostaRicaPopup.vue'),
     },
     data(){
       return{
@@ -77,10 +87,13 @@ import { mapMutations, mapState } from 'vuex';
         'lang',
         'maps'
       ]),
-      showTrinidadPopup(){
-        let path = this.$route.path
-        return path.includes('POS') && path.includes('contactus')
-      },
+      
+      showTrinidadPopup(){ return this.$route.path.includes('POS') && this.$route.path.includes('contactus') },
+      showGuatemalaPopup(){ return this.$route.path.includes('GUA') && this.$route.path.includes('contactus') },
+      showCostaPopup(){ return this.$route.path.includes('SJO') && this.$route.path.includes('contactus') },
+      showBVIPopup(){ return this.$route.path.includes('BHS') && this.$route.path.includes('contactus') },
+      showBarbadosPopup(){ return this.$route.path.includes('BGI') && this.$route.path.includes('contactus') },
+
       hero(){
         return this.lang==='en'?this.en_hero:this.es_hero;
       },
@@ -103,14 +116,79 @@ import { mapMutations, mapState } from 'vuex';
           }
         })
       })
+
+
+      // const script = document.createElement('script')
+      // script.type = "text/javascript";
+      // script.id = "salesforce"
+      // script.setAttribute('data-currentcountry',"gatewayCode");
+      // script.innerHTML = `document.getElementById('salesforce').setAttribute("data-sso", JSON.stringify(${});`;
+      // document.body.appendChild(script)
+
+      // let script1 = document.createElement('script');
+      // script1.defer = 1;
+      // script1.src = ()=>import('@/assets/js/chatbot_sso.js')
+      // document.body.appendChild(script)
+
+
     }   
   }
   </script>
-  <style lang="scss" scoped>
-  .container{
+  <style lang="scss">
+  .contact-container{
     @apply w-[96%] max-w-[980px] bg-white shadow-xl rounded-xl p-10 mx-auto relative z-20 -translate-y-10 text-center text-[#333333]
                    mb-20 max-md:px-4;     
   }
+
+  .show-button {
+            display: block !important;
+        }
+
+      #hide-widget {
+            display: none !important;
+        }
+      .hide-widget {
+            display: none !important;
+        }
+
+
+
+        /*
+      You can position the custom Gladly button in the lower right corner
+      */
+        #custom-gladly-chat-button {
+                  position: fixed;
+                  padding: 15px;
+                  right: 25px;
+                  bottom: 25px;
+                  border-radius: 50%;
+                  cursor: pointer;
+                  border: 1px solid rgba(0, 0, 0, .05);
+                  background-color: #BCE6F7;
+                  height: 72px;
+                  width: 72px;
+                  color: #153F8E;
+                  box-shadow: 0 4px 20px 4px rgb(0 0 0 / 12%);
+              }
+
+        /*
+      By default we hide the Ada and Gladly buttons
+    */
+        #ada-button-frame {
+            display: none;
+        }
+
+        #custom-gladly-chat-button {
+            display: none;
+        }
+
+        #custom-gladly-chat-button #with-active-chat {
+            display: none;
+        }
+
+        #gladlyChat_container .minimizedChatButton.minimizedChatButtonSelector {
+            display: none !important;
+        }
 
     
   </style>
