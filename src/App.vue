@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-    
-    <!-- <AutopayPrepaid/> -->
 
     <div class="overlay" @click="setShowCountries(false)" v-show="showCountries "></div>
     <div class="menu-overlay" @click="setShowMenu(false)" v-show="showMenu"></div>
@@ -56,8 +54,6 @@ export default{
     HeaderVue,
     FooterVue,
     Mapsvg,
-
-    AutopayPrepaid: ()=> import('@/components/popups/AutopayPrepaid.vue')
   },
   computed:{
       ...mapState([

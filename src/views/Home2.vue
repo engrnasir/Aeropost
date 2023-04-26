@@ -1,5 +1,6 @@
 <template>
     <div class="min-w-full">
+      <AutopayPrepaid v-if="!skip" @skip="skip=true" />
       <HeroTitleVue :title="title" :utext="utext" :description="description" :showSignUp="true"></HeroTitleVue>
       <Benefits></Benefits>
       <DetailsVue></DetailsVue>
@@ -14,15 +15,22 @@
   import DetailsVue from '@/components/homepage2/Details2.vue';
   import SliderVue from '@/components/homepage/Slider.vue';
   import FooterTitle from '@/components/footer/FooterTitle.vue';
-import { mapState } from 'vuex';
+  import { mapState } from 'vuex';
   export default {
     name: 'HomeView2',
+    data(){
+      return {
+        skip:false
+      }
+    },
     components:{
       HeroTitleVue,
       Benefits,
       DetailsVue,
       SliderVue,
       FooterTitle,
+
+      AutopayPrepaid:()=>import('@/components/popups/AutopayPrepaid.vue')
     },    
     computed:{
       ...mapState(['lang']),
