@@ -3,7 +3,7 @@
         <div class="bg-lightYellow rounded-sm mx-auto relative w-[850px] min-h-[570px] max-md:w-[96%] p-6">
             <!-- Bg Blue Images -->
             <img src="@/assets/images/popups/bgBlue.png" alt="bgBlue" class="w-full absolute top-0 left-0 z-0 max-md:h-[700px] max-md:hidden">
-            <img src="@/assets/images/popups/bgBlueMob.png" alt="bgBlueMob" class="w-full absolute top-0 left-0 z-0 h-[770px] md:hidden">
+            <img src="@/assets/images/popups/bgBlueMob.png" alt="bgBlueMob" class="w-full absolute top-0 left-0 z-0 h-[700px] sm:h-[650px] md:hidden">
             
             <!-- Main top heading  -->
             <div class="flex relative z-10">
@@ -36,8 +36,8 @@
                             {{ lang==='en'?' Extended Hours':'Horarios extendidos'}}
                         </li>
                     </ul>
-                    <p class="max-w-[250px] mb-4" v-if="lang==='en'">Add locker<b>location as your primary pickup</b>option</p>
-                    <p v-else> Selecciona la ubicación que <br>prefieras como opción de retiro <br>principal </p>
+                    <p class="max-w-[240px] mb-16 md:mb-6" v-if="lang==='en'">Add locker <b>location as your primary pickup </b>option</p>
+                    <p class="max-w-[240px] mb-16 md:mb-6" v-else> Selecciona la ubicación que <br>prefieras como opción de retiro <br>principal </p>
                     
                     <!-- Select Options -->
 
@@ -76,10 +76,10 @@
                 <!-- Right Map Section -->
 
                 <div class="max-md:w-full flex flex-col max-md:items-center md:items-end font-sofiaPro md:-mt-8">
-                    <p class="font-bold text-base text-darkYellow md:text-blue leading-6 px-4 md:ml-10 md:rounded-[84px] md:bg-darkYellow w-full max-md:text-center md:mb-3 self-start md:w-[184px]">
+                    <p class="font-bold text-base text-darkYellow md:text-blue leading-6 px-4 md:ml-10 md:rounded-[84px] md:bg-darkYellow w-full max-md:text-center mb-2 md:mb-3 self-start md:w-[184px]">
                         {{ lang==='en'?'Lockers In Your Area':'Lockers en tu área'}}
                     </p>
-                    <Map class="w-[330px] md:w-[380px]"/>
+                    <Map class="w-auto h-[250px] md:w-[480px]"/>
                     <p class="text-3xl text-blue max-md:hidden md:-mt-4">
                         {{ lang==='en'?'it’s your package,':'Son tus paquetes,' }}
                         <br><b>{{ lang==='en'?'get it when you want it.':'retiralos cuando quieras.' }}</b>

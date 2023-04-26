@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     
+    <!-- <AutopayPrepaid/> -->
 
     <div class="overlay" @click="setShowCountries(false)" v-show="showCountries "></div>
     <div class="menu-overlay" @click="setShowMenu(false)" v-show="showMenu"></div>
@@ -39,6 +40,10 @@ export default{
           name: 'description',
           content: 'We offer the fastest shipping experience to make your shopping easier. As a global shipping company, we deliver courier services to nearly 38 countries worldwide.'
         },
+        {
+          name: 'keywords',
+          content:'Shipping and courier services, courier delivery services, courier pickup from home, courier services near me, global shipping services '
+        }
       ]
   },
   data(){
@@ -51,6 +56,8 @@ export default{
     HeaderVue,
     FooterVue,
     Mapsvg,
+
+    AutopayPrepaid: ()=> import('@/components/popups/AutopayPrepaid.vue')
   },
   computed:{
       ...mapState([
@@ -104,6 +111,11 @@ export default{
     mapScript.defer = 1;
     mapScript.setAttribute('src', 'https://apps.elfsight.com/p/platform.js')
     document.body.appendChild(mapScript)
+
+    // let meta1 = document.createElement('meta')
+    // meta1.setAttribute('name', 'description')
+    // meta1.setAttribute('content', 'We offer the fastest shipping experience to make your shopping easier. As a global shipping company, we deliver courier services to nearly 38 countries worldwide.')
+    // document.getElementsByTagName('head')[0].appendChild(meta1);
   },
 }
 </script>
