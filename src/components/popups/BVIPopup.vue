@@ -2,13 +2,13 @@
     <div class="popupWrapper">
         <div class="bg-lightYellow rounded-sm mx-auto relative w-[850px] min-h-[570px] max-md:w-[96%] p-6">
             <!-- Bg Blue Images -->
-            <img src="@/assets/images/popups/bgBlue.png" alt="bgBlue" class="w-full absolute top-0 left-0 z-0 max-md:h-[700px] max-md:hidden">
+            <img src="@/assets/images/popups/bgBlue.png" alt="bgBlue" class="w-full absolute top-0 left-0 z-0 h-[450px] max-md:hidden">
             <img src="@/assets/images/popups/bgBlueMob.png" alt="bgBlueMob" class="w-full absolute top-0 left-0 z-0 h-[700px] sm:h-[650px] md:hidden">
             
             <!-- Main top heading  -->
             <div class="flex relative z-10">
                 <img src="@/assets/images/popups/circularImg.png" alt="circularImg1" class="w-40 -translate-y-10 mr-5 max-md:hidden">
-                <h2 class="text-lightYellow text-3xl leading-9 font-sofiaPro max-md:mb-5">
+                <h2 class="text-lightYellow text-2xl md:text-3xl leading-9 font-sofiaPro max-md:mb-5">
                     {{ lang==='en'?'Smart lockers now available for':'Lockers Inteligentes disponibles' }}
                     <br><span class="text-white font-bold">
                         {{ lang==='en'?'package collection.':'para retiro de paquetes' }}
@@ -37,7 +37,7 @@
                         </li>
                     </ul>
                     <p class="max-w-[250px] mb-16 md:mb-6" v-if="lang==='en'">Add locker <b>location as your primary pickup </b>option</p>
-                    <p class="max-w-[250px] mb-16 md:mb-6" v-else> Selecciona la ubicación que <br>prefieras como opción de retiro <br>principal </p>
+                    <p class="max-w-[200px] sm:max-w-[220px] mb-16 md:mb-6" v-else> Selecciona la ubicación que <br>prefieras como opción de retiro <br class="max-md:hidden">principal </p>
                     
                     <!-- Select Options -->
 
@@ -79,7 +79,7 @@
                     <p class="font-bold text-base text-darkYellow md:text-blue leading-6 px-4 md:ml-10 md:rounded-[84px] md:bg-darkYellow w-full max-md:text-center md:mb-3 self-start md:w-[184px]">
                         {{ lang==='en'?'Lockers In Your Area':'Lockers en tu área'}}
                     </p>
-                    <BVIMap class="w-auto h-[250px] md:w-[480px]"/>
+                    <BVIMap class="w-auto max-w-[340px] h-[250px] md:w-[480px]"/>
                     <p class="text-3xl text-blue max-md:hidden md:-mt-4">
                         {{ lang==='en'?'it’s your package,':'Son tus paquetes,' }}
                         <br><b>{{ lang==='en'?'get it when you want it.':'retiralos cuando quieras.' }}</b>
