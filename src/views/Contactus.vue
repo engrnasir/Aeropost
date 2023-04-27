@@ -39,12 +39,6 @@ import { mapMutations, mapState } from 'vuex';
         HeroTitleVue,
         FooterTitle,
         mapVue,
-
-        TrinidadPopupVue: ()=> import('@/components/popups/trinidadPopup.vue'),
-        BVIPopupVue: ()=> import('@/components/popups/BVIPopup.vue'),
-        BarbadosPopupVue: ()=> import('@/components/popups/BarbadosPopup.vue'),
-        GuatemalaPopupVue: ()=> import('@/components/popups/GuatemalaPopup.vue'),
-        CostaRicaPopupVue: ()=> import('@/components/popups/CostaRicaPopup.vue'),
     },
     data(){
       return{
