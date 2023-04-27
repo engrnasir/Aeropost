@@ -79,7 +79,7 @@
                     <p class="font-bold text-base text-darkYellow md:text-blue leading-6 px-4 md:ml-10 md:rounded-[84px] md:bg-darkYellow w-full max-md:text-center md:mb-3 self-start md:w-[184px]">
                         {{ lang==='en'?'Lockers In Your Area':'Lockers en tu área'}}
                     </p>
-                    <Map class="w-auto max-w-[340px] h-[250px] md:w-[480px]"/>
+                    <Map class="w-auto max-md:max-w-[340px] h-[250px] md:w-[480px]"/>
                     <p class="text-3xl text-blue max-md:hidden md:-mt-4">
                         {{ lang==='en'?'it’s your package,':'Son tus paquetes,' }}
                         <br><b>{{ lang==='en'?'get it when you want it.':'retiralos cuando quieras.' }}</b>
