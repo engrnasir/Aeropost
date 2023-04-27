@@ -78,8 +78,8 @@ export default{
 
   mounted() {
     const that = this;
-    const lg = this.$route.params.lg
-    if(lg){ this.setLang(lg)}
+    let lg = this.$route.params.lg
+    if(lg){ this.setLang(lg) }
     let gtw = this.$route.params.gtw? this.$route.params.gtw : this.$route.path.substring(1,4)
     this.maps.forEach((el,i)=>{
       el.countries.forEach(c=> {
@@ -108,10 +108,6 @@ export default{
     mapScript.setAttribute('src', 'https://apps.elfsight.com/p/platform.js')
     document.body.appendChild(mapScript)
 
-    // let meta1 = document.createElement('meta')
-    // meta1.setAttribute('name', 'description')
-    // meta1.setAttribute('content', 'We offer the fastest shipping experience to make your shopping easier. As a global shipping company, we deliver courier services to nearly 38 countries worldwide.')
-    // document.getElementsByTagName('head')[0].appendChild(meta1);
   },
 }
 </script>

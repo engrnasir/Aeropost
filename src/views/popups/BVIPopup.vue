@@ -151,7 +151,7 @@ export default {
 
 <style lang="scss" scoped>
 .popupWrapper{
-    @apply w-full h-screen  overflow-y-scroll py-12 fixed left-0 top-0 bg-[#00000010] z-[999];
+    @apply w-full h-screen  overflow-y-scroll py-12 fixed left-0 top-0 bg-[#fff] z-[999];
 }
 .popupWrapper::-webkit-scrollbar{
     @apply hidden;

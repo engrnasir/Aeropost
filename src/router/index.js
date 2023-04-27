@@ -9,8 +9,10 @@ import HowItWorks from '@/views/HowItWorks.vue'
 import Aboutus from '@/views/Aboutus.vue'
 import TermsCondition from '@/views/TermsCondition.vue'
 import Contactus from '@/views/Contactus.vue'
-import RatesView from '@/views/RatesView.vue'
 
+
+// Rates page
+import RatesView from '@/views/RatesView.vue'
 import BelizeRate from '@/views/rates/BelizeRate.vue'
 import CostaRate from '@/views/rates/CostaRate.vue'
 import ElSavadorRate from '@/views/rates/ElSavadorRate.vue'
@@ -45,6 +47,8 @@ import EcuadorRate from '@/views/rates/EcuadorRate.vue'
 import GuyanaRate from '@/views/rates/GuyanaRate.vue'
 import PeruRate from '@/views/rates/PeruRate.vue'
 import VenezuelaRate from '@/views/rates/VenezuelaRate.vue'
+
+
 
 // Restricted
 import Restricted from '@/views/Restricted.vue'
@@ -84,11 +88,18 @@ import PeruRestricted from '@/views/restricted/southAmerica/PeruRestricted.vue'
 import VenezuelaRestricted from '@/views/restricted/southAmerica/VenezuelaRestricted.vue'
 
 
+// Country Picker
 import CountryPicker from '@/views/CountryPicker.vue'
 import AllCountries from '@/views/AllCountries.vue'
 
 
-
+// Popup
+import TrinidadPopup from '@/views/popups/trinidadPopup.vue'
+import GuatemalaPopup from '@/views/popups/GuatemalaPopup.vue'
+import CostaRicaPopup from '@/views/popups/CostaRicaPopup.vue'
+import BVIPopup from '@/views/popups/BVIPopup.vue'
+import BarbadosPopup from '@/views/popups/BarbadosPopup.vue'
+import AutopayPrepaid from '@/views/popups/AutopayPrepaid.vue'
 
 
 
@@ -96,7 +107,6 @@ Vue.use(VueRouter)
 
 const routes = [  
   
-
   {
     path: '/',
     redirect:'/BZE/en'
@@ -107,51 +117,61 @@ const routes = [
     name: 'Home',
     component: Home
   },
+
   {
     path: '/:gtw/:lg/country-picker',
     name: 'CountryPicker',
     component: CountryPicker,
   },
+
   {
     path: '/:gtw/:lg/country-picker/all',
     name: 'AllCountries',
     component: AllCountries,
   },
+
   {
     path: '/:gtw/:lg/benefits',
     name: 'benefitsview',
     component: benefitsview
   },
+
   {
     path: '/:gtw/:lg/calculator',
     name: 'calculator',
     component:CalculatorView
   },
+
   {
     path: '/:gtw/:lg/faqs',
     name: 'faqs',
     component: FaqsView
   },
+  
   {
     path: '/:gtw/:lg/how-it-works',
     name: 'HowItWorks',
     component: HowItWorks
   },
+
   {
     path: '/:gtw/:lg/aboutus',
     name: 'AboutUs',
     component: Aboutus
   },
+
   {
     path: '/:gtw/:lg/terms',
     name: 'TermsCondition',
     component: TermsCondition
   },
+
   {
     path: '/:gtw/:lg/contactus',
     name: 'Contactus',
     component: Contactus
   },
+
   {
     path: '/:gtw/:lg/restricted',
     name: 'RestrictedView',
@@ -198,6 +218,7 @@ const routes = [
 
     ]
   },
+  
   {
     path: '/:gtw/:lg/rates',
     name: 'Rates',
@@ -242,6 +263,31 @@ const routes = [
     ],
   },
   
+  {
+    path:'/:gtw/:lg/popups/trinidad',
+    component:TrinidadPopup
+  },
+  {
+    path:'/:gtw/:lg/popups/guatemala',
+    component:GuatemalaPopup
+  },
+  {
+    path:'/:gtw/:lg/popups/costa',
+    component: CostaRicaPopup
+  },
+  {
+    path:'/:gtw/:lg/popups/bvi',
+    component: BVIPopup
+  },
+  {
+    path:'/:gtw/:lg/popups/barbados',
+    component: BarbadosPopup
+  },
+  {
+    path:'/:gtw/:lg/popups/autopay',
+    component: AutopayPrepaid
+  },
+
   {
     // will match everything
     path: '*',

@@ -76,10 +76,10 @@
                 <!-- Right Map Section -->
 
                 <div class="max-md:w-full flex flex-col max-md:items-center md:items-end font-sofiaPro md:-mt-8">
-                    <p class="font-bold text-base text-darkYellow md:text-blue leading-6 px-4 md:ml-10 md:rounded-[84px] md:bg-darkYellow w-full max-md:text-center md:mb-3 self-start md:w-[184px]">
+                    <p class="font-bold text-base text-darkYellow md:text-blue leading-6 px-4 md:ml-10 md:rounded-[84px] md:bg-darkYellow w-full max-md:text-center mb-2 md:mb-3 self-start md:w-[184px]">
                         {{ lang==='en'?'Lockers In Your Area':'Lockers en tu área'}}
                     </p>
-                    <Map class="w-auto max-w-[340px] h-[250px] md:w-[480px]"/>
+                    <trinidadMap class="w-auto max-w-[340px] h-[250px] md:w-[480px]"/>
                     <p class="text-3xl text-blue max-md:hidden md:-mt-4">
                         {{ lang==='en'?'it’s your package,':'Son tus paquetes,' }}
                         <br><b>{{ lang==='en'?'get it when you want it.':'retiralos cuando quieras.' }}</b>
@@ -93,9 +93,11 @@
 </template>
 
 <script>
+import trinidadMap from '@/assets/images/popups/trinidadMap.vue'
 import { mapState } from 'vuex'
 export default {
-    data(){        
+    data(){
+        
         return {
             selectVal:'',
             en_lockers:[
@@ -134,10 +136,10 @@ export default {
         ...mapState(['lang']),
         lockers(){
             return this.lang==='en'? this.en_lockers:this.es_lockers;
-        },
+        }
     },
     components:{
-        Map : ()=> import('@/assets/images/popups/guatemalaMap.vue')
+        trinidadMap
     },
     methods:{
         handleLockerSelection(){
@@ -149,7 +151,7 @@ export default {
 
 <style lang="scss" scoped>
 .popupWrapper{
-    @apply w-full h-screen  overflow-y-scroll py-12 fixed left-0 top-0 bg-[#00000010] z-[999];
+    @apply w-full h-screen  overflow-y-scroll py-12 fixed left-0 top-0 bg-[#fff] z-[999];
 }
 .popupWrapper::-webkit-scrollbar{
     @apply hidden;

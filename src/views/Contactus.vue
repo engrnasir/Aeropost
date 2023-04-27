@@ -1,11 +1,6 @@
 <template>
     <div class="min-w-full">
-      <TrinidadPopupVue v-if="showTrinidadPopup && !skip" @skip="skip=true"/>
-      <BVIPopupVue v-if="showBVIPopup && !skip" @skip="skip=true"/>
-      <BarbadosPopupVue v-if="showBarbadosPopup && !skip" @skip="skip=true"/>
-      <GuatemalaPopupVue v-if="showGuatemalaPopup && !skip" @skip="skip=true"/>
-      <CostaRicaPopupVue v-if="showCostaPopup && !skip" @skip="skip=true"/>
-
+    
       <HeroTitleVue :title="hero.title" :description="hero.description"></HeroTitleVue>
 
       <div class="contact-container">
@@ -53,7 +48,6 @@ import { mapMutations, mapState } from 'vuex';
     },
     data(){
       return{
-        skip:false,
         en_hero:{
           title:'Contact Us',
           description:'Looking for our store locations or hours?',
@@ -93,12 +87,6 @@ import { mapMutations, mapState } from 'vuex';
         'maps'
       ]),
       
-      showTrinidadPopup(){ return this.$route.path.includes('POS') && this.$route.path.includes('contactus') },
-      showGuatemalaPopup(){ return this.$route.path.includes('GUA') && this.$route.path.includes('contactus') },
-      showCostaPopup(){ return this.$route.path.includes('SJO') && this.$route.path.includes('contactus') },
-      showBVIPopup(){ return this.$route.path.includes('BHS') && this.$route.path.includes('contactus') },
-      showBarbadosPopup(){ return this.$route.path.includes('BGI') && this.$route.path.includes('contactus') },
-
       hero(){
         return this.lang==='en'?this.en_hero:this.es_hero;
       },

@@ -8,7 +8,7 @@
             <!-- Main top heading  -->
             <div class="flex relative z-10">
                 <img src="@/assets/images/popups/circularImg.png" alt="circularImg1" class="w-40 -translate-y-10 mr-5 max-md:hidden">
-                <h2 class="text-lightYellow  text-2xl md:text-3xl leading-9 font-sofiaPro max-md:mb-5">
+                <h2 class="text-lightYellow text-2xl md:text-3xl leading-9 font-sofiaPro max-md:mb-5">
                     {{ lang==='en'?'Smart lockers now available for':'Lockers Inteligentes disponibles' }}
                     <br><span class="text-white font-bold">
                         {{ lang==='en'?'package collection.':'para retiro de paquetes' }}
@@ -79,7 +79,7 @@
                     <p class="font-bold text-base text-darkYellow md:text-blue leading-6 px-4 md:ml-10 md:rounded-[84px] md:bg-darkYellow w-full max-md:text-center md:mb-3 self-start md:w-[184px]">
                         {{ lang==='en'?'Lockers In Your Area':'Lockers en tu área'}}
                     </p>
-                    <BarbadosMap class="w-auto max-w-[340px] h-[250px] md:w-[480px]"/>
+                    <Map class="w-auto max-w-[340px] h-[250px] md:w-[480px]"/>
                     <p class="text-3xl text-blue max-md:hidden md:-mt-4">
                         {{ lang==='en'?'it’s your package,':'Son tus paquetes,' }}
                         <br><b>{{ lang==='en'?'get it when you want it.':'retiralos cuando quieras.' }}</b>
@@ -93,11 +93,9 @@
 </template>
 
 <script>
-import BarbadosMap from '@/assets/images/popups/BarbadosMap.vue'
 import { mapState } from 'vuex'
 export default {
-    data(){
-        
+    data(){        
         return {
             selectVal:'',
             en_lockers:[
@@ -136,10 +134,10 @@ export default {
         ...mapState(['lang']),
         lockers(){
             return this.lang==='en'? this.en_lockers:this.es_lockers;
-        }
+        },
     },
     components:{
-        BarbadosMap
+        Map : ()=> import('@/assets/images/popups/guatemalaMap.vue')
     },
     methods:{
         handleLockerSelection(){
@@ -151,7 +149,7 @@ export default {
 
 <style lang="scss" scoped>
 .popupWrapper{
-    @apply w-full h-screen  overflow-y-scroll py-12 fixed left-0 top-0 bg-[#00000010] z-[999];
+    @apply w-full h-screen  overflow-y-scroll py-12 fixed left-0 top-0 bg-[#fff] z-[999];
 }
 .popupWrapper::-webkit-scrollbar{
     @apply hidden;
