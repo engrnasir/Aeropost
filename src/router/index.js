@@ -264,23 +264,23 @@ const routes = [
   },
   
   {
-    path:'/:gtw/:lg/popups/trinidad',
+    path:'/:gtw/:lg/popups/POS',
     component:TrinidadPopup
   },
   {
-    path:'/:gtw/:lg/popups/guatemala',
+    path:'/:gtw/:lg/popups/GUA',
     component:GuatemalaPopup
   },
   {
-    path:'/:gtw/:lg/popups/costa',
+    path:'/:gtw/:lg/popups/SJO',
     component: CostaRicaPopup
   },
   {
-    path:'/:gtw/:lg/popups/bvi',
+    path:'/:gtw/:lg/popups/BVI',
     component: BVIPopup
   },
   {
-    path:'/:gtw/:lg/popups/barbados',
+    path:'/:gtw/:lg/popups/BGI',
     component: BarbadosPopup
   },
   {
