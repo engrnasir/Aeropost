@@ -39,7 +39,7 @@ export default {
             let path = this.$route.path
             this.setLang(lg)
             let gtw = this.$route.params.gtw
-            if(path.includes('rates') || path.includes('restricted')){
+            if(path.includes('rates') || path.includes('restricted') || path.includes('business')){
                 gtw = path.substring(1,4)
             }
             if(gtw && lg){

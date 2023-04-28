@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Home from '@/views/Home2.vue'
+import Home from '@/views/Home.vue'
 import benefitsview from '@/views/BenefitView.vue'
 import CalculatorView from '@/views/CalculatorView.vue'
 import FaqsView from '@/views/FaqsView.vue'
@@ -9,7 +9,7 @@ import HowItWorks from '@/views/HowItWorks.vue'
 import Aboutus from '@/views/Aboutus.vue'
 import TermsCondition from '@/views/TermsCondition.vue'
 import Contactus from '@/views/Contactus.vue'
-
+import BusinessView from '@/views/Business.vue'
 
 // Rates page
 import RatesView from '@/views/RatesView.vue'
@@ -170,6 +170,12 @@ const routes = [
     path: '/:gtw/:lg/contactus',
     name: 'Contactus',
     component: Contactus
+  },
+
+  {
+    path: '/SCL/:lg/business',
+    name: 'Contactus',
+    component: BusinessView
   },
 
   {

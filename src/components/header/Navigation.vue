@@ -35,9 +35,9 @@
                 {{lang==='en'?'Contact':'Contacto'}}
               </router-link>
             </li>
-            <li class="item mr-0" @click="setShowMenu(false)">
-              <router-link :to="`/${selectedCountry.gtw}/${lang}/benefits`">
-                {{lang==='en'?'Benefits':'Beneficios'}}
+            <li class="item mr-0" @click="setShowMenu(false)" v-if="selectedCountry.gtw === 'SCL'">
+              <router-link :to="`/${selectedCountry.gtw}/${lang}/business`">
+                {{lang==='en'?'Business':'Negocio'}}
               </router-link>
             </li>
         </ul>

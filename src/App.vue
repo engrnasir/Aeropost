@@ -107,8 +107,14 @@ export default{
     mapScript.defer = 1;
     mapScript.setAttribute('src', 'https://apps.elfsight.com/p/platform.js')
     document.body.appendChild(mapScript)
+    
+    
+
+    
+
 
   },
+
 }
 </script>
 <style>

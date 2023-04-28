@@ -1,63 +1,100 @@
 <template>
-  <div>
-    <div class="row wrapper max-md:flex-col">
-        <div class="bg-layer"></div>
-        <img src="@/assets/images/prealertImg.png" alt="prealertImg" class="image">
-        <div class="details-wrapper">
-            <p class="sub-heading">Pre-alert</p>
-            <h3 class="main-heading">Process your package much more quickly</h3>
-            <p class="snippet">A pre-alert is a way for you to let us know you have a package coming. By doing this you give us the original tracking number and an invoice which then allows us to process your package much more quickly when it arrives in Miami</p>
-        </div>
+    <div>
+      <div class="row wrapper max-md:flex-col">
+          <img src="@/assets/images/lady-prealert.png" alt="lady-prealert" class="image">
+          <div class="details-wrapper">
+              <p class="text-blue mb-4 leading-none text-3xl uppercase">{{ prealert.title }}</p>
+              <h3 class="main-heading">{{ prealert.description }}</h3>
+              <p class="snippet" v-html="prealert.details"></p>
+          </div>
+      </div>
+  
+      <div class="row wrapper flex-row-reverse max-md:flex-col">
+          <img src="@/assets/images/autopay2.png" alt="autopay2" class="image1">
+          <div class="details-wrapper">
+              <p class="text-blue mb-4 leading-none text-3xl uppercase">{{autopay.title}}</p>
+              <h3 class="main-heading">{{autopay.description}}</h3>
+              <p class="snippet " v-html="autopay.details"></p>
+          </div>
+      </div>
     </div>
+  </template>
+  
+  <script>
+import { mapState } from 'vuex'
+  export default {
+    data(){
+      return{
+        en_prealert:{
+          title:'PRE-ALERT',
+          description:'Process your package much more smoothly',
+          details:'After placing an order using your FREE U.S. address, <a href="" class="text-blue">Submit Pre-alert</a> to let us know that your package is on its way to our Miami fulfillment center. This step is crucial in ensuring that packages are processed as smoothly and efficiently as possible.'
+        },
+        es_prealert:{
+          title:'Pre-Alerta',
+          description:'Procese su paquete de forma mucho más fluida',
+          details:'Después de realizar un pedido con su dirección GRATUITA de EE. UU., <a href="" class="text-blue">Enviar alerta previa</a> para informarnos que su paquete está en camino a nuestro centro logístico de Miami. Este paso es crucial para garantizar que los paquetes se procesen de la manera más fluida y eficiente posible.'
+        },
+        
+        en_autopay:{
+          title:'AUTOPAY',
+          description:'Less time at checkout, more time shopping online.',
+          details:'Streamline your online shopping experience even more when you <a href="" class="text-blue">ENROLL IN AUTOPAY</a> at aeropost.com. Enabling the AutoPay function will allow us to automatically charge the cost of your package to your saved  credit card or debit card when it arrives at our Miami fulfillment center.'
+        },
+        es_autopay:{
+          title:'AUTOPAGO',
+          description:'Menos tiempo para pagar, más tiempo para comprar en línea.',
+          details:'Optimice su experiencia de compra en línea aún más cuando <a href="" class="text-blue">REGÍSTRESE EN AUTOPAY</a> en aeropost.com. Habilitar la función de pago automático nos permitirá cargar automáticamente el costo de su paquete a su tarjeta de crédito o débito guardada cuando llegue a nuestro centro logístico de Miami.'
+        },
 
-    <div class="row wrapper flex-row-reverse max-md:flex-col">
-        <div class="bg-layer absolute top-0 left-0 z-0 rounded-t-2xl"></div>
-        <img src="@/assets/images/autopay.png" alt="autopay" class="image">
-        <div class="details-wrapper">
-            <p class="sub-heading">Autopay</p>
-            <h3 class="main-heading">Speed delivery</h3>
-            <p class="snippet ">Autopay is a setting where you allow us to take payment from your credit card or Paypal account automatically when packages have been invoiced to you. This will ensure the speediest delivery of your package.</p>
-        </div>
-    </div>
-  </div>
-</template>
-
-<script>
-export default {
-
-}
-</script>
-
-<style lang="scss" scoped>
-.wrapper{
-  @apply flex justify-center items-center px-5 py-16 relative mb-14
-      max-md:py-6
-          ;
-}
-.sub-heading{
-  @apply font-semibold text-2xl text-blue mb-5;
-}
-.main-heading{
-  @apply font-bold text-[44px] max-md:text-3xl leading-[44px] text-blue mb-6;
-}
-.snippet{
-  @apply text-[#737373] text-[22px] leading-8;
-}
-.bg-layer{
-  @apply bg-[#F1F9FD] min-h-full w-[75%] rounded-l-2xl rounded-b-2xl absolute top-0 right-0 z-0
-    max-md:hidden
-  ;
-}
-.image{
-  @apply w-[442px] mr-[128px] relative z-10
-    max-lg:w-[300px] max-lg:mr-16
-    max-md:mr-0 max-md:mb-10
+      }
+    },
+    computed:{
+      ...mapState(['lang']),
+      prealert(){
+        return this.lang==='en'?this.en_prealert:this.es_prealert;
+      },
+      autopay(){
+        return this.lang==='en'?this.en_autopay:this.es_autopay;
+      }
+    }
+  
+  }
+  </script>
+  
+  <style lang="scss" scoped>
+  .wrapper{
+    @apply flex justify-center items-center px-5 pt-12  relative mb-10
+        max-md:py-6 max-md:mb-8
+            ;
+  }
+  .main-heading{
+    @apply font-bold text-[44px] max-md:text-3xl leading-[44px] text-blue mb-6;
+  }
+  .snippet{
+    @apply text-[#737373] text-[22px] leading-8;
+  }
+  .bg-layer{
+    @apply bg-[#F1F9FD] min-h-full w-[75%] rounded-l-2xl rounded-b-2xl absolute top-0 right-0 z-0
+      max-md:hidden
     ;
-}
-.details-wrapper{
-  @apply max-w-[530px] relative z-10
-
-  ;
-}
-
-</style>
+  }
+  .image{
+    @apply w-[442px] mr-[128px] relative z-10
+      max-lg:w-[300px] max-lg:mr-16
+      max-md:mr-0 max-md:mb-10
+      ;
+  }
+  .image1{
+    @apply w-[542px] relative z-10
+      max-lg:w-[300px] max-lg:mr-16
+      max-md:mr-0 max-md:mb-10
+      ;
+  }
+  .details-wrapper{
+    @apply max-w-[530px] relative z-10
+  
+    ;
+  }
+  
+  </style>
