@@ -26,9 +26,9 @@ export default {
         ...mapState([
             'lang',
             'showCountries',
-            'selectedCountry'
+            'selectedCountry',
         ]),
-    },
+    },  
     methods:{
         ...mapMutations([
             'setLang',
