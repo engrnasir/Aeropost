@@ -173,8 +173,8 @@ const routes = [
   },
 
   {
-    path: '/SCL/:lg/business',
-    name: 'Contactus',
+    path: '/:gtw/:lg/business',
+    name: 'BusinessView',
     component: BusinessView
   },
 

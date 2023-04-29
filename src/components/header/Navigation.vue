@@ -35,7 +35,7 @@
                 {{lang==='en'?'Contact':'Contacto'}}
               </router-link>
             </li>
-            <li class="item mr-0" @click="setShowMenu(false)" v-if="selectedCountry.gtw === 'SCL'">
+            <li class="item mr-0" @click="setShowMenu(false)" v-if="selectedCountry.gtw === 'SCL' || selectedCountry.gtw === 'SJO'">
               <router-link :to="`/${selectedCountry.gtw}/${lang}/business`">
                 {{lang==='en'?'Business':'Negocio'}}
               </router-link>

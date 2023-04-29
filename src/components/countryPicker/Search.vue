@@ -27,10 +27,13 @@
                     @click.stop="handleSelection(item)"
                     >
                     <div class="text-[#3E454E] lowercase flex">
-                        <p v-for="(t,i) in item.country.name" :key="i" 
-                            :class="[
-                                (searchKey.toLowerCase().includes(t.toLowerCase())?'font-bold ':''),
-                                (i===0?'uppercase':'')] " v-html="t"></p>
+                        <div v-for="(word,i) in item.country.name.split(' ')" :key="i" class="flex">
+                            <p v-for="(t,i) in word" :key="i" 
+                                :class="[
+                                    (searchKey.toLowerCase().includes(t.toLowerCase())?'font-bold ':''),
+                                    (i===0?'uppercase':'')] " v-html="t"></p>
+                            &nbsp;
+                        </div>
                     </div>
                     <p class="text-[#67778B]">{{ maps[item.mapId].name }}</p>
                 </div>

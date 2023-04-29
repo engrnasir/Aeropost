@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-      <h1 class="text-center sm:min-w-max" v-html="getTitle"></h1>
+      <h1 class="text-center min-w-max" v-html="getTitle"></h1>
       <p class="description">{{ description }}</p>
       <a href="https://courier.aeropost.com/site/en/auth?a=signup" class="btn-yellow" v-show="showSignUp">{{lang==='en'?'Sign Up for Free':'Regístrate Gratis'}}</a>
   </div>

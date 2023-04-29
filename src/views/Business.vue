@@ -50,11 +50,11 @@
     data(){
       return{
         en_hero:{
-          title:'Business Shipping Made Simple',
+          title:'Business Shipping Made <br class="sm:hidden">Simple',
           description:'Import from the USA. Ship, Manage & Track with Confidence',
         },
         es_hero:{
-          title:'Envío comercial simplificado',
+          title:'Envío comercial <br class="sm:hidden">simplificado',
           description:'Importación de los EE.UU. Envíe, administre y rastree con confianza',
         },
       }
