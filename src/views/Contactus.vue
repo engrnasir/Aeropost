@@ -32,6 +32,7 @@ import { mapMutations, mapState } from 'vuex';
     name: 'Contactus',
     data(){
       return {
+        chatScript:null
       }
     },
     components:{
@@ -79,8 +80,8 @@ import { mapMutations, mapState } from 'vuex';
         'lang',
         'maps'
       ]),
-        showChat(){
-            return false
+      adaEntry(){
+            return document.getElementById('ada-entry')
         },
       hero(){
         return this.lang==='en'?this.en_hero:this.es_hero;
@@ -96,6 +97,7 @@ import { mapMutations, mapState } from 'vuex';
       ...mapMutations(['setSelectedCountry'])
     },
     mounted(){
+      
       const gtw = this.$route.params.gtw
       this.maps.forEach(el=>{
         el.countries.forEach(c=> {
@@ -607,8 +609,16 @@ import { mapMutations, mapState } from 'vuex';
     script.src = "https://static.ada.support/embed2.js";
     script.setAttribute('data-handle', "aeropost"); //prod
     document.getElementsByTagName('head')[0].appendChild(script);
-	
+    console.log('hello');
+
+    const adaEntry = document.getElementById('ada-entry')
+    adaEntry? adaEntry.style.display = 'block' :''
+
   }  ,
+  beforeDestroy(){
+    const adaEntry = document.getElementById('ada-entry')
+    adaEntry.style.display = 'none'
+  }
 }
   </script>
   <style lang="scss">
