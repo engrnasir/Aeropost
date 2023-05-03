@@ -1,19 +1,13 @@
 <template>
     <div>
-        <p class="text-base mb-4 text-blue ">{{ info.effectiveDate }}</p>
-
-        <InformationVue :list="info.list1" />
 
         <tableVue :list="info.packages" :hasHeader="true"/>
 
         <tableVue :list="info.OtherCharges" :hasHeader="true"/>
 
-        <InformationVue :list="info.list2" />
-
         <WarrantyVue/>
 
         <h2 class="main-heading">{{ info.customHandling.title }}</h2>
-        <p class="text-base text-blue mb-5" v-html="info.customHandling.description"></p>       
         <tableVue :list="info.customHandling.table" :hasHeader="true"/>
         
         <h2 class="main-heading">{{ info.customsRates.title }}</h2>
@@ -38,13 +32,6 @@ export default {
   data(){
     return{
         en_info:{
-            effectiveDate:'Effective as of February 1, 2022.',
-            list1:[
-                'We charge on weight NOT on size of your package.',
-                'You can return your junk mail and we will credit your account.',
-                'You can track your packages on our site at www.aeropost.com.',
-            ],
-
             packages:[
                 ['Packages','Rates(USD)'],
                 ['0.50 lb','USD$7.95'],
@@ -64,15 +51,8 @@ export default {
                 ['SED Shipment','USD $25.00'],	
             ],
 
-            list2:[
-                'All documents with tracking number will be treated as packages.',
-                'Special handling shipments have additional charges. Please quote with the local office.',
-                'Additional charges apply to shipments measuring over than 1 meter on any side. Please quote with the local office.',
-            ],
-
             customHandling:{
                 title:'Customs Handling',
-                description:'All packages that enter the country must go through customs and are subject to pay duties. Customs handling rates are set based on the package CIF value.',
                 table:[
                     ["PACKAGE'S DECLARED VALUE",'RATE*'],
                     ['Per package fee with declared value of USD $1 to USD $1000','USD $5.00'],
@@ -140,12 +120,6 @@ export default {
             }
         },
         es_info:{
-            effectiveDate:'Efectivo a partir del 1 de febrero de 2022.',
-            list1:[
-                'Cobramos por el peso, NO por el tamaño de su paquete.',
-                'Puede devolver su correo no deseado y le acreditaremos su cuenta.',
-                'Puede rastrear sus paquetes en nuestro sitio en www.aeropost.com.',
-            ],
 
             packages:[
                 ['Paquetes','Tarifas(USD)'],
@@ -166,15 +140,8 @@ export default {
                  ['Envío SED','USD $25.00'],
              ],
 
-            list2:[
-                'Todos los documentos con número de seguimiento serán tratados como paquetes.',
-                'Los envíos de manejo especial tienen cargos adicionales. Cotice con la oficina local.',
-                'Se aplican cargos adicionales a los envíos que miden más de 1 metro en cualquier lado. Cotice con la oficina local.',
-            ],
-
             customHandling:{
-                title:'Manejo de Aduana',
-                description:'Todos los paquetes que ingresan al país deben pasar por la aduana y están sujetos al pago de impuestos. Las tarifas de manejo de aduanas se establecen en función del valor CIF del paquete.',
+                title:'Manejo Aduanal',
                 table:[
                     ["VALOR DECLARADO DEL PAQUETE",'TARIFA*'],
                     ['Tarifa por paquete con valor declarado de USD $1 a USD $1000','USD $5.00'],

@@ -1,15 +1,15 @@
 <template>
     <div>
         <h3 class="heading">
-            {{ lang==='en'?'Dangerous goods and other restricted items':'Mercancías peligrosas y otros artículos restringidos' }}
+            {{ lang==='en'?'Dangerous goods and other restricted items':'Productos Prohibidos' }}
         </h3>
         <p class="snippet" v-if="lang==='en'">
             PLEASE DO NOT SHIP THESE PRODUCTS TO YOUR MIAMI ADDRESS AS THEY CANNOT BE SHIPPED TO YOUR COUNTRY AND YOU WILL NEED TO PAY FOR DESTRUCTION OR RETURN TO SHIPPER COSTS.
             <br><br> AEROCASILLAS WILL NOT TRANSPORT THESE ITEMS AND NO CLAIMS WILL BE ACCEPTED FOR THEM.
         </p>
         <p class="snippet" v-else>
-            POR FAVOR, NO ENVÍE ESTOS PRODUCTOS A SU DIRECCIÓN DE MIAMI YA QUE NO SE PUEDEN ENVIAR A SU PAÍS Y DEBERÁ PAGAR LOS GASTOS DE DESTRUCCIÓN O DEVOLUCIÓN AL REMITENTE.
-            <br><br> AEROCASILLAS NO TRANSPORTARÁ ESTOS ARTÍCULOS NI SE ACEPTARÁN RECLAMACIONES POR ELLOS.
+            <b>Cualquier producto que en su listado de ingredientes contenga alcohol. Cualquier cantidad de producto explosivo o corrosivo</b>
+            <br><br> POR FAVOR NO ENVÍES ESTOS PRODUCTOS A TU DIRECCIÓN EN MIAMI PUES NO PODRÁN SER TRANSPORTADOS Y DEBERÁS ASUMIR LOS COSTOS DE DESTRUCCIÓN O DEVOLUCIÓN AL PROVEEDOR.
         </p>
         
         <tableVue :list="info.productsTable" :hasHeader="true"/>

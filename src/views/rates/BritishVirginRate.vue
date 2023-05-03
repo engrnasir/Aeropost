@@ -16,7 +16,6 @@
             }}
         </p>
         
-        <InformationVue :list="info.list2" />
 
         <h2 class="main-heading">{{ info.maritime.title }}</h2>
         <tableVue :list="info.maritime.table"/>
@@ -92,12 +91,6 @@ export default {
                 ['Over 500 pound','USD $30.00'],
             ],
 
-            list2:[
-                'All security documents with a tracking number will be treated as packages.',
-                'Shipments that require any special handling, are subject to additional charges.'
-            ],
-
-
             maritime:{
                 title:'MARITIME SERVICE (Per Cubic Foot)',
                 table:[
@@ -146,11 +139,6 @@ export default {
                 ['100 libras - 199,99 libras', 'USD $10,00'],
                 ['200 libras - 500 libras', 'USD $15.00'],
                 ['Más de 500 libras','USD $30.00'],
-            ],
-
-            list2:[
-                'Todos los documentos de seguridad con un número de seguimiento serán tratados como paquetes.',
-                'Los envíos que requieren algún manejo especial, están sujetos a cargos adicionales.'
             ],
 
 

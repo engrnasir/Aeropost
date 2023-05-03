@@ -4,7 +4,8 @@
       <HeroTitleVue :title="hero.title" :description="hero.description"></HeroTitleVue>
 
       <div class="contact-container">
-        <p v-html="content"></p>
+        <h2 class="main-heading">{{ lang==='en'?'Welcome to our Contact Page!':'¡Bienvenido a nuestra página de contacto!' }}</h2>
+        <p v-html="content" class="text-blue"></p>
       </div>
       <mapVue/>
 

@@ -27,7 +27,7 @@ import { mapState } from 'vuex';
           title:'Restricted Shipping',
         },
         es_hero:{
-          title:'Envío restringido',
+          title:'Envíos Restringidos',
         },
       }
     },

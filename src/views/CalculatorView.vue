@@ -29,8 +29,8 @@
           description:'Calculate your shipping costs including freight, customs duties, and taxes by utilizing our shipping calculator.',
         },
         es_hero:{
-          title:'Calculadora de Envío',
-          description:'Calcula tus costos de envío, incluidos el flete, los aranceles aduaneros y los impuestos, utilizando nuestra calculadora de envío.',
+          title:'Cotiza tu envío',
+          description:'Utiliza nuestra calculadora en línea para estimar el costo de tu envío, incluyendo impuestos de importación.',
         },
       }
     },

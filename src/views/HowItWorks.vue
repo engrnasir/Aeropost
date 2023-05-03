@@ -67,9 +67,9 @@ import { mapState } from 'vuex';
           description:`Shopping from the U.S. has never been easier than with Aeropost. We’ve streamline our courier process to ensure that you have the simplest and smoothest online shopping experience.`,
         },
         es_hero:{
-          title:'Cómo funciona',
+          title:'¿Cómo Funciona?',
           utext:'',
-          description:'Comprar desde EE. UU. nunca ha sido tan fácil como con Aeropost. Hemos simplificado nuestro proceso de mensajería para garantizar que tenga la experiencia de compra en línea más simple y fluida.'
+          description:'Comprar en Estados Unidos nunca había sido tan fácil. Hemos simplificado los procesos de envío de tus compras en línea para garantizar que tengas una experiencia fácil, rápida y confiable.'
         },
 
         en_step1:{
@@ -77,8 +77,8 @@ import { mapState } from 'vuex';
           description:' Create an Aeropost account to get  a FREE U.S. address.'
         },
         es_step1:{
-          title:'Regístrese para obtener una dirección GRATUITA en EE. UU.',
-          description:'Cree una cuenta de Aeropost para obtener una dirección de EE. UU. GRATIS.'
+          title:'Regístrate GRATIS para obtener tu dirección de Aeropost.',
+          description:'Crea una cuenta Aeropost para tener una dirección en Estados Unidos, gratis.'
         },
 
         en_step2:{
@@ -86,8 +86,8 @@ import { mapState } from 'vuex';
           description:'Shop your favorite online stores using the FREE U.S. address provided.'
         },
         es_step2:{
-          title:'Tienda en linea',
-          description:'Compre en sus tiendas en línea favoritas usando la dirección GRATUITA de EE. UU. proporcionada.'
+          title:'Compra',
+          description:'Ingresa a tu tienda en línea favorita de Estados Unidos y compra utilizando tu nueva dirección de Aeropost.'
         },
         
         en_step3:{
@@ -95,8 +95,8 @@ import { mapState } from 'vuex';
           description:'Let us know when your package is on its way to our Miami fulfillment center.'
         },
         es_step3:{
-          title:'Enviar una alerta previa',
-          description:'Infórmenos cuando su paquete esté en camino a nuestro centro logístico de Miami.'
+          title:'Pre-alerta',
+          description:'Una vez el vendedor te envíe la confirmación de despacho, pre-alerta tus compras en nuestro sitio antes de que lleguen a nuestro almacén en Miami.'
         },
 
         en_step4:{
@@ -104,8 +104,8 @@ import { mapState } from 'vuex';
           description:'Pick up packages from your selected Aeropost store, smart parcel locker, or right from your front door!'
         },
         es_step4:{
-          title:'Recibir o recoger paquete',
-          description:'¡Recoge paquetes de tu tienda Aeropost seleccionada, casillero inteligente para paquetes o directamente desde la puerta de tu casa!'
+          title:'Recibe',
+          description:'En nuestras tiendas, lockers o en la puerta de tu casa.'
         },
 
       }

@@ -1,8 +1,6 @@
 <template>
     <div>      
-        
-        <InformationVue :list="info.list1" />
-        
+                
         <h2 class="main-heading">{{ lang==='en'?'AIR':'AIRE' }}</h2>
         <tableVue :list="info.packages" :hasHeader="true"/>
         
@@ -10,8 +8,6 @@
 
          <p class="text-blue mb-4" v-if="lang==='en'">*This handling fee charge applies to all transactions, both when customs clearance is provided by Aeropost or the customer elects to pick up Customs document.</p>
          <p class="text-blue mb-4" v-else>*Este cargo por tarifa de manejo se aplica a todas las transacciones, tanto cuando Aeropost proporciona el despacho de aduana como cuando el cliente elige recoger el documento de Aduana.</p>
-        
-        <InformationVue :list="info.list2" />
 
         <tableVue :list="info.maritime" :hasHeader="true"/>     
         
@@ -39,11 +35,6 @@ export default {
   data(){
     return{
         en_info:{
-            list1:[
-                'We charge on weight NOT on size of your package.',
-                'You can track your packages on our site at www.aeropost.com.'
-            ],
-
 
             packages:[
                 ['Packages','Rates(USD)'],
@@ -59,11 +50,6 @@ export default {
                 ['Restricted Shipments','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Click here</a>'],
             ],
             
-            list2:[
-                'All security documents with a tracking number will be treated as packages.',
-                'Shipments that require any special handling, are subject to additional charges.',
-                'Package duties will be collected upon delivery.',
-            ],
  
             maritime:[
                 ['MARITIME',''],
@@ -102,11 +88,6 @@ export default {
             ]
         },
         es_info:{
-            list1:[
-                'Cobramos por el peso, NO por el tamaño de su paquete.',
-                'Puede rastrear sus paquetes en nuestro sitio en www.aeropost.com.'
-            ],
-
 
             packages:[
                 ['Paquetes','Tarifas(USD)'],
@@ -120,12 +101,6 @@ export default {
                 ['Otros cargos',''],
                 ['Manejo de Aduanas','USD $3.50*'],
                 ['Envíos restringidos','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Haga clic aquí</a>'],
-            ],
-            
-            list2:[
-                'Todos los documentos de seguridad con un número de seguimiento serán tratados como paquetes.',
-                'Los envíos que requieren algún manejo especial están sujetos a cargos adicionales.',
-                'Los impuestos del paquete se cobrarán en el momento de la entrega.',
             ],
  
             maritime:[

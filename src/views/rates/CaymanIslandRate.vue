@@ -1,9 +1,6 @@
 <template>
     <div>
-        <p class=" text-base mb-4 text-blue ">{{ info.effectiveDate }}</p>
 
-        <InformationVue :list="info.list1" />
-        
         <tableVue :list="info.packages" :hasHeader="true"/>
 
         <tableVue :list="info.OtherCharges" :hasHeader="true"/>
@@ -31,12 +28,6 @@ export default {
   data(){
     return{
         en_info:{
-            effectiveDate:'Effective February, 2022.',
-            list1:[
-                'We charge on weight NOT on size of your package.',
-                'You can return your junk mail and we will credit your account.',
-                'You can track your packages on our site at www.aeropost.com.',
-            ],
 
             packages:[
                 ['Packages','Rates(USD)'],
@@ -92,12 +83,6 @@ export default {
 
         },
         es_info:{
-            effectiveDate:'Efectivo febrero de 2022.',
-            list1:[
-                'Cobramos por el peso, NO por el tamaño de su paquete.',
-                'Puede devolver su correo no deseado y le acreditaremos su cuenta.',
-                'Puede rastrear sus paquetes en nuestro sitio en www.aeropost.com.',
-            ],
 
             packages:[
                 ['Paquetes','Tarifas(USD)'],

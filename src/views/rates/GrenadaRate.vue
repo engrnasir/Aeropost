@@ -1,14 +1,11 @@
 <template>
     <div>
-        <InformationVue :list="info.list1" />
-        
+                
         <tableVue :list="info.packages" :hasHeader="true"/>
 
         <tableVue :list="info.OtherCharges" :hasHeader="true"/>
 
         <tableVue :list="info.table1"/>
-
-        <InformationVue :title="info.title2" :list="info.list2" />
  
         <WarrantyVue/>
 
@@ -31,11 +28,6 @@ export default {
   data(){
     return{
         en_info:{
-            list1:[
-                'We charge on weight NOT on size of your package.',
-                'You can return your junk mail and we will credit your account.',
-                'You can track your packages on our site at www.aeropost.com.',
-            ],
 
             packages:[
                 ['Packages','Rates(USD)'],
@@ -56,20 +48,8 @@ export default {
                 ['SED','USD $25.00'],
             ],
             
-            title2:'Other information:',
-            list2:[
-                'All documents with a tracking number will be processed as packages.',
-                'Shipments that require any special handling, are subject to additional charges. Please quote with local office.',
-                'Additional charges apply to shipments measuring over 1 meter on any side. Please quote with the local office.',
-            ],
         },
         es_info:{
-            list1:[
-                'Cobramos por el peso, NO por el tamaño de su paquete.',
-                'Puede devolver su correo no deseado y le acreditaremos su cuenta.',
-                'Puede rastrear sus paquetes en nuestro sitio en www.aeropost.com.',
-            ],
-
             packages:[
                 ['Paquetes','Tarifas(USD)'],
                 ['0.5 lb','USD $6.95'],
@@ -89,12 +69,6 @@ export default {
                 ['SED','USD $25.00'],
             ],
             
-            title2:'Otra información:',
-            list2:[
-                'Todos los documentos con un número de seguimiento se procesarán como paquetes.',
-                'Los envíos que requieran algún manejo especial, están sujetos a cargos adicionales. Cotice con la oficina local.',
-                'Se aplican cargos adicionales a los envíos que miden más de 1 metro en cualquier lado. Cotice con la oficina local.',
-            ],
         },
     }
   },

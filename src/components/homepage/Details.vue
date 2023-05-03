@@ -31,9 +31,9 @@ import { mapState } from 'vuex'
           details:'After placing an order using your FREE U.S. address, <a href="" class="text-blue">Submit Pre-alert</a> to let us know that your package is on its way to our Miami fulfillment center. This step is crucial in ensuring that packages are processed as smoothly and efficiently as possible.'
         },
         es_prealert:{
-          title:'Pre-Alerta',
-          description:'Procese su paquete de forma mucho más fluida',
-          details:'Después de realizar un pedido con su dirección GRATUITA de EE. UU., <a href="" class="text-blue">Enviar alerta previa</a> para informarnos que su paquete está en camino a nuestro centro logístico de Miami. Este paso es crucial para garantizar que los paquetes se procesen de la manera más fluida y eficiente posible.'
+          title:'PRE-ALERTA',
+          description:'Recibe tus compras más rápido.',
+          details:'Una vez el vendedor te envíe la confirmación de despacho, pre-alerta tus compras en nuestro sitio antes de que lleguen a nuestro almacén en Miami. Este paso nos ayudará a entregarte tus paquetes más rápido. Si ya tienes un envío en camino, prealerta <a href="" class="text-blue">aquí</a>.'
         },
         
         en_autopay:{
@@ -43,8 +43,8 @@ import { mapState } from 'vuex'
         },
         es_autopay:{
           title:'AUTOPAGO',
-          description:'Menos tiempo para pagar, más tiempo para comprar en línea.',
-          details:'Optimice su experiencia de compra en línea aún más cuando <a href="" class="text-blue">REGÍSTRESE EN AUTOPAY</a> en aeropost.com. Habilitar la función de pago automático nos permitirá cargar automáticamente el costo de su paquete a su tarjeta de crédito o débito guardada cuando llegue a nuestro centro logístico de Miami.'
+          description:'Menos tiempo pagando, más tiempo comprando en línea.',
+          details:'A nadie le gusta pagar. Suscríbete a nuestro servicio de Autopago y olvídate de los pagos manuales. Los cargos de tus envíos serán cobrados automáticamente a la tarjeta que registres con nosotros. Tus envíos nunca se detienen.'
         },
 
       }

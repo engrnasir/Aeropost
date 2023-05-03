@@ -8,12 +8,12 @@
             <ul class="items">
                 <li class="item" :class="bgBlue?'item-white':'item-blue'">
                     <router-link :to="`/${selectedCountry.gtw}/${lang}/how-it-works`">
-                        {{lang=='en'?'How It Works':'Cómo funciona'}}
+                        {{lang=='en'?'How It Works':'¿Cómo Funciona?'}}
                     </router-link>
                 </li>
                 <li class="item" :class="bgBlue?'item-white':'item-blue'">
                     <router-link :to="`/${selectedCountry.gtw}/${lang}/aboutus`">
-                        {{lang=='en'?'About Us':'Sobre nosotras'}}
+                        {{lang=='en'?'About Us':'¿Quiénes somos?'}}
                     </router-link>
                 </li>
                 <li v-if="!invalidRate" class="item" :class="bgBlue?'item-white':'item-blue'">
@@ -23,7 +23,7 @@
                 </li>
                 <li class="item" :class="bgBlue?'item-white':'item-blue'">
                     <router-link :to="`/${selectedCountry.gtw}/${lang}/calculator`">
-                        {{lang=='en'?'Calculator':'Calculadora'}}
+                        {{lang=='en'?'Calculator':'Cotiza tu envío'}}
                     </router-link>
                 </li>
                 <li class="item" :class="bgBlue?'item-white':'item-blue'">
@@ -33,7 +33,7 @@
                 </li>
                 <li class="item" :class="bgBlue?'item-white':'item-blue'" v-if="selectedCountry.gtw === 'SCL'">
                     <router-link :to="`/${selectedCountry.gtw}/${lang}/business`">
-                        {{lang==='en'?'Business':'Negocio'}}
+                        {{lang==='en'?'Business':'Beneficios'}}
                     </router-link>
                 </li>
                 <li class="item" :class="bgBlue?'item-white':'item-blue'" >
@@ -43,7 +43,7 @@
                 </li>
                 <li class="item mr-0" :class="bgBlue?'item-white':'item-blue'">
                     <router-link :to="`/${selectedCountry.gtw}/${lang}/terms`">
-                        {{lang=='en'?'Terms and Conditions':'Términos y condiciones'}}
+                        {{lang=='en'?'Terms and Conditions':'Términos y Condiciones'}}
                     </router-link>
                 </li>
             </ul>

@@ -8,7 +8,6 @@
             }}
         </p>
         
-        <InformationVue :list="info.list1" />
 
         <p class="snippet">
             {{ 
@@ -21,8 +20,6 @@
         <tableVue :list="info.rates" :hasHeader="true"/>
 
         <tableVue :list="info.otherCharges" :hasHeader="true"/>
-
-        <InformationVue :list="info.list2" />
         
         <tableVue :list="info.packages" :hasHeader="true"/>
         
@@ -47,10 +44,7 @@ export default {
   data(){
     return{
         en_info:{
-            list1:[
-                'You can return your junk mail and we will credit your account.',
-                'You can track your packages on our site at www.aeropost.com'
-            ],
+            
             rates:[
                 ['','RATES'],
                 ['Annual Membership.','	FREE'],
@@ -63,11 +57,6 @@ export default {
                 ['Other Charges',''],
                 ['Fuel Surcharge per package','USD$1.50'],
                 ['Restricted Shipments ','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue"> Click here</a>']
-            ],
-
-            list2:[
-                'Shipments that require any special handling are subject to additional charges.',
-                'If package weight exceeds 50 lb or the package length',
             ],
 
             packages:[
@@ -110,10 +99,7 @@ export default {
             ],
         },
         es_info:{
-            list1:[
-                'Puede devolver su correo no deseado y le acreditaremos su cuenta.',
-                'Puede rastrear sus paquetes en nuestro sitio en www.aeropost.com'
-            ],
+            
             rates:[
                 ['','TARIFAS'],
                 ['Membresía Anual.','GRATIS'],
@@ -126,11 +112,6 @@ export default {
                 ['Otros cargos',''],
                 ['Recargo por combustible por paquete','USD$1.50'],
                 ['Envíos restringidos', '<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Haga clic aquí</a> ']
-            ],
-
-            list2:[
-                'Los envíos que requieren un manejo especial están sujetos a cargos adicionales.',
-                'Si el peso del paquete supera las 50 libras o la longitud del paquete',
             ],
 
             packages:[

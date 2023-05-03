@@ -1,7 +1,5 @@
 <template>
     <div>
-        
-        <InformationVue :list="info.list1" />
                 
         <tableVue :list="info.packages" :hasHeader="true"/>
         
@@ -135,11 +133,6 @@ export default {
     return{
         en_info:{
 
-            list1:[
-                'You pay for the real weight of your package, not size.',
-                'You can return your junk mail and we will credit your account.',
-                'You can track your packages on our site at www.aeropost.com.',
-            ],
             packages:[
                ['Weight (kg)','Basic'],
                ['Up to 500 g','$7.50'],
@@ -245,11 +238,6 @@ export default {
         },
         es_info:{
 
-            list1:[
-                'Usted paga por el peso real de su paquete, no por el tamaño.',
-                'Puede devolver su correo no deseado y le acreditaremos su cuenta.',
-                'Puede rastrear sus paquetes en nuestro sitio en www.aeropost.com.',
-            ],
             packages:[
                 ['Peso (kg)','Básico'],
                 ['Hasta 500 g','$7.50'],

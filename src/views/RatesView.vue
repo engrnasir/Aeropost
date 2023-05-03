@@ -29,7 +29,7 @@
         },
         es_hero:{
           title:'Tarifas',
-          description:'Nuestro servicio de dirección de Miami te permite comprar en tus sitios web favoritos de EE. UU. y recibir tus compras en tu hogar, en el trabajo o en una tienda local.',
+          description:'Nuestro servicio de envíos te permite comprar en tus sitios favoritos de Estados Unidos y recibir tus compras en casa, trabajo, o retirar en una de nuestras tiendas.',
         },
       }
     },

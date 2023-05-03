@@ -8,7 +8,7 @@
       </div>
       
         <h2 class="main-heading">
-         {{ this.lang==='en'? 'Why We’re The Total Package?':'¿Por qué somos el paquete total?' }} 
+         {{ this.lang==='en'? 'Why We’re The Total Package?':'¿Por qué comprar con nosotros?' }} 
         </h2>
       <div class="row cards">
           <div class="card" v-for="(item, i) in benefitItems" :key="i">
@@ -36,9 +36,9 @@ import { mapState } from 'vuex'
                 {url:``, img:'track1.png', title:'Track Packages'},
             ],
             es_cards:[
-                {url:``, img:'prealert.png', title:'Enviar Pre-Alerta'},
-                {url:'', img:'payment.png', title:'Realizar un pago'},
-                {url:``, img:'track1.png', title:'Seguimiento de paquetes'},
+                {url:``, img:'prealert.png', title:'Pre-Alertar'},
+                {url:'', img:'payment.png', title:'Pagar'},
+                {url:``, img:'track1.png', title:'Rastrear'},
             ],
 
             en_benefitItems:[
@@ -48,10 +48,10 @@ import { mapState } from 'vuex'
                 {img:'track.png',title:'Track Your Packages',description:'Receive up-to-date tracking updates for your packages.'},
             ],
             es_benefitItems:[
-                {img:'fast.png',title:'Rápido y confiable',description:'Entrega de última milla con la mayor frecuencia de vuelos de la región.'},
-                {img:'secure.png',title:'Transacciones seguras',description:'Utilizamos la última tecnología para garantizar que tus transacciones sean seguras.'},
-                {img:'return.png',title:'Devoluciones fáciles',description:'Si no estás satisfecho con tu compra, te facilitamos la devolución.'},
-                {img:'track.png',title:'Ahorra en impuestos',description:'Ahorra un 7 % en el impuesto sobre las ventas de EE. UU. al usar tu dirección de Aeropost.'},
+                {img:'fast.png',title:'Rápido y confiable',description:'Tenemos la mayor frecuencia de vuelos de la región.'},
+                {img:'secure.png',title:'Pagos seguros',description:'Utilizamos la última tecnología para garantizar un ambiente de pagos seguro.'},
+                {img:'return.png',title:'Devoluciones fáciles',description:'Si no estás satisfecho con tu compra, te facilitamos la devolución, sin costo adicional.'},
+                {img:'track.png',title:'Ahorra en impuestos',description:'Ahorra el 7% de impuesto de ventas de Estados Unidos al usar tu dirección de Aeropost.'},
             ]
         }
       },

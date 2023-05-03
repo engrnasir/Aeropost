@@ -1,18 +1,13 @@
 <template>
     <div>
 
-        <InformationVue :list="info.list1" />
-
         <tableVue :list="info.packages" :hasHeader="true"/>
 
         <tableVue :list="info.OtherCharges" :hasHeader="true"/>
 
-        <InformationVue :list="info.list2" />
-
         <WarrantyVue/>
         
         <h2 class="main-heading">{{ info.customHandling.title }}</h2>
-        <p class="text-base text-blue mb-5" v-html="info.customHandling.description"></p>       
         <tableVue :list="info.customHandling.table" :hasHeader="false" :tfoot="info.customHandling.tableFooter"/>
         <tableVue :list="[['(*) Rates do not include VAT']]" />
 
@@ -35,10 +30,6 @@ export default {
   data(){
     return{
         en_info:{
-            list1:[
-                'We charge on weight NOT on size of your package.',
-                'You can track your packages on our site at www.aeropost.com',
-            ],
 
             packages:[
                 ['Packages','Rates(USD)'],
@@ -56,13 +47,8 @@ export default {
                 ['Counter Storage Fee if package is not collected within the next 5 business days after ‘Ready At Counter’','USD $5.00 per day'],            	
 	        ],
 
-            list2:[
-                'Shipments that require any special handling, are subject to additional charges.',
-             ],
-
             customHandling:{
                 title:'Customs Handling',
-                description:'All packages that enter the country must go through customs and are subject to pay duties.',
                 table:[
                     ['Customs Handling Fee on Personal Entries','USD  $10.00'],
                     ['Customs Handling Fee on Commercial Entries','USD  $20.00'],
@@ -72,11 +58,6 @@ export default {
             },
         },
         es_info:{
-            list1:[
-                'Cobramos por el peso, NO por el tamaño de su paquete.',
-                'Puede rastrear sus paquetes en nuestro sitio en www.aeropost.com',
-            ],
-
             packages:[
                 ['Paquetes','Tarifas(USD)'],
                 ['0.5 lb','USD $6.95'],
@@ -93,13 +74,8 @@ export default {
                 ["Tarifa de almacenamiento en mostrador si el paquete no se recoge dentro de los próximos 5 días hábiles después de 'Listo en mostrador", "USD $5.00 por día"],
 	        ],
 
-            list2:[
-                'Los envíos que requieren algún manejo especial están sujetos a cargos adicionales.',
-             ],
-
             customHandling:{
-                title:'Manejo de Aduana',
-                description:'Todos los paquetes que ingresan al país deben pasar por la aduana y están sujetos al pago de impuestos.',
+                title:'Manejo Aduanal',
                 table:[
                     ['Tarifa de gestión aduanera sobre entradas personales','USD $10,00'],
                     ['Tarifa de gestión aduanera sobre entradas comerciales','USD $20,00'],

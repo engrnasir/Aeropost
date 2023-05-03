@@ -7,7 +7,7 @@
         <ul class="items">
             <li class="item" @click="setShowMenu(false)">
               <router-link :to="`/${selectedCountry.gtw}/${lang}/how-it-works`">
-                {{lang==='en'?'How It Works':'Cómo Funciona'}}
+                {{lang==='en'?'How It Works':'¿Cómo Funciona?'}}
               </router-link>
             </li>
             <li class="item" v-if="!invalidRate" @click="setShowMenu(false)">
@@ -17,7 +17,7 @@
             </li>
             <li class="item" @click="setShowMenu(false)">
               <router-link :to="`/${selectedCountry.gtw}/${lang}/calculator`">
-                {{lang==='en'?'Calculator':'Calculadora de Costos'}}
+                {{lang==='en'?'Calculator':'Cotiza tu envío'}}
               </router-link>
             </li>
             <li class="item" @click="setShowMenu(false)">
@@ -27,7 +27,7 @@
             </li>
             <li class="item">
                 <router-link :to="`/${selectedCountry.gtw}/${lang}/restricted`">
-                    {{lang=='en'?'Restricted Products':'Productos restringidos'}}
+                    {{lang=='en'?'Restricted Products':'Productos Restringidos'}}
                 </router-link>
             </li>
             <li class="item mr-0" @click="setShowMenu(false)">

@@ -1,8 +1,6 @@
 <template>
     <div>
         
-        <InformationVue :list="info.list1" />
-        
         <h2 class="main-heading">
            {{lang==='en'?'International Freight':'Cargamento internacional'}}
         </h2>
@@ -10,7 +8,6 @@
         
         <tableVue :list="info.table1"/>
         
-        <InformationVue :list="info.list2" />
         
         <h2 class="main-heading">
             {{lang==='en'?'Home delivery':'Entrega a domicilio'}}
@@ -27,7 +24,6 @@
         
         <h2 class="main-heading">{{ info.customHandling.title }}</h2>
         <p class="text-blue mb-4">{{ info.customHandling.description }}</p>
-        <p class="text-sm text-blue mb-4">{{ info.customHandling.effectiveDate }}</p>
         <tableVue :list="info.customHandling.table" :hasHeader="true"/>
 
     </div>
@@ -47,14 +43,6 @@ export default {
   data(){
     return{
         en_info:{
-            effectiveDate:'Effective June 2022',
-
-            list1:[
-                '<a href="https://aeropost.com/site/en/terms" class="text-blue">We charge on weight, NOT on size of your package.*</a>',
-                'You can return your junk mail and we will credit your account.',
-                'You can track your packages on our site at www.aeropost.com. ',
-            ],
-
 
             packages:[
                 ['Packages','(Chilean Pesos)'],
@@ -69,11 +57,6 @@ export default {
             ],
             table1:[
                 ['Restricted shipments and dangerous goods.	','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Click here</a>']
-            ],
-            
-            list2:[
-                'Shipments above USD $3.000 FOB and/or that require special handling are subject to additional charges.',
-                'Customs Duties and VAT: use our <a href="/calculator" class="text-blue">calculator</a> to estimate duty charges and taxes due.',
             ],
 
             homeDeliveryPackages:[
@@ -123,7 +106,6 @@ export default {
             customHandling:{
                 title:'Customs Handling',
                 description:"Customs handling rates are based on the package's value.",
-                effectiveDate:'Rates effective October 1st, 2012',
                 table:[
                     ["PACKAGE'S VALUE IN ($USD)",'Tarifa en pesos chilenos*'],
                     ['USD $0 - USD $29.99','CLP $1,499'],
@@ -135,13 +117,7 @@ export default {
             }
         },
         es_info:{
-            effectiveDate:'Efectivo en junio de 2022',
 
-            list1:[
-                '<a href="https://aeropost.com/site/en/terms" class="text-blue">Cobramos según el peso, NO según el tamaño de su paquete.*</a>',
-                'Puede devolver su correo no deseado y le acreditaremos su cuenta.',
-                'Puede rastrear sus paquetes en nuestro sitio en www.aeropost.com. ',
-            ],
             packages:[
                 ['Paquetes','(Pesos Chilenos)'],
                 ['Hasta 0,5 kg','CLP $6.800'],
@@ -155,11 +131,6 @@ export default {
             ],
             table1:[
                 ['Envíos restringidos y mercancías peligrosas. ','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Haga clic aquí</a>']
-            ],
-            
-            list2:[
-                'Los envíos superiores a USD $3.000 FOB y/o que requieran manejo especial están sujetos a cargos adicionales.',
-                'Derechos de aduana e IVA: utilice nuestra <a href="/calculator" class="text-blue">calculadora</a> para estimar los derechos de aduana y los impuestos adeudados.',
             ],
 
             homeDeliveryPackages:[
@@ -207,9 +178,8 @@ export default {
                 ['*El IVA no está incluido en estas tarifas.']
             ],
             customHandling:{
-                title:'Manejo de Aduana',
+                title:'Manejo Aduanal',
                 description:"Las tarifas de manejo de aduanas se basan en el valor del paquete.",
-                effectiveDate:'Tarifas vigentes a partir del 1 de octubre de 2012',
                 table:[
                     ["VALOR DEL PAQUETE EN ($USD)", 'Tarifa en pesos chilenos*'],
                     ['USD $0 - USD $29.99','CLP $1,499'],

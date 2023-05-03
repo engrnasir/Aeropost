@@ -1,8 +1,5 @@
 <template>
     <div>
-        <p class="text-base mb-4 text-blue ">{{ info.effectiveDate }}</p>
-
-        <InformationVue :list="info.list1" />
 
         <tableVue :list="info.packages" :hasHeader="true"/>
 
@@ -11,8 +8,6 @@
         <WarrantyVue/>
         
         <h2 class="main-heading">{{ info.customHandling.title }}</h2>
-        <p class="text-base text-blue mb-5" v-html="info.customHandling.description"></p>  
-        <p class="text-base mb-4 text-blue ">{{ info.effectiveDate }}</p>
         <tableVue :list="info.customHandling.table" :hasHeader="true"/>
 
     </div>
@@ -34,12 +29,6 @@ export default {
   data(){
     return{
         en_info:{
-            effectiveDate:'Effective as of February 1, 2022.',
-            list1:[
-                'We charge on weight NOT on size of your package.',
-                'You can return your junk mail and we will credit your account.',
-                'You can track your packages on our site at www.aeropost.com.',
-            ],
 
             packages:[
                 ['Packages','Rates(USD)'],
@@ -49,16 +38,9 @@ export default {
                 ['3 lb','USD$13.50'],
                 ['Addtional lb','USD$3.75'],       	
 	        ],
-            
-
-            list2:[
-                'All security documents with a tracking number will be treated as packages.',
-                'Shipments that require any special handling, are subject to additional charges.'
-            ],
 
             customHandling:{
                 title:'Customs Handling',
-                description:'All packages that enter the country must go through customs and are subject to pay duties. Customs handling rates are set based on the package CIF value. To calculate duties for a package use our Online Calculator or ask Customer Service for help.',
                 table:[
                     ['','AWG'],
                     ['USD$0.00 - USD$50.00','AWG 15.00'],
@@ -78,12 +60,6 @@ export default {
             },
         },
         es_info:{
-            effectiveDate:'Efectivo a partir del 1 de febrero de 2022.',
-            list1:[
-                'Cobramos por el peso, NO por el tamaño de su paquete.',
-                'Puede devolver su correo no deseado y le acreditaremos su cuenta.',
-                'Puede rastrear sus paquetes en nuestro sitio en www.aeropost.com.',
-            ],
 
             packages:[
                 ['Paquetes','Tarifas(USD)'],
@@ -95,14 +71,8 @@ export default {
 	        ],
             
 
-            list2:[
-                'Todos los documentos de seguridad con un número de seguimiento serán tratados como paquetes.',
-                'Los envíos que requieren algún manejo especial, están sujetos a cargos adicionales.'
-            ],
-
             customHandling:{
-                title:'Manejo de Aduana',
-                description:'Todos los paquetes que ingresan al país deben pasar por la aduana y están sujetos al pago de impuestos. Las tarifas de manejo de aduanas se establecen en función del valor CIF del paquete. Para calcular los aranceles de un paquete, use nuestra Calculadora en línea o solicite ayuda al Servicio de atención al cliente.',
+                title:'Manejo Aduanal',
                 table:[
                      ['','AWG'],
                      ['USD$0,00 - USD$50,00','AWG 15,00'],

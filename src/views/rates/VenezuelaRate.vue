@@ -1,7 +1,5 @@
 <template>
     <div>
-        
-        <InformationVue :list="info.list1" />
                         
         <h3 class="heading" v-if="lang==='en'">Rates for all packages received at the Venezuelan Customs.</h3>
         <h3 class="heading" v-else>Tarifas para todos los paquetes recibidos en la Aduana de Venezuela.</h3>
@@ -28,10 +26,6 @@ export default {
     return{
         en_info:{
 
-            list1:[
-                'You can track your packages on our website www.aeropost.com.',
-                'We charge by weight NOT the size of the package.',
-            ],
             packages:[
                ['International Costs (USA)','',''],
                ['','1 lb.','additional lbs.'],
@@ -50,10 +44,6 @@ export default {
         },
         es_info:{
 
-            list1:[
-                'Puede rastrear sus paquetes en nuestro sitio web www.aeropost.com.',
-                'Cobramos por peso, NO por el tamaño del paquete.',
-            ],
             packages:[
                 ['Costos internacionales (EE. UU.)','',''],
                 ['','1 libra','libras adicionales'],

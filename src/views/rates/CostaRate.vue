@@ -1,15 +1,11 @@
 <template>
     <div>
-        <InformationVue :title="info.title1" :list="info.list1"/>
 
         <h2 class="main-heading">
             {{lang==='en'?'CALCULATE your shipment':'CALCULA tu envío'}}
         </h2>
-        <tableVue :list="info.basicTable" :hasHeader="true"/>
         <tableVue :list="info.packages" :hasHeader="true"/>
         <tableVue :list="info.otherCharges" :hasHeader="true"/>
-
-        <InformationVue :list="info.list2" />
 
         <p class="text-base text-blue mb-5">
             {{ lang==='en'?'Valid for customers that register their BAC credit or debit card as payment method.':'Válido para clientes que registren su tarjeta de crédito o débito BAC como medio de pago.' }}
@@ -21,7 +17,6 @@
         <WarrantyVue/>
 
         <h2 class="main-heading">{{ info.customHandling.title }}</h2>
-        <p class="text-base text-blue mb-5" v-html="info.customHandling.description"></p>       
         <tableVue :list="info.customHandling.table1" :tfoot="info.customHandling.table1footer" :hasHeader="true"/>
 
         <h2 class="main-heading">{{ info.individualCustoms.title }}</h2>
@@ -56,15 +51,6 @@ export default {
     return{
      en_info:{
         title1:'Compare Account Types and Find the One Is Best for You:',
-        list1:[
-            'We charge based on real weight, not on the size of your package.',
-            'You can return your junk mail and we will credit your account.',
-            'You can track your packages on our site at www.aeropost.com.'
-        ],
-        basicTable:[
-            ['', 'Basic'],
-            ['Annual membership', 'FREE']
-        ],
         packages:[
             ['Packages****', ''],
             ['0.5 kg', 'US$6.75'],
@@ -89,13 +75,8 @@ export default {
             ['Restricted Shipments', '<a href="" class="text-blue">Click here</a>'],
             ['Multiple shipments (Additional piece)', 'US$2.00 per piece']
         ],
-        list2:[
-            'All security documents with a tracking number will be treated as packages.',
-            'Shipments that require any special handling are subject to additional charges.'
-        ],
         customHandling:{
             title:'Customs Handling',
-            description:'All packages that enter the country must go through customs and are subject to duties. Customs handling rates are set based on the package CIF value. To calculate duties for a package use our Online Calculator or ask Customer Service for help.\nRates Effective as of July 1, 2022.',
             table1:[
                 ["Package's CIF Value", 'Rate* + IVA'],
                 ["Books**", "US$4.50"],
@@ -150,15 +131,6 @@ export default {
      },
      es_info:{
         title1:'Compare los tipos de cuenta y encuentre la mejor para usted:',
-        list1:[
-            'Cobramos en función del peso real, no del tamaño de su paquete.',
-            'Puede devolver su correo no deseado y le acreditaremos su cuenta.',
-            'Puede rastrear sus paquetes en nuestro sitio en www.aeropost.com.'
-         ],
-        basicTable:[
-            ['', 'Básico'],
-            ['Membresía anual', 'GRATIS']
-        ],
         packages:[
             ['Paquetes****', ''],
             ['0.5 kg', 'US$6.75'],
@@ -183,13 +155,8 @@ export default {
             ['Envíos restringidos', '<a href="" class="text-blue">Haga clic aquí</a>'],
             ['Envíos múltiples (pieza adicional)', 'US$2.00 por pieza']
         ],
-        list2:[
-            'Todos los documentos de seguridad con un número de seguimiento serán tratados como paquetes.',
-            'Los envíos que requieren un manejo especial están sujetos a cargos adicionales.'
-        ],
         customHandling:{
-            title:'Manejo de Aduana',
-            description:'Todos los paquetes que ingresan al país deben pasar por la aduana y están sujetos a aranceles. Las tarifas de manejo de aduanas se establecen en función del valor CIF del paquete. Para calcular los aranceles de un paquete, use nuestra Calculadora en línea o solicite ayuda al Servicio de atención al cliente.\nTarifas vigentes a partir del 1 de julio de 2022.',
+            title:'Manejo Aduanal',
             table1:[
                 ["Valor CIF del Paquete", 'Tarifa* + IVA'],
                 ["Libros**", "US$4,50"],

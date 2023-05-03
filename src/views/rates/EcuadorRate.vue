@@ -1,8 +1,6 @@
 <template>
     <div>
         
-        <InformationVue :list="info.list1" />
-        
         <tableVue :list="info.basics" :hasHeader="true"/>
         
         <tableVue :list="info.packages" :hasHeader="true"/>
@@ -10,8 +8,6 @@
         <tableVue :list="info.otherChanges" :hasHeader="true"/>
 
         <WarrantyVue/>
-
-        <InformationVue :list="info.list2" />
 
         <h2 class="main-heading">{{ info.rule.title }}</h2>
         <p class="text-blue mb-4" v-html="info.rule.description"></p>
@@ -52,11 +48,6 @@ export default {
     return{
         en_info:{
 
-            list1:[
-                'We charge on weight NOT on size of your package.',
-                'You can return your junk mail and we will credit your account.',
-                'You can track your packages on our site at www.aeropost.com',
-            ],
             basics:[
               ['','Guayaquil and Quito','Rest of the country'],
               ['Annual Membership','N/A','N/A'],
@@ -81,12 +72,7 @@ export default {
                 ['Consolidation cost (per package)','USD $3.00'],
                 ['Restricted Shipments','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Click here</a>'],
             ],     
-            
-            list2:[
-                'All documents with a tracking number will be processed as packages.',
-                'Shipments that require any special handling are subject to additional charges.',
-                'Shipments with a value greater than USD $5,000.00 or weighing more than 100 kilograms require an import permit.',
-            ],
+        
             rule:{
                 title:'4x4 RULE',
                 description:'The 4x4 rule refers to packages that have any of the following characteristics:',
@@ -101,12 +87,6 @@ export default {
             
         },
         es_info:{
-
-            list1:[
-                'Cobramos por el peso, NO por el tamaño de su paquete.',
-                'Puede devolver su correo no deseado y le acreditaremos su cuenta.',
-                'Puede rastrear sus paquetes en nuestro sitio en www.aeropost.com',
-            ],
             basics:[
                 ['','Guayaquil y Quito','Resto del país'],
                ['Membresía anual','N/A','N/A'],
@@ -132,11 +112,6 @@ export default {
                  ['Envíos restringidos','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Haga clic aquí</a>'],
             ],     
             
-            list2:[
-                'Todos los documentos con un número de seguimiento se procesarán como paquetes.',
-                 'Los envíos que requieren un manejo especial están sujetos a cargos adicionales.',
-                 'Los envíos con un valor mayor a USD $5,000.00 o que pesen más de 100 kilogramos requieren un permiso de importación.',
-            ],
             rule:{
                 title:'REGLA 4x4',
                 description:'La regla 4x4 se refiere a paquetes que tienen alguna de las siguientes características:',

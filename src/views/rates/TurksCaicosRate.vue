@@ -1,12 +1,9 @@
 <template>
     <div>
-        <p class="text-blue mb-4">{{ info.effectiveDate }}</p>
-        
-        <InformationVue :list="info.list1" />
         
         <h2 class="main-heading">{{ lang==='en'?'AIR':'AIRE' }}</h2>
         <tableVue :list="info.packages" :hasHeader="true"/>
-        
+
         <tableVue :list="info.handlingFee" :hasHeader="true"/>
 
         <tableVue v-for="(table, i) in info.tables" :key="i" :list="table"/>
@@ -36,12 +33,6 @@ export default {
   data(){
     return{
         en_info:{
-            effectiveDate:'Effective January 15, 2017',
-            list1:[
-                'We charge on weight NOT on size of your package.',
-                'You can track your packages on our site at www.aeropost.com.',
-            ],
-
 
             packages:[
                 ['Packages','Rates(USD)'],
@@ -51,12 +42,14 @@ export default {
                 ['Additional lb after 30lb','USD $ 3.75'],
                 ['Other Charges (USD)',''],
             ],
+
             handlingFee:[
                 ['Handling Fee',''],
                 ['Packages with value USD $499.00 and under','USD $10.00 per pkg.'],
                 ['Packages with value between USD $500.00 and USD $999.00','USD $15.00 per pkg.'],
                 ['Packages with value USD $1,000 and up','USD $20.00 per pkg.'],
             ],
+
             tables:[
                 [
                     ['Multiple Package Shipments: Single purchase with several packages	 ',''],
@@ -116,12 +109,6 @@ export default {
             ]
         },
         es_info:{
-            effectiveDate:'Efectivo el 15 de enero de 2017',
-            list1:[
-                'Cobramos por el peso, NO por el tamaño de su paquete.',
-                'Puede rastrear sus paquetes en nuestro sitio en www.aeropost.com.',
-            ],
-
 
             packages:[
                 ['Paquetes','Tarifas(USD)'],
@@ -163,37 +150,37 @@ export default {
             
             list2Title:'Otra información importante:',
             list2:[
-            'Para envíos restringidos, <a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">haga clic aquí</a> .',
-                 'Cobramos por el peso, NO por el tamaño de su paquete. Límite de 31 pulgadas por cualquiera de sus lados.',
-                 'Puede rastrear sus paquetes en nuestro sitio en <a href="http://www.aeropost.com/" class="text-blue">www.aeropost.com </a> ',
-                 'Los aranceles se aplican a todas las importaciones. Debido a los huracanes, ciertos productos están libres de impuestos. <a href="http://www.midireccioninteligente.com/2017/TCA2017/website/duty_free.html" class="text-blue">haga clic aquí</a> para conocer esos artículos. Un formulario de exención de impuestos aprobado debe estar disponible antes del despacho de aduana; de lo contrario, se aplica la tarifa regular.',
-                 'Los envíos que requieren un manejo especial están sujetos a cargos adicionales.',
-                 'Puede rastrear sus paquetes en nuestro sitio en <a href="http://www.aeropost.com/" class="text-blue">www.aeropost.com</a> ',
-                 'Siempre estamos disponibles a través del correo electrónico <a href="mailto:serviceTCA@aeropost.com" class="text-blue">serviceTCA@aeropost.com</a>, Chatlive en nuestro sitio web o llamando sin cargo al <a href="tel:(649)%20941-8185" class="text-blue">1 (649) 341-5299</a>.',
+                'Para envíos restringidos, <a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">haga clic aquí</a> .',
+                'Cobramos por el peso, NO por el tamaño de su paquete. Límite de 31 pulgadas por cualquiera de sus lados.',
+                'Puede rastrear sus paquetes en nuestro sitio en <a href="http://www.aeropost.com/" class="text-blue">www.aeropost.com </a> ',
+                'Los aranceles se aplican a todas las importaciones. Debido a los huracanes, ciertos productos están libres de impuestos. <a href="http://www.midireccioninteligente.com/2017/TCA2017/website/duty_free.html" class="text-blue">haga clic aquí</a> para conocer esos artículos. Un formulario de exención de impuestos aprobado debe estar disponible antes del despacho de aduana; de lo contrario, se aplica la tarifa regular.',
+                'Los envíos que requieren un manejo especial están sujetos a cargos adicionales.',
+                'Puede rastrear sus paquetes en nuestro sitio en <a href="http://www.aeropost.com/" class="text-blue">www.aeropost.com</a> ',
+                'Siempre estamos disponibles a través del correo electrónico <a href="mailto:serviceTCA@aeropost.com" class="text-blue">serviceTCA@aeropost.com</a>, Chatlive en nuestro sitio web o llamando sin cargo al <a href="tel:(649)%20941-8185" class="text-blue">1 (649) 341-5299</a>.',
             ],
  
             maritime:[
-                 ['MARÍTIMO',''],
-                 ['<b>Tarifa del paquete (USD)</b>','lb adicional $1,00'],
-                 ['',''],
-                 ['Por pie cúbico','USD $10,00'],
-                 ['Cargo mínimo','USD $50.00'],
-                 ['Tarifa de manejo','USD $10.00'],
-                 ['',''],
-                 ['Flete por Cu/Ft (150-300 CuFt)','$9.00'],
-                 ['Cargo mínimo (flete)','$1350.00'],
-                 ['Tarifa de manejo','$25.00'],
-                 ['',''],
-                 ['Flete por Cu/Ft (300 CuFt y más)','USD $5.70'],
-                 ['Cargo mínimo (flete)','USD $2400.00'],
-                 ['Tarifa de manejo','USD $50.00'],
-                 ['',''],
-                 ['Seguro',''],
-                 ['Si la carga tiene valor declarado 0, el cargo mínimo es','USD $1.60 por cada $100.00 de valor declarado'],
-                 ['',''],
-                 ['Primer paquete','USD $3.00'],
-                 ['Cada paquete adicional','USD $1.50'],
-             ]
+                ['MARÍTIMO',''],
+                ['<b>Tarifa del paquete (USD)</b>','lb adicional $1,00'],
+                ['',''],
+                ['Por pie cúbico','USD $10,00'],
+                ['Cargo mínimo','USD $50.00'],
+                ['Tarifa de manejo','USD $10.00'],
+                ['',''],
+                ['Flete por Cu/Ft (150-300 CuFt)','$9.00'],
+                ['Cargo mínimo (flete)','$1350.00'],
+                ['Tarifa de manejo','$25.00'],
+                ['',''],
+                ['Flete por Cu/Ft (300 CuFt y más)','USD $5.70'],
+                ['Cargo mínimo (flete)','USD $2400.00'],
+                ['Tarifa de manejo','USD $50.00'],
+                ['',''],
+                ['Seguro',''],
+                ['Si la carga tiene valor declarado 0, el cargo mínimo es','USD $1.60 por cada $100.00 de valor declarado'],
+                ['',''],
+                ['Primer paquete','USD $3.00'],
+                ['Cada paquete adicional','USD $1.50'],
+            ]
         },
     }
   },

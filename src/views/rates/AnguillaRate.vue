@@ -1,14 +1,11 @@
 <template>
     <div>
-        <InformationVue :list="info.list1" />
 
         <tableVue :list="info.packages" :hasHeader="true"/>
 
         <tableVue :list="info.OtherCharges" :hasHeader="true"/>
 
         <tableVue :list="info.homeDeliveryTable" :hasHeader="true"/>
-
-        <InformationVue :list="info.list2" />
 
         <WarrantyVue/>
 
@@ -31,12 +28,6 @@ export default {
   data(){
     return{
         en_info:{
-            list1:[
-                'We charge on weight NOT on size of your package.',
-                'You can return your junk mail and we will credit your account.',
-                'You can track your packages on our site at www.aeropost.com.',
-            ],
-
             packages:[
                 ['Packages','Rates(USD)'],
                 ['0.50 lb',	'USD$7.00'],
@@ -62,18 +53,8 @@ export default {
                 ['Out of Metropolitan Area (10-25 miles)','USD$5.00'],
                 ['Deliveries (+Standard Delivery Fees)','USD$10.00'],
             ],
-            list2:[
-                'All security documents with a tracking number will be treated as packages.',
-                'Shipments that require any special handling, are subject to additional charges.',
-                'Delivery charges for packages will be collected upon delivery.',
-            ],
         },
         es_info:{
-            list1:[
-                'Cobramos por el peso, NO por el tamaño de su paquete.',
-                'Puede devolver su correo no deseado y le acreditaremos su cuenta.',
-                'Puede rastrear sus paquetes en nuestro sitio en www.aeropost.com.',
-            ],
 
             packages:[
                 ['Paquetes','Tarifas(USD)'],
@@ -99,11 +80,6 @@ export default {
                 ['Piezas adicionales (por pieza)','USD$1.00'],
                 ['Fuera del área metropolitana (10-25 millas)','USD$5.00'],
                 ['Entregas (+Tarifas de envío estándar)','USD$10.00'],
-            ],
-            list2:[
-                'Todos los documentos de seguridad con un número de seguimiento serán tratados como paquetes.',
-                'Los envíos que requieren algún manejo especial están sujetos a cargos adicionales.',
-                'Los gastos de envío de los paquetes se cobrarán en el momento de la entrega.',
             ],
             }
         }

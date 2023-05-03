@@ -1,14 +1,11 @@
 <template>
     <div>
-        <InformationVue :list="info.list1" />
         
         <tableVue :list="info.packages" :hasHeader="true"/>
         
         <tableVue :list="info.OtherCharges" :hasHeader="true"/>
         
         <tableVue :list="info.table1"/>
-
-        <InformationVue :list="info.list2" />
  
         <WarrantyVue/>
 
@@ -31,11 +28,6 @@ export default {
   data(){
     return{
         en_info:{
-            list1:[
-                'We charge on weight NOT on size of your package.',
-                'You can return your junk mail and we will credit your account.',
-                'You can track your packages on our site at www.aeropost.com.',
-            ],
 
             packages:[
                 ['Packages','Rates(USD)'],
@@ -50,24 +42,15 @@ export default {
                 ['Duties & Taxes','Applicable Duties & Taxes'],
                 ['Home Delivery (local charge)','Quote with local agent'],	
             ],
+
             table1:[
                 ['Restricted Shipments','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Click here</a>'],
                 ['SED Shipment','USD $25.00'],
                 ['Local clearance fees (for shipment brokerage with applied duties and taxes fees)','USD $30.00 (approx.)'],
             ],
             
-            list2:[
-                'All documents with a tracking number will be processed as packages.',
-                'Shipments that require any special handling, are subject to additional charges. Please quote with local office.',
-                'Additional charges apply to shipments measuring over 1 meter on any side. Please quote with the local office.',
-            ],
         },
         es_info:{
-            list1:[
-                'Cobramos por el peso, NO por el tamaño de su paquete.',
-                'Puede devolver su correo no deseado y le acreditaremos su cuenta.',
-                'Puede rastrear sus paquetes en nuestro sitio en www.aeropost.com.',
-            ],
 
             packages:[
                 ['Paquetes','Tarifas(USD)'], 
@@ -88,11 +71,6 @@ export default {
                 ['Tarifas de despacho local (para el corretaje de envíos con aranceles e impuestos aplicados)','USD $30.00 (aprox.)'],
             ],
             
-            list2:[
-                'Todos los documentos con un número de seguimiento se procesarán como paquetes.',
-                'Los envíos que requieran algún manejo especial, están sujetos a cargos adicionales. Cotice con la oficina local.',
-                'Se aplican cargos adicionales a los envíos que miden más de 1 metro en cualquier lado. Cotice con la oficina local.',
-            ],
         },
     }
   },
