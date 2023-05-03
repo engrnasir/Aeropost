@@ -86,7 +86,7 @@ import { mapState } from 'vuex';
         return this.invalidLocker?  this.specific_en_cards : this.simple_en_cards
       },
       es_cards(){
-        return this.invalidLocker?  this.simple_es_cards : this.simple_es_cards
+        return this.invalidLocker?  this.specific_es_cards : this.simple_es_cards
       },
       cards(){return this.lang==='en'? this.en_cards:this.es_cards},
       footerTitle(){
