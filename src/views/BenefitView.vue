@@ -65,7 +65,7 @@ import { mapState } from 'vuex';
             {img:'hand.png',title:'Cobramos por el peso real de tu paquete, no su tamaño', description:'¿No te importa el tamaño de la caja con la que el proveedor empaca lo que compraste? A nosotros tampoco. Te cobramos por el peso real, no por volumen.'},
             {img:'fast.png',title:'Rápido y confiable', description:'Tenemos la mayor frecuencia de vuelos de la región.'},
         ],
-        special_es_cards:[
+        specific_es_cards:[
             {img:'save.png', title:'Ahorra en impuestos',  description:'Ahorra el 7% de impuesto de ventas de Estados Unidos al usar tu dirección de Aeropost.'},
             {img:'secure.png',title:'Pagos seguros', description:'Utilizamos la última tecnología para garantizar un ambiente de pago seguro.'},
             {img:'return.png',title:'Devoluciones fáciles', description:'Si no estás satisfecho con tu compra, te facilitamos la devolución, sin costo adicional.'},{img:'track.png',title:'Rastreo de paquetes',description:'Rastrea tus paquetes desde nuestra página web. Recibe actualizaciones automáticas a tu correo electrónico.'},
