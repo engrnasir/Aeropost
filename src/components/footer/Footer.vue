@@ -33,7 +33,7 @@
                 </li>
                 <li class="item" :class="bgBlue?'item-white':'item-blue'" v-if="selectedCountry.gtw === 'SCL'">
                     <router-link :to="`/${selectedCountry.gtw}/${lang}/business`">
-                        {{lang==='en'?'Business':'Beneficios'}}
+                        {{lang==='en'?'Business':'Negocio'}}
                     </router-link>
                 </li>
                 <li class="item" :class="bgBlue?'item-white':'item-blue'" >
@@ -43,7 +43,7 @@
                 </li>
                 <li class="item mr-0" :class="bgBlue?'item-white':'item-blue'">
                     <router-link :to="`/${selectedCountry.gtw}/${lang}/terms`">
-                        {{lang=='en'?'Terms and Conditions':'Términos y Condiciones'}}
+                        {{lang=='en'?'Terms and Conditions':'Términos y condiciones'}}
                     </router-link>
                 </li>
             </ul>
