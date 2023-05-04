@@ -55,8 +55,12 @@ import { mapMutations, mapState } from 'vuex';
             Read on for the best ways to find what you need. <br><br>
             <b>Need to track an order or package? </b><br>
             Log in to your account here to check order/package status. <br><br>
+
             <b>Are you looking for a product in aeropost.com?</b><br>
             Use our search bar located at the center of our website. You can either copy and paste the link of the item you want to buy on our search bar or type the name of the product you want to buy. Still not convinced? Click here and we’ll show you how to shop! And remember, if you don’t like it, just return it!<br><br>
+            
+
+
             <b>Looking for our store locations and/or hours?</b><br>
             Pick the store you want to visit in the drop down menu below.<br><br>
             <b>Need a little more help?</b><br>

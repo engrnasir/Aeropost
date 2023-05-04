@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-
+    <ThankyouPopup/>
+    <MarketplaceBannerVue/>
     <div class="overlay" @click="setShowCountries(false)" v-show="showCountries "></div>
     <div class="menu-overlay" @click="setShowMenu(false)" v-show="showMenu"></div>
 
@@ -13,11 +14,6 @@
     <HeaderVue></HeaderVue>
     <router-view/>
     <footerVue :bgBlue="false"/>
-    <!-- <button @click="goTop()" 
-      class="fixed right-6 bottom-6 z-50 text-white bg-blue p-3 rounded-md border border-gray-50"
-      id="goTopBtn">
-      <img src="@/assets/images/down.png" alt="down" class="rotate-180">
-    </button> -->
   </div>
 </template>
 
@@ -26,6 +22,8 @@ import LogoNav from "./components/header/LogoNav.vue";
 import HeaderVue from "@/components/header/Header.vue"
 import FooterVue from "@/components/footer/Footer.vue"
 import Mapsvg from "./components/header/Mapsvg.vue";
+import MarketplaceBannerVue from './components/header/MarketplaceBanner.vue';
+import ThankyouPopup from '@/views/popups/ThankyouPopup.vue';
 import { mapMutations, mapState } from 'vuex';
 
 
@@ -54,12 +52,14 @@ export default{
     HeaderVue,
     FooterVue,
     Mapsvg,
+    MarketplaceBannerVue,
+    ThankyouPopup
   },
   computed:{
       ...mapState([
           'showCountries',
           'showMenu',
-          'maps'
+          'maps',
       ]),
     },
   methods:{
@@ -89,11 +89,6 @@ export default{
         }
       })
     })
-
-    // const goTopBtn = document.getElementById('goTopBtn')
-    // window.addEventListener('scroll',()=>{
-    //   goTopBtn.style.display = window.scrollY<320? 'none':'inline';
-    // })
 
     window.onUsersnapLoad = function(api) {
         api.init();

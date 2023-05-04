@@ -93,10 +93,11 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapMutations, mapState } from 'vuex'
 export default {
     data(){        
         return {
+            showthankyou:true,
             selectVal:'',
             en_lockers:[
                 'Massy Stores Maraval Aeropost Locker',
@@ -137,11 +138,15 @@ export default {
         },
     },
     components:{
-        Map : ()=> import('@/assets/images/popups/costaricaMap.vue')
+        Map : ()=> import('@/assets/images/popups/costaricaMap.vue'),
     },
     methods:{
+        ...mapMutations(['setThankyou']),
         handleLockerSelection(){
-
+            if(this.selectVal){
+                console.log(this.selectVal)
+                this.setThankyou(true)
+            }
         }
     }
 }

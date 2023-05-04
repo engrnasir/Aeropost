@@ -93,7 +93,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapMutations, mapState } from 'vuex'
 export default {
     data(){        
         return {
@@ -140,8 +140,11 @@ export default {
         Map : ()=> import('@/assets/images/popups/guatemalaMap.vue')
     },
     methods:{
+        ...mapMutations(['setThankyou']),
         handleLockerSelection(){
-
+            if(this.selectVal){
+                this.setThankyou(false)
+            }
         }
     }
 }

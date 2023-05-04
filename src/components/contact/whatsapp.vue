@@ -1,5 +1,5 @@
 <template>
-    <div class="md:absolute md:bottom-10 ml-[50%] -translate-x-[50%] mb-5 z-30 w-full md:w-[450px] flex items-start p-6 bg-white md:shadow-2xl md:rounded-sm max-md:mt-6">
+    <div class=" ml-[50%] -translate-x-[50%] mb-5 z-30 w-full md:w-[450px] flex items-start p-6 bg-white md:shadow-2xl md:rounded-sm max-md:mt-6">
         <div class="mr-4">
             <div class="flex items-start mb-4">
                 <img src="@/assets/images/whatsapp.png" alt="whatsapp icon" class="w-9 mr-4">

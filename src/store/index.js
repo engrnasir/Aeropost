@@ -8,6 +8,7 @@ export default new Vuex.Store({
     lang:'en', //default
     selectedCountry:{ gtw:'BZE', name:'Belize', flagUrl:'belize.png', mapClass:'elfsight-app-0dc0f602-36c4-4db8-8b87-86688ae7c1ba'},
 
+    showthankyou:true,
     showCountries:false,
     selectedMapIndex:0,
     showMenu:false,
@@ -93,6 +94,9 @@ export default new Vuex.Store({
     },
     setShowMenu:(state,val)=>{
       state.showMenu = val
+    },
+    setThankyou:(state,val)=>{
+      state.showthankyou = val
     }
   },
   actions: {

@@ -94,7 +94,7 @@
 
 <script>
 import trinidadMap from '@/assets/images/popups/trinidadMap.vue'
-import { mapState } from 'vuex'
+import { mapMutations, mapState } from 'vuex'
 export default {
     data(){
         
@@ -142,8 +142,11 @@ export default {
         trinidadMap
     },
     methods:{
+        ...mapMutations(['setThankyou']),
         handleLockerSelection(){
-
+            if(this.selectVal){
+                this.setThankyou(false)
+            }
         }
     }
 }

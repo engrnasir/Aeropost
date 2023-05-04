@@ -1,8 +1,11 @@
 <template>
+  <div>
+
+    <WhatsappVue/>
     <div class="mb-3 relative min-h-[50vh]"> 
           <div :class="selectedCountry.mapClass" id="wrapper"></div>
-          <WhatsappVue/>
     </div>
+  </div>
 
 </template>
 <script>
