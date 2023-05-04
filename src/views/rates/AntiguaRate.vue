@@ -8,7 +8,8 @@
         <WarrantyVue/>
 
         <h2 class="main-heading">{{ info.customHandling.title }}</h2>
-        <tableVue :list="info.customHandling.table" :hasHeader="true"/>
+        <tableVue :list="info.customHandling.table" :tfoot="info.customHandling.tfoot" :hasHeader="true"/>
+        <tableVue :list="info.customHandling.formula"/>
         
         <h2 class="main-heading">{{ info.customsRates.title }}</h2>
         <tableVue :list="info.customsRates.table" :hasHeader="true"/>
@@ -55,10 +56,12 @@ export default {
                 title:'Customs Handling',
                 table:[
                     ["PACKAGE'S DECLARED VALUE",'RATE*'],
-                    ['Per package fee with declared value of USD $1 to USD $1000','USD $5.00'],
-                    ['Per package fee with declared value of USD 1001 to USD $2000','USD $10.00'],
-                    ['Per package fee with declared value of USD $2001 and up','USD $25.00'],
-                ]
+                    ['Per package fee with declared value of $1 to $1000','$5.00'],
+                    ['Per package fee with declared value of 1001 to $2000','$10.00'],
+                    ['Per package fee with declared value of $2001 and up','$25.00'],
+                ],
+                tfoot:'* Does not include sales tax. All rates are expressed in USD and will be converted to pesos at the exchange rate of the day.',
+                formula:[['CIF value = Total invoice of the package + Transport cost + Insurance']]
             },
 
             customsRates:{
@@ -144,10 +147,12 @@ export default {
                 title:'Manejo Aduanal',
                 table:[
                     ["VALOR DECLARADO DEL PAQUETE",'TARIFA*'],
-                    ['Tarifa por paquete con valor declarado de USD $1 a USD $1000','USD $5.00'],
-                    ['Tarifa por paquete con valor declarado de USD 1001 a USD $2000','USD $10.00'],
-                    ['Tarifa por paquete con un valor declarado de USD $ 2001 y más', 'USD $ 25.00'],
-                ]
+                    ['Tarifa por paquete con valor declarado de $1 a $1000','$5.00'],
+                    ['Tarifa por paquete con valor declarado de $1001 a $2000','$10.00'],
+                    ['Tarifa por paquete con un valor declarado de $2001 y más', '$25.00'],
+                ],
+                tfoot:'*No incluye impuesto de ventas. Todas las tarifas están expresadas en USD y serán convertidas a pesos al tipo de cambio del día.',
+                formula:[['Valor CIF = Factura total del paquete + Costo de transporte + Seguro']]
             },
 
             customsRates:{

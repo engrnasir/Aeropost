@@ -13,49 +13,56 @@
         </p>
         
         <tableVue :list="info.productsTable" :hasHeader="true"/>
-        
+        <h3 class="heading" v-if="lang==='es'">
+            Productos de Manejo Especial
+        </h3>
         <h3 class="heading">
-            {{ lang==='en'?'Defined as small quantities of personal use items.':'Definido como pequeñas cantidades de artículos de uso personal.' }}
+            {{ lang==='en'?'Defined as small quantities of personal use items.':'Definido como cantidades pequeñas de artículos de cuidado personal' }}
         </h3>
         <p class="snippet">
-            {{ lang==='en'? 'THESE ITEMS INCLUDE BUT ARE NOT LIMITED TO:':'ESTOS ARTÍCULOS INCLUYEN PERO NO SE LIMITAN A:' }}
+            {{ lang==='en'? 'THESE ITEMS INCLUDE BUT ARE NOT LIMITED TO:':'ESTOS ARTÍCULOS TAMBIÉN ESTÁN RESTRINGIDOS POR LA ADUANA LOCAL Y REQUIEREN PERMISOS ADICIONALES. ESTOS ARTÍCULOS INCLUYEN PERO NO ESTÁN LIMITADOS A:' }}
         </p>
         <tableVue :list="info.productsTable1" :hasHeader="true"/>
-        
-        <p class="snippet" v-if="lang==='en'">These products require special handling and will be shipped as "consolidated goods" every 15 days. An additional fee of ₵6000 will be charged per package (in addition to the regular freight and customs handling fees).</p>
-        <p class="snippet" v-else>Estos productos requieren un manejo especial y se enviarán como "mercancías consolidadas" cada 15 días. Se cobrará una tarifa adicional de ₵ 6000 por paquete (además de las tarifas regulares de flete y manejo de aduanas).</p>
 
+        <p class="snippet" v-if="lang==='en'">These products require special handling and will be shipped as "consolidated goods" every 15 days. An additional fee of ₵6000 will be charged per package (in addition to the regular freight and customs handling fees).</p>
+        <p class="snippet" v-else>Estos productos requieren un manejo especial que tiene un costo de ¢6000.00 por paquete (adicional al costo normal de transporte y nacionalización)  y viajan de forma consolidada cada 15 días.</p>
+
+        <h3 class="heading" v-if="lang==='es'">
+            Restringidos por la Aduana Local
+        </h3>
         <h3 class="heading">
-            {{ lang==='en'?'Restricted':'Restringido'}}
+            {{ lang==='en'?'Restricted':'Restringidos'}}
         </h3>
         <p class="snippet" v-if="lang==='en'">THESE ITEMS HAVE CERTAIN LOCAL RESTRICTIONS OR MAY NEED SPECIAL PERMITS TO ENTER THE COUNTRY. PLEASE CONTACT CUSTOMER SERVICE FOR MORE INFORMATION.</p>
-        <p class="snippet" v-else>ESTOS ARTÍCULOS TIENEN CIERTAS RESTRICCIONES LOCALES O PUEDEN NECESITAR PERMISOS ESPECIALES PARA INGRESAR AL PAÍS. PÓNGASE EN CONTACTO CON EL SERVICIO DE ATENCIÓN AL CLIENTE PARA OBTENER MÁS INFORMACIÓN.</p>
+        <p class="snippet" v-else>ESTOS ARTÍCULOS PUEDEN TENER ALGÚN TIPO DE RESTRICCIÓN LOCAL O NECESITAN PERMISOS ESPECIALES PARA ENTRAR AL PAÍS. POR FAVOR CONTACTA A SERVICIO AL CLIENTE PARA MÁS INFORMACIÓN</p>
         
         <h3 class="heading">
-            {{ lang==='en'?'Require Permit from Ministerio de Salud ':'Requiere Permiso del Ministerio de Salud'}}
+            {{ lang==='en'?'Require Permit from Ministerio de Salud ':'Requieren permiso del Ministerio de Salud '}}
         </h3>
         <tableVue :list="info.productsTable2" :hasHeader="true"/>
-        
+
         <InformationVue :title="info.list1Title" :list="info.list1" />
         
         
         <h2 class="main-heading">
-            {{ lang==='en'?'Products that and Require Important Permits from Various Governmental Entities.':'Productos que y Requieren Permisos Importantes de Varias Entidades Gubernamentales.' }}
+            {{ lang==='en'?'Products that and Require Important Permits from Various Governmental Entities.':'Productos que requieren Permiso de Importación por Diversas Entidades Gubernamentales' }}
         </h2>
         <h3 class="heading">
-            {{ lang==='en'?'Aerocasillas DOES NOT process import permits in the following cases:':'Aerocasillas NO tramita permisos de importación en los siguientes casos:' }}
+            {{ lang==='en'?'Aerocasillas DOES NOT process import permits in the following cases:':'Aerocasillas NO realiza el permiso de importación para los siguientes casos:' }}
         </h3>
         <tableVue :list="info.productsTable3" :hasHeader="true"/>
 
         <InformationVue :list="info.list2" />
         
         <h3 class="heading">
-            {{ lang==='en'?'These products require import authorization from the Ozone Dependence':'Estos productos requieren autorización de importación de la Dependencia del Ozono'}}
+            {{ lang==='en'?'These products require import authorization from the Ozone Dependence':'Requieren autorización de importación de la Comisión Gubernamental del'}}
         </h3>
         <h3 class="heading">
-            {{ lang==='en'?'Governmental Commission: Ministry of Environment and Energy':'Comisión Gubernamental: Ministerio de Ambiente y Energía'}}
+            {{ lang==='en'?'Governmental Commission: Ministry of Environment and Energy':'Ozono Dependencia: Ministerio de Ambiente y Energía.'}}
         </h3>
         <tableVue :list="info.productsTable4" :hasHeader="true"/>
+
+
         
         <InformationVue :list="info.list3" />
 
@@ -63,24 +70,27 @@
             The Ozone Technical Offices are located 75 meters west of Plaza González Víquez in front of Liceo de Costa Rica. Telephone (506) 2257-1839, email: <a href="mailto:diseca@minae.go.cr" class="text-bold">diseca@minae.go.cr</a>.
         </p>
         <p class="snippet" v-else>
-            Las Oficinas Técnicas de Ozono están ubicadas 75 metros oeste de la Plaza González Víquez frente al Liceo de Costa Rica. Teléfono (506) 2257-1839, correo electrónico: <a href="mailto:diseca@minae.go.cr" class="text-bold">diseca@minae.go.cr</a>.
+            La oficina Técnica del Ozono, se encuentran ubicadas 75 metros al oeste de Plaza González Víquez, frente al Liceo de Costa Rica. Teléfono 257-1839, correo electrónico: <a href="mailto:diseca@minae.go.cr" class="text-bold">diseca@minae.go.cr</a>.
         </p>
 
 
         <h3 class="heading">
-            {{ lang==='en'?'Require Permit from the "Ministerio de Gobernación y Policía"':'Requerir Permiso del "Ministerio de Gobernación y Policía"'}}
+            {{ lang==='en'?'Require Permit from the "Ministerio de Gobernación y Policía"':'Requieren permiso del Ministerio de Gobernación y Policía'}}
         </h3>
         <tableVue :list="info.productsTable5" :hasHeader="true"/>
         <InformationVue :list="info.list4" />
         
+
+
+
         <h3 class="heading">
-            {{ lang==='en'?'Require Permit from Ministerio de Agricultura y Ganadería':'Requiere Permiso del Ministerio de Agricultura y Ganadería'}}
+            {{ lang==='en'?'Require Permit from Ministerio de Agricultura y Ganadería':'Requieren permiso del Ministerio de Agricultura y Ganadería'}}
         </h3>
         <tableVue :list="info.productsTable6" :hasHeader="true"/>
         <InformationVue :list="info.list5" />
 
         <h3 class="heading">
-            {{ lang==='en'?'Used or Damaged Products, Purchased as Replacement Parts':'Productos usados o dañados, comprados como repuestos'}}
+            {{ lang==='en'?'Used or Damaged Products, Purchased as Replacement Parts':'Productos Usados o Dañados (Adquiridos para repuestos)'}}
         </h3>
         <InformationVue :list="info.list6" />
 
@@ -101,11 +111,9 @@
             NIGHT MODE
         </p>
         <p class="snippet" v-else>
-            Para el despacho de ropa usada se debe realizar un procedimiento completo de fumigación (DE 17624: Vigilancia Epidemiológica y Control de Enfermedades Infecciosas) Aerocasillas NO *tramita permisos para estos productos y es responsabilidad del cliente tramitar permisos a través de la agencia de aduanas de su elección. *No se aceptarán reclamaciones por dichos paquetes.
+            Para el desalmacenaje de ropa usada se debe realizar un trámite de fumigación (DE 17624: Reglamento Vigilancia Epidemiológica y Control Enfermedades Transmisibles) el cual Aerocasillas <b>NO tramita <i>*por lo que es responsabilidad del cliente tramitarlo con una Agencia Aduanal de su preferencia. </i> *No se aceptarán reclamos por paquetes de este tipo.</b>
             <br><br>
-            Las tarifas de almacenamiento NO están incluidas; el cliente debe pagar las tasas de almacenamiento en el Depósito Fiscal.
-            <br><br>
-            MODO NOCTURNO
+            <b>El bodegaje NO está incluido,</b> por lo que el cliente deberá cancelarlo directamente al Almacén Fiscal.
         </p>
 
     </div>
@@ -185,53 +193,53 @@ export default {
             ],
 
             productsTable3:[
-                ['Products',''],
-                ['Tires	','Tobacco powder to make cigarettes*	 '],
-                ['Electronic cigarettes with essences or replacement cartridges*	','Tobacco in cigarettes*'],
+                ['Productos',''],
+                ['Llantas y neumáticos','	Tabaco en polvo para hacer cigarrillos*'],
+                ['Cigarillos electrónicos con cartuchos de reposición o esencias*	','Tabaco en cigarillos*'],
             ],
             list2:[
-                "Aerocasillas* <i>DOES NOT</i>* <b>process</b> permits and it is the customer's responsibility to process permits through the customs agency of their choice. No claims will be processed for such products.",
-                'Storage* is NOT included,* the customer must pay fees to the Bonded Warehouse.',
-                'Duties applied to these products according to the Tobacco Law 9028 (government duties)',
+                'Aerocasillas* <b><i>NO realiza el trámite de estos permisos por lo que es responsabilidad del cliente tramitarlo con una Agencia Aduanal de su preferencia.</i> *No se aceptarán reclamos por paquetes de este tipo.</b>',
+                'El bodegaje NO está incluido, por lo que el cliente deberá cancelarlo directamente al Almacén Fiscal.',
+                '<i>*Requieren pago a productos de TABACO LEY 9028 (entero que se paga al gobierno) *</i>',
             ],
 
             productsTable4:[
                 ['Productos',''],
-                ['Refrigerators','Air Conditioners'],
+                ['Refrigeradoras	','Aires acondicionados'],
             ],
             list3:[
-                "Aerocasillas <b>DOES NOT</b> process permits and it is the customer's responsibility to process permits through the customs agency of their choice. No claims will be processed for such products.",
-                "Storage is <b>NOT included</b>, the customer must pay fees to the Bonded Warehouse.",
+                'Aerocasillas <b>NO tramita</b> este permiso por lo que es responsabilidad del cliente tramitarlo con una Agencia Aduanal de su preferencia. No se aceptarán reclamos por paquetes de este tipo.',
+                'El bodegaje <b>NO *está incluido,*</b> por lo que el cliente deberá cancelarlo directamente al Almacén Fiscal.',
             ],
 
             productsTable5:[
-                ['Products',''],
-                ['Electric guns and accessories	','Paintball guns and accessories'],
-                ['CO2-powered guns and accessories','Sharp tools such as crossbows and bows that are not sport related.'],
-                ['Electroshock weapons and accessories',''],
+                ['Productos',''],
+                ['Pistolas y accesorios para CO2','	Pistolas y accesorios para paintball'],
+                ['Pistolas de bengala y de señales de humo','	Herramientas punzo cortantes como ballestas y arcos que no sean para deporte'],
+                ['Armas y accesorios de electroshock',''],
             ],
             list4:[
-                'Aerocasillas <b>NOT</b> perform the processing of permits and it is your responsibility to process it with a customs agency of your choice.* No claims are allowed for packages for this kind of package.*',
-                '<b>Storage fees are NOT included</b>, the customer must pay storage fees to the Bonded Warehouse.',
+                'Aerocasillas NO realiza el trámite de estos permisos por lo que es responsabilidad del cliente tramitarlo con una Agencia Aduanal de su preferencia.* No se aceptarán reclamos por paquetes de este tipo*.',
+                '<b>El bodegaje NO está incluido</b>, por lo que el cliente deberá cancelarlo directamente al Almacén Fiscal.',
             ],
 
             productsTable6:[
-                ['Products',''],
-                ['Wood','Seeds'],
-                ['Fur and animal products','Plants'],
-                ['Veterinary products and accessories','Agricultural products and accesories'],
-                ['Products for animals','Dairy products'],
-                ['Coffee beans','Flour'],
+                ['Productos',''],
+                ['Madera	','Semillas'],
+                ['Pieles y productos de origen animal	','Plantas'],
+                ['Productos y accesorios veterinarios	','Productos y accesorios para agricultura'],
+                ['Productos para uso animal','	Productos lácteos'],
+                ['Café en grano','	Harina'],
             ],
             list5:[
-                "Aerocasillas <b>does not perform</b> the paperwork for these permits so it is the customer's responsibility to process the permit through a Customs Broker. <b>No claims will be accepted for such packages.</b>",
-                "You can contact Ministerio de Agricultura y Ganadería for more information at (506) 2299-4814 or 2299-4819.",
-                "<b>Warehousing fees are NOT included</b> so the customer must pay them directly to the Bonded Warehouse.",
+                'Aerocasillas NO realiza el trámite de estos permisos por lo que es responsabilidad del cliente tramitarlo con una Agencia Aduanal de su preferencia.* No se aceptarán reclamos por paquetes de este tipo*.',
+                'Puede realizar sus consultas al Ministerio de Agricultura y Ganadería a los teléfonos 2299-4814 or 2299-4819.',
+                '<b>El bodegaje NO está incluido,</b> por lo que el cliente deberá cancelarlo directamente al Almacén Fiscal.',
             ],
 
             list6:[
-                "Any used items require a permit from the 'Ministerio de Salud' which <b>Aerocasillas does not process</b>; so it is the customer's responsibility to process it through a Customs Broker. <b>No claims will be allowed for such packages.</b>",
-                '<b>Warehousing fees are NOT included</b> so the customer must pay them directly to the Bonded Warehouse.',
+                'Cualquier artículo usado requiere un permiso del Ministerio de Salud el cual Aerocasillas NO TRAMITA *; por lo que es responsabilidad del cliente tramitarlo con una Agencia Aduanal de su preferencia. *No se aceptarán reclamos por paquetes de este tipo.',
+                'El bodegaje <b>NO está incluido</b> por lo que el cliente deberá cancelarlo directamente al Almacén Fiscal.',
             ]
 
 
@@ -239,62 +247,63 @@ export default {
         },
         es_info:{
             productsTable:[
-                 ['Productos',''],
-                 ['Cualquier artículo inflamable, corrosivo o explosivo', 'Municiones, armas de fuego y partes de armas de fuego'],
-                 ['Cualquier artículo con alcohol incluido como su primer ingrediente', 'Baterías de celda húmeda'],
-                 ['Soluciones de limpieza', 'Venenos'],
-                 ['Fuegos artificiales',' Recipientes a presión'],
-                 ['Gasolina','Fósforos'],
-                 ['Gas lacrimógeno o gas pimienta', 'Herramientas a gas'],
-                 ['Mecheros', 'Perecederos'],
-                 ['Piedras preciosas o piedras preciosas', 'Sustancias psicotrópicas, precursores y sustancias controladas'],
-                 ['Productos naturales y vitaminas', 'Máquinas y accesorios para tatuar'],
-                 ['Airbags','Carbón'],
-                 ['Usado',' Zapatos'],
-                 ['Usado',' Ropa Interior'],
-                 ['Certificados de valor y acciones de cualquier clase', 'Manuscritos'],
-                 ['Cheques', 'Académicos, inmobiliarios o de cualquier otro tipo de grados o títulos'],
-                 ['Pasaportes o documentos de identificación', 'Tarjetas de crédito o débito'],
-                 ['Efectivo y monedas', 'Tarjetas regalo'],
-                 ['Sellos o billetes de cualquier clase', 'Mimbre real'],
+                ['Productos',''],
+                ['Cualquier producto flamable, corrosivo o explosivo	','Municiones, armas de fuego y parte de armas de fuego'],
+                ['Cualquier artículo con alcohol como primer ingrediente	','Baterías que contengan productos quimicos o sean dangerous good'],
+                ['Soluciones de limpieza	','Venenos'],
+                ['Fuegos artificiales y pólvora','	Envases a presión'],
+                ['Gas	','Fósforos'],
+                ['Gas lacrimógeno o de pimienta	','Herramientas que funcionen con gas'],
+                ['Encendedores	','Productos perecederos'],
+                ['Piedras preciosas','	Psicotrópicos, precursores y sustancias controladas'],
+                ['Productos naturales y vitamínicos','	Máquinas de tatuaje y accesorios'],
+                ['Airbags	','Carbón'],
+                ['Zapatos Usados	','Ropa interior usada'],
+                ['Certificados de valor y acciones de cualquier tipo','	Manuscritos'],
+                ['Cheques	','Títulos académicos, de propiedades o cualquier otro tipo'],
+                ['Pasaportes o documentos de identificación','	Tarjetas de crédito o débito'],
+                ['Dinero en efectivo y monedas	','Tarjetas de regalo'],
+                ['Estampillas o tiquetes de cualquier tipo','	Mimbre real'],
              ],
 
             productsTable1:[
-                 ['Productos',''],
-                 ['Latas de aerosol', 'Esmalte de uñas'],
-                 ['Polvos de belleza', 'Latas de aerosol'],
-                 ['Productos de belleza', 'Velas de aceite'],
-                 ['Cremas', 'Perfumes'],
-                 ['Gels', 'Bloqueador solar'],
-                 ['Soluciones de limpieza no corrosivas, edulcorantes', 'productos colorantes y aromatizantes alimentarios'],
-                 ['Enjuague bucal', 'Choques de coche'],
+                ['Productos',''],
+                ['Desodorantes	','Esmalte de uñas'],
+                ['Polvos de belleza	','Envases de aerosol'],
+                ['Productos de belleza	','Candelas de aceite'],
+                ['Cremas	','Perfumes'],
+                ['Geles	','Bloqueador solar'],
+                ['Soluciones de limpieza no corrosivas	','Endulzantes, saborizantes o colorantes de alimentos.'],
+                ['Enjuague bucal','	Amortiguadores'],
+                ['Hoverboards (Patineta eléctrica)',''],
              ],
-
             productsTable2:[
-                     ['Productos',''],
-                     ['Productos de cuidado personal (ver pestaña arriba)','Productos de maquillaje y belleza'],
-                     ['Perfumes y fragancias', 'Jabón'],
-                     ['Productos para el cabello','Productos en spray'],
-                     ['Gels','Equipamiento médico'],
-                     ['Productos comestibles','Medicamentos'],
-                     ['Licores y bebidas', 'Complementos vitamínicos'],
-                     ['Tintas y pinturas','Jarabes'],
-                     ['Masajeadores','Supositorios'],
-                     ['Ampollas, ungüentos', 'Gel medicinal'],
+                ['Products',''],
+                ['Productos de Cuidado Personal  (ver pestaña arriba)	','Productos de belleza'],
+                ['Perfumes','	Maquillaje'],
+                ['Productos para el cabello	','Jabón'],
+                ['Geles','	Productos en spray o que dañen la capa de ozono'],
+                ['Productos comestibles	','Equipo médico'],
+                ['Licor y bebidas','	Medicamentos'],
+                ['Tintas y pinturas	','Pastillas suplemento vitamínico'],
+                ['Masajeadores	','Jarabes'],
+                ['Ampollas','	Supositorios'],
+                ['Gel medicado	','Ungüentos'],
              ],
 
             list1Title:'NOTAS IMPORTANTES:',
             list1:[
-                 'Tiempo de procesamiento (incluido el despacho de aduana): 15 días hábiles.',
-                 'Tarifa de tramitación de permisos: USD $14.00 + IVA',
-                 'Para el procesamiento de medicamentos, pastillas, jarabes, supositorios, geles medicados y similares, se requiere que proporcione una receta médica, de lo contrario no podrá solicitar un permiso y no se aceptarán reclamos por dichos paquetes' ,
-                 'Para la tramitación de equipos médicos deberá proporcionarnos una carta en la que se describan los usos del artículo, tal como lo solicita el Ministerio de Salud.',
-                 'Aerocasillas tramita permisos de importación del Ministerio de Salud cuando el valor total de las mercancías que requieren el permiso no supere los US$500. Para permisos de partidas superiores a US$500 el importador deberá presentar la solicitud del permiso directamente al Ministerio de Salud.',
-                 'Para envíos en los que uno de los productos requiera permiso y el envío no venga en cajas separadas, el importador deberá primero solicitar el permiso y posteriormente solicitar la nacionalización del envío completo. Si se deniega el permiso, TODO el contenido del envío será declarado "abandonado" de acuerdo con los procesos aduaneros.',
-                 'Si no se otorga el permiso, se le informará a través de MyAero sobre el motivo de la denegación por parte del Ministerio de Salud (Aerocasillas le asesorará sobre los pasos a seguir en caso de presentarse esta situación).',
-                 'Se aplicarán los gastos de tramitación del permiso. <a href="http://www.ministeriodesalud.go.cr/empresas/importacion/index.htm" class="text-blue">Guía rápida para importar alimentos, medicamentos y cosméticos</a>. *Los servicios de transporte y la tasa de tramitación de permisos deben abonarse de la forma habitual. *',
-                 '<b>IMPORTANTE</b>: Aerocasillas no aceptará reclamos por este tipo de situaciones fuera de su control, y como funcionario deberá acatar las normas estipuladas por la aduana. Pedimos disculpas por los inconvenientes que esta regulación pueda causar.',
-                 'Ten en cuenta que <b>Aerocasillas no cobra gastos de almacenaje de paquetes hasta 30 días naturales</b>. Después de este tiempo, el cliente debe pagar las tarifas de almacenamiento (US$50 en adelante) directamente al Depósito Fiscal.',
+                'Tiempo de trámite (incluyendo desalmacenaje): 15 días hábiles.',
+                'Costo de trámite del permiso: USD $14.00 + IVA',
+                'Para el trámite de medicamentos, pastillas, jarabes, supositorios, geles medicados y similares *, es requisito imprescindible que usted nos facilite una receta médica o epícrisis; *de lo contrario no se puede tramitar el permiso y no se aceptarán reclamos por paquetes de este tipo.',
+                'Para el trámite de equipo médico es requisito que usted nos brinde una carta explicativa de uso del artículo, ya que el Ministerio de Salud solicita este documento para todos estos casos.',
+                'Aerocasillas realiza el trámite de permiso de importación de sus paquetes ante el Ministerio de Salud cuando el valor total de las mercancías que requieran del permiso no exceda los $500.',
+                'Para todo aquel trámite de permiso con un valor superior a $500, el importador deberá presentarse directamente en la Ventanilla Única de Comercio del Ministerio de Salud para solicitar el permiso de importación.',
+                'Embarques en los cuales uno de los productos requiera un permiso y este embarque no venga en cajas separadas, se debe primero tramitar el permiso requerido, posteriormente, se realiza el proceso de nacionalización del producto. De no ser aprobado el permiso TODO su contenido quedara en abandono según el proceso estipulado por aduanas.',
+                'Si el permiso es rechazado, usted será informado mediante su sistema MyAero del motivo del rechazo por parte del Ministerio de Salud (Aerocasillas le informara de los pasos a seguir en caso que esta situación se presente).',
+                'El costo del trámite del permiso será igualmente aplicado. <a href="http://www.ministeriodesalud.go.cr/empresas/importacion/index.htm" class="text-blue">Guía rápida para importar alimentos, medicamentos y cosméticos</a>.  Los servicios  de transporte y costo de trámite del permiso deben ser cancelados de la forma habitual.',
+                '<b>IMPORTANTE:</b> Aerocasillas no podrá aceptar reclamos por este tipo de situaciones fuera de nuestro control, ya que como Auxiliar de la función pública debe acatar las regulaciones estipuladas por aduana. Ofrecemos disculpas por cualquier inconveniente que esta regulación  le ocasione.',
+                'Recuerde que <b>Aerocasillas no cobra bodegaje por los paquetes hasta los 30 días naturales</b>. Transcurrido ese tiempo, el cliente deberá cancelar los costos de bodegaje ($50 en adelante) directamente al Almacén Fiscal.',
              ],
 
             productsTable3:[

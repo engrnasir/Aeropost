@@ -7,6 +7,9 @@
         <tableVue :list="info.OtherCharges" :hasHeader="true"/>
 
         <InformationVue :list="info.list2" />
+
+        <h2 class="main-heading">{{ lang==='en'?'Warranty Program and Return Service':'Programa de Garantía y Retornos' }}</h2>
+        <newWarrantyTable/>
         
         <h2 class="main-heading">{{ info.consolidatedPolicy.title }}</h2>
         <tableVue :list="info.consolidatedPolicy.table1" :hasHeader="true" :tfoot="info.consolidatedPolicy.table1Footer"/>
@@ -20,12 +23,14 @@
 <script>
 import tableVue from '@/components/rates/table.vue';
 import InformationVue from '@/components/rates/Information.vue';
+import newWarrantyTable from '@/components/rates/newWarrantyTable.vue';
 import { mapState } from 'vuex';
 export default {
   name: 'PanamRate',
   components:{
       tableVue,
       InformationVue,
+      newWarrantyTable
   },
   data(){
     return{

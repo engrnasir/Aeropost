@@ -8,9 +8,12 @@
         <tableVue :list="info.packages" :hasHeader="true"/>
 
         <tableVue :list="info.OtherCharges" :hasHeader="true"/>
+ 
+        <WarrantyVue/>
 
         <h2 class="main-heading">{{ info.customHandling.title }}</h2>
-        <tableVue :list="info.customHandling.table1" :hasHeader="true" :tfoot="info.customHandling.table1Footer"/>
+        <tableVue :list="info.customHandling.table1" :hasHeader="true" :tfoot="info.customHandling.tfoot"/>
+        <tableVue :list="info.customHandling.formula" />
 
         <InformationVue :list="info.list3" />
 
@@ -26,12 +29,14 @@
 <script>
 import tableVue from '@/components/rates/table.vue';
 import InformationVue from '@/components/rates/Information.vue';
+import WarrantyVue from '@/components/rates/Warranty.vue';
 import { mapState } from 'vuex';
 export default {
   name: 'HondurusRate',
   components:{
       tableVue,
       InformationVue,
+      WarrantyVue
   },
   data(){
     return{
@@ -60,7 +65,8 @@ export default {
                     ['From $301 to $500','$15.00'],
                     ['From $501 to $1,000','$35.00'],
                 ],
-                table1Footer:'* Does not include ISV',
+                tfoot:'* Does not include sales tax. All rates are expressed in USD and will be converted to pesos at the exchange rate of the day.',
+                formula:[['CIF Value	=	Total package invoice	+	Transportation cost	+	Insurance']]
             },
             list3:[
                 'Aeropost automatically clears all your retained packages up to USD $1,000 CIF value. Taxes and customs handling costs will be charged to the package.',
@@ -100,7 +106,8 @@ export default {
                     ['De $301 a $500','$15.00'],
                     ['De $501 a $1,000','$35.00'],
                 ],
-                table1Footer:'* No incluye ISV',
+                tfoot:'*No incluye impuesto de ventas. Todas las tarifas están expresadas en USD y serán convertidas a pesos al tipo de cambio del día.',
+                formula:[['Valor CIF = Factura total del paquete + Costo de transporte + Seguro']]
             },
             list3:[
                 'Aeropost borra automáticamente todos sus paquetes retenidos hasta un valor CIF de USD $1,000. Los impuestos y los gastos de tramitación aduanera se cargarán al paquete.',

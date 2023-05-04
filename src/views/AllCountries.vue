@@ -1,9 +1,7 @@
 <template>
     <div class="countryPickerWrapper">
 
-        <router-link :to="`/${selectedCountry.gtw}/${lang}`">
-            <img src="@/assets/images/x.png" alt="x" class="w-12 h-12 cursor-pointer absolute right-1 top-1 3xl:right-3 3xl:top-3">
-        </router-link>
+        <img src="@/assets/images/x.png" alt="x" @click="goBack()" class="w-12 h-12 cursor-pointer absolute right-1 top-1 3xl:right-3 3xl:top-3">
 
         <bg-map class="w-[700px] h-screen fixed left-0 top-0 max-lg:hidden"/>
 
@@ -53,6 +51,9 @@ export default {
             this.setSelectedCountry(c)
             this.$router.push(`/${this.selectedCountry.gtw}/${this.lang}`)
         },
+        goBack(){
+            history.back()
+        }
     }
 
 }

@@ -1,9 +1,7 @@
 <template>
     <div class="countryPickerWrapper">
 
-        <router-link :to="`/${selectedCountry.gtw}/${lang}`">
-            <img src="@/assets/images/x.png" alt="x" class="w-12 h-12 cursor-pointer absolute right-1 top-1 3xl:right-3 3xl:top-3">
-        </router-link>
+        <img src="@/assets/images/x.png" alt="x" @click="goBack()" class="w-12 h-12 cursor-pointer absolute right-1 top-1 3xl:right-3 3xl:top-3">
 
         <div class="flex items-center justify-center mb-14 md:mb-20 lg:hidden">
             <router-link :to="`/${selectedCountry.gtw}/${lang}`">
@@ -57,7 +55,9 @@ export default {
     },
     methods:{
         ...mapMutations(['setSelectedMapIndex','setSelectedCountry']),
-        
+        goBack(){
+            history.back()
+        }
     }
 }
 

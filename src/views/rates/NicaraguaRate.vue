@@ -12,8 +12,11 @@
 
         <InformationVue :list="info.list2" />
 
+        <WarrantyVue/>
+
         <h2 class="main-heading">{{ info.customHandling.title }}</h2>
-        <tableVue :list="info.customHandling.table1" :hasHeader="true" :tfoot="info.customHandling.table1Footer"/>
+        <tableVue :list="info.customHandling.table1" :hasHeader="true" :tfoot="info.customHandling.tfoot"/>
+        <tableVue :list="info.customHandling.formula"/>
 
         <InformationVue :list="info.list3" />
 
@@ -24,12 +27,14 @@
 <script>
 import tableVue from '@/components/rates/table.vue';
 import InformationVue from '@/components/rates/Information.vue';
+import WarrantyVue from '@/components/rates/Warranty.vue';
 import { mapState } from 'vuex';
 export default {
   name: 'NicarguaRate',
   components:{
       tableVue,
       InformationVue,
+      WarrantyVue
   },
   data(){
     return{
@@ -74,7 +79,8 @@ export default {
                     ['Permits','FREE'],
 
                 ],
-                table1Footer:'* Does not include IVA',
+                tfoot:'* Does not include sales tax. All rates are expressed in USD and will be converted to pesos at the exchange rate of the day.',
+                formula:[['CIF Value	=	Total package invoice	+	Transportation cost	+	Insurance']]
             },
             list3:[
                 'Aeropost automatically clears all your retained packages up to USD $1,000 CIF value. Taxes and customs handling costs will be charged to the package.',
@@ -120,7 +126,8 @@ export default {
                     ['$501.00-$1000.00','$60.00 +'],
                     ['Permisos','GRATIS'],
                 ],
-                table1Footer:'* No incluye IVA',
+                tfoot:'*No incluye impuesto de ventas. Todas las tarifas están expresadas en USD y serán convertidas a pesos al tipo de cambio del día.',
+                formula:[['Valor CIF = Factura total del paquete + Costo de transporte + Seguro']]
             },
             list3:[
                 'Aeropost borra automáticamente todos sus paquetes retenidos hasta un valor CIF de USD $1,000. Los impuestos y los gastos de tramitación aduanera se cargarán al paquete.',
