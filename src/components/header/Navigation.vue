@@ -1,5 +1,5 @@
 <template>
-  <div class="row nav-wrapper" :class="showMenu?'showMenu':''">
+  <div class="row nav-wrapper" :class="[(showMenu?'showMenu':''),(banner?'nav-banner':'')]">
     <div  class="hidden max-md:block control-wrapper">
       <CountryControl></CountryControl>
     </div>
@@ -64,6 +64,10 @@ export default {
     ]),
     invalidRate(){
       return this.selectedCountry.gtw==='BHS';
+    },
+    banner(){
+      const validGateways = ['EIS','BGI','SAL','GUA','LIM','SJO','PTY'];
+      return validGateways.includes(this.selectedCountry.gtw)
     }
   },
   methods:{
@@ -95,6 +99,9 @@ nav{
             transition-all duration-300
             -translate-x-full
             ;
+  }
+  .nav-banner{
+    @apply top-[170px]
   }
   .showMenu{
     @apply translate-x-0;

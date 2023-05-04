@@ -8,7 +8,7 @@
     <div class="bg-blue absolute z-[-1] top-0 left-0 w-full h-[358px]"></div>
     <div class="bg-blue absolute max-md:fixed top-0 left-0 w-full h-[58px] mb-0"></div>
     <Mapsvg class="w-full h-min overflow-x-hidden absolute top-0 left-0 z-0"/>
-    <div class="max-md:sticky top-0 left-0 z-50">
+    <div class="max-md:sticky top-0 left-0 z-50" :class="banner?'top-[115px]':'top-0'">
       <LogoNav class="relative z-40"></LogoNav>
     </div>
     <HeaderVue></HeaderVue>
@@ -42,11 +42,6 @@ export default{
         }
       ]
   },
-  data(){
-    return{
-      
-    }
-  },
   components:{
     LogoNav,
     HeaderVue,
@@ -60,7 +55,12 @@ export default{
           'showCountries',
           'showMenu',
           'maps',
+          'selectedCountry'
       ]),
+      banner(){
+            const validGateways = ['EIS','BGI','SAL','GUA','LIM','SJO','PTY'];
+            return validGateways.includes(this.selectedCountry.gtw)
+        }
     },
   methods:{
       ...mapMutations([

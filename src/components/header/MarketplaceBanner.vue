@@ -1,5 +1,5 @@
 <template>
-    <div class="relative z-[999] w-full min-h-[58px] flex max-md:flex-col items-center justify-between max-md:text-center bg-[#F6D000] text-sm text-blue max-md:pb-3 md:pr-6" :class="show? 'flex':'hidden'">
+    <div class="sticky top-0 left-0 md:relative z-[999] w-full min-h-[58px] flex max-md:flex-col items-center justify-between max-md:text-center bg-[#F6D000] text-sm text-blue max-md:pb-3 md:pr-6" :class="show? 'flex':'hidden'">
         <div class=" left-0 top-0 w-[296px] md:h-[58px] md:bg-[#FF929233] clipPath px-6 py-2">
             <p>Currently you’re in <br class="max-md:hidden"> <b>Aeropost Courier</b></p>
         </div>
