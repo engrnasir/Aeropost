@@ -5,7 +5,7 @@
       <!--  -->
       <div class="w-[95%] max-w-[940px] bg-white shadow-2xl rounded-xl p-10 mx-auto -translate-y-12 grid grid-cols-2 max-sm:grid-cols-1 gap-[80px] gap-y-10">
         <div v-for="(item, i) in cards" :key="i">
-            <img :src="require(`@/assets/images/${item.img}`)" :alt="item.title" class="w-10 mb-4">
+            <img :src="require(`@/assets/images/${item.img}`)" :alt="item.title" class="h-10 mb-4">
             <h3 class="font-bold text-2xl text-blue mb-4">{{ item.title }}</h3>
             <p class="text-sm text-[#333333]" >{{ item.description }}</p>
         </div>
