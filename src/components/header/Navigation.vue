@@ -101,7 +101,7 @@ nav{
             ;
   }
   .nav-banner{
-    @apply top-[170px]
+    @apply top-[180px]
   }
   .showMenu{
     @apply translate-x-0;
