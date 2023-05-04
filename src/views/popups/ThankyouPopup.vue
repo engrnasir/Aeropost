@@ -20,7 +20,7 @@
                     </p>
                 </div>
                 <p class=" text-[33px] leading-none text-blue" v-if="lang==='en'">it’s your package, <br><b>get it when you want.</b></p>
-                <p class=" text-[33px] leading-none text-blue" v-else>Son tus paquetes, <br><b>retiralos cuando quieras.</b></p>
+                <p class=" text-[33px] leading-none text-blue max-w-[350px]" v-else>Son tus paquetes, <br><b>retiralos cuando quieras.</b></p>
             </div>
     
         </div>
@@ -31,10 +31,10 @@
 import { mapMutations, mapState } from 'vuex'
 export default {
     computed:{
-        ...mapState(['showthankyou'])
+        ...mapState(['lang','showthankyou'])
     },
     methods:{
-        ...mapMutations(['lang','setThankyou'])
+        ...mapMutations(['setThankyou'])
     }
 }
 </script>
