@@ -81,7 +81,7 @@ export default {
             this.setSelectedMapIndex(item.mapId)
             this.setSelectedCountry(item.country)
             this.searchKey=''
-            this.$router.push(`/${this.selectedCountry.gtw}/${this.lang}/benefits`)
+            this.$router.push(`/${this.selectedCountry.gtw}/${this.lang}`)
         },
     }
 }

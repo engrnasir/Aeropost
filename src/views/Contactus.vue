@@ -42,17 +42,18 @@ import { mapMutations, mapState } from 'vuex';
     },
     data(){
       return{
+        
         en_hero:{
           title:'Contact Us',
-          description:'Looking for our store locations or hours?',
+          description:'',
         },
         es_hero:{
           title:'Contacta con nosotros',
-          description:'¿Busca las ubicaciones u horarios de nuestras tiendas?',
+          description:'',
         },
         en_content:`
             <b>Need to track an order or package?</b><br>
-            Log in to your account here to check order/package status.<br><br>
+            Log in to your account  <a href="https://aeropost.cloud-iam.com/auth/realms/myaccount/protocol/openid-connect/auth?response_type=code&client_id=myaccount&scope=openid&redirect_uri=https%3a%2f%2fmyaccount.aeropost.com%2f&culture=en%2Fv1%2Fcallback" class="text-blue cursor-pointer">here</a> to check order/package status.<br><br>
 
             <b>Looking for our store locations and/or hours?</b><br>
             View store location, hours and phone numbers below. Select the store location on the map to get driving directions. <br><br>
@@ -62,10 +63,10 @@ import { mapMutations, mapState } from 'vuex';
         `,
         es_content:`
             <b>¿Quieres rastrear una orden o paquete?</b><br>
-            Ingresa a tu cuenta aquí para ver el estado de tus órdenes.<br><br>
+            Ingresa a tu cuenta <a href="https://aeropost.cloud-iam.com/auth/realms/myaccount/protocol/openid-connect/auth?response_type=code&client_id=myaccount&scope=openid&redirect_uri=https%3a%2f%2fmyaccount.aeropost.com%2f&culture=en%2Fv1%2Fcallback" class="text-blue cursor-pointer">aquí</a> para ver el estado de tus órdenes.<br><br>
 
             <b>¿Estás buscando una de nuestras tiendas y/o quieres saber nuestros horarios?</b><br>
-            Vea la ubicación de la tienda, el horario y los números de teléfono a continuación. Seleccione la ubicación de la tienda en el mapa para obtener indicaciones para llegar.<br><br>
+            Puedes encontrar la ubicación y horarios de nuestras tiendas más abajo en esta misma página.<br><br>
 
             <b>¿Necesitas más ayuda?</b><br>
             Comunícate con nosotros por medio de nuestro chatbot haciendo clic en el ícono del chat ubicado en la parte inferior derecha de esta página.<br><br>

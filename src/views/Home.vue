@@ -3,7 +3,7 @@
       <HeroTitleVue :title="title" :utext="utext" :description="description" :showSignUp="true"></HeroTitleVue>
       <Benefits></Benefits>
       <DetailsVue></DetailsVue>
-      <SliderVue></SliderVue>
+      <SliderVue :key="componentKey"></SliderVue>
       <FooterTitle :title="footerTitle" :bgBlue='true'></FooterTitle>
     </div>
   </template>
@@ -30,7 +30,7 @@
       FooterTitle,
     },    
     computed:{
-      ...mapState(['lang']),
+      ...mapState(['lang','selectedCountry']),
       title(){
         return this.lang==='en'?'Buy Anything from the U.S.':'Compra cualquier cosa desde USA'
       },
@@ -42,6 +42,9 @@
       },
       footerTitle(){
         return this.lang==='en'?'We make shopping simple.':'Hacemos que tus compras sean simples.';
+      },
+      componentKey(){
+        return `testimonial${this.selectedCountry.name}`
       }
     }
     

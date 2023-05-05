@@ -48,7 +48,7 @@
                 </li>
             </ul>
             <p class="text-sm" :class="bgBlue?'text-white':'text-[#33333]'">
-                {{this.lang==='en'?'© 2023 Aeropost. All Rights Reserved.':'© 2023 Aeropost. Reservados todos los derechos.'}}
+                {{this.lang==='en'?`© ${currentYear} Aeropost. All Rights Reserved.`:`© ${currentYear} Aeropost. Todos los derechos reservados.`}}
             </p>
         </div>
     </div>
@@ -72,7 +72,10 @@ export default {
         ...mapState(['selectedCountry','lang']),
         invalidRate(){
             return this.selectedCountry.gtw==='BHS';
-            }
+            },
+        currentYear(){
+            return new Date().getFullYear()
+        }
     },
     mounted(){
        this.logoColor = this.bgBlue===true? 'white': 'blue';

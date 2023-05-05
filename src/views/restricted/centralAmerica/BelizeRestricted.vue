@@ -70,7 +70,7 @@ export default {
 
             ],
         },
-        en_info:{
+        es_info:{
             
             table1:[
             ['Estos productos incluyen Cualquier artículo con alcohol incluido como su primer ingrediente, así como Cualquier cantidad de material INFLAMABLE, EXPLOSIVO o CORROSIVO']

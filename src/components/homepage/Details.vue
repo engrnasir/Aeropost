@@ -33,7 +33,7 @@ import { mapState } from 'vuex'
         es_prealert:{
           title:'PRE-ALERTA',
           description:'Recibe tus compras más rápido.',
-          details:'Una vez el vendedor te envíe la confirmación de despacho, pre-alerta tus compras en nuestro sitio antes de que lleguen a nuestro almacén en Miami. Este paso nos ayudará a entregarte tus paquetes más rápido. Si ya tienes un envío en camino, prealerta <a href="" class="text-blue">aquí</a>.'
+          details:'Una vez el vendedor te envíe la confirmación de despacho, pre-alerta tus compras en nuestro sitio antes de que lleguen a nuestro almacén en Miami. Este paso nos ayudará a entregarte tus paquetes más rápido. Si ya tienes un envío en camino, prealerta <a href="https://aeropost.cloud-iam.com/auth/realms/myaccount/protocol/openid-connect/auth?response_type=code&client_id=myaccount&scope=openid&type=&gtw=SCL&login_hint=&redirect_uri=https%3a%2f%2flogin.aeropost.com%2fLogin%2fAuth%3fsrv%3dhttps%253a%252f%252fcourier.aeropost.com%252fsite%252fen%252fauth" class="text-blue font-bold">aquí</a>.'
         },
         
         en_autopay:{

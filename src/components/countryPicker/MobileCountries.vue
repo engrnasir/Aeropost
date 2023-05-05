@@ -32,7 +32,7 @@ export default {
         handleSelection(c){
             this.setSelectedMapIndex(this.selectedMap.mapId)
             this.setSelectedCountry(c)
-            this.$router.push(`/${this.selectedCountry.gtw}/${this.lang}/benefits`)
+            this.$router.push(`/${this.selectedCountry.gtw}/${this.lang}`)
         },
     }
 }

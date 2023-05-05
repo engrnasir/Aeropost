@@ -40,6 +40,11 @@
                 {{lang==='en'?'Business':'Negocio'}}
               </router-link>
             </li>
+            <li class="item mr-0" @click="setShowMenu(false)">
+                <router-link :to="`/${selectedCountry.gtw}/${lang}/benefits`">
+                    {{lang==='en'?'Benefits':'Beneficios'}}
+                </router-link>
+            </li>
         </ul>
     </nav>
     <div class="flex items-center min-w-max max-md:min-w-full">
@@ -95,7 +100,7 @@ nav{
 @media screen and (max-width:840px) {
   .nav-wrapper{
     @apply w-[260px] mx-0 fixed left-0 top-[56px] h-screen justify-start flex-col items-start bg-white shadow-2xl 
-            px-3 py-5 pb-60 overflow-y-scroll
+            px-3 py-5 pb-96 overflow-y-scroll
             transition-all duration-300
             -translate-x-full
             ;

@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
-      <h1 class="text-center min-w-max" v-html="getTitle"></h1>
-      <p class="description">{{ description }}</p>
-      <a href="https://courier.aeropost.com/site/en/auth?a=signup" class="btn-yellow" v-show="showSignUp">{{lang==='en'?'Sign Up for Free':'Regístrate Gratis'}}</a>
+      <h1 class="text-center min-w-max relative z-30" v-html="getTitle"></h1>
+      <p class="description relative z-30" v-if="description">{{ description }}</p>
+      <a href="https://courier.aeropost.com/site/en/auth?a=signup" class="btn-yellow relative z-30" v-show="showSignUp">{{lang==='en'?'Sign Up for Free':'Regístrate Gratis'}}</a>
   </div>
 </template>
 

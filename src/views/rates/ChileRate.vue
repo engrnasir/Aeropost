@@ -2,7 +2,7 @@
     <div>
         
         <h2 class="main-heading">
-           {{lang==='en'?'International Freight':'Cargamento internacional'}}
+           {{lang==='en'?'International Freight':'Envío internacional'}}
         </h2>
         <tableVue :list="info.packages" :hasHeader="true"/>
         
@@ -12,11 +12,14 @@
         <h2 class="main-heading">
             {{lang==='en'?'Home delivery':'Entrega a domicilio'}}
         </h2>
+        <h3 class="heading">
+            {{ lang==='en'?'Packages (Chilean Pesos)':'Paquetes (Pesos Chilenos)' }}
+        </h3>
         
         <tableVue :list="info.homeDeliveryPackages" :hasHeader="true"/>
 
         <h2 class="main-heading">
-            {{lang==='en'?'Warranty Program and Return Service':'Programa de Garantía y Servicio de Devolución'}}
+            {{lang==='en'?'Warranty Program and Return Service':'Programa de Garantía y Retornos'}}
         </h2>
         <tableVue :list="info.warrantyPrograms" :hasHeader="true"/>
         
@@ -60,7 +63,6 @@ export default {
             ],
 
             homeDeliveryPackages:[
-                ['Packages (Chilean Pesos)','',''],
                 ['<b>Region</b>','<b>0 to 5 kg</b>','<b>Adicional Kg</b>'],
                 ['Región Metropolitana','CLP $3.990','CLP $500'],
                 ['Arica y Panacota','CLP $9.990','CLP $2.000'],
@@ -119,7 +121,7 @@ export default {
         es_info:{
 
             packages:[
-                ['Paquetes','(Pesos Chilenos)'],
+                ['Peso del paquete (kgs)','Tarifa (Pesos chilenos)'],
                 ['Hasta 0,5 kg','CLP $6.800'],
                 ['Hasta 1 kg','CLP $10.500'],
                 ['Hasta 1,5 kg','CLP $14.900'],
@@ -134,7 +136,6 @@ export default {
             ],
 
             homeDeliveryPackages:[
-                 ['Paquetes (Pesos Chilenos)','',''],
                  ['<b>Región</b>','<b>0 a 5 kg</b>','<b>Kg Adicional</b>'],
                  ['Región Metropolitana','CLP $3.990','CLP $500'],
                  ['Arica y Panacota','CLP $9.990','CLP $2.000'],
@@ -155,7 +156,7 @@ export default {
              ],
  
             warrantyPrograms:[
-                ['Rango de valor declarado','Valor'],
+                ['Rango de valor declarado','Tarifa (Pesos chilenos)'],
                 ['CLP $0,01 - CLP $79,995','CLP $1,275'],
                 ['CLP $79.996 - CLP $127.995','CLP $2.555'],
                 ['CLP $127.996 - CLP $159.995','CLP $2.595'],

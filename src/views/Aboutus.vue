@@ -1,8 +1,8 @@
 <template>
     <div class="min-w-full">
-      <HeroTitleVue :title="hero.title" :description="hero.description"></HeroTitleVue>
+      <HeroTitleVue :title="hero.title"></HeroTitleVue>
 
-      <div class="container">
+      <div class="mcontainer">
         <p class="text-base text-center text-[#333333] mb-12" v-for="(p,i) in details" :key="i" v-html="p"></p>       
       </div>
       
@@ -34,11 +34,12 @@ import { mapState } from 'vuex';
           description:'La forma más fácil de comprar en tus tiendas online favoritas.',
         },
         en_details:[
-          "Aeropost was founded in 1988 as a shipping and logistics solution for US expats living in Costa Rica. Today, the company is an asset-based vertically integrated Commerce provider for Latin America and the Caribbean providing end-to-end services that facilitate cross border purchases, payments and deliveries in 38 countries.We employ more than 1,000 people from 45 countries and process tens of thousands of items each day for millions of consumers across the LATAM region.",
-          "Aeropost has become one of Latin America's most visible and recognizable brand names and is truly a local company across the region. It has local business entities, staff, assets and infrastructure, local customer service, branded retail shops and an innovative local payments platform that allows buyers to easily purchase from US sellers.",
-          "Aeropost knows its customers and is expert in the unique business demands of each of its markets. From duty calculation to customs clearance, international shipping to last mile delivery, and marketing to local payments, Aeropost's expertise is unrivaled.",
-          "Aeropost's corporate headquarters in Miami serves as our central operations center and includes our 177,000 square foot International Logistics Hub. As an Independent Air Carrier (IAC) and Commercial Mail Receiving Agency (CMRA), the Miami hub is in full compliance with US Department of Homeland Security, Transportation Safety Administration and USPS regulations.",
-          "We are certified to handle parcels and cargo of all types including hazardous materials and dangerous goods. The facility has a state-of-the-art security and monitoring system to protect against shrinkage.",
+          "Our company was founded in 1988 as a shipping and logistics solution for US expats living in Costa Rica. Today, our company an asset-based vertically integrated e-commerce provider for Latin America, Central America and the Caribbean providing end-to-end services that facilitate cross border purchases, payments and deliveries in 38 countries. We employ more than 1,000 people from 45 countries and process tens of thousands of items each day for millions of consumers across the LATAM region.",
+          "Aeropost has established itself as one of the most reputable and recognizable brand names in the entire region, yet the company still has a local touch.",
+          "Aeropost has local business entities, staff, assets and infrastructure, local customer service, local branded retail shops an an innovative local payments platform that allows buyers to easily purchase from US sellers.",
+          "Aeropost knows its customers and we are expert in the unique business demands of each of our markets. From duty calculation to customs clearance, international shipping to last mile delivery, and marketing to local payments, our expertise is unrivaled.",
+          "Our corporate headquarters in Miami serves as our central operations center and includes our 177,000 square foot International Logistics Hub. As an Independent Air Carrier (IAC) and Commercial Mail Receiving Agency (CMRA), our Miami hub is in full compliance with US Department of Homeland Security, Transportation Safety Administration and USPS regulations.",
+          "We are certified to handle parcels and cargo of all types including hazardous materials and dangerous goods. Our facility has a state-of-the-art security and monitoring system to protect against shrinkage.",
         ],
         es_details:[
           "Aeropost se fundó en 1988 como una solución de envío y logística para expatriados estadounidenses que viven en Costa Rica. Hoy, la compañía es un proveedor de comercio integrado verticalmente basado en activos para América Latina y el Caribe que brinda servicios de extremo a extremo que facilitan el cruce de fronteras. compras, pagos y entregas en 38 países. Empleamos a más de 1000 personas de 45 países y procesamos decenas de miles de artículos cada día para millones de consumidores en toda la región de LATAM",
@@ -67,7 +68,7 @@ import { mapState } from 'vuex';
   }
   </script>
   <style lang="scss" scoped>
-  .container{
+  .mcontainer{
     @apply w-[96%] max-w-[980px] p-10 mx-auto;     
   }
 

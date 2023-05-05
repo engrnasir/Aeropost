@@ -25,6 +25,15 @@ module.exports = {
       fontFamily:{
         sofiaPro:'Sofia Pro',
         poppins:'Poppins',
+      },
+      animation: {
+        'slidedown': 'slide .4s linear',
+      },
+      keyframes: {
+        slide: {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(0)' },
+        }
       }
     },
   },

@@ -34,7 +34,7 @@ import { mapState } from 'vuex';
         },
         es_hero:{
           title:'¿Por qué Aeropost?',
-          description:'Aeropost tiene una tiene más de tres décadas de experiencia en envíos a más de 30 países en el Caribe, Centro y Suramérica.',
+          description:'Aeropost tiene más de tres décadas de experiencia en envíos a más de 30 países en el Caribe, Centro y Suramérica.',
         },
         simple_en_cards:[
             {img:'save.png',title:'Save on Taxes', description:'Save 7% U.S. Sales Tax when using your Aeropost address.'},
@@ -69,11 +69,12 @@ import { mapState } from 'vuex';
             {img:'save.png', title:'Ahorra en impuestos',  description:'Ahorra el 7% de impuesto de ventas de Estados Unidos al usar tu dirección de Aeropost.'},
             {img:'secure.png',title:'Pagos seguros', description:'Utilizamos la última tecnología para garantizar un ambiente de pago seguro.'},
             {img:'return.png',title:'Devoluciones fáciles', description:'Si no estás satisfecho con tu compra, te facilitamos la devolución, sin costo adicional.'},{img:'track.png',title:'Rastreo de paquetes',description:'Rastrea tus paquetes desde nuestra página web. Recibe actualizaciones automáticas a tu correo electrónico.'},
-            {img:'hub.png',title:'Recogida del cubo', description:'En lugar de recibir un paquete en la dirección de su casa o negocio, puede seleccionar una ubicación de Aeropost Hub. Luego, puede recoger su paquete en el momento que más le convenga.'},
+            {img:'hub.png',title:'Retira en nuestras tiendas', description:'¿No quieres o puedes recibir tus compras en casa u oficina? No hay problema, puedes retirar tus compras en una de nuestras tiendas. Tus compras te estarán esperando al momento que tu prefieras.'},
             {img:'credit-card.png',title:'Opciones de pago', description:'Paga como quieras. Ofrecemos pago con tarjeta de débito, crédito o PayPal; o paga en efectivo en nuestras tiendas.'},
             {img:'hand.png',title:'Cobramos por el peso real de tu paquete, no su tamaño', description:'¿No te importa el tamaño de la caja con la que el proveedor empaca lo que compraste? A nosotros tampoco. Te cobramos por el peso real, no por volumen.'},
             {img:'fast.png',title:'Rápido y confiable', description:'Tenemos la mayor frecuencia de vuelos de la región.'},
         ]
+        
       }
     },
     computed:{
