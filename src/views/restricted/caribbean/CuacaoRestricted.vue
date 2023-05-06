@@ -5,7 +5,7 @@
         </h2>
         <p class="snippet" v-html="info.desc1"></p>
         
-        <table-vue :list="info.products" :hasHeader="true"/>
+        <table-vue :list="info.products" :hasHeader="true" :colspan="2"/>
 
         <InformationVue :list="info.list" />
 
@@ -37,7 +37,7 @@ export default {
             PLEASE DO NOT SHIP THESE PRODUCTS TO YOUR MIAMI ADDRESS AS THEY CANNOT BE SHIPPED TO YOUR COUNTRY AND YOU WILL NEED TO PAY FOR THEIR DESTRUCTION OR THE COST OF RETURNING THEM TO THE SHIPPER.<br><br>
             `,
             products:[
-                ['Products',''],
+                ['Products'],
                 ['Ammunition, firearms and firearm parts','	Lighters'],
                 ['Any item with alcohol listed as its first ingredient','    	Matches'],
                 ['Cleaning solutions','	Pressure containers'],
@@ -73,7 +73,7 @@ export default {
                 NO ENVÍE ESTOS PRODUCTOS A SU DIRECCIÓN DE MIAMI YA QUE NO SE PUEDEN ENVIAR A SU PAÍS Y DEBERÁ PAGAR POR SU DESTRUCCIÓN O EL COSTO DE DEVOLVERLOS AL REMITENTE.<br><br>
             `,
             products:[
-                ['Productos',''],
+                ['Productos'],
                 ['Municiones, armas de fuego y piezas de armas de fuego', 'Encendedores'],
                 ['Cualquier artículo con alcohol incluido como primer ingrediente', 'Fósforos'],
                 ['Soluciones de limpieza', 'Recipientes a presión'],

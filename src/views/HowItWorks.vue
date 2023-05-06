@@ -64,7 +64,7 @@ import { mapState } from 'vuex';
         en_hero:{
           title:'How It Works',
           utext:'',
-          description:`Shopping from the U.S. has never been easier than with Aeropost. We’ve streamline our courier process to ensure that you have the simplest and smoothest online shopping experience.`,
+          description:`Shopping online from the U.S. has never been easier than with Aeropost. We’ve streamlined our courier process to ensure that you have the simplest and smoothest online shopping experience.`,
         },
         es_hero:{
           title:'¿Cómo Funciona?',
@@ -83,7 +83,8 @@ import { mapState } from 'vuex';
 
         en_step2:{
           title:'Shop Online',
-          description:'Shop your favorite online stores using the FREE U.S. address provided.'
+                       
+          description:'Shop your favorite U.S. online stores using the FREE U.S. address provided.'
         },
         es_step2:{
           title:'Compra',
@@ -117,7 +118,7 @@ import { mapState } from 'vuex';
       step2(){return this.lang==='en'?this.en_step2:this.es_step2;},
       step3(){return this.lang==='en'?this.en_step3:this.es_step3;},
       step4(){return this.lang==='en'?this.en_step4:this.es_step4;},
-      footerTitle(){ return this.lang==='en'?'We make shopping simple.':'Hacemos que tus compras sean simples.'; }
+      footerTitle(){ return this.lang==='en'?'We Make Shopping Simple!':'Hacemos fáciles tus compras.'; }
 
     }
     

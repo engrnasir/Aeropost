@@ -25,7 +25,7 @@
             }}
         </p>
 
-        <tableVue :list="info.products" :hasHeader="true"/>
+        <tableVue :list="info.products" :hasHeader="true" :colspan="2"/>
         
         <h2 class="main-heading">
             {{ lang==='en'? 'Special Handling Product':'Producto de manejo especial' }}
@@ -36,14 +36,14 @@
                 'Defined as small quantities of personal use items. These packages will be shipped when a batch of 10 has been accumulated in Miami. Shipping time can vary from 3 to 5 weeks. An additional fee of US $4.00 + IVA per package applies:'
                 :'Definido como pequeñas cantidades de artículos de uso personal. Estos paquetes serán enviados cuando se haya acumulado un lote de 10 en Miami. El tiempo de envío puede variar de 3 a 5 semanas. Aplica un cargo adicional de US $4.00 + IVA por paquete:' 
             }}</p>
-        <tableVue :list="info.products1" :hasHeader="true"/>
+        <tableVue :list="info.products1" :hasHeader="true" :colspan="2"/>
         
         <h2 class="main-heading">
             {{ lang==='en'? 'Restricted by Local Customs':'Restringido por las Aduanas Locales' }}
         </h2>
         <p class="snippet">{{ lang==='en'? 'These items have certain of local restrictions or may need special permits to enter the country. Please contact Customer Service for more information.':'Estos artículos tienen ciertas restricciones locales o pueden necesitar permisos especiales para ingresar al país. Póngase en contacto con el Servicio de atención al cliente para obtener más información.' }}</p>
         <p class="snippet">{{ lang==='en'? 'Additional charge for package US $30.00 + IVA The timeframe for customs clearance is 3 days after the package has arrived in country.':'Cargo adicional por paquete US $30.00 + IVA El plazo para el despacho de aduana es de 3 días después de que el paquete haya llegado al país.' }}</p>
-        <tableVue :list="info.products2" :hasHeader="true"/>
+        <tableVue :list="info.products2" :hasHeader="true" :colspan="2"/>
         
         <p class="snippet">{{ lang==='en'? 'To learn how to request the permits required for your product, contact: Ministry of Public Health and Social Assistance of the Republic of Guatemala.':'Para conocer cómo solicitar los permisos requeridos para su producto, comuníquese con: Ministerio de Salud Pública y Asistencia Social de la República de Guatemala.' }}</p>
         <p class="snippet">{{ lang==='en'? 'Address: 6ª avenida 3-45 zona 11 | PBX: 2444-7474 | Telephone: 2475-2121 y 24752122':'Dirección: 6ª avenida 3-45 zona 11 | PBX: 2444-7474 | Teléfono: 2475-2121 y 24752122' }}</p>
@@ -51,7 +51,7 @@
         <h2 class="main-heading">
             {{ lang==='en'? 'These items require a permit from the Ministry of Agriculture and Livestock':'Estos artículos requieren un permiso del Ministerio de Agricultura y Ganadería' }}
         </h2>
-        <tableVue :list="info.products3" :hasHeader="true"/>
+        <tableVue :list="info.products3" :hasHeader="true" :colspan="2"/>
 
         <InformationVue :list="info.list1" />
                 
@@ -73,7 +73,7 @@ export default {
     return{
         en_info:{
             products:[
-                ['Products',''],
+                ['Products'],
                 ['Any flammable, corrosive or explosive items','Ammunitions and fire arms'],
                 ['Any item with alcohol listed as its first ingredient','Wet-cell batteries'],
                 ['Cleaning solutions','Poisons'],
@@ -87,7 +87,7 @@ export default {
             ],
 
             products1:[
-                ['These items have certain of local restrictions or may need special permits to enter the country.include but are not limited to:',''],
+                ['These items have certain of local restrictions or may need special permits to enter the country.include but are not limited to:'],
                 ['Desodorants	','Nail polish'],
                 ['Beauty powders','	Aerosol cans'],
                 ['Beauty products','	Oil candles'],
@@ -108,7 +108,7 @@ export default {
                 ['Airbags',''],
             ],
             products2:[
-                ['Products <br>Require Permit from the "Ministry of Public Health"',''],
+                ['Products <br>Require Permit from the "Ministry of Public Health"'],
                 ['Creams and cosmetics	','Medications and drugs'],
                 ['Perfumes and fragances','Makeup and beauty products'],
                 ['Hair products	','Soap'],
@@ -118,7 +118,7 @@ export default {
                 ['Aerosoles	',''],
             ],
             products3:[
-                ['Products',''],
+                ['Products'],
                 ['Wood	','Seeds'],
                 ['Fur and animal products	','Plants'],
                 ['Veterinary products and accessories	','Agricultural products and accesories'],
@@ -130,7 +130,7 @@ export default {
         },
         es_info:{
             products:[
-                ['Productos',''],
+                ['Productos'],
                 ['Cualquier artículo inflamable, corrosivo o explosivo', 'Municiones y armas de fuego'],
                 ['Cualquier artículo con alcohol incluido como su primer ingrediente', 'Baterías de celda húmeda'],
                 ['Soluciones de limpieza','Venenos'],
@@ -144,7 +144,7 @@ export default {
             ],
 
             products1:[
-                ['Estos artículos tienen ciertas restricciones locales o pueden necesitar permisos especiales para ingresar al país. Incluyen pero no se limitan a:',''],
+                ['Estos artículos tienen ciertas restricciones locales o pueden necesitar permisos especiales para ingresar al país. Incluyen pero no se limitan a:'],
                 ['Desodorantes', 'Esmalte de uñas'],
                 ['Polvos de belleza', 'Latas de aerosol'],
                 ['Productos de belleza', 'Velas de aceite'],
@@ -165,7 +165,7 @@ export default {
                 ['Bolsas de aire',''],
             ],
             products2:[
-                ['Productos <br>Requieren Permiso del "Ministerio de Salud Pública"',''],
+                ['Productos <br>Requieren Permiso del "Ministerio de Salud Pública"'],
                 ['Cremas y cosméticos', 'Medicamentos y drogas'],
                 ['Perfumes y fragancias','Productos de maquillaje y belleza'],
                 ['Productos para el cabello','Jabón'],
@@ -175,7 +175,7 @@ export default {
                 ['Aerosoles',''],
             ],
             products3:[
-                ['Productos',''],
+                ['Productos'],
                 ['Madera', 'Semillas'],
                 ['Pieles y productos animales', 'Plantas'],
                 ['Productos y accesorios veterinarios', 'Productos y accesorios agrícolas'],

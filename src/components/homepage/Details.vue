@@ -28,7 +28,7 @@ import { mapState } from 'vuex'
         en_prealert:{
           title:'PRE-ALERT',
           description:'Process your package much more smoothly',
-          details:'After placing an order using your FREE U.S. address, <a href="" class="text-blue">Submit Pre-alert</a> to let us know that your package is on its way to our Miami fulfillment center. This step is crucial in ensuring that packages are processed as smoothly and efficiently as possible.'
+          details:'After placing an order using your FREE U.S. address, <a href="" class="text-blue uppercase">Submit Pre-alert</a> to let us know that your package is on its way to our Miami fulfillment center. This step is crucial in ensuring that packages are processed as smoothly and efficiently as possible.'
         },
         es_prealert:{
           title:'PRE-ALERTA',

@@ -19,7 +19,7 @@
         </p>
 
         <tableVue :list="info.table1"/>
-        <tableVue :list="info.products" :hasHeader="true"/>
+        <tableVue :list="info.products" :hasHeader="true" :colspan="2"/>
         
     </div>
   
@@ -43,7 +43,7 @@ export default {
                 ['These products include Any items with alcohol listed as their first ingredient as well Any quantityof FLAMMABLE, EXPLOSIVE or CORROSIVE material']
             ],
             products:[
-                ['Products',''],
+                ['Products'],
                 ['Aerosol cans','Matches'],
                 ['Alcoholic beverages ','Medical Equipment'],
                 ['Ammunition, firearms and firearm parts','	Motor vehicles'],
@@ -76,7 +76,7 @@ export default {
             ['Estos productos incluyen Cualquier artículo con alcohol incluido como su primer ingrediente, así como Cualquier cantidad de material INFLAMABLE, EXPLOSIVO o CORROSIVO']
             ],
             products:[
-                 ['Productos',''],
+                 ['Productos'],
                  ['Latas de aerosol','Fósforos'],
                  ['Bebidas alcohólicas', 'Equipamiento médico'],
                  ['Municiones, armas de fuego y repuestos de armas de fuego', 'Vehículos de motor'],

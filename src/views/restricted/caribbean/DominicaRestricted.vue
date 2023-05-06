@@ -4,19 +4,19 @@
             {{ lang==='en'? 'Forbidden Products':'Productos Prohibidos' }}
         </h2>
         <p class="snippet" v-html="info.desc1"></p>
-        <table-vue :list="info.products1" :hasHeader="true"/>
+        <table-vue :list="info.products1" :hasHeader="true" :colspan="2"/>
 
         <h2 class="main-heading">
             {{ lang==='en'? 'Special Handling Product':'Producto de manejo especial' }}
         </h2>
         <p class="snippet" v-html="info.desc2"></p>
-        <table-vue :list="info.products2" :hasHeader="true"/>
+        <table-vue :list="info.products2" :hasHeader="true" :colspan="2"/>
 
         <h2 class="main-heading">
             {{ lang==='en'? 'Restricted by Local Customs':'Restringido por las Aduanas Locales' }}
         </h2>
         <p class="snippet" v-html="info.desc3"></p>
-        <table-vue :list="info.products3" :hasHeader="true"/>
+        <table-vue :list="info.products3" :hasHeader="true" :colspan="2"/>
         
 
     </div>
@@ -41,7 +41,7 @@ export default {
                 PLEASE DO NOT SHIP THESE PRODUCTS TO YOUR MIAMI ADDRESS AS THEY CANNOT BE SHIPPED TO YOUR COUNTRY AND YOU WILL NEED TO PAY FOR THEIR DESTRUCTION OR THE COST OF RETURNING THEM TO THE SHIPPER.
             `,
             products1:[
-                ['Products',''],
+                ['Products'],
                 ['Ammunition, firearms and firearm parts	','Matches'],
                 ['Any item with alcohol listed as its first ingredient  ','	Poisons'],
                 ['Cleaning solutions	','Pressure containers'],
@@ -60,7 +60,7 @@ export default {
             Defined as small quantities of personal use items. SHIPMENTS OF THESE GOODS WILL BE SENT THE LAST WEEK OF EACH MONTH. AN ADDITIONAL FEE OF US $10 PER PACKAGE APPLIES.
             `,
             products2:[
-                ['These items include but are not limited to:',''],
+                ['These items include but are not limited to:'],
                 ['Aerosol cans','	Nail polish'],
                 ['Beauty powders   ','	Non-corrosive cleaning solutions'],
                 ['Beauty products	','Oil candles'],
@@ -74,7 +74,7 @@ export default {
             THESE ITEMS HAVE CERTAIN LOCAL RESTRICTIONS OR MAY NEED SPECIAL PERMITS TO ENTER THE COUNTRY. PLEASE CONTACT CUSTOMER SERVICE FOR MORE INFORMATION.
             `,
             products3:[
-                ['PRODUCTS',''],
+                ['PRODUCTS'],
                 ['Fur and animal products	','Plant seeds'],
                 ['Explosives	','Plants'],
                 ['Items of extremely high value   ','	Radar detectors'],
@@ -93,7 +93,7 @@ export default {
             NO ENVÍE ESTOS PRODUCTOS A SU DIRECCIÓN DE MIAMI YA QUE NO SE PUEDEN ENVIAR A SU PAÍS Y DEBERÁ PAGAR POR SU DESTRUCCIÓN O EL COSTO DE DEVOLVERLOS AL REMITENTE.
             `,
             products1:[
-                ['Productos',''],
+                ['Productos'],
                 ['Municiones, armas de fuego y repuestos de armas de fuego', 'Fósforos'],
                 ['Cualquier artículo con alcohol listado como su primer ingrediente', 'Venenos'],
                 ['Soluciones de limpieza','Recipientes a presión'],
@@ -112,7 +112,7 @@ export default {
                 Definido como pequeñas cantidades de artículos de uso personal. LOS ENVÍOS DE ESTAS MERCANCÍAS SE REALIZARÁN LA ÚLTIMA SEMANA DE CADA MES. APLICA UN CARGO ADICIONAL DE US $10 POR PAQUETE.
             `,
             products2:[
-                ['Estos elementos incluyen pero no se limitan a:',''],
+                ['Estos elementos incluyen pero no se limitan a:'],
                 ['Latas de aerosol', 'Esmalte de uñas'],
                 ['Polvos de belleza', 'Soluciones de limpieza no corrosivas'],
                 ['Productos de belleza','Velas de aceite'],
@@ -126,7 +126,7 @@ export default {
                 ESTOS ARTÍCULOS TIENEN CIERTAS RESTRICCIONES LOCALES O PUEDEN NECESITAR PERMISOS ESPECIALES PARA INGRESAR AL PAÍS. PÓNGASE EN CONTACTO CON EL SERVICIO DE ATENCIÓN AL CLIENTE PARA OBTENER MÁS INFORMACIÓN.
             `,
             products3:[
-                ['PRODUCTOS',''],
+                ['PRODUCTOS'],
                 ['Pieles y productos animales', 'Semillas de plantas'],
                 ['Explosivos','Plantas'],
                 ['Artículos de valor extremadamente alto', 'Detectores de radar'],

@@ -5,7 +5,7 @@
         </h2>
         <p class="snippet" v-html="info.desc1"></p>
         
-        <table-vue :list="info.products" :hasHeader="true"/>
+        <table-vue :list="info.products" :hasHeader="true" :colspan="2"/>
 
         <information-vue :list="info.list1"/>
         
@@ -28,7 +28,7 @@
             {{ lang==='en'?'Defined as small quantities of personal use items.':'Definido como pequeñas cantidades de artículos de uso personal.' }}<br><br>
             {{ lang==='en'?'SHIPMENTS OF THESE GOODS ARE LIMITED TO TWICE A MONTH.':'LOS ENVÍOS DE ESTOS BIENES ESTÁN LIMITADOS A DOS VECES AL MES.' }}
         </p>
-        <table-vue :list="info.products2" :hasHeader="true"/>
+        <table-vue :list="info.products2" :hasHeader="true" :colspan="2"/>
     </div>
   
 </template>
@@ -51,7 +51,7 @@ export default {
             PLEASE DO NOT SHIP THESE PRODUCTS TO YOUR MIAMI ADDRESS AS THEY CANNOT BE SHIPPED TO YOUR COUNTRY AND YOU WILL NEED TO PAY FOR THEIR DESTRUCTION OR THE COST OF RETURNING THEM TO THE SHIPPER.
             `,
             products:[
-                ['Products',''],
+                ['Products'],
                 ['Any flammable, corrosive or explosive item','All weapons, including but not limited to ammunition and fire arms, BB guns, paintball guns, bows and arrows, etc.'],
                 ['Any item with alcohol listed as its first ingredient','Wet-cell batteries'],
                 ['Cleaning solutions','Poisons'],
@@ -77,7 +77,7 @@ export default {
             ],
             list2:['*Due to strict import laws, these products require a special permit BEFORE the item can be shipped to Antigua.  Forms can be obtained by contacting us at service.anu@aeropost.com or calling 268-562-5089.'],
             products2:[
-                ['Products',''],
+                ['Products'],
                 ['Aerosol cans	','Nail polish'],
                 ['Beauty powders	','Aerosol cans'],
                 ['Beauty products	','Oil candles'],
@@ -94,7 +94,7 @@ export default {
              NO ENVÍE ESTOS PRODUCTOS A SU DIRECCIÓN DE MIAMI YA QUE NO SE PUEDEN ENVIAR A SU PAÍS Y DEBERÁ PAGAR POR SU DESTRUCCIÓN O EL COSTO DE DEVOLVERLOS AL REMITENTE.
             `,
             products:[
-                ['Productos',''],
+                ['Productos'],
                 ['Cualquier artículo inflamable, corrosivo o explosivo', 'Todas las armas, incluidas, entre otras, municiones y armas de fuego, pistolas de aire comprimido, pistolas de bolas de pintura, arcos y flechas, etc.'],
                 ['Cualquier artículo con alcohol incluido como su primer ingrediente', 'Baterías de celda húmeda'],
                 ['Soluciones de limpieza','Venenos'],
@@ -120,7 +120,7 @@ export default {
             ],
             list2:['*Debido a las estrictas leyes de importación, estos productos requieren un permiso especial ANTES de que el artículo pueda enviarse a Antigua. Los formularios se pueden obtener poniéndose en contacto con nosotros en service.anu@aeropost.com o llamando al 268-562-5089.'],
             products2:[
-                ['Productos',''],
+                ['Productos'],
                 ['Latas de aerosol', 'Esmalte de uñas'],
                 ['Polvos de belleza', 'Latas de aerosol'],
                 ['Productos de belleza','Velas de aceite'],

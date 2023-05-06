@@ -5,7 +5,7 @@
         </h2>
         <p class="snippet" v-html="info.desc1"></p>
         
-        <table-vue :list="info.products" :hasHeader="true"/>
+        <table-vue :list="info.products" :hasHeader="true" :colspan="2"/>
 
         <InformationVue :list="info.list" />
         
@@ -33,7 +33,7 @@ export default {
             AEROPOST WILL NOT TRANSPORT THESE ITEMS AND NO CLAIMS WILL BE ACCEPTED FOR THEM.
             `,
             products:[
-                ['PRODUCTS',''],
+                ['PRODUCTS'],
                 ['Aerosol cans	','Medical equipment'],
                 ['Liquor	','Medication'],
                 ['Ammunition, firearms and firearm parts	','Mouthwash'],
@@ -70,7 +70,7 @@ export default {
             AEROPOST NO TRANSPORTARÁ ESTOS ARTÍCULOS NI SE ACEPTARÁN RECLAMACIONES POR ELLOS.
             `,
             products:[
-                ['PRODUCTOS',''],
+                ['PRODUCTOS'],
                 ['Latas de aerosol', 'Equipo médico'],
                 ['Licor', 'Medicamento'],
                 ['Municiones, armas de fuego y partes de armas de fuego', 'Enjuague bucal'],

@@ -69,7 +69,7 @@
         return this.lang==='en'?this.en_hero:this.es_hero;
       },
       footerTitle(){
-        return this.lang==='en'?'We make shopping simple.':'Hacemos que tus compras sean simples.';
+        return this.lang==='en'?'We Make Shopping Simple!':'Hacemos fáciles tus compras.';
       }
     },
     methods:{

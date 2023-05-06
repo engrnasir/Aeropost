@@ -18,7 +18,7 @@
             }}
         </p>
 
-        <tableVue :list="info.table1" :hasHeader="true"/>
+        <tableVue :list="info.table1" :hasHeader="true" :colspan="2"/>
         
         <h2 class="main-heading">
             {{ lang==='en'? 'Special Handling Product':'Producto de manejo especial' }}
@@ -29,13 +29,13 @@
                 'Defined as small quantities of personal use items. THESE GOODS ARE SHIPPED ONCE EVERY 30 DAYS. AN ADDITIONAL FEE OF US$25.00 + IVA  PER PACKAGE APPLIES:'
                 :'Definido como pequeñas cantidades de artículos de uso personal. ESTAS MERCANCÍAS SE ENVÍAN UNA VEZ CADA 30 DÍAS. APLICA UN CARGO ADICIONAL DE US$25.00 + IVA POR PAQUETE:' 
             }}</p>
-        <tableVue :list="info.products" :hasHeader="true"/>
+        <tableVue :list="info.products" :hasHeader="true" :colspan="2"/>
         
         <h2 class="main-heading">
             {{ lang==='en'? 'Restricted by Local Customs':'Restringido por las Aduanas Locales' }}
         </h2>
         <p class="snippet">{{ lang==='en'? 'THESE ITEMS HAVE RESTRICTIONS TO ENTER THE COUNTRY.':'ESTOS ARTÍCULOS TIENEN RESTRICCIONES PARA EL INGRESO AL PAÍS.' }}</p>
-        <tableVue :list="info.products1" :hasHeader="true"/>
+        <tableVue :list="info.products1" :hasHeader="true" :colspan="2"/>
 
         <InformationVue :list="info.list1" />
                 
@@ -57,7 +57,7 @@ export default {
     return{
         en_info:{
             table1:[
-                ['These items include but are not limited to:',''],
+                ['These items include but are not limited to:'],
                 ['Ammunition and firearms	','Lighters'],
                 ['Any item with alcohol listed as its first ingredient	','Wet-cell batteries'],
                 ['Cleaning solutions','	Poisons'],
@@ -74,7 +74,7 @@ export default {
             ],
 
             products:[
-                ['These items include but are not limited to:',''],
+                ['These items include but are not limited to:'],
                 ['Aerosol cans','	Nail polish'],
                 ['Beauty powders	','Car shocks'],
                 ['Beauty products	','Oil candles'],
@@ -87,7 +87,7 @@ export default {
             ],
 
             products1:[
-                ['These products include but are not limited to:',''],
+                ['These products include but are not limited to:'],
                 ['Category M and violence-inducing video games	','Any kind of pornographic material'],
                 ['Electronic cigarrettes	','Sex toys'],
                 ['Ammunition and firearm parts	','X-Ray material and equipment'],
@@ -103,7 +103,7 @@ export default {
         },
         es_info:{
             table1:[
-                ['Estos elementos incluyen pero no se limitan a:',''],
+                ['Estos elementos incluyen pero no se limitan a:'],
                 ['Municiones y armas de fuego', 'Mecheros'],
                 ['Cualquier artículo con alcohol incluido como su primer ingrediente', 'Baterías de celda húmeda'],
                 ['Soluciones de limpieza', 'Venenos'],
@@ -120,7 +120,7 @@ export default {
             ],
 
             products:[
-                ['Estos elementos incluyen pero no se limitan a:',''],
+                ['Estos elementos incluyen pero no se limitan a:'],
                 ['Latas de aerosol', 'Esmalte de uñas'],
                 ['Polvos de belleza', 'Choques de coche'],
                 ['Productos de belleza','Velas de aceite'],
@@ -133,7 +133,7 @@ export default {
             ],
 
             products1:[
-                ['Estos productos incluyen pero no se limitan a:',''],
+                ['Estos productos incluyen pero no se limitan a:'],
                 ['Categoría M y videojuegos que inducen a la violencia', 'Cualquier tipo de material pornográfico'],
                 ['Cigarrillos electrónicos', 'Juguetes sexuales'],
                 ['Municiones y repuestos para armas de fuego', 'Material y equipos de rayos X'],

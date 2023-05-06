@@ -6,7 +6,7 @@
             {{ lang==='en'? 'Dangerous Goods and Others Items':'Mercancías peligrosas y otros artículos' }}
         </h2>
         <p class="snippet" v-html="info.desc"></p>
-        <table-vue :list="info.products" :hasHeader="true"/>
+        <table-vue :list="info.products" :hasHeader="true" :colspan="2"/>
         
     </div>
   
@@ -27,7 +27,7 @@ export default {
         en_info:{
             desc:`THE FOLLOWING ITEMS ARE RESTRICTED BY EITHER THE FAA, U.S. CUSTOMS, AEROPOST, OR BY CUSTOMS IN HAITI.`,
             products:[
-                ['Products',''],
+                ['Products'],
                 ['Any flammable, corrosive or explosive item	','Ammunition and firearms'],
                 ['Any item with alcohol listed as its first ingredient	','Wet-cell batteries'],
                 ['Cleaning solutions	','Poisons'],
@@ -58,7 +58,7 @@ export default {
         es_info:{
             desc:`TLOS SIGUIENTES ARTÍCULOS ESTÁN RESTRINGIDOS POR LA FAA, LA ADUANA DE EE. UU., AEROPOST O LA ADUANA DE HAITÍ.`,
             products:[
-                ['Productos',''],
+                ['Productos'],
                 ['Cualquier artículo inflamable, corrosivo o explosivo', 'Municiones y armas de fuego'],
                 ['Cualquier artículo con alcohol incluido como su primer ingrediente', 'Baterías de celda húmeda'],
                 ['Soluciones de limpieza','Venenos'],

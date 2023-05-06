@@ -4,7 +4,7 @@
             {{ lang==='en'? 'Forbidden Products':'Productos Prohibidos' }}
         </h2>
         <p class="snippet" v-html="info.desc1"></p>
-        <table-vue :list="info.products1" :hasHeader="true"/>
+        <table-vue :list="info.products1" :hasHeader="true" :colspan="2"/>
         
         <p class="snippet" v-html="info.desc2"></p>
         <InformationVue :list="info.list1" />
@@ -34,7 +34,7 @@ export default {
             PLEASE DO NOT SHIP THESE PRODUCTS TO YOUR MIAMI ADDRESS AS THEY CANNOT BE SHIPPED TO YOUR COUNTRY AND YOU WILL NEED TO PAY FOR THEIR DESTRUCTION OR THE COST OF RETURNING THEM TO THE SHIPPER.
             `,
             products1:[
-                ['PRODUCTS',''],
+                ['PRODUCTS'],
                 ['Lubricating Oils	','Glass Ornament'],
                 ['Air Bag	','Glass Container'],
                 ['Shock new','	Mirror'],
@@ -80,7 +80,7 @@ export default {
                 NO ENVÍE ESTOS PRODUCTOS A SU DIRECCIÓN DE MIAMI YA QUE NO SE PUEDEN ENVIAR A SU PAÍS Y DEBERÁ PAGAR POR SU DESTRUCCIÓN O EL COSTO DE DEVOLVERLOS AL REMITENTE.
             `,
             products1:[
-                ['PRODUCTOS',''],
+                ['PRODUCTOS'],
                 ['Aceites lubricantes','Adorno de vidrio'],
                 ['Bolsa de aire','Contenedor de vidrio'],
                 ['Impacto nuevo', 'Espejo'],

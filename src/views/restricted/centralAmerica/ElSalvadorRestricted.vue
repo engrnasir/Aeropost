@@ -18,7 +18,7 @@
             }}
         </p>
 
-        <tableVue :list="info.table1" :hasHeader="true"/>
+        <tableVue :list="info.table1" :hasHeader="true" :colspan="2"/>
         
         <h2 class="main-heading">
             {{ lang==='en'? 'Special Handling Product':'Producto de manejo especial' }}
@@ -26,14 +26,14 @@
         <p class="snippet">{{ lang==='en'? 'Defined as small quantities of personal use items.':'Definido como pequeñas cantidades de artículos de uso personal.' }}</p>
         <p class="snippet">{{ lang==='en'? 'Shipments of these goods are once every 15 days. An Additional fee of US $18.00 + VAT per packages':'Los envíos de estos bienes son una vez cada 15 días. Una tarifa adicional de US $ 18.00 + IVA por paquete' }}</p>
         <p class="snippet">{{ lang==='en'? 'These items include but are not limited to:':'Estos artículos incluyen pero no se limitan a:' }}</p>
-        <tableVue :list="info.products" :hasHeader="true"/>
+        <tableVue :list="info.products" :hasHeader="true" :colspan="2"/>
         
         <h2 class="main-heading">
             {{ lang==='en'? 'Restricted by Local Customs':'Restringido por las Aduanas Locales' }}
         </h2>
         <p class="snippet">{{ lang==='en'? 'These products that require the permission of the National Drug Directorate, the Ministry of Health or the Ministry of Defense:':'Estos productos que requieren el permiso de la Dirección Nacional de Drogas, el Ministerio de Salud o el Ministerio de Defensa:' }}</p>
         <p class="snippet">{{ lang==='en'? 'THESE ITEMS HAVE CERTAIN OF LOCAL RESTRICTIONS OR MAY NEED SPECIAL PERMITS TO ENTER THE COUNTRY. PLEASE CONTACT CUSTOMER SERVICE FOR MORE INFORMATION.':'ESTOS ARTÍCULOS TIENEN CIERTAS RESTRICCIONES LOCALES O PUEDEN NECESITAR PERMISOS ESPECIALES PARA INGRESAR AL PAÍS. PÓNGASE EN CONTACTO CON EL SERVICIO DE ATENCIÓN AL CLIENTE PARA OBTENER MÁS INFORMACIÓN.' }}</p>
-        <tableVue :list="info.products1" :hasHeader="true"/>
+        <tableVue :list="info.products1" :hasHeader="true" :colspan="2"/>
         
         <InformationVue :list="info.list1" />
                 
@@ -57,7 +57,7 @@ export default {
         en_info:{
             
             table1:[
-                ['These items include but are not limited to:',''],
+                ['These items include but are not limited to:'],
                 ['Ammunition, firearms and firearm parts ','Lighters'],
                 ['Any item with alcohol listed as its first ingredient','Wet-cell batteries'],
                 ['Cleaning solutions','Poisons'],
@@ -68,7 +68,7 @@ export default {
                 ['Medication or supplements containing amphetamines or any other substances prohibited by the national drug administration office.', 'Products containing glycerin'],
             ],
             products:[
-                ['Products',''],
+                ['Products'],
                 ['Aerosol cans','Nail polish'],
                 ['Beauty powders ','Aerosol cans'],
                 ['Beauty products ','Oil candles'],
@@ -80,7 +80,7 @@ export default {
                 ['Hoverboards',''],
             ],
             products1:[
-                ['PRODUCTS',''],
+                ['PRODUCTS'],
                 ['Perfumes, creams and cosmetics','Seeds'],
                 ['Pressure containers','Plants'],
                 ['Medical equipment ','Radio controls and radars'],
@@ -103,7 +103,7 @@ export default {
         },
         es_info:{
             table1:[
-                ['Estos elementos incluyen pero no se limitan a:',''],
+                ['Estos elementos incluyen pero no se limitan a:'],
                 ['Municiones, armas de fuego y repuestos de armas de fuego', 'Mecheros'],
                 ['Cualquier artículo con alcohol incluido como su primer ingrediente', 'Baterías de celda húmeda'],
                 ['Soluciones de limpieza','Venenos'],
@@ -114,7 +114,7 @@ export default {
                 ['Medicamentos o suplementos que contengan anfetaminas o cualquier otra sustancia prohibida por la oficina nacional de administración de drogas.', 'Productos que contengan glicerina'],
             ],
             products:[
-                ['Productos',''],
+                ['Productos'],
                 ['Latas de aerosol', 'Esmalte de uñas'],
                 ['Polvos de belleza', 'Latas de aerosol'],
                 ['Productos de belleza','Velas de aceite'],
@@ -126,7 +126,7 @@ export default {
                 ['Aerotablas',''],
             ],
             products1:[
-                ['PRODUCTOS',''],
+                ['PRODUCTOS'],
                 ['Perfumes, cremas y cosméticos', 'Semillas'],
                 ['Contenedores a presión','Plantas'],
                 ['Equipamiento médico', 'Radiomandos y radares'],

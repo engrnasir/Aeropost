@@ -25,8 +25,8 @@
     data(){
       return{
         en_hero:{
-          title:'Shipping Calculator',
-          description:'Calculate your shipping costs including freight, customs duties, and taxes by utilizing our shipping calculator.',
+          title:'Cost Calculator',
+          description:'Calculate your approximate shipping cost including freight and customs charges by utilizing our cost calculator.',
         },
         es_hero:{
           title:'Cotiza tu envío',
@@ -41,7 +41,7 @@
         return this.lang==='en'?`*The price indicated above is only an estimate of the freight and customs charges. We remind you that the final costs may vary depending on the actual customs declarations and/or other charges such as special handling on consumer commodities and a select number of import requirements on certain items (<a href="" class="text-blue">see restricted shipments for more information</a>) .`:`*El precio indicado arriba es solo una estimación de los gastos de flete y aduana. Te recordamos que los costos finales pueden variar según las declaraciones de aduana reales y/u otros cargos, como el manejo especial de productos de consumo y un número selecto de requisitos de importación de ciertos artículos (<a href="" class="text-blue">consulta Envíos restringidos para obtener más información</a>).`
       },
       footerTitle(){
-        return this.lang==='en'?'We make shopping simple.':'Hacemos que tus compras sean simples.';
+        return this.lang==='en'?'We Make Shopping Simple!':'Hacemos fáciles tus compras.';
       },
       cal_url(){
         return `https://calculator.aeropost.com/Calculator.aspx?gateway=${this.selectedCountry.gtw}&userlanguage=${this.langCode}`

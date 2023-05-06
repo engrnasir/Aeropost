@@ -12,7 +12,7 @@
             <br><br> POR FAVOR NO ENVÍES ESTOS PRODUCTOS A TU DIRECCIÓN EN MIAMI PUES NO PODRÁN SER TRANSPORTADOS Y DEBERÁS ASUMIR LOS COSTOS DE DESTRUCCIÓN O DEVOLUCIÓN AL PROVEEDOR.
         </p>
         
-        <tableVue :list="info.productsTable" :hasHeader="true"/>
+        <tableVue :list="info.productsTable" :hasHeader="true" :colspan="2"/>
         <h3 class="heading" v-if="lang==='es'">
             Productos de Manejo Especial
         </h3>
@@ -22,7 +22,7 @@
         <p class="snippet">
             {{ lang==='en'? 'THESE ITEMS INCLUDE BUT ARE NOT LIMITED TO:':'ESTOS ARTÍCULOS TAMBIÉN ESTÁN RESTRINGIDOS POR LA ADUANA LOCAL Y REQUIEREN PERMISOS ADICIONALES. ESTOS ARTÍCULOS INCLUYEN PERO NO ESTÁN LIMITADOS A:' }}
         </p>
-        <tableVue :list="info.productsTable1" :hasHeader="true"/>
+        <tableVue :list="info.productsTable1" :hasHeader="true" :colspan="2"/>
 
         <p class="snippet" v-if="lang==='en'">These products require special handling and will be shipped as "consolidated goods" every 15 days. An additional fee of ₵6000 will be charged per package (in addition to the regular freight and customs handling fees).</p>
         <p class="snippet" v-else>Estos productos requieren un manejo especial que tiene un costo de ¢6000.00 por paquete (adicional al costo normal de transporte y nacionalización)  y viajan de forma consolidada cada 15 días.</p>
@@ -39,7 +39,7 @@
         <h3 class="heading">
             {{ lang==='en'?'Require Permit from Ministerio de Salud ':'Requieren permiso del Ministerio de Salud '}}
         </h3>
-        <tableVue :list="info.productsTable2" :hasHeader="true"/>
+        <tableVue :list="info.productsTable2" :hasHeader="true" :colspan="2"/>
 
         <InformationVue :title="info.list1Title" :list="info.list1" />
         
@@ -50,7 +50,7 @@
         <h3 class="heading">
             {{ lang==='en'?'Aerocasillas DOES NOT process import permits in the following cases:':'Aerocasillas NO realiza el permiso de importación para los siguientes casos:' }}
         </h3>
-        <tableVue :list="info.productsTable3" :hasHeader="true"/>
+        <tableVue :list="info.productsTable3" :hasHeader="true" :colspan="2"/>
 
         <InformationVue :list="info.list2" />
         
@@ -60,7 +60,7 @@
         <h3 class="heading">
             {{ lang==='en'?'Governmental Commission: Ministry of Environment and Energy':'Ozono Dependencia: Ministerio de Ambiente y Energía.'}}
         </h3>
-        <tableVue :list="info.productsTable4" :hasHeader="true"/>
+        <tableVue :list="info.productsTable4" :hasHeader="true" :colspan="2"/>
 
 
         
@@ -77,7 +77,7 @@
         <h3 class="heading">
             {{ lang==='en'?'Require Permit from the "Ministerio de Gobernación y Policía"':'Requieren permiso del Ministerio de Gobernación y Policía'}}
         </h3>
-        <tableVue :list="info.productsTable5" :hasHeader="true"/>
+        <tableVue :list="info.productsTable5" :hasHeader="true" :colspan="2"/>
         <InformationVue :list="info.list4" />
         
 
@@ -86,7 +86,7 @@
         <h3 class="heading">
             {{ lang==='en'?'Require Permit from Ministerio de Agricultura y Ganadería':'Requieren permiso del Ministerio de Agricultura y Ganadería'}}
         </h3>
-        <tableVue :list="info.productsTable6" :hasHeader="true"/>
+        <tableVue :list="info.productsTable6" :hasHeader="true" :colspan="2"/>
         <InformationVue :list="info.list5" />
 
         <h3 class="heading">
@@ -134,7 +134,7 @@ export default {
     return{
         en_info:{
             productsTable:[
-                ['Products',''],
+                ['Products'],
                 ['Any flammable, corrosive or explosive item', 'Ammunition, firearms and firearm parts'],
                 ['Any item with alcohol listed as its first ingredient','Wet-cell batteries'],
                 ['Cleaning solutions','	Poisons'],
@@ -155,7 +155,7 @@ export default {
             ],
 
             productsTable1:[
-                ['Products',''],
+                ['Products'],
                 ['Aerosol cans',	'Nail polish'],
                 ['Beauty powders',	'Aerosol cans'],
                 ['Beauty products',	'Oil candles'],
@@ -166,7 +166,7 @@ export default {
             ],
 
             productsTable2:[
-                    ['Productos',''],
+                    ['Productos'],
                     ['Personal care products (see tab above)','Makeup and beauty products'],
                     ['Perfumes and fragances','Soap'],
                     ['Hair products','Spray products'],
@@ -193,7 +193,7 @@ export default {
             ],
 
             productsTable3:[
-                ['Productos',''],
+                ['Productos'],
                 ['Llantas y neumáticos','	Tabaco en polvo para hacer cigarrillos*'],
                 ['Cigarillos electrónicos con cartuchos de reposición o esencias*	','Tabaco en cigarillos*'],
             ],
@@ -204,7 +204,7 @@ export default {
             ],
 
             productsTable4:[
-                ['Productos',''],
+                ['Productos'],
                 ['Refrigeradoras	','Aires acondicionados'],
             ],
             list3:[
@@ -213,7 +213,7 @@ export default {
             ],
 
             productsTable5:[
-                ['Productos',''],
+                ['Productos'],
                 ['Pistolas y accesorios para CO2','	Pistolas y accesorios para paintball'],
                 ['Pistolas de bengala y de señales de humo','	Herramientas punzo cortantes como ballestas y arcos que no sean para deporte'],
                 ['Armas y accesorios de electroshock',''],
@@ -224,7 +224,7 @@ export default {
             ],
 
             productsTable6:[
-                ['Productos',''],
+                ['Productos'],
                 ['Madera	','Semillas'],
                 ['Pieles y productos de origen animal	','Plantas'],
                 ['Productos y accesorios veterinarios	','Productos y accesorios para agricultura'],
@@ -247,7 +247,7 @@ export default {
         },
         es_info:{
             productsTable:[
-                ['Productos',''],
+                ['Productos'],
                 ['Cualquier producto flamable, corrosivo o explosivo	','Municiones, armas de fuego y parte de armas de fuego'],
                 ['Cualquier artículo con alcohol como primer ingrediente	','Baterías que contengan productos quimicos o sean dangerous good'],
                 ['Soluciones de limpieza	','Venenos'],
@@ -267,7 +267,7 @@ export default {
              ],
 
             productsTable1:[
-                ['Productos',''],
+                ['Productos'],
                 ['Desodorantes	','Esmalte de uñas'],
                 ['Polvos de belleza	','Envases de aerosol'],
                 ['Productos de belleza	','Candelas de aceite'],
@@ -278,7 +278,7 @@ export default {
                 ['Hoverboards (Patineta eléctrica)',''],
              ],
             productsTable2:[
-                ['Products',''],
+                ['Products'],
                 ['Productos de Cuidado Personal  (ver pestaña arriba)	','Productos de belleza'],
                 ['Perfumes','	Maquillaje'],
                 ['Productos para el cabello	','Jabón'],
@@ -307,7 +307,7 @@ export default {
              ],
 
             productsTable3:[
-                 ['Productos',''],
+                 ['Productos'],
                  ['Neumáticos', 'Tabaco en polvo para hacer cigarrillos*'],
                  ['Cigarrillos electrónicos con esencias o cartuchos de repuesto*', 'Tabaco en cigarrillos*'],
              ],
@@ -318,7 +318,7 @@ export default {
              ],
 
             productsTable4:[
-                ['Productos',''],
+                ['Productos'],
                 ['Refrigeradores','Aire acondicionado'],
             ],
             list3:[
@@ -327,7 +327,7 @@ export default {
             ],
 
             productsTable5:[
-                ['Productos',''],
+                ['Productos'],
                 ['Pistolas eléctricas y accesorios','Pistolas de paintball y accesorios'],
                 ['Armas y accesorios que funcionan con CO2','Herramientas afiladas como ballestas y arcos que no están relacionadas con el deporte.'],
                 ['Armas de electrochoque y accesorios',''],
@@ -338,7 +338,7 @@ export default {
             ],
 
             productsTable6:[
-                 ['Productos',''],
+                 ['Productos'],
                  ['Madera','Semillas'],
                  ['Pieles y productos animales','Plantas'],
                  ['Productos y accesorios veterinarios','Productos y accesorios agrícolas'],

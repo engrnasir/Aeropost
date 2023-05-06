@@ -25,7 +25,7 @@
       return{
         en_hero:{
           title:'Rates',
-          description:'Your Miami Address service allows you to shop from your favorite U.S.websites and receive or pick up your packages at a local store, locker or get it delivered right to your door..',
+          description:'Your FREE U.S. ADDRESS allows you to shop online from your favorite U.S. stores and pick up packages from either our local hub stores, smart parcel lockers, or right from your doorstep!',
         },
         es_hero:{
           title:'Tarifas',
@@ -43,7 +43,7 @@
         return this.lang==='en'?this.en_hero:this.es_hero;
       },
       footerTitle(){
-        return this.lang==='en'?'We make shopping simple.':'Hacemos que tus compras sean simples.';
+        return this.lang==='en'?'We Make Shopping Simple!':'Hacemos fáciles tus compras.';
       }
     },
     methods:{

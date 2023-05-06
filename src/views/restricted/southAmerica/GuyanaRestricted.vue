@@ -1,10 +1,8 @@
 <template>
     <div>
-        <h2 class="main-heading">
-            {{ lang==='en'? 'Forbidden Products':'Productos Prohibidos' }}
-        </h2>
+
         <p class="snippet" v-html="info.desc1"></p>
-        <table-vue :list="info.products1" :hasHeader="true"/>
+        <table-vue :list="info.products1" :hasHeader="true" :colspan="2"/>
         
         <p class="snippet" v-html="info.desc2"></p>
 
@@ -26,24 +24,24 @@ export default {
     return{
         en_info:{
             desc1:`
-                These include any item with alcohol listed as their first ingredient, as well as any amount of FLAMMABLE, EXPLOSIVE or CORROSIVE material.<br><br>
-                PLEASE DO NOT SHIP THESE PRODUCTS TO YOUR MIAMI ADDRESS SINCE THEY CANNOT BE SHIPPED TO YOUR COUNTRY AND YOU WILL NEED TO PAY FOR THEIR DESTRUCTION OR FOR THEM TO BE RETURNED TO THE SHIPPER.<br><br>
-                AEROPOST WILL NOT TRANSPORT THESE ITEMS AND NO CLAIMS WILL BE ACCEPTED FOR THEM.
+            This list includes any item with alcohol listed as its first ingredient, as well as any amount of FLAMMABLE, EXPLOSIVE or CORROSIVE material.<br><br>
+            Under no circumstances should these products be shipped to your U.S. address with Aeropost, as they cannot be shipped to your destination country. Customers who ship a restricted product to their address will incur the cost of having the item either destroyed or returned to the vendor/sender.<br><br>
+            AEROPOST WILL NOT TRANSPORT THESE ITEMS AND NO CLAIMS WILL BE ACCEPTED FOR THEM.
             `,
             products1:[
-                ['PRODUCTS',''],
-                ['Aerosol cans	','Medical equipment'],
+                ['PRODUCTS'],
+                ['Aerosol Cans	','Medical Equipment'],
                 ['Liquor	','Medication'],
-                ['Ammunition, firearms and firearm parts	','Mouthwash'],
-                ['Chemical substances	','Nail polish'],
-                ['Cleaning solutions	','Oil candles'],
-                ['Creams	','Perfumes and colognes'],
-                ['Deodorants	','Perishable items'],
-                ['Explosive material	','Personal beauty products'],
+                ['Ammunition, Firearms And Firearm Farts	','Mouthwash'],
+                ['Chemical Substances	','Nail polish'],
+                ['Cleaning Solutions	','Oil candles'],
+                ['Creams	','Perfumes And Colognes'],
+                ['Deodorants	','Perishable Items'],
+                ['Explosive Material	','Personal Beauty Products'],
                 ['Fireworks	','Plants'],
-                ['Fragrances and cosmetics	','Car shocks'],
-                ['Gas powered tools, Poisons	','Pressure containers'],
-                ['Gasoline, fuel	','Sweeteners, food flavor or coloring products'],
+                ['Fragrances And Cosmetics	','Car Shocks'],
+                ['Gas Powered Tools, Poisons	','Pressure Containers'],
+                ['Gasoline, Fuel	','Sweeteners, food flavor or coloring products'],
                 ['Gels	','Tear gas or pepper spray'],
                 ['Items of extremely high value','	Tobacco'],
                 ['Lighters','Wet-cell batteries'],
@@ -56,7 +54,7 @@ export default {
                 ['Hoverboards',''],
             ],
             desc2:`
-            Please note that the car shocks need a permit to enter the country, for more information please contact customer service.
+            Please note that the car shocks require a permit to enter the country. For more information regarding restricted products, please contact our customer experience team.
             `,
         },
         es_info:{
@@ -66,7 +64,7 @@ export default {
                 AEROPOST NO TRANSPORTARÁ ESTOS ARTÍCULOS NI SE ACEPTARÁN RECLAMACIONES POR ELLOS.
             `,
             products1:[
-                ['PRODUCTOS',''],
+                ['PRODUCTOS'],
                 ['Latas de aerosol', 'Equipo médico'],
                 ['Licor', 'Medicamento'],
                 ['Municiones, armas de fuego y partes de armas de fuego', 'Enjuague bucal'],

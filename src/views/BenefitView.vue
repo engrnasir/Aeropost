@@ -91,7 +91,7 @@ import { mapState } from 'vuex';
       },
       cards(){return this.lang==='en'? this.en_cards:this.es_cards},
       footerTitle(){
-        return this.lang==='en'?'We make shopping simple.':'Hacemos que tus compras sean simples.';
+        return this.lang==='en'?'We Make Shopping Simple!':'Hacemos fáciles tus compras.';
       },
       
     }

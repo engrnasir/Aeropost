@@ -1,7 +1,7 @@
 <template>
   <table>
     <tr v-for="(items,index) in list" :key="index" :class="index==0 && hasHeader? 'thead':''">
-        <td v-for="(item,i) in items" :key="i" :class="index==0 && hasHeader? 'text-white text-base font-semibold':''" v-html="item"></td>
+        <td v-for="(item,i) in items" :key="i" :class="index==0 && hasHeader? 'text-white text-base font-semibold':''" v-html="item" :colspan="index===0 && i==0 && colspan>1? colspan:1"></td>
     </tr>
     <tfoot v-if="tfoot">
         <td colspan="2" >
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-    props:['list','hasHeader', 'tfoot'],
+    props:['list','hasHeader', 'tfoot', 'colspan'],
 }
 </script>
 
@@ -23,7 +23,7 @@ table {
 }
 
 td, th {
-    @apply border border-[#dddddd] text-left p-[12px] text-base text-[#333333] max-md:w-1/2 max-md:text-sm;
+    @apply border border-[#dddddd] text-left p-[12px] text-base text-[#333333] max-md:w-1/2 max-md:text-sm capitalize;
 }
 tr:nth-child(odd) {
     @apply bg-[#F7F7F7];

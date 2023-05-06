@@ -5,13 +5,13 @@
         </h2>
         <p class="snippet" v-html="info.desc1"></p>
         
-        <table-vue :list="info.products" :hasHeader="true"/>
+        <table-vue :list="info.products" :hasHeader="true" :colspan="2"/>
         
         <h2 class="main-heading">
             {{ lang==='en'? 'Restricted by Local Customs':'Restringido por las Aduanas Locales' }}
         </h2>
         <p class="snippet" v-html="info.desc2"></p>
-        <table-vue :list="info.products1" :hasHeader="true"/>
+        <table-vue :list="info.products1" :hasHeader="true" :colspan="2"/>
 
         <InformationVue :list="info.list" />
 
@@ -43,7 +43,7 @@ export default {
             If you would like us to check if a particular good may be held when arriving in Miami or ship with us, via Air or Maritime routes, please e-mail us at <a href="mailto:help@tortolaexpress.com" class="text-semibold">help@tortolaexpress.com</b> with the link to the product you wish to purchase so we can advise you accordingly.<br>
             `,
             products:[
-                ['Hazmat products   **verify with your Local Office** ',''],
+                ['Hazmat products   **verify with your Local Office** '],
                 ['Alcoholic beverages	','Matches'],
                 ['Aerosol cans**	 ','Mouthwash'],
                 ['Chemical substances**	',' Nail polish'],
@@ -59,7 +59,7 @@ export default {
             desc2:`THESE PRODUCTS HAVE CERTAIN CARRIER/LOCAL RESTRICTIONS OR MAY NEED SPECIAL PERMITS TO ENTER THE TERRITORY. PLEASE CONTACT CUSTOMER SERVICE FOR MORE INFORMATION.`,
 
             products1:[
-                ['Products**',''],
+                ['Products**'],
                 ['Ammunition,firearms,and firearm parts/accesories	','Motor Vehicle'],
                 ['Drugs	',' Perishable items'],
                 ['Explosive material	',' Poisons/Toxic Substances'],
@@ -85,7 +85,7 @@ export default {
              Si desea que verifiquemos si un bien en particular puede ser retenido al llegar a Miami o enviarlo con nosotros, por rutas aéreas o marítimas, envíenos un correo electrónico a <a href="mailto:help@tortolaexpress.com" class= "text-semibold">help@tortolaexpress.com</b> con el enlace del producto que desea adquirir para que podamos asesorarlo.<br>
             `,
             products:[
-                ['Productos de materiales peligrosos **verifique con su oficina local** ',''],
+                ['Productos de materiales peligrosos **verifique con su oficina local** '],
                 ['Bebidas alcohólicas', 'Fósforos'],
                 ['Latas de aerosol** ','Enjuague bucal'],
                 ['Sustancias químicas**', 'Esmalte de uñas'],
@@ -101,7 +101,7 @@ export default {
             desc2:`ESTOS PRODUCTOS TIENEN CIERTAS RESTRICCIONES LOCALES O DEL TRANSPORTADOR O PUEDEN NECESITAR PERMISOS ESPECIALES PARA INGRESAR AL TERRITORIO. PÓNGASE EN CONTACTO CON EL SERVICIO DE ATENCIÓN AL CLIENTE PARA OBTENER MÁS INFORMACIÓN.`,
 
             products1:[
-                ['Productos**',''],
+                ['Productos**'],
                 ['Municiones, armas de fuego y repuestos/accesorios de armas de fuego', 'Vehículos de motor'],
                 ['Medicamentos', 'Artículos perecederos'],
                 ['Material explosivo', 'Venenos/Sustancias tóxicas'],

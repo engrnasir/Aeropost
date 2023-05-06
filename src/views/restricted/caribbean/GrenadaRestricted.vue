@@ -5,7 +5,7 @@
             {{ lang==='en'? 'Forbidden Products':'Productos Prohibidos' }}
         </h2>
         <p class="snippet" v-html="info.desc"></p>
-        <table-vue :list="info.products" :hasHeader="true"/>
+        <table-vue :list="info.products" :hasHeader="true" :colspan="2"/>
 
         <information-vue :list="info.list"/>
         
@@ -32,7 +32,7 @@ export default {
             AEROPOST WILL NOT TRANSPORT THESE ITEMS AND NO CLAIMS WILL BE ACCEPTED FOR THEM.
             `,
             products:[
-                ['PRODUCTS',''],
+                ['PRODUCTS'],
                 ['Aerosol cans	','Medical Equipment'],
                 ['Alcoholic beverages	','Medications'],
                 ['Animal furs and skins','	Motor vehicles'],
@@ -70,7 +70,7 @@ export default {
             AEROPOST NO TRANSPORTARÁ ESTOS ARTÍCULOS NI SE ACEPTARÁN RECLAMACIONES POR ELLOS.
             `,
             products:[
-                ['PRODUCTOS',''],
+                ['PRODUCTOS'],
                 ['Latas de aerosol', 'Equipo médico'],
                 ['Bebidas alcohólicas', 'Medicamentos'],
                 ['Pieles y pieles de animales', 'Vehículos de motor'],

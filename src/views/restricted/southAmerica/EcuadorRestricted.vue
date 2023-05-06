@@ -4,7 +4,7 @@
             {{ lang==='en'? 'Forbidden Products':'Productos Prohibidos' }}
         </h2>
         <p class="snippet" v-html="info.desc1"></p>
-        <table-vue :list="info.products1" :hasHeader="true"/>
+        <table-vue :list="info.products1" :hasHeader="true" :colspan="2"/>
         
         <h2 class="main-heading">
             {{ lang==='en'? 'Special Handling Products':'Productos de Manejo Especial' }}
@@ -48,7 +48,7 @@ export default {
                 WE RECOMMEND THAT YOU ABSTAIN FROM SENDING THIS TYPE OF PRODUCTS TO YOUR ADDRESS IN MIAMI, SINCE THEY CANNOT BE TRANSPORTED AND YOU MUST ASSUME THE COSTS OF DESTRUCTION OR RETURN TO THE SUPPLIER.
             `,
             products1:[
-                ['PRODUCTS',''],
+                ['PRODUCTS'],
                 ['Jewelry of great value (does not include costume jewelery)', 'Weapons and ammunition'],
                 ['Used clothing and footwear that do not apply to the 4 x 4 rule (4 kg or USD $400/3 units) ','Pornographic material'],
                 ['Table salt', 'Wet batteries (containing hazardous chemicals or materials)'],
@@ -115,7 +115,7 @@ export default {
                 RECOMENDAMOS ABSTENERTE DE ENVIAR ESTE TIPO DE PRODUCTOS A TU DIRECCIÓN EN MIAMI, YA QUE NO PODRÁN SER TRANSPORTADOS Y DEBERÁS ASUMIR LOS COSTOS DE DESTRUCCIÓN O DEVOLUCIÓN AL PROVEEDOR.
             `,
             products1:[
-                ['PRODUCTOS',''],
+                ['PRODUCTOS'],
                 ['Joyas de gran valor (no incluye bisutería)','	Armas y municiones'],
                 ['Prendas de vestir y calzado usados que no apliquen a la regla 4 x 4 (4 kg o USD $400/3 unidades)	','Material pornográfico'],
                 ['Sal de mesa	','Baterías húmedas (que contengan productos químicos o materiales peligrosos)'],

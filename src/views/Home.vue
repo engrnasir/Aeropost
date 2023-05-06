@@ -41,7 +41,7 @@
         return this.lang==='en'?'The easiest way to shop from your favorite U.S. online stores':'La forma más fácil de comprar en tus tiendas online favoritas.';
       },
       footerTitle(){
-        return this.lang==='en'?'We make shopping simple.':'Hacemos que tus compras sean simples.';
+        return this.lang==='en'?'We Make Shopping Simple!':'Hacemos fáciles tus compras.';
       },
       componentKey(){
         return `testimonial${this.selectedCountry.name}`

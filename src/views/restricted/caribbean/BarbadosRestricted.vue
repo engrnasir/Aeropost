@@ -5,7 +5,7 @@
         </h2>
         <p class="snippet" v-html="info.desc1"></p>
         
-        <table-vue :list="info.products" :hasHeader="true"/>
+        <table-vue :list="info.products" :hasHeader="true" :colspan="2"/>
         
     </div>
   
@@ -29,7 +29,7 @@ export default {
             PLEASE DO NOT SHIP THESE PRODUCTS TO YOUR MIAMI ADDRESS AS THEY CANNOT BE SHIPPED TO YOUR COUNTRY AND YOU WILL NEED TO PAY FOR THEIR DESTRUCTION OR THE COST OF RETURNING THEM TO THE SHIPPER.
             `,
             products:[
-                ['PRODUCTS',''],
+                ['PRODUCTS'],
                 ['Aerosol cans	','Matches'],
                 ['Alcoholic beverages	','Medical equipment'],
                 ['Ammunition, firearms and firearm parts  	','Furs'],
@@ -62,7 +62,7 @@ export default {
              NO ENVÍE ESTOS PRODUCTOS A SU DIRECCIÓN DE MIAMI YA QUE NO SE PUEDEN ENVIAR A SU PAÍS Y DEBERÁ PAGAR POR SU DESTRUCCIÓN O EL COSTO DE DEVOLVERLOS AL REMITENTE.
             `,
             products:[
-                ['PRODUCTOS',''],
+                ['PRODUCTOS'],
                 ['Latas de aerosol', 'Fósforos'],
                 ['Bebidas alcohólicas', 'Equipamiento médico'],
                 ['Municiones, armas de fuego y partes de armas de fuego', 'Pieles'],

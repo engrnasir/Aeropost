@@ -4,7 +4,7 @@
             {{ lang==='en'? 'Forbidden Products':'Productos Prohibidos' }}
         </h2>
         <p class="snippet" v-html="info.desc1"></p>
-        <table-vue :list="info.products1" :hasHeader="true"/>
+        <table-vue :list="info.products1" :hasHeader="true" :colspan="2"/>
         <InformationVue :list="info.list1" />
         
         <h2 class="main-heading">
@@ -14,7 +14,7 @@
             {{ lang==='en'? 'Restricted Products':'Productos restringidos' }}
         </h3>
         <p class="snippet" v-html="info.desc2"></p>
-        <table-vue :list="info.products2" :hasHeader="true"/>
+        <table-vue :list="info.products2" :hasHeader="true" :colspan="2"/>
         <InformationVue :list="info.list2" />
 
         
@@ -41,7 +41,7 @@ export default {
             AEROPOST WILL NOT TRANSPORT THESE ITEMS AND NO CLAIMS WILL BE ACCEPTED FOR THEM. 
             `,
             products1:[
-                ['Products',''],
+                ['Products'],
                 ['Ammunitions and fire arms, BB and pellet guns, air guns or riffles, crossbows, professional sling-shots and the like, explosives','Any item with alcohol listed as its first ingredient'],
                 ['Gas-powered tools	','Tear gas or pepper spray'],
                 ['Lighters	','Batteries contain chemicals'],
@@ -63,7 +63,7 @@ export default {
             THESE ITEMS HAVE CERTAIN LOCAL RESTRICTIONS OR MAY NEED SPECIAL PERMITS TO ENTER THE COUNTRY. PLEASE CONTACT CUSTOMER SERVICE FOR MORE INFORMATION.
             `,
             products2:[
-                ['Products',''],
+                ['Products'],
                 ['Creams and cosmetics	','Medication and drugs'],
                 ['Pills, vitamin suplements	','Flammable substance and chemical'],
                 ['Beauty products','**Consult with customer service'],
@@ -83,7 +83,7 @@ export default {
             AEROPOST NO TRANSPORTARÁ ESTOS ARTÍCULOS NI SE ACEPTARÁN RECLAMACIONES POR ELLOS.
             `,
             products1:[
-                ['Productos',''],
+                ['Productos'],
                 ['Municiones y armas de fuego, escopetas de aire comprimido y perdigones, escopetas o rifles de aire comprimido, ballestas, hondas profesionales y similares, explosivos', 'Cualquier artículo que contenga alcohol como primer ingrediente'],
                 ['Herramientas a gas', 'Gas lacrimógeno o gas pimienta'],
                 ['Mecheros', 'Las baterías contienen químicos'],
@@ -105,7 +105,7 @@ export default {
             ESTOS ARTÍCULOS TIENEN CIERTAS RESTRICCIONES LOCALES O PUEDEN NECESITAR PERMISOS ESPECIALES PARA INGRESAR AL PAÍS. PÓNGASE EN CONTACTO CON EL SERVICIO DE ATENCIÓN AL CLIENTE PARA OBTENER MÁS INFORMACIÓN.
             `,
             products2:[
-                ['Productos',''],
+                ['Productos'],
                 ['Cremas y cosméticos', 'Medicamentos y drogas'],
                 ['Pastillas, suplementos vitamínicos', 'Sustancias y productos químicos inflamables'],
                 ['Productos de belleza','**Consultar con atención al cliente'],

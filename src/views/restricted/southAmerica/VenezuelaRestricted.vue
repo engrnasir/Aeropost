@@ -9,7 +9,7 @@
 
         <table-vue :list="info.products1"/>
 
-        <table-vue :list="info.products2" :hasHeader="true"/>
+        <table-vue :list="info.products2" :hasHeader="true" :colspan="2"/>
         
     </div>
   
@@ -44,7 +44,7 @@ export default {
                 ['Alcoholic beverages'],
             ],
             products2:[
-                ['Shipping Restricted',''],
+                ['Shipping Restricted'],
                 ['Pornography','Long Edged Weapons'],
                 ['Perishable Food', 'Vegetables (plants)'],
                 ['Chemicals','Jewels or Securities'],
@@ -77,7 +77,7 @@ export default {
                 ['Bebidas Alcohólicas'],
             ],
             products2:[
-                ['Envíos Restringidos',''],
+                ['Envíos Restringidos'],
                 ['Pornografía	','Armas Blancas Largas'],
                 ['Comida Perecedera','	Vegetales (plantas)'],
                 ['Químicos	','Joyas o Valores'],

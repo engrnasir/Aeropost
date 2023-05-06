@@ -45,30 +45,31 @@ import { mapMutations, mapState } from 'vuex';
         
         en_hero:{
           title:'Contact Us',
-          description:'',
+          description:"We'd love to hear to from you! Please feel free to contact our customer experience team should you have any questions or inquiries regarding our courier service, such as submitting a pre-alert, processing a package return, etc.",
         },
         es_hero:{
-          title:'Contacta con nosotros',
-          description:'',
+          title:'Contáctanos',
+          description:'¡Nos encantaría saber de usted! No dude en ponerse en contacto con nuestro equipo de experiencia del cliente si tiene alguna pregunta o consulta sobre nuestro servicio de mensajería, como enviar una alerta previa, procesar la devolución de un paquete, etc.',
         },
         en_content:`
-            <b>Need to track an order or package?</b><br>
+            <b class="uppercase">NEED TO TRACK A PACKAGE? </b><br>
             Log in to your account  <a href="https://aeropost.cloud-iam.com/auth/realms/myaccount/protocol/openid-connect/auth?response_type=code&client_id=myaccount&scope=openid&redirect_uri=https%3a%2f%2fmyaccount.aeropost.com%2f&culture=en%2Fv1%2Fcallback" class="text-blue cursor-pointer">here</a> to check order/package status.<br><br>
 
-            <b>Looking for our store locations and/or hours?</b><br>
+            
+            <b class="uppercase">LOOKING FOR OUR STORE LOCATIONS AND OPERATING HOURS?</b><br>
             View store location, hours and phone numbers below. Select the store location on the map to get driving directions. <br><br>
             
-            <b>Need a little more help?</b><br>
+            <b class="uppercase">Need a little more help?</b><br>
             Contact us through our online chatbot by clicking on the chat icon , located on the bottom right corner of this page.You can also contact us through WhatsApp!<br><br>
         `,
         es_content:`
-            <b>¿Quieres rastrear una orden o paquete?</b><br>
+            <b class="uppercase">¿Quieres rastrear una orden o paquete?</b><br>
             Ingresa a tu cuenta <a href="https://aeropost.cloud-iam.com/auth/realms/myaccount/protocol/openid-connect/auth?response_type=code&client_id=myaccount&scope=openid&redirect_uri=https%3a%2f%2fmyaccount.aeropost.com%2f&culture=en%2Fv1%2Fcallback" class="text-blue cursor-pointer">aquí</a> para ver el estado de tus órdenes.<br><br>
 
-            <b>¿Estás buscando una de nuestras tiendas y/o quieres saber nuestros horarios?</b><br>
+            <b class="uppercase">¿Estás buscando una de nuestras tiendas y/o quieres saber nuestros horarios?</b><br>
             Puedes encontrar la ubicación y horarios de nuestras tiendas más abajo en esta misma página.<br><br>
 
-            <b>¿Necesitas más ayuda?</b><br>
+            <b class="uppercase">¿Necesitas más ayuda?</b><br>
             Comunícate con nosotros por medio de nuestro chatbot haciendo clic en el ícono del chat ubicado en la parte inferior derecha de esta página.<br><br>
         `,
       }
@@ -86,7 +87,7 @@ import { mapMutations, mapState } from 'vuex';
         return this.lang==='en'?this.en_hero:this.es_hero;
       },
       footerTitle(){
-        return this.lang==='en'?'We make shopping simple.':'Hacemos que tus compras sean simples.';
+        return this.lang==='en'?'We Make Shopping Simple!':'Hacemos fáciles tus compras.';
       },
       content(){
         return this.lang==='en'? this.en_content:this.es_content;

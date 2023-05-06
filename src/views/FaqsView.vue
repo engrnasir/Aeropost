@@ -52,21 +52,46 @@
     },
     computed:{
       ...mapState(['lang','selectedCountry']),
-      title(){return this.lang==='en'?'FAQs':'Preguntas Frecuentes'},
+      title(){return this.lang==='en'?'Frequently Asked Questions':'Preguntas Frecuentes'},
       enQuestions(){
         return [
           {
             question:'How do I use my Miami address?', 
             answer:`
-              At checkout, use your FREE Aeropost U.S. address for your packages to be shipped to.For a simple and efficient shipping process, ensure that you input the correct name and address. <br><br>
-              Your Miami address is a physical address where Aeropost receives your packages and then sends them to your selected store or smart parcel locker in your destination country.<br><br>
+              At checkout, list your FREE U.S. ADDRESS as the address for the order to be shipped to.<br>
+              To prevent delays in receiving your package(s), please ensure that you input the correct name and address.<br><br>
+              Your Miami address is a physical address where Aeropost receives and processes your packages and then sends them to your selected store or smart parcel locker in your destination country.<br><br>
               No customer address is exactly the same; each address is made up of your account number, your country code (3 letters), our physical address, and the postal code.<br><br>
-              (See example below) Miami Address for PACKAGES (Billing and Shipping Address) Full Name: Name Address Line 1: 1 Aeropost Way Address Lines 2: Country Code + Account # City: Miami State: FL Zip Code: 33206- 3206 Phone Number: (786) 322-2032
+              (Example below)<br><br>
+              Miami Address for PACKAGES (Billing and Shipping   Address)<br>
+              Full Name: John Smith<br>
+              Address Line 1: 1 Aeropost Way<br>
+              Address Line 2: Country Code + Account #12345 City: Miami State: FL Zip Code: 33206- 3206    <br>
+              Phone Number: (786) 322-2032<br>
             `
             },
-          {question:'How to calculate the price?', answer:`Before buying, you can have an estimate of how much you will have to pay for the shipment and nationalization of your package, to do so you can enter the Aeropost calculator, include the product category, weight, price and your type of account. In order to get the category, you must type the name of the item you want to quote in the indicated space or the name most similar to the item (for example, for a stopwatch you can enter "clock").`},
-          {question:'How to pre-alert?', answer:`When you pre-alert your purchases, you let us know in advance that a package is on its way, which makes the process faster and more agile. To pre-alert you must enter "My Account" and select: +PRE-ALERT YOUR PACKAGE Then complete the package information and add the invoice. How can you pre-alert with the My Account plugin? This small application is installed in your browser and gives you access to various features, which will make the online shopping experience even easier. Once installed, you will be able to: Pre-alert with just two clicks, on Amazon, eBay and Rakuten. Quickly track your packages and pre-alerts. Complete your mailbox address with just one click.`},
-          {question:'How to return a product?', answer:`For this you must contact the supplier or manufacturer of the product and obtain a return authorization (neither Aeropost nor its affiliates can contact the supplier or manufacturer to request such authorization). Once it has been issued, you must contact Aeropost and an agent will give you the instructions to follow. Aeropost must receive all the corresponding documentation as well as the merchandise to be returned no later than 15 business days prior to the expiration date of the return authorization issued by the supplier.`},
+          {
+            question:'How to calculate the price?', 
+            answer:`
+            Before placing an order with your FREE U.S. ADDRESS, you can view an estimate of how much you will have to pay for the shipment and nationalization of the package.<br><br>
+            To do so, simply enter the following details into the Aeropost Cost Calculator: product category, product weight, listed price, and your account type.<br><br>
+            In order to generate the most accurate estimated cost, be sure to list the correct product category by either typing the name of the item you want to quote or the name most similar to the item. (for example, for a stopwatch you can enter "clock").<br><br>
+            `
+          },
+          {
+            question:'How to pre-alert?', 
+            answer:`
+            After making a purchase, you should submit an Aeropost pre-alert to let us know in advance that a package is on its way to our Miami fulfillment center.  This step is crucial in ensuring that package processing is faster and smoother.<br><br>
+            To submit a pre-alert for an incoming package, go to 'My Account' and select + PRE-ALERT YOUR PACKAGE. Fill-in the pre-alert form with the package details and upload the invoice.<br><br>
+            How can you pre-alert with the 'My Account' plugin? This small application is installed in your browser and gives you access to various features, which will make the online shopping experience even simpler. Once installed, you will be able to pre-alert with just two clicks, on Amazon, eBay and Rakuten.  
+            `
+          },
+          {
+            question:'How to return a product?', 
+            answer:`
+            To return a package you must contact the supplier or manufacturer of the product and obtain a return authorization (neither Aeropost nor its affiliates can contact the supplier or manufacturer to request such authorization).  Once it has been issued, you must contact Aeropost and an agent will give you the instructions to follow. Aeropost must receive all the corresponding documentation as well as the merchandise to be returned no later than 15 business days prior to the expiration date of the return authorization issued by the supplier.
+            `
+          },
           {
             question:'How to set up autopay?', 
             answer:`
@@ -101,7 +126,7 @@
           },
           {
             question:'¿Cuánto voy a pagar por el envío y los impuestos?', 
-            answer:`El costo de tu envío depende de 3 cosas: el peso, el valor declarado (valor comercial) y del tipo de mercadería (que determina el porcentaje de impuestos que pagará al ingresar al país).<br>Puedes cotizar el costo de un envío usando nuestra herramienta de cotización en línea.`
+            answer:`Antes de comprar, puedes tener un estimado de cuánto vas a tener que pagar por el envío y la nacionalización de tu paquete. Para hacerlo debes de entrar a la calculadora de Aeropost, seleccionar la categoría, incluir peso, precio del artículo y tu tipo de cuanta. Para obtener la categoría debes de escribir el nombre del artículo en el espacio indicado o el nombre del artículo más similar (por ejemplo, para un cronómetro ingresar "reloj")`
           },
           {
             question:'¿Cómo Pre-alerto un envío?', 

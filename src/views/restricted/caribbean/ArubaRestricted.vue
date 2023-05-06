@@ -5,14 +5,14 @@
         </h2>
         <p class="snippet" v-html="info.desc1"></p>
         
-        <table-vue :list="info.products" :hasHeader="true"/>
+        <table-vue :list="info.products" :hasHeader="true" :colspan="2"/>
         
         <h2 class="main-heading">
             {{ lang==='en'? 'Restricted by Local Customs':'Restringido por las Aduanas Locales' }}
         </h2>
         <p class="snippet" v-html="info.desc2"></p>
         
-        <table-vue :list="info.products1" :hasHeader="true"/>
+        <table-vue :list="info.products1" :hasHeader="true" :colspan="2"/>
         
     </div>
   
@@ -36,7 +36,7 @@ export default {
             PLEASE DO NOT SHIP THESE PRODUCTS TO YOUR MIAMI ADDRESS AS THEY CANNOT BE SHIPPED TO YOUR COUNTRY AND YOU WILL NEED TO PAY FOR THEIR DESTRUCTION OR THE COST OF RETURNING THEM TO THE SHIPPER.
             `,
             products:[
-                ['Products',''],
+                ['Products'],
                 ['Ammunition, firearms and firearm parts	','Lighters'],
                 ['Any item with alcohol listed as its first ingredient    	','Matches'],
                 ['Cleaning solutions	','Car shocks'],
@@ -55,7 +55,7 @@ export default {
             THESE ITEMS HAVE CERTAIN LOCAL RESTRICTIONS OR MAY NEED SPECIAL PERMITS TO ENTER THE COUNTRY. PLEASE CONTACT CUSTOMER SERVICE FOR MORE INFORMATION.
             `,
             products1:[
-                ['Products',''],
+                ['Products'],
                 ['Creams and cosmetics	','Plant seeds'],
                 ['Medication and drugs	','Plants'],
                 ['Food and beverages	','Cell phones and radar detectors'],
@@ -74,7 +74,7 @@ export default {
              NO ENVÍE ESTOS PRODUCTOS A SU DIRECCIÓN DE MIAMI YA QUE NO SE PUEDEN ENVIAR A SU PAÍS Y DEBERÁ PAGAR POR SU DESTRUCCIÓN O EL COSTO DE DEVOLVERLOS AL REMITENTE.
             `,
             products:[
-                ['Productos',''],
+                ['Productos'],
                 ['Municiones, armas de fuego y repuestos de armas de fuego', 'Mecheros'],
                 ['Cualquier artículo con alcohol listado como su primer ingrediente', 'Fósforos'],
                 ['Soluciones de limpieza','Amortiguadores de coche'],
@@ -93,7 +93,7 @@ export default {
              ESTOS ARTÍCULOS TIENEN CIERTAS RESTRICCIONES LOCALES O PUEDEN NECESITAR PERMISOS ESPECIALES PARA INGRESAR AL PAÍS. PÓNGASE EN CONTACTO CON EL SERVICIO DE ATENCIÓN AL CLIENTE PARA OBTENER MÁS INFORMACIÓN.
             `,
             products1:[
-                ['Productos',''],
+                ['Productos'],
                 ['Cremas y cosméticos', 'Semillas de plantas'],
                 ['Medicamentos y drogas', 'Plantas'],
                 ['Alimentos y bebidas', 'Teléfonos móviles y detectores de radar'],
