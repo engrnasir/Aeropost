@@ -44,7 +44,7 @@ export default {
     },
     mounted(){
         window.addEventListener('scroll',(e)=>{
-           this.bgBlue = window.scrollY>10 && window.innerWidth<800?true:false;
+           this.bgBlue = window.scrollY>0 && window.innerWidth<840?true:false;
         })
     }
 }
