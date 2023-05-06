@@ -2,9 +2,9 @@
     <div>
         
 
-        <tableVue :list="info.packages" :hasHeader="true"/>
+        <tableVue :list="info.packages" :hasHeader="true" :colspan="2"/>
 
-        <tableVue :list="info.OtherCharges" :hasHeader="true"/>
+        <tableVue :list="info.OtherCharges" :hasHeader="true" :colspan="2"/>
 
         <InformationVue :list="info.list2" />
 
@@ -37,14 +37,14 @@ export default {
         en_info:{
 
             packages:[
-                ['Packages',''],
+                ['Packages'],
                 ['Annual Membership','FREE'],
                 ['Monthly Minimum','None'],
                 ['Shipping Miami-Panama','USD $3.00 per lb'],
             ],
             
             OtherCharges:[
-                ['Other charges',''],
+                ['Other charges'],
                 ['Delivery','USD $3.00 per package'],
                 ['Customs Handling','See Custom Handling for details'],
                 ['Restricted Shipments','<a href="" class="text-blue">Click here</a>'],
@@ -82,14 +82,14 @@ export default {
             ],
 
             packages:[
-                ['Paquetes',''],
+                ['Paquetes'],
                 ['Membresía Anual','GRATIS'],
                 ['Mínimo mensual','Ninguno'],
                 ['Envío Miami-Panamá','USD $3.00 por lb'],
             ],
             
             OtherCharges:[
-                ['Otros cargos',''],
+                ['Otros cargos'],
                 ['Entrega','USD $3.00 por paquete'],
                 ['Gestión aduanera','Ver Gestión personalizada para más detalles'],
                 ['Envíos restringidos','<a href="" class="text-blue">Haga clic aquí</a>'],

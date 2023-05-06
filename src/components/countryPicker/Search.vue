@@ -5,7 +5,7 @@
                 class="w-5 3xl:w-7 mr-3 transition-transform duration-200" 
                 :class="searchKey?'':'lg:translate-x-36 3xl:translate-x-48 opacity-80'">
  
-            <input type="text" name="countryKey" placeholder="Search Country" v-model="searchKey"
+            <input type="text" name="countryKey" placeholder="Search Country" v-model="searchKey" autocomplete="off"
                 class="text-white text-lg 3xl:text-2xl w-full bg-transparent outline-none transition-transform duration-200"
                 :class="searchKey?'':'lg:-translate-x-7 3xl:-translate-x-10'"
                 @focus="searchbarFocused=true" @blur="searchbarFocused=false"

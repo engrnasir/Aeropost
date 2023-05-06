@@ -3,9 +3,9 @@
         
         <tableVue :list="info.packages" :hasHeader="true"/>
         
-        <tableVue :list="info.otherCharges" :hasHeader="true"/>
+        <tableVue :list="info.otherCharges" :hasHeader="true" :colspan="2"/>
 
-        <tableVue :list="info.maritime" :hasHeader="true"/>     
+        <tableVue :list="info.maritime" :hasHeader="true" :colspan="2"/>     
         
         <p class=" text-blue mb-4" v-if="lang==='en'"><u>Local documentation charges</u> from vessel company landing agent may apply.</p>        
         <p class=" text-blue mb-4" v-else>Se pueden aplicar <u>cargos por documentación local</u> del agente de desembarque de la compañía naviera.</p>        
@@ -42,7 +42,7 @@ export default {
             ],
             
             otherCharges:[
-                ['Other charges',''],
+                ['Other charges'],
                 ['Restricted Shipments','See Custom Handling for details'],
                 ['Customs Handling','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Click here</a>'],
                 ['Home delivery at the Metropolitan area','USD $5.00'],
@@ -50,7 +50,7 @@ export default {
             
  
             maritime:[
-                ['MARITIME',''],
+                ['MARITIME'],
                 ['<b>Individuals and Corporations</b>',''],
                 ['Freight','USD $6.45 per cubic ft.'],
                 ['Minimum charge:','USD $25.00'],
@@ -97,14 +97,14 @@ export default {
             ],
             
             otherCharges:[
-                ['Otros cargos',''],
+                ['Otros cargos'],
                 ['Envíos restringidos','Ver Manejo personalizado para más detalles'],
                 ['Tramitación de aduanas','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Haga clic aquí</a>'],
                 ['Envío a domicilio en el área Metropolitana','USD $5.00'],
             ],
             
             maritime:[
-                 ['MARÍTIMO',''],
+                 ['MARÍTIMO'],
                  ['<b>Personas físicas y jurídicas</b>',''],
                  ['Flete','USD $6.45 por pie cúbico'],
                  ['Cargo mínimo:','USD $25.00'],

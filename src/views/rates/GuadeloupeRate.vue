@@ -3,7 +3,7 @@
         
         <tableVue :list="info.packages" :hasHeader="true"/>
 
-        <tableVue :list="info.OtherCharges" :hasHeader="true"/>
+        <tableVue :list="info.OtherCharges" :hasHeader="true" :colspan="2"/>
 
         <tableVue :list="info.table1" :hasHeader="true"/>
  
@@ -37,7 +37,7 @@ export default {
             ],
             
             OtherCharges:[
-                ['Other charges',''],
+                ['Other charges'],
                 ['Handling Fee (local charge)','Quote with local agent'],
                 ['Duties & Taxes','Applicable Duties & Taxes'],
                 ['Home Delivery (local charge)','Quote with local agent'],			
@@ -58,7 +58,7 @@ export default {
             ],
             
             OtherCharges:[
-                ['Otros cargos',''],
+                ['Otros cargos'],
                 ['Tarifa de manejo (cargo local)','Cotización con agente local'],
                 ['Derechos e impuestos','Derechos e impuestos aplicables'],
                 ['Entrega a domicilio (cargo local)','Cotización con agente local'],			

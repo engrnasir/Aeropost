@@ -1,9 +1,9 @@
 <template>
     <div>
 
-        <tableVue :list="info.packages" :hasHeader="true"/>
+        <tableVue :list="info.packages" :hasHeader="true" :colspan="2"/>
 
-        <tableVue :list="info.OtherCharges" :hasHeader="true"/>
+        <tableVue :list="info.OtherCharges" :hasHeader="true" :colspan="2"/>
 
         <p class="text-blue text-sm mb-4">
             {{ lang==='en'?'*Additional fees apply for packages that are 30 lb and up.':'*Se aplican tarifas adicionales para paquetes de 30 lb o más.' }}
@@ -39,12 +39,12 @@ export default {
         en_info:{
 
             packages:[
-                ['Packages',''],
+                ['Packages'],
                 ['Packages 1 to 35 lbs ($4.50 minimum)','USD $3.70'],
                 ['Packages 35 lbs and up','USD $2.60']
             ],
             OtherCharges:[
-                ['Other charges',''],
+                ['Other charges'],
                 ['Delivery to External Counters (Quetzaltenango, Antigua, Río Dulce, Pana, etc.)','USD $1.00 additional per lb'],
                 ['Home Delivery (Metropolitan Area)','USD $4.50 per package'],
                 ['Home Delivery (Provincial Area)','USD $5.50 per package*'],
@@ -72,12 +72,12 @@ export default {
         es_info:{
         
             packages:[
-                ['Paquetes',''],
+                ['Paquetes'],
                 ['Paquetes de 1 a 35 libras ($4.50 mínimo)','USD $3.70'],
                 ['Paquetes de 35 libras en adelante','USD $2.60']
             ],
             OtherCharges:[
-                ['Otros cargos',''],
+                ['Otros cargos'],
                 ['Entrega en Mostradores Externos (Quetzaltenango, Antigua, Río Dulce, Pana, etc.)','USD $1.00 adicional por lb'],
                 ['Envío a domicilio (Área Metropolitana)','USD $4.50 por paquete'],
                 ['Envío a domicilio (Área Provincial)','USD $5.50 por paquete*'],

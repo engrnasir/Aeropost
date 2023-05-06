@@ -4,13 +4,13 @@
         <h2 class="main-heading">{{ lang==='en'?'AIR':'AIRE' }}</h2>
         <tableVue :list="info.packages" :hasHeader="true"/>
 
-        <tableVue :list="info.handlingFee" :hasHeader="true"/>
+        <tableVue :list="info.handlingFee" :hasHeader="true" :colspan="2"/>
 
         <tableVue v-for="(table, i) in info.tables" :key="i" :list="table"/>
         
         <InformationVue :title="info.list2Title" :list="info.list2" />
 
-        <tableVue :list="info.maritime" :hasHeader="true"/>     
+        <tableVue :list="info.maritime" :hasHeader="true" :colspan="2"/>     
 
         <WarrantyVue/>
 
@@ -44,7 +44,7 @@ export default {
             ],
 
             handlingFee:[
-                ['Handling Fee',''],
+                ['Handling Fee'],
                 ['Packages with value USD $499.00 and under','USD $10.00 per pkg.'],
                 ['Packages with value between USD $500.00 and USD $999.00','USD $15.00 per pkg.'],
                 ['Packages with value USD $1,000 and up','USD $20.00 per pkg.'],
@@ -86,7 +86,7 @@ export default {
             ],
  
             maritime:[
-                ['MARITIME',''],
+                ['MARITIME'],
                 ['<b>Package Rate (USD)</b>','Additional lb $1.00'],
                 ['',''],
                 ['Per Cu/Ft','USD $10.00 '],
@@ -119,7 +119,7 @@ export default {
                 ['Otros cargos (USD)',''],
             ],
             handlingFee:[
-                ['Tasa de tramitación',''],
+                ['Tasa de tramitación'],
                 ['Paquetes con valor de USD $499.00 o menos','USD $10.00 por paquete'],
                 ['Paquetes con valor entre USD $500.00 y USD $999.00','USD $15.00 por paquete'],
                 ['Paquetes con valor de USD $1,000 en adelante','USD $20.00 por paquete'],
@@ -160,7 +160,7 @@ export default {
             ],
  
             maritime:[
-                ['MARÍTIMO',''],
+                ['MARÍTIMO'],
                 ['<b>Tarifa del paquete (USD)</b>','lb adicional $1,00'],
                 ['',''],
                 ['Por pie cúbico','USD $10,00'],

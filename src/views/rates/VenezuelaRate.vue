@@ -4,7 +4,7 @@
         <h3 class="heading" v-if="lang==='en'">Rates for all packages received at the Venezuelan Customs.</h3>
         <h3 class="heading" v-else>Tarifas para todos los paquetes recibidos en la Aduana de Venezuela.</h3>
 
-        <tableVue :list="info.packages" :hasHeader="true"/>
+        <tableVue :list="info.packages" :hasHeader="true" :colspan="3"/>
 
         <InformationVue :list="info.list2" />
         
@@ -27,7 +27,7 @@ export default {
         en_info:{
 
             packages:[
-               ['International Costs (USA)','',''],
+               ['International Costs (USA)'],
                ['','1 lb.','additional lbs.'],
                ['Freight','USD $4.00','USD $3.00'],
                ['PakProtect*','USD $2.00 for each USD $100 of declared value',''],
@@ -45,7 +45,7 @@ export default {
         es_info:{
 
             packages:[
-                ['Costos internacionales (EE. UU.)','',''],
+                ['Costos internacionales (EE. UU.)'],
                 ['','1 libra','libras adicionales'],
                 ['Flete','USD $4.00','USD $3.00'],
                 ['PakProtect*','USD $2.00 por cada USD $100 de valor declarado',''],

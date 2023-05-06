@@ -5,9 +5,9 @@
             {{ lang==='en'? 'Compare what account type is best for you':'Compara qué tipo de cuenta es mejor para ti' }}
         </h2>
 
-        <tableVue :list="info.packages" :hasHeader="true"/>
+        <tableVue :list="info.packages" :hasHeader="true" :colspan="2"/>
 
-        <tableVue :list="info.OtherCharges" :hasHeader="true"/>
+        <tableVue :list="info.OtherCharges" :hasHeader="true" :colspan="2"/>
  
         <WarrantyVue/>
 
@@ -43,12 +43,12 @@ export default {
         en_info:{
 
             packages:[
-                ['Packages',''],
+                ['Packages'],
                 ['Packages per pound (USD $4.50 minimum)','USD $3.50'],
                 ['Packages per pound (Over 35 lb)', 'USD $2.45']
             ],
             OtherCharges:[
-                ['Other charges',''],
+                ['Other charges'],
                 ['Fuel Surcharge','15%'],
                 ['Delivery within the Metropolitan Area', 'USD $1.00 per package'],
                 ['Customs Handling', 'See Custom Handling for details'],
@@ -84,12 +84,12 @@ export default {
         es_info:{
 
             packages:[
-                ['Paquetes',''],
+                ['Paquetes'],
                 ['Paquetes por libra (USD $4.50 mínimo)','USD $3.50'],
                 ['Paquetes por libra (más de 35 lb)', 'USD $2.45']
             ],
             OtherCharges:[
-                ['Otros cargos',''],
+                ['Otros cargos'],
                 ['Recargo por combustible','15%'],
                 ['Entrega dentro del Área Metropolitana', 'USD $1.00 por paquete'],
                 ['Gestión aduanera', 'Ver Gestión personalizada para más detalles'],

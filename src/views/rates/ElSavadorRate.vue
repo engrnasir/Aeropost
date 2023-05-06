@@ -4,8 +4,8 @@
 
         <tableVue :list="info.table1"/>
 
-        <tableVue :list="info.packages" :hasHeader="true"/>
-        <tableVue :list="info.OtherCharges" :hasHeader="true"/>
+        <tableVue :list="info.packages" :hasHeader="true" :colspan="2"/>
+        <tableVue :list="info.OtherCharges" :hasHeader="true" :colspan="2"/>
 
         <h2 class="main-heading">{{ lang==='en'?'Warranty Program and Return Service':'Programa de Garantía y Retornos' }}</h2>
         <newWarrantyTableVue/>
@@ -41,13 +41,13 @@ export default {
                 ['Monthly Minimum', '<b>None</b>']
             ],
             packages:[
-                ['Packages',''],
+                ['Packages'],
                 ['Packages up to 1 lb. (USD $4.75 minimum)', 'USD $3.65 + IVA'],
                 ['Packages froms 2lb to 35lb.', 'USD $3.65 per lb + IVA'],
                 ['more than 35 lb.', 'USD $2.95 per lb + IVA']
             ],
             OtherCharges:[
-                ['Other charges',''],
+                ['Other charges'],
                 ['Fuel Surcharge', 'USD $0.85 per lb. + IVA'],
                 ['Delivery in Metropolitan Area', 'USD $2.25 per package (IVA included)'],
                 ['Customs Handling', 'See Custom Handling for details'],
@@ -81,13 +81,13 @@ export default {
                 ['Mínimo mensual', '<b>Ninguno</b>']
             ],
             packages:[
-                ['Paquetes',''],
+                ['Paquetes'],
                 ['Paquetes hasta 1 lb. (mínimo USD $4.75)', 'USD $3.65 + IVA'],
                 ['Paquetes desde 2lb hasta 35lb.', 'USD $3.65 por lb + IVA'],
                 ['más de 35 lb.', 'USD $2.95 por lb + IVA']
             ],
             OtherCharges:[
-                ['Otros cargos',''],
+                ['Otros cargos'],
                 ['Recargo por combustible', 'USD $0.85 por libra + IVA'],
                 ['Entrega en Área Metropolitana', 'USD $2.25 por paquete (IVA incluido)'],
                 ['Gestión aduanera', 'Ver Gestión personalizada para más detalles'],

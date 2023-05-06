@@ -29,7 +29,7 @@ tr:nth-child(odd) {
     @apply bg-[#F7F7F7];
 }
 tr td:first-child{
-    @apply w-[500px];
+    @apply w-[450px];
 }
 tfoot{
     background-color: #F3FAFF;

@@ -88,11 +88,11 @@ export default {
 
 nav{
   .items{
-    @apply flex items-center text-white;
+    @apply flex items-center text-white flex-wrap;
   }
   .item{
-    @apply mr-4 text-sm hover:text-yellow font-medium
-            max-md:text-base;
+    @apply mr-4 text-[15px] hover:text-yellow font-medium min-w-max mt-1
+           max-lg:text-base;
   }
 }
 
@@ -100,13 +100,13 @@ nav{
 @media screen and (max-width:840px) {
   .nav-wrapper{
     @apply w-[260px] mx-0 fixed left-0 top-[56px] h-screen justify-start flex-col items-start bg-white shadow-2xl 
-            px-3 py-5 pb-96 overflow-y-scroll
+            px-3 py-5 pb-[600px] overflow-y-scroll
             transition-all duration-300
             -translate-x-full
             ;
   }
   .nav-banner{
-    @apply top-[180px]
+    @apply top-[114px]
   }
   .showMenu{
     @apply translate-x-0;

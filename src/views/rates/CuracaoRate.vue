@@ -4,9 +4,9 @@
         <h2 class="main-heading">{{lang==='en'?'AIR':'AIRE'}}</h2>
         <tableVue :list="info.packages" :hasHeader="true"/>
 
-        <tableVue :list="info.OtherCharges" :hasHeader="true"/>
+        <tableVue :list="info.OtherCharges" :hasHeader="true" :colspan="2"/>
 
-        <tableVue :list="info.table1"/>
+        <tableVue :list="info.table1" :colspan="2"/>
 
         <InformationVue :list="info.list2" />
 
@@ -48,13 +48,13 @@ export default {
             ],
             
             OtherCharges:[
-                ['Other charges',''],
+                ['Other charges'],
                 ['Restricted Shipments','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Click here</a>'],
                 ['Home Delivery','$5.00'],
                 ['Customs Handling (billed on a separate line)','$6.50/package'],
             ],
             table1:[
-                ['Consolidation requests',''],
+                ['Consolidation requests'],
                 ['First Package: Regular fees apply (Handling fee)',''],
                 ['Additional Packages within the Multiple Shipment','$3.00 per pkg.'],
             ],
@@ -78,13 +78,13 @@ export default {
             ],
             
             OtherCharges:[
-                ['Otros cargos',''],
+                ['Otros cargos'],
                 ['Envíos restringidos','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Haga clic aquí</a>'],
                 ['Entrega a domicilio','$5.00'],
                 ['Manejo de aduanas (facturado en una línea separada)','$6.50/paquete'],
             ],
             table1:[
-                ['Solicitudes de consolidación',''],
+                ['Solicitudes de consolidación'],
                 ['Primer paquete: se aplican tarifas regulares (tarifa de manejo)',''],
                 ['Paquetes Adicionales dentro del Envío Múltiple','$3.00 por paquete'],
             ],

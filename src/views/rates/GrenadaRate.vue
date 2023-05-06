@@ -3,7 +3,7 @@
                 
         <tableVue :list="info.packages" :hasHeader="true"/>
 
-        <tableVue :list="info.OtherCharges" :hasHeader="true"/>
+        <tableVue :list="info.OtherCharges" :hasHeader="true" :colspan="2"/>
 
         <tableVue :list="info.table1"/>
  
@@ -37,7 +37,7 @@ export default {
             ],
             
             OtherCharges:[
-                ['Other charges',''],
+                ['Other charges'],
                 ['Handling Fee','USD $5.00'],
                 ['Duties and taxes','Applicable duties and taxes'],
                 ['Customs warehousing (local charge at customs)','$3.00ECD'],
@@ -58,7 +58,7 @@ export default {
             ],
             
             OtherCharges:[
-                ['Otros cargos',''],
+                ['Otros cargos'],
                 ['Tarifa de manejo','USD $5.00'],
                 ['Derechos e impuestos','Derechos e impuestos aplicables'],
                 ['Almacenamiento aduanero (cargo local en la aduana)','$3.00ECD'],

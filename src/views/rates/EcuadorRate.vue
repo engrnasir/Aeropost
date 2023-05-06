@@ -5,7 +5,7 @@
         
         <tableVue :list="info.packages" :hasHeader="true"/>
         
-        <tableVue :list="info.otherChanges" :hasHeader="true"/>
+        <tableVue :list="info.otherChanges" :hasHeader="true" :colspan="2"/>
 
         <WarrantyVue/>
 
@@ -68,7 +68,7 @@ export default {
                 ['lb. Additional up to 10 lbs.','USD$5.00	','USD$5.25'],
             ],
             otherChanges:[
-                ['Other charges',''],
+                ['Other charges'],
                 ['Consolidation cost (per package)','USD $3.00'],
                 ['Restricted Shipments','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Click here</a>'],
             ],     
@@ -107,7 +107,7 @@ export default {
                  ['lb. Adicional hasta 10 lbs.','USD$5.00 ','USD$5.25'],
             ],
             otherChanges:[
-                ['Otros cargos',''],
+                ['Otros cargos'],
                  ['Costo de consolidación (por paquete)','USD $3.00'],
                  ['Envíos restringidos','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Haga clic aquí</a>'],
             ],     

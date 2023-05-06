@@ -3,7 +3,7 @@
                         
         <tableVue :list="info.packages" :hasHeader="true"/>
         
-        <tableVue :list="info.otherChanges" :hasHeader="true"/>
+        <tableVue :list="info.otherChanges" :hasHeader="true" :colspan="2"/>
 
         <tableVue :list="info.homeDelivery" :hasHeader="true"/>
 
@@ -40,7 +40,7 @@ export default {
                ['Additional lb (exceeding 200 lbs)','$2.50'],
             ],
             otherChanges:[
-                ['Other charges',''],
+                ['Other charges'],
                 ['Restricted Shipments','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Click here</a>'],
             ],     
             homeDelivery:[
@@ -68,7 +68,7 @@ export default {
                 ['lb adicional - más de 200 lb', '$2.50'],
             ],
             otherChanges:[
-                ['Otros cargos',''],
+                ['Otros cargos'],
                 ['Envíos restringidos','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Haga clic aquí</a>'],
             ],     
             homeDelivery:[

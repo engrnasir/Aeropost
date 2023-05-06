@@ -3,7 +3,7 @@
 
         <tableVue :list="info.packages" :hasHeader="true"/>
 
-        <tableVue :list="info.OtherCharges" :hasHeader="true"/>
+        <tableVue :list="info.OtherCharges" :hasHeader="true" :colspan="2"/>
 
         <InformationVue :title="info.title2" :list="info.list2" />
 
@@ -40,7 +40,7 @@ export default {
             ],
             
             OtherCharges:[
-                ['Other charges',''],
+                ['Other charges'],
                 ['Handling Fee and processing fee','$7.00'],
                 ['Pkg Tax / Customs handling, per pkg','$12.20'],
                 ['',''],
@@ -95,7 +95,7 @@ export default {
             ],
             
             OtherCharges:[
-                 ['Otros cargos',''],
+                 ['Otros cargos'],
                  ['Tarifa de manejo y tarifa de procesamiento','$7.00'],
                  ['Impuestos por paquete/Manejo de aduanas, por paquete','$12.20'],
                  ['',''],

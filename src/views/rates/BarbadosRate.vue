@@ -3,7 +3,7 @@
 
         <tableVue :list="info.packages" :hasHeader="true"/>
 
-        <tableVue :list="info.OtherCharges" :hasHeader="true"/>
+        <tableVue :list="info.OtherCharges" :hasHeader="true" :colspan="2"/>
 
         <WarrantyVue/>
         
@@ -41,7 +41,7 @@ export default {
             ],
             
             OtherCharges:[
-                ['Other charges',''],
+                ['Other charges'],
                 ['Restricted Shipments','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Click here</a>'],
                 ['Customs Handling','See Custom Handling for details'],
                 ['Counter Storage Fee if package is not collected within the next 5 business days after ‘Ready At Counter’','USD $5.00 per day'],            	
@@ -68,7 +68,7 @@ export default {
             ],
             
             OtherCharges:[
-                ['Otros cargos',''],
+                ['Otros cargos'],
                 ['Envíos restringidos','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Haga clic aquí</a>'],
                 ['Gestión aduanera','Ver Gestión personalizada para más detalles'],
                 ["Tarifa de almacenamiento en mostrador si el paquete no se recoge dentro de los próximos 5 días hábiles después de 'Listo en mostrador", "USD $5.00 por día"],

@@ -3,7 +3,7 @@
 
         <tableVue :list="info.packages" :hasHeader="true"/>
 
-        <tableVue :list="info.OtherCharges" :hasHeader="true"/>
+        <tableVue :list="info.OtherCharges" :hasHeader="true" :colspan="2"/>
 
         <tableVue :list="info.homeDeliveryTable" :hasHeader="true"/>
 
@@ -38,7 +38,7 @@ export default {
 	            ],
             
             OtherCharges:[
-                ['Other charges',''],
+                ['Other charges'],
                 ['Restricted Shipments','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Click here</a>'],
             ],
 
@@ -66,7 +66,7 @@ export default {
 	        ],
             
             OtherCharges:[
-                ['Otros cargos',''],
+                ['Otros cargos'],
                 ['Envíos restringidos','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Haga clic aquí</a>'],
              ],
 

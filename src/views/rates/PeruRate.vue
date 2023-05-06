@@ -6,7 +6,7 @@
         <h2 class="main-heading">
             {{ lang==='en'? 'INTERNATIONAL FREIGHT RATES':'TARIFAS DE CARGA INTERNACIONAL' }}
         </h2>
-        <tableVue :list="info.otherChanges" :hasHeader="true"/>
+        <tableVue :list="info.otherChanges" :hasHeader="true" :colspan="2"/>
         
         <InformationVue :list="info.list2" />
         
@@ -146,7 +146,7 @@ export default {
                ['More than 20 Kg (every additional 0.5 kg)','$2.00'],
             ],
             otherChanges:[
-                ['Other charges',''],
+                ['Other charges'],
                 ['Restricted Shipments','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Click here</a>'],
                 ['Bulk Shipments (Consolidated Cargo) per piece','$2.00']
             ],     
@@ -251,7 +251,7 @@ export default {
                 ['Más de 20 Kg (cada 0,5 kg adicional)','$2,00'],
             ],
             otherChanges:[
-                ['Otros cargos',''],
+                ['Otros cargos'],
                 ['Envíos restringidos','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Haga clic aquí</a>'],
                 ['Envíos a granel (Carga consolidada) por pieza','$2.00']
             ],     

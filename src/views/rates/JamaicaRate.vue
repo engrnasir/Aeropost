@@ -19,9 +19,9 @@
 
         <tableVue :list="info.rates" :hasHeader="true"/>
 
-        <tableVue :list="info.otherCharges" :hasHeader="true"/>
+        <tableVue :list="info.otherCharges" :hasHeader="true" :colspan="2"/>
         
-        <tableVue :list="info.packages" :hasHeader="true"/>
+        <tableVue :list="info.packages" :hasHeader="true" :colspan="2"/>
         
         <tableVue :list="info.table1"/>
         
@@ -54,13 +54,13 @@ export default {
                 ['Security documents','	USD$2.00'],
             ],
             otherCharges:[
-                ['Other Charges',''],
+                ['Other Charges'],
                 ['Fuel Surcharge per package','USD$1.50'],
                 ['Restricted Shipments ','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue"> Click here</a>']
             ],
 
             packages:[
-                ['Packages',''],
+                ['Packages'],
                 ['0.5 lb.','USD$5.00'],
                 ['1lb.','USD$8.00'],
                 ['2 lb.','USD$10.50'],
@@ -109,13 +109,13 @@ export default {
                 ['Documentos de seguridad', 'USD$2.00'],
             ],
             otherCharges:[
-                ['Otros cargos',''],
+                ['Otros cargos'],
                 ['Recargo por combustible por paquete','USD$1.50'],
                 ['Envíos restringidos', '<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Haga clic aquí</a> ']
             ],
 
             packages:[
-                ['Paquetes',''],
+                ['Paquetes'],
                 ['0.5 libras','USD$5.00'],
                  ['1lb.','USD$8.00'],
                  ['2 libras', 'USD$10.50'],

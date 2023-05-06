@@ -1,9 +1,9 @@
 <template>
     <div>
         
-        <tableVue :list="info.packages" :hasHeader="true"/>
+        <tableVue :list="info.packages" :hasHeader="true" :colspan="2"/>
         
-        <tableVue :list="info.otherChanges" :hasHeader="true"/>
+        <tableVue :list="info.otherChanges" :hasHeader="true" :colspan="2"/>
 
         <h2 class="main-heading">{{ lang==='en'?'Warranty Program and Return Service':'Programa de Garantía y Retornos' }}</h2>
         <newWarrantyTable/>
@@ -34,7 +34,7 @@ export default {
         en_info:{
 
             packages:[
-                ['Packages',''],
+                ['Packages'],
                 ['0.5 lb.','USD$6.00'],
                 ['1lb.','USD$7.00'],
                 ['2 lb.','USD$13.00'],
@@ -43,7 +43,7 @@ export default {
                 ['More than 20 lb.','USD$4.00'],
             ],
             otherChanges:[
-                ['Other charges',''],
+                ['Other charges'],
                 ['Home Delivery (Área Metropolitana de Bogota)','FREE'],
                 ['Home Delivery (Municipios and remote Areas)','USD$1.00 per lb. (mini USD$3.50)'],
                 ['Restricted Shipments','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Click here</a>'],
@@ -68,7 +68,7 @@ export default {
         es_info:{
 
             packages:[
-                ['Paquetes',''],
+                ['Paquetes'],
                 ['0.5 lb.','USD$6.00'],
                 ['1lb.','USD$7.00'],
                 ['2 lb.','USD$13.00'],
@@ -77,7 +77,7 @@ export default {
                 ['Más de 20 lb.','USD$4.00'],
             ],
             otherChanges:[
-                ['Otros cargos',''],
+                ['Otros cargos'],
                 ['Envío a domicilio (Área Metropolitana de Bogotá)','GRATIS'],
                 ['Envío a Domicilio (Municipios y Áreas Remotas)','USD$1.00 por libra (mini USD$3.50)'],
                 ['Envíos restringidos','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Haga clic aquí</a>'],

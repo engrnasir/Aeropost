@@ -6,9 +6,9 @@
     <div class="menu-overlay" @click="setShowMenu(false)" v-show="showMenu"></div>
 
     <div class="bg-blue absolute z-[-1] top-0 left-0 w-full" :class="bannerCountry?'h-[358px]':'h-[230px]'"></div>
-    <div class="bg-blue absolute max-md:fixed top-0 left-0 w-full h-[58px] mb-0"></div>
+    <!-- <div class="bg-blue absolute max-md:fixed top-0 left-0 w-full h-[65px] mb-0"></div> -->
     <Mapsvg class="w-full h-min overflow-x-hidden absolute top-0 left-0 z-0"/>
-    <div class="max-md:sticky top-0 left-0 z-50" :class="bannerCountry?'top-[125px]':'top-0'">
+    <div class="max-md:sticky top-0 left-0 z-50" :class="bannerCountry?'top-[60px]':'top-0'">
       <LogoNav class="relative z-40"></LogoNav>
     </div>
     <HeaderVue></HeaderVue>
@@ -60,9 +60,9 @@ export default{
           'selectedCountry'
       ]),
       bannerCountry(){
-            const validGateways = ['EIS','BGI','SAL','GUA','LIM','SJO','PTY'];
-            return validGateways.includes(this.selectedCountry.gtw)
-        }
+        const validGateways = ['EIS','BGI','SAL','GUA','LIM','SJO','PTY'];
+        return validGateways.includes(this.selectedCountry.gtw)
+      },
     },
   methods:{
       ...mapMutations([

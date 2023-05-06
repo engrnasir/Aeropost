@@ -3,7 +3,7 @@
 
         <tableVue :list="info.packages" :hasHeader="true"/>
 
-        <tableVue :list="info.OtherCharges" :hasHeader="true"/>
+        <tableVue :list="info.OtherCharges" :hasHeader="true" :colspan="2"/>
 
         <WarrantyVue/>
 
@@ -41,7 +41,7 @@ export default {
 	        ],
             
             OtherCharges:[
-                ['Handling Fee',''],
+                ['Handling Fee'],
                 ['USD $1 - $1,000','USD $5.00'],
                 ['USD $1,001 - $2,000','USD $10.00'],
                 ['USD $2,001 and up','USD $25.00'],
@@ -132,7 +132,7 @@ export default {
 	        ],
             
             OtherCharges:[
-                 ['Tasa de tramitación',''],
+                 ['Tasa de tramitación'],
                  ['USD $1 - $1,000','USD $5.00'],
                  ['USD $1,001 - $2,000','USD $10.00'],
                  ['USD $ 2,001 y más', 'USD $ 25.00'],

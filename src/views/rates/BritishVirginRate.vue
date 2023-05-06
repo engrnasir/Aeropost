@@ -6,7 +6,7 @@
         <h2 class="main-heading">AIR SERVICE RATES</h2>
         <tableVue :list="info.packages" :hasHeader="true"/>
 
-        <tableVue :list="info.airportCargo" :hasHeader="true"/>
+        <tableVue :list="info.airportCargo" :hasHeader="true" :colspan="2"/>
 
         <p class="text-sm mb-4 text-blue ">
             {{ 
@@ -80,7 +80,7 @@ export default {
                 ['Product Returns','INCLUDED'],
             ],
             airportCargo:[
-                ['Airport Cargo Transfer Fee per Package',''],
+                ['Airport Cargo Transfer Fee per Package'],
                 ['Below 2 lbs','USD $1.00'],
                 ['2 lbs - 9.9 lbs','USD $2.00'],
                 ['10 lbs - 19.99 lbs','USD $4.00'],
@@ -130,7 +130,7 @@ export default {
                 ['Devoluciones de productos','INCLUIDO'],
             ],
             airportCargo:[
-                ['Tarifa de transferencia de carga aeroportuaria por paquete',''],
+                ['Tarifa de transferencia de carga aeroportuaria por paquete'],
                 ['Menos de 2 libras','USD $1.00'],
                 ['2 libras - 9,9 libras', 'USD $2,00'],
                 ['10 libras - 19,99 libras', 'USD $4,00'],

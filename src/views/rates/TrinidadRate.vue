@@ -10,7 +10,7 @@
 
         <tableVue :list="info.packages" :hasHeader="true"/>
 
-        <tableVue :list="info.otherCharges" :hasHeader="true"/>
+        <tableVue :list="info.otherCharges" :hasHeader="true" :colspan="2"/>
        
 
         <h2 class="main-heading">
@@ -57,7 +57,7 @@ export default {
 
 
             otherCharges:[
-                ['Other Charges',''],
+                ['Other Charges'],
                 ['Local Delivery','FREE (some exceptions apply)'],
                 ['Service Charge','$2.99 + VAT per shipment'],
                 ['Restricted Shipments','<a href="" class="text-blue">Click here</a>']
@@ -96,7 +96,7 @@ export default {
 
 
             otherCharges:[
-                ['Otros cargos',''],
+                ['Otros cargos'],
                 ['Entrega local','GRATIS (se aplican algunas excepciones)'],
                 ['Cargo por servicio','$2.99 + IVA por envío'],
                 ['Envíos restringidos','<a href="" class="text-blue">Haga clic aquí</a>']

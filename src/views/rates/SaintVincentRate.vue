@@ -4,12 +4,12 @@
         <h2 class="main-heading">{{ lang==='en'?'AIR':'AIRE' }}</h2>
         <tableVue :list="info.packages" :hasHeader="true"/>
         
-        <tableVue :list="info.otherCharges" :hasHeader="true"/>
+        <tableVue :list="info.otherCharges" :hasHeader="true" :colspan="2"/>
 
          <p class="text-blue mb-4" v-if="lang==='en'">*This handling fee charge applies to all transactions, both when customs clearance is provided by Aeropost or the customer elects to pick up Customs document.</p>
          <p class="text-blue mb-4" v-else>*Este cargo por tarifa de manejo se aplica a todas las transacciones, tanto cuando Aeropost proporciona el despacho de aduana como cuando el cliente elige recoger el documento de Aduana.</p>
 
-        <tableVue :list="info.maritime" :hasHeader="true"/>     
+        <tableVue :list="info.maritime" :hasHeader="true" :colspan="2"/>     
         
         <p class="text-blue mb-4" v-if="lang==='en'"><u>Local documentation charges</u> from vessel company landing agent may apply.</p>        
         <p class="text-blue mb-4" v-else>Se pueden aplicar <u>cargos por documentación local</u> del agente de desembarque de la compañía naviera.</p>        
@@ -45,14 +45,14 @@ export default {
                 ['200+ lb','USD $3.05 '],
             ],            
             otherCharges:[
-                ['Other charges',''],
+                ['Other charges'],
                 ['Customs Handling','USD $3.50*'],	
                 ['Restricted Shipments','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Click here</a>'],
             ],
             
  
             maritime:[
-                ['MARITIME',''],
+                ['MARITIME'],
                 ['<b>Individuals and Corporations</b>',''],
                 ['Freight','USD $7.25 per cubic ft. '],
                 ['Minimum invoice charge:','USD $25.00'],
@@ -98,13 +98,13 @@ export default {
                 ['200+ lb','USD $3.05 '],
             ],            
             otherCharges:[
-                ['Otros cargos',''],
+                ['Otros cargos'],
                 ['Manejo de Aduanas','USD $3.50*'],
                 ['Envíos restringidos','<a href="https://aeropost.com/site/en/getit-restricted-shipping" class="text-blue">Haga clic aquí</a>'],
             ],
  
             maritime:[
-                 ['MARÍTIMO',''],
+                 ['MARÍTIMO'],
                  ['<b>Personas físicas y jurídicas</b>',''],
                  ['Flete','USD $7.25 por pie cúbico'],
                  ['Cobro mínimo de factura:','USD $25.00'],

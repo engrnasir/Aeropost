@@ -6,9 +6,9 @@
 
         <tableVue :list="info.table1"/>
 
-        <tableVue :list="info.packages" :hasHeader="true"/>
+        <tableVue :list="info.packages" :hasHeader="true" :colspan="2"/>
 
-        <tableVue :list="info.OtherCharges" :hasHeader="true"/>
+        <tableVue :list="info.OtherCharges" :hasHeader="true" :colspan="2"/>
 
         <InformationVue :list="info.list2" />
 
@@ -44,7 +44,7 @@ export default {
                 ['Monthly Minimum','<b>None</b>'],
             ],
             packages:[
-                ['Packages',''],
+                ['Packages'],
                 ['0.50','$5.00'],
                 ['1 lb','$6.00'],
                 ['2 lb','$10.50'],
@@ -55,7 +55,7 @@ export default {
                 ['More than 20 lb','$2.50'],
             ],
             OtherCharges:[
-                ['Other charges',''],
+                ['Other charges'],
                 ['Home Delivery in the Metropolitan Area (Managua)','$3.00 per package'],
                 ['Customs Handling','See Custom Handling for details'],
                 ['Restricted Shipments','<a href="" class="text-blue">Click here</a>'],
@@ -93,7 +93,7 @@ export default {
                 ['Mínimo mensual','<b>Ninguno</b>'],
             ],
             packages:[
-                ['Paquetes',''],
+                ['Paquetes'],
                 ['0.50','$5.00'],
                 ['1 libra', '$6.00'],
                 ['2 libras', '$10.50'],
@@ -104,7 +104,7 @@ export default {
                 ['Más de 20 lb','$2.50'],
             ],
             OtherCharges:[
-                ['Otros cargos',''],
+                ['Otros cargos'],
                 ['Envío a domicilio en el Área Metropolitana (Managua)','$3.00 por paquete'],
                 ['Gestión aduanera','Ver Gestión personalizada para más detalles'],
                 ['Envíos restringidos','<a href="" class="text-blue">Haga clic aquí</a>'],
