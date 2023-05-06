@@ -5,45 +5,29 @@
     </div>
     <nav class="w-full">
         <ul class="items">
-            <li class="item" @click="setShowMenu(false)">
-              <router-link :to="`/${selectedCountry.gtw}/${lang}/how-it-works`">
-                {{lang==='en'?'How It Works':'¿Cómo Funciona?'}}
-              </router-link>
+            <li class="item" @click="setRoute('how-it-works')">
+              {{lang==='en'?'How It Works':'¿Cómo Funciona?'}}
             </li>
-            <li class="item" v-if="!invalidRate" @click="setShowMenu(false)">
-              <router-link :to="`/${selectedCountry.gtw}/${lang}/rates`">
+            <li class="item" v-if="!invalidRate" @click="setRoute('rates')">
                 {{lang==='en'?'Rates':'Tarifas'}}
-              </router-link>
             </li>
-            <li class="item" @click="setShowMenu(false)">
-              <router-link :to="`/${selectedCountry.gtw}/${lang}/calculator`">
-                {{lang==='en'?'Calculator':'Cotiza tu envío'}}
-              </router-link>
+            <li class="item" @click="setRoute('calculator')">
+              {{lang==='en'?'Calculator':'Cotiza tu envío'}}
             </li>
-            <li class="item" @click="setShowMenu(false)">
-              <router-link :to="`/${selectedCountry.gtw}/${lang}/faqs`">
-                {{lang==='en'?'FAQs':'Preguntas Frecuentes'}}
-              </router-link>
+            <li class="item" @click="setRoute('faqs')">
+              {{lang==='en'?'FAQs':'Preguntas Frecuentes'}}
             </li>
-            <li class="item">
-                <router-link :to="`/${selectedCountry.gtw}/${lang}/restricted`">
-                    {{lang=='en'?'Restricted Products':'Productos Restringidos'}}
-                </router-link>
+            <li class="item" @click="setRoute('restricted')">
+              {{lang=='en'?'Restricted Products':'Productos Restringidos'}}
             </li>
-            <li class="item mr-0" @click="setShowMenu(false)">
-              <router-link :to="`/${selectedCountry.gtw}/${lang}/contactus`">
+            <li class="item mr-0" @click="setRoute('contactus')">
                 {{lang==='en'?'Contact':'Contacto'}}
-              </router-link>
             </li>
-            <li class="item mr-0" @click="setShowMenu(false)" v-if="selectedCountry.gtw === 'SCL' || selectedCountry.gtw === 'SJO'">
-              <router-link :to="`/${selectedCountry.gtw}/${lang}/business`">
-                {{lang==='en'?'Business':'Negocio'}}
-              </router-link>
+            <li class="item mr-0" @click="setRoute('business')" v-if="selectedCountry.gtw === 'SCL' || selectedCountry.gtw === 'SJO'">
+              {{lang==='en'?'Business':'Negocio'}}
             </li>
-            <li class="item mr-0" @click="setShowMenu(false)">
-                <router-link :to="`/${selectedCountry.gtw}/${lang}/benefits`">
-                    {{lang==='en'?'Benefits':'Beneficios'}}
-                </router-link>
+            <li class="item mr-0" @click="setRoute('benefits')">
+              {{lang==='en'?'Benefits':'Beneficios'}}
             </li>
         </ul>
     </nav>
@@ -76,7 +60,11 @@ export default {
     }
   },
   methods:{
-    ...mapMutations(['setShowMenu'])
+    ...mapMutations(['setShowMenu']),
+    setRoute(page){
+      this.$router.push(`/${this.selectedCountry.gtw}/${this.lang}/${page}`)
+      this.setShowMenu(false)
+    }
   },
 }
 </script>
@@ -91,7 +79,7 @@ nav{
     @apply flex items-center text-white flex-wrap;
   }
   .item{
-    @apply mr-4 text-[15px] hover:text-yellow font-medium min-w-max mt-1
+    @apply mr-4 text-[15px] hover:text-yellow font-medium min-w-max cursor-pointer mt-1
            max-lg:text-base;
   }
 }

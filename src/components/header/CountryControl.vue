@@ -1,7 +1,6 @@
 <template>
   <div class="wrapper">
         <router-link class="select" :to="`/${selectedCountry.gtw}/${lang}/country-picker`">
-            <img src="@/assets/images/up.png" alt="up" class="w-4 z-50 absolute right-8 -bottom-2" v-show="showCountries">
             <p class="text-base mr-3">{{selectedCountry.name}}</p>
             <img src="@/assets/images/down.png" alt="down arrow" class="w-3">
         </router-link>
@@ -25,14 +24,12 @@ export default {
     computed:{
         ...mapState([
             'lang',
-            'showCountries',
             'selectedCountry',
         ]),
     },  
     methods:{
         ...mapMutations([
             'setLang',
-            'setShowCountries',
             'setSelectedCountries',
         ]),
         setLanguage(lg){

@@ -81,18 +81,18 @@ export default new Vuex.Store({
       state.lang = val
     },
 
-    setShowCountries:(state,val)=>{
+    setSelectedCountry:(state,val)=>{
       window.scrollTo(0,0)
       state.showMenu = false,
-      state.showCountries = false
-    },
-    setSelectedCountry:(state,val)=>{
       state.selectedCountry = val
     },
     setSelectedMapIndex:(state,val)=>{
       state.selectedMapIndex=val;
     },
     setShowMenu:(state,val)=>{
+      if(val===false){
+        window.scrollTo(0,0)
+      }
       state.showMenu = val
     },
     setThankyou:(state,val)=>{

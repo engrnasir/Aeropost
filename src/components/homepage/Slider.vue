@@ -18,7 +18,7 @@
                             <p class="italic text-[#737373] mb-4 justify-items-start">{{ quote[0].description }}</p>
                         </div>
                         <p class="font-semibold text-blue text-sm">{{ quote[0].author }}</p>
-                    </div>
+                    </div>  
                     <div class="relative w-full max-w-[80%] bg-white shadow-lg rounded-xl p-12 max-md:hidden flex flex-col justify-between">
                         <img src="@/assets/images/dblquote.png" alt="dblquote" class="w-12 absolute -top-2 -left-2">
                         <div>
