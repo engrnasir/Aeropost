@@ -71,16 +71,15 @@ export default {
 
 <style lang="scss" scoped>
 .nav-wrapper{
-  @apply flex justify-between items-center relative z-40 pt-6;
+  @apply flex justify-between items-center relative z-40;
 }
 
 nav{
   .items{
-    @apply flex items-center text-white flex-wrap;
+    @apply flex items-start text-white;
   }
   .item{
-    @apply mr-4 text-[15px] hover:text-yellow font-medium min-w-max cursor-pointer mt-1
-           max-lg:text-base;
+    @apply mr-4 text-base md:text-sm hover:text-yellow font-medium cursor-pointer;
   }
 }
 

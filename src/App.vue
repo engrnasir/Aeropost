@@ -5,7 +5,7 @@
     <div class="overlay" @click="setShowCountries(false)" v-show="showCountries "></div>
     <div class="menu-overlay" @click="setShowMenu(false)" v-show="showMenu"></div>
 
-    <div class="bg-blue absolute z-[-1] top-0 left-0 w-full" :class="bannerCountry?'h-[358px]':'h-[230px]'"></div>
+    <div class="bg-blue absolute top-0 left-0 w-full" :class="bannerCountry?'h-[358px]':'h-[230px]'"></div>
     <!-- <div class="bg-blue absolute max-md:fixed top-0 left-0 w-full h-[65px] mb-0"></div> -->
     <Mapsvg class="w-full h-min overflow-x-hidden absolute top-0 left-0 z-0"/>
     <div class="max-md:sticky top-0 left-0 z-50" :class="bannerCountry?'top-[60px]':'top-0'">

@@ -32,7 +32,7 @@
           title:'Aeropost Terms & Condition',
         },
         es_hero:{
-          title:'Términos y condiciones de Aeropost',
+          title:'Términos y condiciones <br class="lg:hidden"> de Aeropost',
         },
       }
     },

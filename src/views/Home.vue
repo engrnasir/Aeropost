@@ -32,7 +32,7 @@
     computed:{
       ...mapState(['lang','selectedCountry']),
       title(){
-        return this.lang==='en'?'Buy Anything from the U.S.':'Compra cualquier cosa desde USA'
+        return this.lang==='en'?'Buy Anything from the U.S.':'Compra cualquier cosa <br class="sm:hidden">desde USA'
       },
       utext(){
         return this.lang==='en'?' with Aeropost':' con Aeropost';

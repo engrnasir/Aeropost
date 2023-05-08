@@ -26,7 +26,7 @@ export default {
   ;
   h1{
     @apply font-medium text-[53px] leading-[105%] mb-4 max-w-[950px]
-            max-md:text-2xl
+            max-md:text-3xl
     ;
   }
   .description{

@@ -4,7 +4,7 @@
       <div class="w-[95%] max-w-[940px] bg-white shadow-2xl rounded-xl p-10 mx-auto relative z-30 -mt-20 -mb-28 max-md:mt-0 max-md:mb-0 max-md:-translate-y-12">
         <div v-for="(item, i) in questions" :key="i" class="border-b-2 border-[#EBEBEB] py-3" :class="i===questions.length-1? 'border-none':''">
             <div class="flex items-center justify-between cursor-pointer" @click="collapse(i)">
-              <h3 class="font-bold text-2xl text-blue max-sm:text-lg uppercase" v-html="item.question"></h3>
+              <h3 class="font-bold text-base md:text-2xl text-blue  uppercase mr-3" v-html="item.question"></h3>
               <img src="@/assets/images/plus.png" alt="" class="w-5 h-5 showbtn">
               <img src="@/assets/images/close.png" alt="" class="w-5 h-5 hidebtn hide">
             </div>

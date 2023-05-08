@@ -1,7 +1,7 @@
 <template>
     <div class="countryPickerWrapper">
 
-        <img src="@/assets/images/x.png" alt="x" @click="goBack()" class="w-12 h-12 cursor-pointer absolute right-1 top-1 3xl:right-3 3xl:top-3">
+        <img src="@/assets/images/x.png" alt="x" @click="goBack()" class="w-8 h-8 md:w-12 md:h-12 cursor-pointer absolute right-1 top-1 3xl:right-3 3xl:top-3">
 
         <bg-map class="w-[700px] h-screen fixed left-0 top-0 max-lg:hidden"/>
 
